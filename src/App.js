@@ -3,8 +3,8 @@ import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 
 import Aberdeen from "./pages/town/Aberdeen";
-import Bath from "./pages/town/Bath";
-import Cheltenham from "./pages/town/Cheltenham";
+import Aberystwyth from "./pages/town/Aberystwyth";
+import Bangor from "./pages/town/Bangor";
 
 
 
@@ -18,8 +18,8 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="aberdeen" element={<Aberdeen />} />
-          <Route path="bath" element={<Bath />} />
-          <Route path="cheltenham" element={<Cheltenham />} />
+          <Route path="aberystwyth" element={<Aberystwyth />} />
+          <Route path="bangor" element={<Bangor />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
