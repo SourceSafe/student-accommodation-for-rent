@@ -19,6 +19,7 @@ h2{
  }
 
  table {
+    background-color: #f7f7f7;
     border-collapse: collapse;
     margin : 15px 0px 0px 0px ;
     width: 80%;
