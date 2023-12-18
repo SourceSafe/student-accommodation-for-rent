@@ -6,10 +6,10 @@ h1{
   }
 
 
-  p{        
-    font-size: 18px;
+p{        
+    font-size: 15px;
     margin : 5px 5px 0px 0px 
-  }
+}
 
 h2{
     color:rgba(227, 139, 8, 0.937);
@@ -18,27 +18,23 @@ h2{
     font-size: 21px;
  }
 
-table{
-    margin : 10px 0px 5px 0px ;
-    }
- th
- {
-    background-color: lightslategray;
-    color:white;
-    font-size: 18px;    
-    font-weight: 300;
- }
-
-
- td 
- {
-    background-color: rgb(243, 243, 243);
-    
-    font-size: 18px;    
- }
+ table {
+    border-collapse: collapse;
+    margin : 15px 0px 0px 0px ;
+    width: 80%;
+  }
+  
+  th, td {
+    font-size: 15px;
+    padding: 3px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tr:hover {background-color:rgb(223, 224, 225);;}
 
  a:link {
-    font-size: 18px;          
+    font-size: 15px;          
     background-color: transparent;
     text-decoration: none;
     color:black;
