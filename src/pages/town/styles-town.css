@@ -1,14 +1,64 @@
 h1{
-    color: lightslategray
+    color: lightslategray;
+    font-weight: 600;
+    font-size: 26px;
+    margin : 10px 0px 0px 0px 
+  }
+
+
+  p{        
+    font-size: 18px;
+    margin : 5px 5px 0px 0px 
   }
 
 h2{
-    color:orange;
+    color:rgba(227, 139, 8, 0.937);
+    margin : 35px 0px 0px 0px ;
     font-weight: 400;
+    font-size: 21px;
  }
 
- h2{
-    color:orange;
+table{
+    margin : 10px 0px 5px 0px ;
+    }
+ th
+ {
+    background-color: lightslategray;
+    color:white;
+    font-size: 18px;    
+    font-weight: 300;
  }
 
+
+ td 
+ {
+    background-color: rgb(243, 243, 243);
+    
+    font-size: 18px;    
+ }
+
+ a:link {
+    font-size: 18px;          
+    background-color: transparent;
+    text-decoration: none;
+    color:black;
+  }
+  a:visited {    
+    background-color: transparent;
+    text-decoration: none;
+    color:black;
+  }
+  a:hover {
+    color:rgba(227, 139, 8, 0.937);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:active {
+    color:rgba(227, 139, 8, 0.937);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+
+ 
  
