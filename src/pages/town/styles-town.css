@@ -1,5 +1,5 @@
 h1{
-    color: lightslategray;
+    color: rgb(135, 160, 185);
     font-weight: 600;
     font-size: 26px;
     margin : 10px 0px 0px 0px 
@@ -12,11 +12,16 @@ p{
 }
 
 h2{
-    color:rgba(227, 139, 8, 0.937);
+    color:rgba(255, 153, 0, 0.937);
     margin : 35px 0px 0px 0px ;
     font-weight: 400;
     font-size: 21px;
  }
+
+ b{    
+  font-weight: 640;
+  color: black;  
+}
 
  table {
     background-color: #f7f7f7;
