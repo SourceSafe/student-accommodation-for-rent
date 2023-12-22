@@ -6,7 +6,8 @@ h1{
   }
 
 
-p{        
+p{       
+
     font-size: 15px;
     margin : 5px 5px 0px 0px 
 }
@@ -17,6 +18,13 @@ h2{
     font-weight: 400;
     font-size: 21px;
  }
+
+ h3{
+  
+  font-weight: 500;
+  font-size: 16px;
+  margin : 25px 0px 5px 0px ;
+}
 
  b{    
   font-weight: 640;
@@ -31,7 +39,7 @@ h2{
   }
   
   th, td {
-    font-size: 15px;
+    font-size: 14px;
     padding: 3px;
     text-align: left;
     border-bottom: 1px solid #ddd;

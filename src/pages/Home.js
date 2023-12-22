@@ -7,6 +7,9 @@ const Home = () => {
         <li> <Link to="/aberdeen">Aberdeen</Link></li>
         <li><Link to="/aberystwyth">Aberystwyth</Link></li>
         <li><Link to="/bangor">Bangor</Link></li>
+        <li><Link to="/bath">Bath</Link></li>
+        <li><Link to="/belfast">Belfast</Link></li>
+        
       </ul>
 
     </div>  
