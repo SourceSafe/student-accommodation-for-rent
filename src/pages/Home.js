@@ -15,6 +15,8 @@ const Home = () => {
 <li><Link to="/student-accommodation-in-bradford">Student Accommodation in Bradford</Link></li>
 <li><Link to="/student-accommodation-in-brighton">Student Accommodation in Brighton</Link></li>
 <li><Link to="/student-accommodation-in-bristol">Student Accommodation in Bristol</Link></li>
+<li><Link to="/student-accommodation-in-buckingham">Student Accommodation in Buckingham</Link></li>
+<li><Link to="/student-accommodation-in-cambridge">Student Accommodation in Cambridge</Link></li>
         {/* townSectionEnd */}        
       </ul>
 

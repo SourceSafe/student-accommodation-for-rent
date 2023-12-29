@@ -386,6 +386,42 @@ import {BristolWhitehall} from "./pages/town";
 import {BristolYate} from "./pages/town";
 import {BristolBarrsCourt} from "./pages/town";
 import {BristolBradleyStoke} from "./pages/town";
+import {BristolBlackhorse} from "./pages/town";
+import {BristolCatbrain} from "./pages/town";
+import {BristolHengrovePark} from "./pages/town";
+import {BristolVinneyGreen} from "./pages/town";
+import {BristolBlaise} from "./pages/town";
+import {BristolBlaiseHamlet} from "./pages/town";
+import {BristolCribbsCauseway} from "./pages/town";
+import {BristolFilwood} from "./pages/town";
+import {BristolFilwoodPark} from "./pages/town";
+import {BristolHursleyHill} from "./pages/town";
+import {BristolLowerKnowle} from "./pages/town";
+import {BristolPenPole} from "./pages/town";
+import {BristolStockwellHill} from "./pages/town";
+import {BristolVinnyGreen} from "./pages/town";
+import {BristolNorthavon} from "./pages/town";
+import {BristolKingsWeston} from "./pages/town";
+import {BristolSistonHill} from "./pages/town";
+import {BristolWappingWharf} from "./pages/town";
+import {Buckingham} from "./pages/town";
+import {BuckinghamMountPleasant} from "./pages/town";
+import {BuckinghamBoneHill} from "./pages/town";
+import {BuckinghamBourtonville} from "./pages/town";
+import {BuckinghamPrebendEnd} from "./pages/town";
+import {Cambridge} from "./pages/town";
+import {CambridgeRomseyTown} from "./pages/town";
+import {CambridgeBrookfields} from "./pages/town";
+import {CambridgeColdhamsCommon} from "./pages/town";
+import {CambridgeDittonFields} from "./pages/town";
+import {CambridgeFenDitton} from "./pages/town";
+import {CambridgeMidsummerCommon} from "./pages/town";
+import {CambridgeBroadEnd} from "./pages/town";
+import {CambridgeDelverEnd} from "./pages/town";
+import {CambridgeLowbridgeHole} from "./pages/town";
+import {CambridgeFallowField} from "./pages/town";
+import {CambridgeJesusGreen} from "./pages/town";
+import {CambridgeNewChesterton} from "./pages/town";
 //*** js:import-townEnd
 
 //*** jsStart:import-town-location
@@ -785,6 +821,42 @@ function App() {
 <Route path="student-accommodation-in-yate-bristol" element={<BristolYate/>}/>
 <Route path="student-accommodation-in-barrs-court-bristol" element={<BristolBarrsCourt/>}/>
 <Route path="student-accommodation-in-bradley-stoke-bristol" element={<BristolBradleyStoke/>}/>
+<Route path="student-accommodation-in-blackhorse-bristol" element={<BristolBlackhorse/>}/>
+<Route path="student-accommodation-in-catbrain-bristol" element={<BristolCatbrain/>}/>
+<Route path="student-accommodation-in-hengrove-park-bristol" element={<BristolHengrovePark/>}/>
+<Route path="student-accommodation-in-vinney-green-bristol" element={<BristolVinneyGreen/>}/>
+<Route path="student-accommodation-in-blaise-bristol" element={<BristolBlaise/>}/>
+<Route path="student-accommodation-in-blaise-hamlet-bristol" element={<BristolBlaiseHamlet/>}/>
+<Route path="student-accommodation-in-cribbs-causeway-bristol" element={<BristolCribbsCauseway/>}/>
+<Route path="student-accommodation-in-filwood-bristol" element={<BristolFilwood/>}/>
+<Route path="student-accommodation-in-filwood-park-bristol" element={<BristolFilwoodPark/>}/>
+<Route path="student-accommodation-in-hursley-hill-bristol" element={<BristolHursleyHill/>}/>
+<Route path="student-accommodation-in-lower-knowle-bristol" element={<BristolLowerKnowle/>}/>
+<Route path="student-accommodation-in-pen-pole-bristol" element={<BristolPenPole/>}/>
+<Route path="student-accommodation-in-stockwell-hill-bristol" element={<BristolStockwellHill/>}/>
+<Route path="student-accommodation-in-vinny-green-bristol" element={<BristolVinnyGreen/>}/>
+<Route path="student-accommodation-in-northavon-bristol" element={<BristolNorthavon/>}/>
+<Route path="student-accommodation-in-kings-weston-bristol" element={<BristolKingsWeston/>}/>
+<Route path="student-accommodation-in-siston-hill-bristol" element={<BristolSistonHill/>}/>
+<Route path="student-accommodation-in-wapping-wharf-bristol" element={<BristolWappingWharf/>}/>
+<Route path="student-accommodation-in-buckingham" element={<Buckingham/>}/>
+<Route path="student-accommodation-in-mount-pleasant-buckingham" element={<BuckinghamMountPleasant/>}/>
+<Route path="student-accommodation-in-bone-hill-buckingham" element={<BuckinghamBoneHill/>}/>
+<Route path="student-accommodation-in-bourtonville-buckingham" element={<BuckinghamBourtonville/>}/>
+<Route path="student-accommodation-in-prebend-end-buckingham" element={<BuckinghamPrebendEnd/>}/>
+<Route path="student-accommodation-in-cambridge" element={<Cambridge/>}/>
+<Route path="student-accommodation-in-romsey-town-cambridge" element={<CambridgeRomseyTown/>}/>
+<Route path="student-accommodation-in-brookfields-cambridge" element={<CambridgeBrookfields/>}/>
+<Route path="student-accommodation-in-coldhams-common-cambridge" element={<CambridgeColdhamsCommon/>}/>
+<Route path="student-accommodation-in-ditton-fields-cambridge" element={<CambridgeDittonFields/>}/>
+<Route path="student-accommodation-in-fen-ditton-cambridge" element={<CambridgeFenDitton/>}/>
+<Route path="student-accommodation-in-midsummer-common-cambridge" element={<CambridgeMidsummerCommon/>}/>
+<Route path="student-accommodation-in-broad-end-cambridge" element={<CambridgeBroadEnd/>}/>
+<Route path="student-accommodation-in-delver-end-cambridge" element={<CambridgeDelverEnd/>}/>
+<Route path="student-accommodation-in-lowbridge-hole-cambridge" element={<CambridgeLowbridgeHole/>}/>
+<Route path="student-accommodation-in-fallow-field-cambridge" element={<CambridgeFallowField/>}/>
+<Route path="student-accommodation-in-jesus-green-cambridge" element={<CambridgeJesusGreen/>}/>
+<Route path="student-accommodation-in-new-chesterton-cambridge" element={<CambridgeNewChesterton/>}/>
           {/* routeSectionEnd*/}          
 
           {/* <Route path="/aberdeen/aberdeen-city-centre" element={<AberdeenAberdeenCityCentre/>}/>
