@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "../pages/town/styles-town.css"
 const Home = () => {
   return (
     <div>
