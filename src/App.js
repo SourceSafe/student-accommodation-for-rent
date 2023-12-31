@@ -6,7 +6,90 @@ import NoPage from "./pages/NoPage";
 
 
 //*** js:import-townStart
-const Aberdeen =  lazy(() => import('./pages/town/Aberdeen'));
+const Aberdeen = lazy(() => import('./pages/town/Aberdeen'));
+const Aberystwyth = lazy(() => import('./pages/town/Aberystwyth'));
+const Bangor = lazy(() => import('./pages/town/Bangor'));
+const Bath = lazy(() => import('./pages/town/Bath'));
+const Belfast = lazy(() => import('./pages/town/Belfast'));
+const Birmingham = lazy(() => import('./pages/town/Birmingham'));
+const Bolton = lazy(() => import('./pages/town/Bolton'));
+const Bradford = lazy(() => import('./pages/town/Bradford'));
+const Brighton = lazy(() => import('./pages/town/Brighton'));
+const Bristol = lazy(() => import('./pages/town/Bristol'));
+const Buckingham = lazy(() => import('./pages/town/Buckingham'));
+const Cambridge = lazy(() => import('./pages/town/Cambridge'));
+const Canterbury = lazy(() => import('./pages/town/Canterbury'));
+const Cardiff = lazy(() => import('./pages/town/Cardiff'));
+const Carlisle = lazy(() => import('./pages/town/Carlisle'));
+const Carmarthen = lazy(() => import('./pages/town/Carmarthen'));
+const Chelmsford = lazy(() => import('./pages/town/Chelmsford'));
+const Cheltenham = lazy(() => import('./pages/town/Cheltenham'));
+const Chester = lazy(() => import('./pages/town/Chester'));
+const Chichester = lazy(() => import('./pages/town/Chichester'));
+const Cirencester = lazy(() => import('./pages/town/Cirencester'));
+const Colchester = lazy(() => import('./pages/town/Colchester'));
+const Coleraine = lazy(() => import('./pages/town/Coleraine'));
+const Coventry = lazy(() => import('./pages/town/Coventry'));
+const Cranfield = lazy(() => import('./pages/town/Cranfield'));
+const Derby = lazy(() => import('./pages/town/Derby'));
+const Dundee = lazy(() => import('./pages/town/Dundee'));
+const Durham = lazy(() => import('./pages/town/Durham'));
+const Ealing = lazy(() => import('./pages/town/Ealing'));
+const Edinburgh = lazy(() => import('./pages/town/Edinburgh'));
+const Egham = lazy(() => import('./pages/town/Egham'));
+const Exeter = lazy(() => import('./pages/town/Exeter'));
+const Falmouth = lazy(() => import('./pages/town/Falmouth'));
+const Farnham = lazy(() => import('./pages/town/Farnham'));
+const Glasgow = lazy(() => import('./pages/town/Glasgow'));
+const Gloucester = lazy(() => import('./pages/town/Gloucester'));
+const Guildford = lazy(() => import('./pages/town/Guildford'));
+const Hatfield = lazy(() => import('./pages/town/Hatfield'));
+const HighWycombe = lazy(() => import('./pages/town/HighWycombe'));
+const Huddersfield = lazy(() => import('./pages/town/Huddersfield'));
+const Hull = lazy(() => import('./pages/town/Hull'));
+const Inverness = lazy(() => import('./pages/town/Inverness'));
+const Ipswich = lazy(() => import('./pages/town/Ipswich'));
+const Keele = lazy(() => import('./pages/town/Keele'));
+const KingstonuponThames = lazy(() => import('./pages/town/KingstonuponThames'));
+const Lancaster = lazy(() => import('./pages/town/Lancaster'));
+const Leeds = lazy(() => import('./pages/town/Leeds'));
+const Leicester = lazy(() => import('./pages/town/Leicester'));
+const Lincoln = lazy(() => import('./pages/town/Lincoln'));
+const Liverpool = lazy(() => import('./pages/town/Liverpool'));
+const London = lazy(() => import('./pages/town/London'));
+const Loughborough = lazy(() => import('./pages/town/Loughborough'));
+const Luton = lazy(() => import('./pages/town/Luton'));
+const Manchester = lazy(() => import('./pages/town/Manchester'));
+const Middlesbrough = lazy(() => import('./pages/town/Middlesbrough'));
+const NewcastleuponTyne = lazy(() => import('./pages/town/NewcastleuponTyne'));
+const Newport = lazy(() => import('./pages/town/Newport'));
+const Northampton = lazy(() => import('./pages/town/Northampton'));
+const Norwich = lazy(() => import('./pages/town/Norwich'));
+const Nottingham = lazy(() => import('./pages/town/Nottingham'));
+const Ormskirk = lazy(() => import('./pages/town/Ormskirk'));
+const Oxford = lazy(() => import('./pages/town/Oxford'));
+const Paisley = lazy(() => import('./pages/town/Paisley'));
+const Plymouth = lazy(() => import('./pages/town/Plymouth'));
+const Pontypridd = lazy(() => import('./pages/town/Pontypridd'));
+const Poole = lazy(() => import('./pages/town/Poole'));
+const Portsmouth = lazy(() => import('./pages/town/Portsmouth'));
+const Preston = lazy(() => import('./pages/town/Preston'));
+const Reading = lazy(() => import('./pages/town/Reading'));
+const Salford = lazy(() => import('./pages/town/Salford'));
+const Sheffield = lazy(() => import('./pages/town/Sheffield'));
+const Southampton = lazy(() => import('./pages/town/Southampton'));
+const StAndrews = lazy(() => import('./pages/town/StAndrews'));
+const Stirling = lazy(() => import('./pages/town/Stirling'));
+const StokeonTrent = lazy(() => import('./pages/town/StokeonTrent'));
+const Sunderland = lazy(() => import('./pages/town/Sunderland'));
+const Swansea = lazy(() => import('./pages/town/Swansea'));
+const Twickenham = lazy(() => import('./pages/town/Twickenham'));
+const Uxbridge = lazy(() => import('./pages/town/Uxbridge'));
+const Winchester = lazy(() => import('./pages/town/Winchester'));
+const Wolverhampton = lazy(() => import('./pages/town/Wolverhampton'));
+const Worcester = lazy(() => import('./pages/town/Worcester'));
+const Wrexham = lazy(() => import('./pages/town/Wrexham'));
+const York = lazy(() => import('./pages/town/York'));
 const AberdeenAberdeenCityCentre = lazy(() => import('./pages/town/AberdeenAberdeenCityCentre'));
 const AberdeenMiddlefield = lazy(() => import('./pages/town/AberdeenMiddlefield'));
 const AberdeenRuthrieston = lazy(() => import('./pages/town/AberdeenRuthrieston'));
@@ -37,7 +120,6 @@ const AberdeenStranog = lazy(() => import('./pages/town/AberdeenStranog'));
 const AberdeenWedderhill = lazy(() => import('./pages/town/AberdeenWedderhill'));
 const AberdeenDyce = lazy(() => import('./pages/town/AberdeenDyce'));
 const AberdeenStoneywood = lazy(() => import('./pages/town/AberdeenStoneywood'));
-const Aberystwyth = lazy(() => import('./pages/town/Aberystwyth'));
 const AberystwythPenparke = lazy(() => import('./pages/town/AberystwythPenparke'));
 const AberystwythWaunfawr = lazy(() => import('./pages/town/AberystwythWaunfawr'));
 const AberystwythGelliangharad = lazy(() => import('./pages/town/AberystwythGelliangharad'));
@@ -55,7 +137,6 @@ const AberystwythBroginin = lazy(() => import('./pages/town/AberystwythBroginin'
 const AberystwythPenRhiwNewydd = lazy(() => import('./pages/town/AberystwythPenRhiwNewydd'));
 const AberystwythTroedYrHenRiw = lazy(() => import('./pages/town/AberystwythTroedYrHenRiw'));
 const AberystwythSouthGate = lazy(() => import('./pages/town/AberystwythSouthGate'));
-const Bangor = lazy(() => import('./pages/town/Bangor'));
 const BangorGarddDenman = lazy(() => import('./pages/town/BangorGarddDenman'));
 const BangorNantPorth = lazy(() => import('./pages/town/BangorNantPorth'));
 const BangorCaellepa = lazy(() => import('./pages/town/BangorCaellepa'));
@@ -78,7 +159,6 @@ const BangorWaenPentir = lazy(() => import('./pages/town/BangorWaenPentir'));
 const BangorParcVaynol = lazy(() => import('./pages/town/BangorParcVaynol'));
 const BangorBryn = lazy(() => import('./pages/town/BangorBryn'));
 const BangorParcPenrhyn = lazy(() => import('./pages/town/BangorParcPenrhyn'));
-const Bath = lazy(() => import('./pages/town/Bath'));
 const BathOldfieldPark = lazy(() => import('./pages/town/BathOldfieldPark'));
 const BathBathSpa = lazy(() => import('./pages/town/BathBathSpa'));
 const BathSladebrook = lazy(() => import('./pages/town/BathSladebrook'));
@@ -139,8 +219,6 @@ const BathBradfordPark = lazy(() => import('./pages/town/BathBradfordPark'));
 const BathRalphAllenPark = lazy(() => import('./pages/town/BathRalphAllenPark'));
 const BathCombeDown = lazy(() => import('./pages/town/BathCombeDown'));
 const BathTyning = lazy(() => import('./pages/town/BathTyning'));
-const Belfast = lazy(() => import('./pages/town/Belfast'));
-const Birmingham = lazy(() => import('./pages/town/Birmingham'));
 const BirminghamSellyOak = lazy(() => import('./pages/town/BirminghamSellyOak'));
 const BirminghamStirchleyStreet = lazy(() => import('./pages/town/BirminghamStirchleyStreet'));
 const BirminghamTenAcres = lazy(() => import('./pages/town/BirminghamTenAcres'));
@@ -215,7 +293,6 @@ const BirminghamUpperWitton = lazy(() => import('./pages/town/BirminghamUpperWit
 const BirminghamWakeGreen = lazy(() => import('./pages/town/BirminghamWakeGreen'));
 const BirminghamBearwood = lazy(() => import('./pages/town/BirminghamBearwood'));
 const BirminghamNorthfieldStation = lazy(() => import('./pages/town/BirminghamNorthfieldStation'));
-const Bolton = lazy(() => import('./pages/town/Bolton'));
 const BoltonDixonGreen = lazy(() => import('./pages/town/BoltonDixonGreen'));
 const BoltonFarnworth = lazy(() => import('./pages/town/BoltonFarnworth'));
 const BoltonNewBury = lazy(() => import('./pages/town/BoltonNewBury'));
@@ -232,7 +309,6 @@ const BoltonTheHaulgh = lazy(() => import('./pages/town/BoltonTheHaulgh'));
 const BoltonTongeFold = lazy(() => import('./pages/town/BoltonTongeFold'));
 const BoltonTopOThBrow = lazy(() => import('./pages/town/BoltonTopOThBrow'));
 const BoltonBurnden = lazy(() => import('./pages/town/BoltonBurnden'));
-const Bradford = lazy(() => import('./pages/town/Bradford'));
 const BradfordPrinceville = lazy(() => import('./pages/town/BradfordPrinceville'));
 const BradfordDirkHill = lazy(() => import('./pages/town/BradfordDirkHill'));
 const BradfordChapelGreen = lazy(() => import('./pages/town/BradfordChapelGreen'));
@@ -254,8 +330,6 @@ const BradfordNewLeeds = lazy(() => import('./pages/town/BradfordNewLeeds'));
 const BradfordScholemoor = lazy(() => import('./pages/town/BradfordScholemoor'));
 const BradfordUpperGreen = lazy(() => import('./pages/town/BradfordUpperGreen'));
 const BradfordBradfordForsterSquareStation = lazy(() => import('./pages/town/BradfordBradfordForsterSquareStation'));
-const Brighton = lazy(() => import('./pages/town/Brighton'));
-const Bristol = lazy(() => import('./pages/town/Bristol'));
 const BristolBedminsterStation = lazy(() => import('./pages/town/BristolBedminsterStation'));
 const BristolBristolCityCentre = lazy(() => import('./pages/town/BristolBristolCityCentre'));
 const BristolClifton = lazy(() => import('./pages/town/BristolClifton'));
@@ -407,12 +481,10 @@ const BristolNorthavon = lazy(() => import('./pages/town/BristolNorthavon'));
 const BristolKingsWeston = lazy(() => import('./pages/town/BristolKingsWeston'));
 const BristolSistonHill = lazy(() => import('./pages/town/BristolSistonHill'));
 const BristolWappingWharf = lazy(() => import('./pages/town/BristolWappingWharf'));
-const Buckingham = lazy(() => import('./pages/town/Buckingham'));
 const BuckinghamMountPleasant = lazy(() => import('./pages/town/BuckinghamMountPleasant'));
 const BuckinghamBoneHill = lazy(() => import('./pages/town/BuckinghamBoneHill'));
 const BuckinghamBourtonville = lazy(() => import('./pages/town/BuckinghamBourtonville'));
 const BuckinghamPrebendEnd = lazy(() => import('./pages/town/BuckinghamPrebendEnd'));
-const Cambridge = lazy(() => import('./pages/town/Cambridge'));
 const CambridgeRomseyTown = lazy(() => import('./pages/town/CambridgeRomseyTown'));
 const CambridgeBrookfields = lazy(() => import('./pages/town/CambridgeBrookfields'));
 const CambridgeColdhamsCommon = lazy(() => import('./pages/town/CambridgeColdhamsCommon'));
@@ -431,7 +503,6 @@ const CambridgeCommercialEnd = lazy(() => import('./pages/town/CambridgeCommerci
 const CambridgeEddington = lazy(() => import('./pages/town/CambridgeEddington'));
 const CambridgeBurwell = lazy(() => import('./pages/town/CambridgeBurwell'));
 const CambridgeChestertonFenRoadEstate = lazy(() => import('./pages/town/CambridgeChestertonFenRoadEstate'));
-const Canterbury = lazy(() => import('./pages/town/Canterbury'));
 const CanterburyStThomassHill = lazy(() => import('./pages/town/CanterburyStThomassHill'));
 const CanterburyThaningtonWithout = lazy(() => import('./pages/town/CanterburyThaningtonWithout'));
 const CanterburyParkwood = lazy(() => import('./pages/town/CanterburyParkwood'));
@@ -460,7 +531,6 @@ const CanterburyTylerHill = lazy(() => import('./pages/town/CanterburyTylerHill'
 const CanterburyHarbledown = lazy(() => import('./pages/town/CanterburyHarbledown'));
 const CanterburyPettyFrance = lazy(() => import('./pages/town/CanterburyPettyFrance'));
 const CanterburyBekesbourneStation = lazy(() => import('./pages/town/CanterburyBekesbourneStation'));
-const Cardiff = lazy(() => import('./pages/town/Cardiff'));
 const CardiffCardiffCity = lazy(() => import('./pages/town/CardiffCardiffCity'));
 const CardiffPlasnewydd = lazy(() => import('./pages/town/CardiffPlasnewydd'));
 const CardiffRoathPark = lazy(() => import('./pages/town/CardiffRoathPark'));
@@ -537,9 +607,6 @@ const CardiffLlanbedrGwynllwg = lazy(() => import('./pages/town/CardiffLlanbedrG
 const CardiffCoedYGores = lazy(() => import('./pages/town/CardiffCoedYGores'));
 const CardiffWatfordPark = lazy(() => import('./pages/town/CardiffWatfordPark'));
 const CardiffEly = lazy(() => import('./pages/town/CardiffEly'));
-const Carlisle = lazy(() => import('./pages/town/Carlisle'));
-const Carmarthen = lazy(() => import('./pages/town/Carmarthen'));
-const Chelmsford = lazy(() => import('./pages/town/Chelmsford'));
 const ChelmsfordBeaulieu = lazy(() => import('./pages/town/ChelmsfordBeaulieu'));
 const ChelmsfordNewlandsSpring = lazy(() => import('./pages/town/ChelmsfordNewlandsSpring'));
 const ChelmsfordFambridgeEnd = lazy(() => import('./pages/town/ChelmsfordFambridgeEnd'));
@@ -556,7 +623,6 @@ const ChelmsfordChatley = lazy(() => import('./pages/town/ChelmsfordChatley'));
 const ChelmsfordGubbionsGreen = lazy(() => import('./pages/town/ChelmsfordGubbionsGreen'));
 const ChelmsfordBrookEnd = lazy(() => import('./pages/town/ChelmsfordBrookEnd'));
 const ChelmsfordChelmerVillage = lazy(() => import('./pages/town/ChelmsfordChelmerVillage'));
-const Cheltenham = lazy(() => import('./pages/town/Cheltenham'));
 const CheltenhamWymansBrook = lazy(() => import('./pages/town/CheltenhamWymansBrook'));
 const CheltenhamHasbury = lazy(() => import('./pages/town/CheltenhamHasbury'));
 const CheltenhamLeckhampton = lazy(() => import('./pages/town/CheltenhamLeckhampton'));
@@ -567,7 +633,6 @@ const CheltenhamLilleyBrook = lazy(() => import('./pages/town/CheltenhamLilleyBr
 const CheltenhamMoorend = lazy(() => import('./pages/town/CheltenhamMoorend'));
 const CheltenhamUpEnd = lazy(() => import('./pages/town/CheltenhamUpEnd'));
 const CheltenhamLittleHerberts = lazy(() => import('./pages/town/CheltenhamLittleHerberts'));
-const Chester = lazy(() => import('./pages/town/Chester'));
 const ChesterTwoMills = lazy(() => import('./pages/town/ChesterTwoMills'));
 const ChesterBache = lazy(() => import('./pages/town/ChesterBache'));
 const ChesterAbbotsMeads = lazy(() => import('./pages/town/ChesterAbbotsMeads'));
@@ -596,11 +661,9 @@ const ChesterNewtonByChester = lazy(() => import('./pages/town/ChesterNewtonByCh
 const ChesterHoolePark = lazy(() => import('./pages/town/ChesterHoolePark'));
 const ChesterIrishHill = lazy(() => import('./pages/town/ChesterIrishHill'));
 const ChesterTheCastle = lazy(() => import('./pages/town/ChesterTheCastle'));
-const Chichester = lazy(() => import('./pages/town/Chichester'));
 const ChichesterPortfield = lazy(() => import('./pages/town/ChichesterPortfield'));
 const ChichesterRumboldswhyke = lazy(() => import('./pages/town/ChichesterRumboldswhyke'));
 const ChichesterWhyke = lazy(() => import('./pages/town/ChichesterWhyke'));
-const Cirencester = lazy(() => import('./pages/town/Cirencester'));
 const CirencesterTheBeeches = lazy(() => import('./pages/town/CirencesterTheBeeches'));
 const CirencesterKingsHill = lazy(() => import('./pages/town/CirencesterKingsHill'));
 const CirencesterWatermoor = lazy(() => import('./pages/town/CirencesterWatermoor'));
@@ -614,7 +677,6 @@ const CirencesterWiggold = lazy(() => import('./pages/town/CirencesterWiggold'))
 const CirencesterAblington = lazy(() => import('./pages/town/CirencesterAblington'));
 const CirencesterKilkenny = lazy(() => import('./pages/town/CirencesterKilkenny'));
 const CirencesterMaiseyhampton = lazy(() => import('./pages/town/CirencesterMaiseyhampton'));
-const Colchester = lazy(() => import('./pages/town/Colchester'));
 const ColchesterParsonsHeath = lazy(() => import('./pages/town/ColchesterParsonsHeath'));
 const ColchesterWelshwoodPark = lazy(() => import('./pages/town/ColchesterWelshwoodPark'));
 const ColchesterGreenstead = lazy(() => import('./pages/town/ColchesterGreenstead'));
@@ -640,8 +702,6 @@ const ColchesterEastHill = lazy(() => import('./pages/town/ColchesterEastHill'))
 const ColchesterGorePit = lazy(() => import('./pages/town/ColchesterGorePit'));
 const ColchesterBirchHolt = lazy(() => import('./pages/town/ColchesterBirchHolt'));
 const ColchesterLittleBirchHolt = lazy(() => import('./pages/town/ColchesterLittleBirchHolt'));
-const Coleraine = lazy(() => import('./pages/town/Coleraine'));
-const Coventry = lazy(() => import('./pages/town/Coventry'));
 const CoventryStoke = lazy(() => import('./pages/town/CoventryStoke'));
 const CoventryCanley = lazy(() => import('./pages/town/CoventryCanley'));
 const CoventryGosfordGreen = lazy(() => import('./pages/town/CoventryGosfordGreen'));
@@ -689,8 +749,6 @@ const CoventryBinley = lazy(() => import('./pages/town/CoventryBinley'));
 const CoventryBinleyCollieryVillage = lazy(() => import('./pages/town/CoventryBinleyCollieryVillage'));
 const CoventryFinham = lazy(() => import('./pages/town/CoventryFinham'));
 const CoventryStyvechale = lazy(() => import('./pages/town/CoventryStyvechale'));
-const Cranfield = lazy(() => import('./pages/town/Cranfield'));
-const Derby = lazy(() => import('./pages/town/Derby'));
 const DerbyTheHolmes = lazy(() => import('./pages/town/DerbyTheHolmes'));
 const DerbyStruttsPark = lazy(() => import('./pages/town/DerbyStruttsPark'));
 const DerbyMoorway = lazy(() => import('./pages/town/DerbyMoorway'));
@@ -704,14 +762,12 @@ const DerbyLittleover = lazy(() => import('./pages/town/DerbyLittleover'));
 const DerbyAlvaston = lazy(() => import('./pages/town/DerbyAlvaston'));
 const DerbyAllenton = lazy(() => import('./pages/town/DerbyAllenton'));
 const DerbyRoseHill = lazy(() => import('./pages/town/DerbyRoseHill'));
-const Dundee = lazy(() => import('./pages/town/Dundee'));
 const DundeeDundeeWestEnd = lazy(() => import('./pages/town/DundeeDundeeWestEnd'));
 const DundeeDundeeCityCentre = lazy(() => import('./pages/town/DundeeDundeeCityCentre'));
 const DundeeStannergate = lazy(() => import('./pages/town/DundeeStannergate'));
 const DundeeDundeeTechnologyPark = lazy(() => import('./pages/town/DundeeDundeeTechnologyPark'));
 const DundeeBroughtyFerryStation = lazy(() => import('./pages/town/DundeeBroughtyFerryStation'));
 const DundeeBroughtyFerry = lazy(() => import('./pages/town/DundeeBroughtyFerry'));
-const Durham = lazy(() => import('./pages/town/Durham'));
 const DurhamGilesgate = lazy(() => import('./pages/town/DurhamGilesgate'));
 const DurhamStocktonOnTees = lazy(() => import('./pages/town/DurhamStocktonOnTees'));
 const DurhamLowBurnhall = lazy(() => import('./pages/town/DurhamLowBurnhall'));
@@ -749,9 +805,7 @@ const DurhamSherburn = lazy(() => import('./pages/town/DurhamSherburn'));
 const DurhamBrandon = lazy(() => import('./pages/town/DurhamBrandon'));
 const DurhamEdmondsleyFell = lazy(() => import('./pages/town/DurhamEdmondsleyFell'));
 const DurhamCrossgateMoor = lazy(() => import('./pages/town/DurhamCrossgateMoor'));
-const Ealing = lazy(() => import('./pages/town/Ealing'));
 const EalingNorthfields = lazy(() => import('./pages/town/EalingNorthfields'));
-const Edinburgh = lazy(() => import('./pages/town/Edinburgh'));
 const EdinburghEdinburghSouth = lazy(() => import('./pages/town/EdinburghEdinburghSouth'));
 const EdinburghEdinburghNorth = lazy(() => import('./pages/town/EdinburghEdinburghNorth'));
 const EdinburghLeith = lazy(() => import('./pages/town/EdinburghLeith'));
@@ -820,13 +874,11 @@ const EdinburghPortobello = lazy(() => import('./pages/town/EdinburghPortobello'
 const EdinburghRoyston = lazy(() => import('./pages/town/EdinburghRoyston'));
 const EdinburghCraigleith = lazy(() => import('./pages/town/EdinburghCraigleith'));
 const EdinburghGilmerton = lazy(() => import('./pages/town/EdinburghGilmerton'));
-const Egham = lazy(() => import('./pages/town/Egham'));
 const EghamWick = lazy(() => import('./pages/town/EghamWick'));
 const EghamEnglefieldGreen = lazy(() => import('./pages/town/EghamEnglefieldGreen'));
 const EghamBellWeirLock = lazy(() => import('./pages/town/EghamBellWeirLock'));
 const EghamBishopsgate = lazy(() => import('./pages/town/EghamBishopsgate'));
 const EghamGlanty = lazy(() => import('./pages/town/EghamGlanty'));
-const Exeter = lazy(() => import('./pages/town/Exeter'));
 const ExeterPennsylvania = lazy(() => import('./pages/town/ExeterPennsylvania'));
 const ExeterDuryard = lazy(() => import('./pages/town/ExeterDuryard'));
 const ExeterStDavids = lazy(() => import('./pages/town/ExeterStDavids'));
@@ -871,7 +923,6 @@ const ExeterGreatShilhay = lazy(() => import('./pages/town/ExeterGreatShilhay'))
 const ExeterMarshBarton = lazy(() => import('./pages/town/ExeterMarshBarton'));
 const ExeterRedhills = lazy(() => import('./pages/town/ExeterRedhills'));
 const ExeterTheFairways = lazy(() => import('./pages/town/ExeterTheFairways'));
-const Falmouth = lazy(() => import('./pages/town/Falmouth'));
 const FalmouthTregatreath = lazy(() => import('./pages/town/FalmouthTregatreath'));
 const FalmouthBareppa = lazy(() => import('./pages/town/FalmouthBareppa'));
 const FalmouthBrill = lazy(() => import('./pages/town/FalmouthBrill'));
@@ -888,7 +939,6 @@ const FalmouthDurgan = lazy(() => import('./pages/town/FalmouthDurgan'));
 const FalmouthPenwerris = lazy(() => import('./pages/town/FalmouthPenwerris'));
 const FalmouthSwanvale = lazy(() => import('./pages/town/FalmouthSwanvale'));
 const FalmouthTheBeacon = lazy(() => import('./pages/town/FalmouthTheBeacon'));
-const Farnham = lazy(() => import('./pages/town/Farnham'));
 const FarnhamMountPleasant = lazy(() => import('./pages/town/FarnhamMountPleasant'));
 const FarnhamBridgeField = lazy(() => import('./pages/town/FarnhamBridgeField'));
 const FarnhamWeybourne = lazy(() => import('./pages/town/FarnhamWeybourne'));
@@ -896,7 +946,6 @@ const FarnhamWrecclesham = lazy(() => import('./pages/town/FarnhamWrecclesham'))
 const FarnhamBentley = lazy(() => import('./pages/town/FarnhamBentley'));
 const FarnhamAliceHolt = lazy(() => import('./pages/town/FarnhamAliceHolt'));
 const FarnhamEwshot = lazy(() => import('./pages/town/FarnhamEwshot'));
-const Glasgow = lazy(() => import('./pages/town/Glasgow'));
 const GlasgowBlantyreStation = lazy(() => import('./pages/town/GlasgowBlantyreStation'));
 const GlasgowAirblesStation = lazy(() => import('./pages/town/GlasgowAirblesStation'));
 const GlasgowWestertonStation = lazy(() => import('./pages/town/GlasgowWestertonStation'));
@@ -1004,7 +1053,6 @@ const GlasgowGarscaden = lazy(() => import('./pages/town/GlasgowGarscaden'));
 const GlasgowHutchesontown = lazy(() => import('./pages/town/GlasgowHutchesontown'));
 const GlasgowPossilPark = lazy(() => import('./pages/town/GlasgowPossilPark'));
 const GlasgowEaglesham = lazy(() => import('./pages/town/GlasgowEaglesham'));
-const Gloucester = lazy(() => import('./pages/town/Gloucester'));
 const GloucesterTredworth = lazy(() => import('./pages/town/GloucesterTredworth'));
 const GloucesterBownham = lazy(() => import('./pages/town/GloucesterBownham'));
 const GloucesterWottonVillage = lazy(() => import('./pages/town/GloucesterWottonVillage'));
@@ -1019,7 +1067,6 @@ const GloucesterPoolMeadow = lazy(() => import('./pages/town/GloucesterPoolMeado
 const GloucesterTheIsland = lazy(() => import('./pages/town/GloucesterTheIsland'));
 const GloucesterLinden = lazy(() => import('./pages/town/GloucesterLinden'));
 const GloucesterBarton = lazy(() => import('./pages/town/GloucesterBarton'));
-const Guildford = lazy(() => import('./pages/town/Guildford'));
 const GuildfordParkBarn = lazy(() => import('./pages/town/GuildfordParkBarn'));
 const GuildfordWoodbridgeHill = lazy(() => import('./pages/town/GuildfordWoodbridgeHill'));
 const GuildfordPinksHill = lazy(() => import('./pages/town/GuildfordPinksHill'));
@@ -1041,7 +1088,6 @@ const GuildfordGuildfordPark = lazy(() => import('./pages/town/GuildfordGuildfor
 const GuildfordAsh = lazy(() => import('./pages/town/GuildfordAsh'));
 const GuildfordWhitmoor = lazy(() => import('./pages/town/GuildfordWhitmoor'));
 const GuildfordKeensPark = lazy(() => import('./pages/town/GuildfordKeensPark'));
-const Hatfield = lazy(() => import('./pages/town/Hatfield'));
 const HatfieldRoeGreen = lazy(() => import('./pages/town/HatfieldRoeGreen'));
 const HatfieldWilkinsGreen = lazy(() => import('./pages/town/HatfieldWilkinsGreen'));
 const HatfieldSymondsHyde = lazy(() => import('./pages/town/HatfieldSymondsHyde'));
@@ -1070,7 +1116,6 @@ const HatfieldHawkeshead = lazy(() => import('./pages/town/HatfieldHawkeshead'))
 const HatfieldOldHatfield = lazy(() => import('./pages/town/HatfieldOldHatfield'));
 const HatfieldWarrengateEstate = lazy(() => import('./pages/town/HatfieldWarrengateEstate'));
 const HatfieldBrookmansParkStation = lazy(() => import('./pages/town/HatfieldBrookmansParkStation'));
-const HighWycombe = lazy(() => import('./pages/town/HighWycombe'));
 const HighWycombeWestWycombeVillage = lazy(() => import('./pages/town/HighWycombeWestWycombeVillage'));
 const HighWycombeWestWycombe = lazy(() => import('./pages/town/HighWycombeWestWycombe'));
 const HighWycombeBooker = lazy(() => import('./pages/town/HighWycombeBooker'));
@@ -1080,7 +1125,6 @@ const HighWycombeTotteridge = lazy(() => import('./pages/town/HighWycombeTotteri
 const HighWycombeBowerdean = lazy(() => import('./pages/town/HighWycombeBowerdean'));
 const HighWycombeDownleyCommon = lazy(() => import('./pages/town/HighWycombeDownleyCommon'));
 const HighWycombeHighWycombeStation = lazy(() => import('./pages/town/HighWycombeHighWycombeStation'));
-const Huddersfield = lazy(() => import('./pages/town/Huddersfield'));
 const HuddersfieldFollyHall = lazy(() => import('./pages/town/HuddersfieldFollyHall'));
 const HuddersfieldRashcliffe = lazy(() => import('./pages/town/HuddersfieldRashcliffe'));
 const HuddersfieldSpringwood = lazy(() => import('./pages/town/HuddersfieldSpringwood'));
@@ -1138,7 +1182,6 @@ const HuddersfieldDodlee = lazy(() => import('./pages/town/HuddersfieldDodlee'))
 const HuddersfieldLeymoor = lazy(() => import('./pages/town/HuddersfieldLeymoor'));
 const HuddersfieldRoydsHall = lazy(() => import('./pages/town/HuddersfieldRoydsHall'));
 const HuddersfieldColneValley = lazy(() => import('./pages/town/HuddersfieldColneValley'));
-const Hull = lazy(() => import('./pages/town/Hull'));
 const HullNewlandPark = lazy(() => import('./pages/town/HullNewlandPark'));
 const HullSulcoates = lazy(() => import('./pages/town/HullSulcoates'));
 const HullSculcoates = lazy(() => import('./pages/town/HullSculcoates'));
@@ -1150,19 +1193,14 @@ const HullDerringhamBank = lazy(() => import('./pages/town/HullDerringhamBank'))
 const HullBrooklandsPark = lazy(() => import('./pages/town/HullBrooklandsPark'));
 const HullParagon = lazy(() => import('./pages/town/HullParagon'));
 const HullPrioryGrange = lazy(() => import('./pages/town/HullPrioryGrange'));
-const Inverness = lazy(() => import('./pages/town/Inverness'));
-const Ipswich = lazy(() => import('./pages/town/Ipswich'));
 const IpswichBixleyHeath = lazy(() => import('./pages/town/IpswichBixleyHeath'));
 const IpswichRedhousePark = lazy(() => import('./pages/town/IpswichRedhousePark'));
 const IpswichCalifornia = lazy(() => import('./pages/town/IpswichCalifornia'));
 const IpswichPrioryHeath = lazy(() => import('./pages/town/IpswichPrioryHeath'));
 const IpswichStJohns = lazy(() => import('./pages/town/IpswichStJohns'));
 const IpswichWarrenHeath = lazy(() => import('./pages/town/IpswichWarrenHeath'));
-const Keele = lazy(() => import('./pages/town/Keele'));
-const KingstonuponThames = lazy(() => import('./pages/town/KingstonuponThames'));
 const KingstonuponThamesKingstonUponThames = lazy(() => import('./pages/town/KingstonuponThamesKingstonUponThames'));
 const KingstonuponThamesNorbiton = lazy(() => import('./pages/town/KingstonuponThamesNorbiton'));
-const Lancaster = lazy(() => import('./pages/town/Lancaster'));
 const LancasterPrimroseHill = lazy(() => import('./pages/town/LancasterPrimroseHill'));
 const LancasterTheGreaves = lazy(() => import('./pages/town/LancasterTheGreaves'));
 const LancasterWestfieldWarMemorialVillage = lazy(() => import('./pages/town/LancasterWestfieldWarMemorialVillage'));
@@ -1181,7 +1219,6 @@ const LancasterHampsonGreen = lazy(() => import('./pages/town/LancasterHampsonGr
 const LancasterGalgate = lazy(() => import('./pages/town/LancasterGalgate'));
 const LancasterEllel = lazy(() => import('./pages/town/LancasterEllel'));
 const LancasterHaverbreaks = lazy(() => import('./pages/town/LancasterHaverbreaks'));
-const Leeds = lazy(() => import('./pages/town/Leeds'));
 const LeedsHydePark = lazy(() => import('./pages/town/LeedsHydePark'));
 const LeedsHeadingley = lazy(() => import('./pages/town/LeedsHeadingley'));
 const LeedsWoodhouse = lazy(() => import('./pages/town/LeedsWoodhouse'));
@@ -1258,7 +1295,6 @@ const LeedsDeanHead = lazy(() => import('./pages/town/LeedsDeanHead'));
 const LeedsScotland = lazy(() => import('./pages/town/LeedsScotland'));
 const LeedsOakwood = lazy(() => import('./pages/town/LeedsOakwood'));
 const LeedsFarnley = lazy(() => import('./pages/town/LeedsFarnley'));
-const Leicester = lazy(() => import('./pages/town/Leicester'));
 const LeicesterClarendonPark = lazy(() => import('./pages/town/LeicesterClarendonPark'));
 const LeicesterLeicesterCityCentre = lazy(() => import('./pages/town/LeicesterLeicesterCityCentre'));
 const LeicesterKnighton = lazy(() => import('./pages/town/LeicesterKnighton'));
@@ -1292,7 +1328,6 @@ const LeicesterLeicesterFrith = lazy(() => import('./pages/town/LeicesterLeicest
 const LeicesterAnsteyPastures = lazy(() => import('./pages/town/LeicesterAnsteyPastures'));
 const LeicesterBraunstone = lazy(() => import('./pages/town/LeicesterBraunstone'));
 const LeicesterSpencefield = lazy(() => import('./pages/town/LeicesterSpencefield'));
-const Lincoln = lazy(() => import('./pages/town/Lincoln'));
 const LincolnBrayfordSideNorth = lazy(() => import('./pages/town/LincolnBrayfordSideNorth'));
 const LincolnBrayfordWharfNorth = lazy(() => import('./pages/town/LincolnBrayfordWharfNorth'));
 const LincolnNewland = lazy(() => import('./pages/town/LincolnNewland'));
@@ -1308,7 +1343,6 @@ const LincolnScampton = lazy(() => import('./pages/town/LincolnScampton'));
 const LincolnBracebridge = lazy(() => import('./pages/town/LincolnBracebridge'));
 const LincolnBurtonWaters = lazy(() => import('./pages/town/LincolnBurtonWaters'));
 const LincolnFallows = lazy(() => import('./pages/town/LincolnFallows'));
-const Liverpool = lazy(() => import('./pages/town/Liverpool'));
 const LiverpoolWavertree = lazy(() => import('./pages/town/LiverpoolWavertree'));
 const LiverpoolKensington = lazy(() => import('./pages/town/LiverpoolKensington'));
 const LiverpoolAigburth = lazy(() => import('./pages/town/LiverpoolAigburth'));
@@ -1349,7 +1383,6 @@ const LiverpoolBearbrands = lazy(() => import('./pages/town/LiverpoolBearbrands'
 const LiverpoolFarthingWood = lazy(() => import('./pages/town/LiverpoolFarthingWood'));
 const LiverpoolHillfoot = lazy(() => import('./pages/town/LiverpoolHillfoot'));
 const LiverpoolSuttonOak = lazy(() => import('./pages/town/LiverpoolSuttonOak'));
-const London = lazy(() => import('./pages/town/London'));
 const LondonWansteadParkStation = lazy(() => import('./pages/town/LondonWansteadParkStation'));
 const LondonCroydon = lazy(() => import('./pages/town/LondonCroydon'));
 const LondonKingsRoadArea = lazy(() => import('./pages/town/LondonKingsRoadArea'));
@@ -1404,7 +1437,6 @@ const LondonElephantnCastleNorthernStation = lazy(() => import('./pages/town/Lon
 const LondonHeronQuaysStation = lazy(() => import('./pages/town/LondonHeronQuaysStation'));
 const LondonMileEndStation = lazy(() => import('./pages/town/LondonMileEndStation'));
 const LondonBeddingtonLaneTramStop = lazy(() => import('./pages/town/LondonBeddingtonLaneTramStop'));
-const Loughborough = lazy(() => import('./pages/town/Loughborough'));
 const LoughboroughBuckHill = lazy(() => import('./pages/town/LoughboroughBuckHill'));
 const LoughboroughCowHill = lazy(() => import('./pages/town/LoughboroughCowHill'));
 const LoughboroughSouthfieldsPark = lazy(() => import('./pages/town/LoughboroughSouthfieldsPark'));
@@ -1419,7 +1451,6 @@ const LoughboroughSileby = lazy(() => import('./pages/town/LoughboroughSileby'))
 const LoughboroughFinneyHill = lazy(() => import('./pages/town/LoughboroughFinneyHill'));
 const LoughboroughParkHill = lazy(() => import('./pages/town/LoughboroughParkHill'));
 const LoughboroughNanpantan = lazy(() => import('./pages/town/LoughboroughNanpantan'));
-const Luton = lazy(() => import('./pages/town/Luton'));
 const LutonHyde = lazy(() => import('./pages/town/LutonHyde'));
 const LutonLutonHoo = lazy(() => import('./pages/town/LutonLutonHoo'));
 const LutonNewmillEnd = lazy(() => import('./pages/town/LutonNewmillEnd'));
@@ -1429,7 +1460,6 @@ const LutonNewTown = lazy(() => import('./pages/town/LutonNewTown'));
 const LutonParkTown = lazy(() => import('./pages/town/LutonParkTown'));
 const LutonWardown = lazy(() => import('./pages/town/LutonWardown'));
 const LutonWinsdonHill = lazy(() => import('./pages/town/LutonWinsdonHill'));
-const Manchester = lazy(() => import('./pages/town/Manchester'));
 const ManchesterSouthManchester = lazy(() => import('./pages/town/ManchesterSouthManchester'));
 const ManchesterAlmaPark = lazy(() => import('./pages/town/ManchesterAlmaPark'));
 const ManchesterAlbertPark = lazy(() => import('./pages/town/ManchesterAlbertPark'));
@@ -1545,7 +1575,6 @@ const ManchesterLowerIrlam = lazy(() => import('./pages/town/ManchesterLowerIrla
 const ManchesterTheCity = lazy(() => import('./pages/town/ManchesterTheCity'));
 const ManchesterWoodsEnd = lazy(() => import('./pages/town/ManchesterWoodsEnd'));
 const ManchesterTraffordDistributionCentre = lazy(() => import('./pages/town/ManchesterTraffordDistributionCentre'));
-const Middlesbrough = lazy(() => import('./pages/town/Middlesbrough'));
 const MiddlesbroughTeesside = lazy(() => import('./pages/town/MiddlesbroughTeesside'));
 const MiddlesbroughAyresome = lazy(() => import('./pages/town/MiddlesbroughAyresome'));
 const MiddlesbroughGroveHill = lazy(() => import('./pages/town/MiddlesbroughGroveHill'));
@@ -1556,7 +1585,6 @@ const MiddlesbroughLinthorpe = lazy(() => import('./pages/town/MiddlesbroughLint
 const MiddlesbroughBattersbyStation = lazy(() => import('./pages/town/MiddlesbroughBattersbyStation'));
 const MiddlesbroughNorthOrmesby = lazy(() => import('./pages/town/MiddlesbroughNorthOrmesby'));
 const MiddlesbroughWhinneyBanks = lazy(() => import('./pages/town/MiddlesbroughWhinneyBanks'));
-const NewcastleuponTyne = lazy(() => import('./pages/town/NewcastleuponTyne'));
 const NewcastleuponTyneNewcastleUponTyne = lazy(() => import('./pages/town/NewcastleuponTyneNewcastleUponTyne'));
 const NewcastleuponTyneJesmond = lazy(() => import('./pages/town/NewcastleuponTyneJesmond'));
 const NewcastleuponTyneNewcastleCityCentre = lazy(() => import('./pages/town/NewcastleuponTyneNewcastleCityCentre'));
@@ -1645,7 +1673,6 @@ const NewcastleuponTyneSouthBenwell = lazy(() => import('./pages/town/Newcastleu
 const NewcastleuponTyneRegentCentre = lazy(() => import('./pages/town/NewcastleuponTyneRegentCentre'));
 const NewcastleuponTyneRegentFarmEstate = lazy(() => import('./pages/town/NewcastleuponTyneRegentFarmEstate'));
 const NewcastleuponTynePendowerEstate = lazy(() => import('./pages/town/NewcastleuponTynePendowerEstate'));
-const Newport = lazy(() => import('./pages/town/Newport'));
 const NewportCastleView = lazy(() => import('./pages/town/NewportCastleView'));
 const NewportChetwyndEnd = lazy(() => import('./pages/town/NewportChetwyndEnd'));
 const NewportEdgmondManor = lazy(() => import('./pages/town/NewportEdgmondManor'));
@@ -1668,7 +1695,6 @@ const NewportChurchAston = lazy(() => import('./pages/town/NewportChurchAston'))
 const NewportLilleshall = lazy(() => import('./pages/town/NewportLilleshall'));
 const NewportEdgmond = lazy(() => import('./pages/town/NewportEdgmond'));
 const NewportTibberton = lazy(() => import('./pages/town/NewportTibberton'));
-const Northampton = lazy(() => import('./pages/town/Northampton'));
 const NorthamptonTownCentre = lazy(() => import('./pages/town/NorthamptonTownCentre'));
 const NorthamptonKingsleyPark = lazy(() => import('./pages/town/NorthamptonKingsleyPark'));
 const NorthamptonPhippsville = lazy(() => import('./pages/town/NorthamptonPhippsville'));
@@ -1698,7 +1724,6 @@ const NorthamptonLinksView = lazy(() => import('./pages/town/NorthamptonLinksVie
 const NorthamptonMillMeadow = lazy(() => import('./pages/town/NorthamptonMillMeadow'));
 const NorthamptonPoetsCorner = lazy(() => import('./pages/town/NorthamptonPoetsCorner'));
 const NorthamptonBlackLionHill = lazy(() => import('./pages/town/NorthamptonBlackLionHill'));
-const Norwich = lazy(() => import('./pages/town/Norwich'));
 const NorwichMarlpitEstate = lazy(() => import('./pages/town/NorwichMarlpitEstate'));
 const NorwichLarkmanEstate = lazy(() => import('./pages/town/NorwichLarkmanEstate'));
 const NorwichEarlham = lazy(() => import('./pages/town/NorwichEarlham'));
@@ -1733,7 +1758,6 @@ const NorwichCostesseyPark = lazy(() => import('./pages/town/NorwichCostesseyPar
 const NorwichMousehold = lazy(() => import('./pages/town/NorwichMousehold'));
 const NorwichTrowseMillgate = lazy(() => import('./pages/town/NorwichTrowseMillgate'));
 const NorwichTuckswood = lazy(() => import('./pages/town/NorwichTuckswood'));
-const Nottingham = lazy(() => import('./pages/town/Nottingham'));
 const NottinghamLenton = lazy(() => import('./pages/town/NottinghamLenton'));
 const NottinghamOldLenton = lazy(() => import('./pages/town/NottinghamOldLenton'));
 const NottinghamOldRadford = lazy(() => import('./pages/town/NottinghamOldRadford'));
@@ -1795,7 +1819,6 @@ const NottinghamStapleford = lazy(() => import('./pages/town/NottinghamStaplefor
 const NottinghamWilford = lazy(() => import('./pages/town/NottinghamWilford'));
 const NottinghamWhitemoor = lazy(() => import('./pages/town/NottinghamWhitemoor'));
 const NottinghamNetherfieldStation = lazy(() => import('./pages/town/NottinghamNetherfieldStation'));
-const Ormskirk = lazy(() => import('./pages/town/Ormskirk'));
 const OrmskirkChurchFieldGardens = lazy(() => import('./pages/town/OrmskirkChurchFieldGardens'));
 const OrmskirkAughtonPark = lazy(() => import('./pages/town/OrmskirkAughtonPark'));
 const OrmskirkPrioryGrove = lazy(() => import('./pages/town/OrmskirkPrioryGrove'));
@@ -1806,7 +1829,6 @@ const OrmskirkLathom = lazy(() => import('./pages/town/OrmskirkLathom'));
 const OrmskirkScarisbrick = lazy(() => import('./pages/town/OrmskirkScarisbrick'));
 const OrmskirkBurscough = lazy(() => import('./pages/town/OrmskirkBurscough'));
 const OrmskirkOrmskirkStation = lazy(() => import('./pages/town/OrmskirkOrmskirkStation'));
-const Oxford = lazy(() => import('./pages/town/Oxford'));
 const OxfordCowley = lazy(() => import('./pages/town/OxfordCowley'));
 const OxfordTempleCowley = lazy(() => import('./pages/town/OxfordTempleCowley'));
 const OxfordStClements = lazy(() => import('./pages/town/OxfordStClements'));
@@ -1853,9 +1875,7 @@ const OxfordRockleyHeath = lazy(() => import('./pages/town/OxfordRockleyHeath'))
 const OxfordDeanCourt = lazy(() => import('./pages/town/OxfordDeanCourt'));
 const OxfordLittlemore = lazy(() => import('./pages/town/OxfordLittlemore'));
 const OxfordBlackbirdLeys = lazy(() => import('./pages/town/OxfordBlackbirdLeys'));
-const Paisley = lazy(() => import('./pages/town/Paisley'));
 const PaisleyShortroods = lazy(() => import('./pages/town/PaisleyShortroods'));
-const Plymouth = lazy(() => import('./pages/town/Plymouth'));
 const PlymouthMutley = lazy(() => import('./pages/town/PlymouthMutley'));
 const PlymouthPennycomequick = lazy(() => import('./pages/town/PlymouthPennycomequick'));
 const PlymouthLipson = lazy(() => import('./pages/town/PlymouthLipson'));
@@ -1880,7 +1900,6 @@ const PlymouthStoke = lazy(() => import('./pages/town/PlymouthStoke'));
 const PlymouthPlymstock = lazy(() => import('./pages/town/PlymouthPlymstock'));
 const PlymouthPrinceRock = lazy(() => import('./pages/town/PlymouthPrinceRock'));
 const PlymouthElburton = lazy(() => import('./pages/town/PlymouthElburton'));
-const Pontypridd = lazy(() => import('./pages/town/Pontypridd'));
 const PontypriddTreforest = lazy(() => import('./pages/town/PontypriddTreforest'));
 const PontypriddTheGraig = lazy(() => import('./pages/town/PontypriddTheGraig'));
 const PontypriddTrehopcyn = lazy(() => import('./pages/town/PontypriddTrehopcyn'));
@@ -1892,7 +1911,6 @@ const PontypriddGlynTaf = lazy(() => import('./pages/town/PontypriddGlynTaf'));
 const PontypriddRhydyfelin = lazy(() => import('./pages/town/PontypriddRhydyfelin'));
 const PontypriddRhydfelen = lazy(() => import('./pages/town/PontypriddRhydfelen'));
 const PontypriddGlanBad = lazy(() => import('./pages/town/PontypriddGlanBad'));
-const Poole = lazy(() => import('./pages/town/Poole'));
 const PooleTalbotVillage = lazy(() => import('./pages/town/PooleTalbotVillage'));
 const PooleBranksome = lazy(() => import('./pages/town/PooleBranksome'));
 const PooleParkstone = lazy(() => import('./pages/town/PooleParkstone'));
@@ -1903,7 +1921,6 @@ const PooleStAldhelms = lazy(() => import('./pages/town/PooleStAldhelms'));
 const PooleBranksomePark = lazy(() => import('./pages/town/PooleBranksomePark'));
 const PooleCanfordCliffs = lazy(() => import('./pages/town/PooleCanfordCliffs'));
 const PooleLowerParkstone = lazy(() => import('./pages/town/PooleLowerParkstone'));
-const Portsmouth = lazy(() => import('./pages/town/Portsmouth'));
 const PortsmouthCopnor = lazy(() => import('./pages/town/PortsmouthCopnor'));
 const PortsmouthPortsea = lazy(() => import('./pages/town/PortsmouthPortsea'));
 const PortsmouthOldPortsmouth = lazy(() => import('./pages/town/PortsmouthOldPortsmouth'));
@@ -1924,7 +1941,6 @@ const PortsmouthGunwharfQuays = lazy(() => import('./pages/town/PortsmouthGunwha
 const PortsmouthStamshaw = lazy(() => import('./pages/town/PortsmouthStamshaw'));
 const PortsmouthWhaleIsland = lazy(() => import('./pages/town/PortsmouthWhaleIsland'));
 const PortsmouthTipner = lazy(() => import('./pages/town/PortsmouthTipner'));
-const Preston = lazy(() => import('./pages/town/Preston'));
 const PrestonPlungington = lazy(() => import('./pages/town/PrestonPlungington'));
 const PrestonAdelphi = lazy(() => import('./pages/town/PrestonAdelphi'));
 const PrestonAvenham = lazy(() => import('./pages/town/PrestonAvenham'));
@@ -1950,7 +1966,6 @@ const PrestonGillerFold = lazy(() => import('./pages/town/PrestonGillerFold'));
 const PrestonKingsfold = lazy(() => import('./pages/town/PrestonKingsfold'));
 const PrestonGreavesTown = lazy(() => import('./pages/town/PrestonGreavesTown'));
 const PrestonLostockHallStation = lazy(() => import('./pages/town/PrestonLostockHallStation'));
-const Reading = lazy(() => import('./pages/town/Reading'));
 const ReadingEarley = lazy(() => import('./pages/town/ReadingEarley'));
 const ReadingWhitley = lazy(() => import('./pages/town/ReadingWhitley'));
 const ReadingSouthernHill = lazy(() => import('./pages/town/ReadingSouthernHill'));
@@ -1969,7 +1984,6 @@ const ReadingCaversham = lazy(() => import('./pages/town/ReadingCaversham'));
 const ReadingLowerCaversham = lazy(() => import('./pages/town/ReadingLowerCaversham'));
 const ReadingKingsMeadows = lazy(() => import('./pages/town/ReadingKingsMeadows'));
 const ReadingPoundGreen = lazy(() => import('./pages/town/ReadingPoundGreen'));
-const Salford = lazy(() => import('./pages/town/Salford'));
 const SalfordSeedley = lazy(() => import('./pages/town/SalfordSeedley'));
 const SalfordWallness = lazy(() => import('./pages/town/SalfordWallness'));
 const SalfordPendleton = lazy(() => import('./pages/town/SalfordPendleton'));
@@ -1999,7 +2013,6 @@ const SalfordCheetham = lazy(() => import('./pages/town/SalfordCheetham'));
 const SalfordHighBroughton = lazy(() => import('./pages/town/SalfordHighBroughton'));
 const SalfordSalfordQuays = lazy(() => import('./pages/town/SalfordSalfordQuays'));
 const SalfordHigherBroughton = lazy(() => import('./pages/town/SalfordHigherBroughton'));
-const Sheffield = lazy(() => import('./pages/town/Sheffield'));
 const SheffieldEcclesallRoadArea = lazy(() => import('./pages/town/SheffieldEcclesallRoadArea'));
 const SheffieldCrookesmoor = lazy(() => import('./pages/town/SheffieldCrookesmoor'));
 const SheffieldEcclesall = lazy(() => import('./pages/town/SheffieldEcclesall'));
@@ -2070,7 +2083,6 @@ const SheffieldHillsborough = lazy(() => import('./pages/town/SheffieldHillsboro
 const SheffieldRanmoor = lazy(() => import('./pages/town/SheffieldRanmoor'));
 const SheffieldMillhouses = lazy(() => import('./pages/town/SheffieldMillhouses'));
 const SheffieldHydeParkTramStop = lazy(() => import('./pages/town/SheffieldHydeParkTramStop'));
-const Southampton = lazy(() => import('./pages/town/Southampton'));
 const SouthamptonPortswood = lazy(() => import('./pages/town/SouthamptonPortswood'));
 const SouthamptonWhithedWood = lazy(() => import('./pages/town/SouthamptonWhithedWood'));
 const SouthamptonSouthamptonCommon = lazy(() => import('./pages/town/SouthamptonSouthamptonCommon'));
@@ -2136,8 +2148,6 @@ const SouthamptonMoorgreen = lazy(() => import('./pages/town/SouthamptonMoorgree
 const SouthamptonSholing = lazy(() => import('./pages/town/SouthamptonSholing'));
 const SouthamptonHatchBottom = lazy(() => import('./pages/town/SouthamptonHatchBottom'));
 const SouthamptonWoolston = lazy(() => import('./pages/town/SouthamptonWoolston'));
-const StAndrews = lazy(() => import('./pages/town/StAndrews'));
-const Stirling = lazy(() => import('./pages/town/Stirling'));
 const StirlingStirlingCounty = lazy(() => import('./pages/town/StirlingStirlingCounty'));
 const StirlingCambuskenneth = lazy(() => import('./pages/town/StirlingCambuskenneth'));
 const StirlingRaploch = lazy(() => import('./pages/town/StirlingRaploch'));
@@ -2164,7 +2174,6 @@ const StokeonTrentOakHill = lazy(() => import('./pages/town/StokeonTrentOakHill'
 const StokeonTrentHarpfields = lazy(() => import('./pages/town/StokeonTrentHarpfields'));
 const StokeonTrentThePotteries = lazy(() => import('./pages/town/StokeonTrentThePotteries'));
 const StokeonTrentBarlastonStation = lazy(() => import('./pages/town/StokeonTrentBarlastonStation'));
-const Sunderland = lazy(() => import('./pages/town/Sunderland'));
 const SunderlandAshbrooke = lazy(() => import('./pages/town/SunderlandAshbrooke'));
 const SunderlandTunstallVale = lazy(() => import('./pages/town/SunderlandTunstallVale'));
 const SunderlandThornhill = lazy(() => import('./pages/town/SunderlandThornhill'));
@@ -2232,7 +2241,6 @@ const SunderlandWhitburnVillage = lazy(() => import('./pages/town/SunderlandWhit
 const SunderlandWitherwack = lazy(() => import('./pages/town/SunderlandWitherwack'));
 const SunderlandHighPlains = lazy(() => import('./pages/town/SunderlandHighPlains'));
 const SunderlandLowFord = lazy(() => import('./pages/town/SunderlandLowFord'));
-const Swansea = lazy(() => import('./pages/town/Swansea'));
 const SwanseaBrynmill = lazy(() => import('./pages/town/SwanseaBrynmill'));
 const SwanseaUplands = lazy(() => import('./pages/town/SwanseaUplands'));
 const SwanseaTheMarina = lazy(() => import('./pages/town/SwanseaTheMarina'));
@@ -2254,11 +2262,9 @@ const SwanseaSkettyPark = lazy(() => import('./pages/town/SwanseaSkettyPark'));
 const SwanseaParcbeck = lazy(() => import('./pages/town/SwanseaParcbeck'));
 const SwanseaTycoch = lazy(() => import('./pages/town/SwanseaTycoch'));
 const SwanseaFforestfach = lazy(() => import('./pages/town/SwanseaFforestfach'));
-const Twickenham = lazy(() => import('./pages/town/Twickenham'));
 const TwickenhamWhitton = lazy(() => import('./pages/town/TwickenhamWhitton'));
 const TwickenhamMaswellPark = lazy(() => import('./pages/town/TwickenhamMaswellPark'));
 const TwickenhamWhittonPark = lazy(() => import('./pages/town/TwickenhamWhittonPark'));
-const Uxbridge = lazy(() => import('./pages/town/Uxbridge'));
 const UxbridgeColhamGreen = lazy(() => import('./pages/town/UxbridgeColhamGreen'));
 const UxbridgeGouldsGreen = lazy(() => import('./pages/town/UxbridgeGouldsGreen'));
 const UxbridgeUxbridgeCommon = lazy(() => import('./pages/town/UxbridgeUxbridgeCommon'));
@@ -2266,7 +2272,6 @@ const UxbridgeCowleyPeachey = lazy(() => import('./pages/town/UxbridgeCowleyPeac
 const UxbridgeWillowbank = lazy(() => import('./pages/town/UxbridgeWillowbank'));
 const UxbridgeCowley = lazy(() => import('./pages/town/UxbridgeCowley'));
 const UxbridgeHillingdon = lazy(() => import('./pages/town/UxbridgeHillingdon'));
-const Winchester = lazy(() => import('./pages/town/Winchester'));
 const WinchesterStanmore = lazy(() => import('./pages/town/WinchesterStanmore'));
 const WinchesterSleepersHill = lazy(() => import('./pages/town/WinchesterSleepersHill'));
 const WinchesterOramsArbour = lazy(() => import('./pages/town/WinchesterOramsArbour'));
@@ -2306,7 +2311,6 @@ const WinchesterAndoverRoad = lazy(() => import('./pages/town/WinchesterAndoverR
 const WinchesterGreenacre = lazy(() => import('./pages/town/WinchesterGreenacre'));
 const WinchesterHarestock = lazy(() => import('./pages/town/WinchesterHarestock'));
 const WinchesterWeere = lazy(() => import('./pages/town/WinchesterWeere'));
-const Wolverhampton = lazy(() => import('./pages/town/Wolverhampton'));
 const WolverhamptonNewbridge = lazy(() => import('./pages/town/WolverhamptonNewbridge'));
 const WolverhamptonTettenhall = lazy(() => import('./pages/town/WolverhamptonTettenhall'));
 const WolverhamptonAldersley = lazy(() => import('./pages/town/WolverhamptonAldersley'));
@@ -2315,7 +2319,6 @@ const WolverhamptonBlakeleyGreen = lazy(() => import('./pages/town/Wolverhampton
 const WolverhamptonPalmersCross = lazy(() => import('./pages/town/WolverhamptonPalmersCross'));
 const WolverhamptonParkDale = lazy(() => import('./pages/town/WolverhamptonParkDale'));
 const WolverhamptonWhitmoreReans = lazy(() => import('./pages/town/WolverhamptonWhitmoreReans'));
-const Worcester = lazy(() => import('./pages/town/Worcester'));
 const WorcesterStJohns = lazy(() => import('./pages/town/WorcesterStJohns'));
 const WorcesterUpperBroadheath = lazy(() => import('./pages/town/WorcesterUpperBroadheath'));
 const WorcesterBroadmoorGreen = lazy(() => import('./pages/town/WorcesterBroadmoorGreen'));
@@ -2354,7 +2357,6 @@ const WorcesterGreenStreet = lazy(() => import('./pages/town/WorcesterGreenStree
 const WorcesterPixham = lazy(() => import('./pages/town/WorcesterPixham'));
 const WorcesterStonehall = lazy(() => import('./pages/town/WorcesterStonehall'));
 const WorcesterNapleton = lazy(() => import('./pages/town/WorcesterNapleton'));
-const Wrexham = lazy(() => import('./pages/town/Wrexham'));
 const WrexhamGardenVillage = lazy(() => import('./pages/town/WrexhamGardenVillage'));
 const WrexhamKingsMills = lazy(() => import('./pages/town/WrexhamKingsMills'));
 const WrexhamOldRhosrobin = lazy(() => import('./pages/town/WrexhamOldRhosrobin'));
@@ -2374,7 +2376,6 @@ const WrexhamTheDunks = lazy(() => import('./pages/town/WrexhamTheDunks'));
 const WrexhamTheLodge = lazy(() => import('./pages/town/WrexhamTheLodge'));
 const WrexhamWrexhamMaelor = lazy(() => import('./pages/town/WrexhamWrexhamMaelor'));
 const WrexhamLlwynOnn = lazy(() => import('./pages/town/WrexhamLlwynOnn'));
-const York = lazy(() => import('./pages/town/York'));
 const YorkTangHall = lazy(() => import('./pages/town/YorkTangHall'));
 const YorkGarrowHill = lazy(() => import('./pages/town/YorkGarrowHill'));
 const YorkHeworth = lazy(() => import('./pages/town/YorkHeworth'));
@@ -2423,7 +2424,91 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />          
           {/* routeSectionStart*/}                    
+
 <Route path="student-accommodation-in-aberdeen" element={<Aberdeen/>}/>
+<Route path="student-accommodation-in-aberystwyth" element={<Aberystwyth/>}/>
+<Route path="student-accommodation-in-bangor" element={<Bangor/>}/>
+<Route path="student-accommodation-in-bath" element={<Bath/>}/>
+<Route path="student-accommodation-in-belfast" element={<Belfast/>}/>
+<Route path="student-accommodation-in-birmingham" element={<Birmingham/>}/>
+<Route path="student-accommodation-in-bolton" element={<Bolton/>}/>
+<Route path="student-accommodation-in-bradford" element={<Bradford/>}/>
+<Route path="student-accommodation-in-brighton" element={<Brighton/>}/>
+<Route path="student-accommodation-in-bristol" element={<Bristol/>}/>
+<Route path="student-accommodation-in-buckingham" element={<Buckingham/>}/>
+<Route path="student-accommodation-in-cambridge" element={<Cambridge/>}/>
+<Route path="student-accommodation-in-canterbury" element={<Canterbury/>}/>
+<Route path="student-accommodation-in-cardiff" element={<Cardiff/>}/>
+<Route path="student-accommodation-in-carlisle" element={<Carlisle/>}/>
+<Route path="student-accommodation-in-carmarthen" element={<Carmarthen/>}/>
+<Route path="student-accommodation-in-chelmsford" element={<Chelmsford/>}/>
+<Route path="student-accommodation-in-cheltenham" element={<Cheltenham/>}/>
+<Route path="student-accommodation-in-chester" element={<Chester/>}/>
+<Route path="student-accommodation-in-chichester" element={<Chichester/>}/>
+<Route path="student-accommodation-in-cirencester" element={<Cirencester/>}/>
+<Route path="student-accommodation-in-colchester" element={<Colchester/>}/>
+<Route path="student-accommodation-in-coleraine" element={<Coleraine/>}/>
+<Route path="student-accommodation-in-coventry" element={<Coventry/>}/>
+<Route path="student-accommodation-in-cranfield" element={<Cranfield/>}/>
+<Route path="student-accommodation-in-derby" element={<Derby/>}/>
+<Route path="student-accommodation-in-dundee" element={<Dundee/>}/>
+<Route path="student-accommodation-in-durham" element={<Durham/>}/>
+<Route path="student-accommodation-in-ealing" element={<Ealing/>}/>
+<Route path="student-accommodation-in-edinburgh" element={<Edinburgh/>}/>
+<Route path="student-accommodation-in-egham" element={<Egham/>}/>
+<Route path="student-accommodation-in-exeter" element={<Exeter/>}/>
+<Route path="student-accommodation-in-falmouth" element={<Falmouth/>}/>
+<Route path="student-accommodation-in-farnham" element={<Farnham/>}/>
+<Route path="student-accommodation-in-glasgow" element={<Glasgow/>}/>
+<Route path="student-accommodation-in-gloucester" element={<Gloucester/>}/>
+<Route path="student-accommodation-in-guildford" element={<Guildford/>}/>
+<Route path="student-accommodation-in-hatfield" element={<Hatfield/>}/>
+<Route path="student-accommodation-in-high-wycombe" element={<HighWycombe/>}/>
+<Route path="student-accommodation-in-huddersfield" element={<Huddersfield/>}/>
+<Route path="student-accommodation-in-hull" element={<Hull/>}/>
+<Route path="student-accommodation-in-inverness" element={<Inverness/>}/>
+<Route path="student-accommodation-in-ipswich" element={<Ipswich/>}/>
+<Route path="student-accommodation-in-keele" element={<Keele/>}/>
+<Route path="student-accommodation-in-kingston-upon-thames" element={<KingstonuponThames/>}/>
+<Route path="student-accommodation-in-lancaster" element={<Lancaster/>}/>
+<Route path="student-accommodation-in-leeds" element={<Leeds/>}/>
+<Route path="student-accommodation-in-leicester" element={<Leicester/>}/>
+<Route path="student-accommodation-in-lincoln" element={<Lincoln/>}/>
+<Route path="student-accommodation-in-liverpool" element={<Liverpool/>}/>
+<Route path="student-accommodation-in-london" element={<London/>}/>
+<Route path="student-accommodation-in-loughborough" element={<Loughborough/>}/>
+<Route path="student-accommodation-in-luton" element={<Luton/>}/>
+<Route path="student-accommodation-in-manchester" element={<Manchester/>}/>
+<Route path="student-accommodation-in-middlesbrough" element={<Middlesbrough/>}/>
+<Route path="student-accommodation-in-newcastle-upon-tyne" element={<NewcastleuponTyne/>}/>
+<Route path="student-accommodation-in-newport" element={<Newport/>}/>
+<Route path="student-accommodation-in-northampton" element={<Northampton/>}/>
+<Route path="student-accommodation-in-norwich" element={<Norwich/>}/>
+<Route path="student-accommodation-in-nottingham" element={<Nottingham/>}/>
+<Route path="student-accommodation-in-ormskirk" element={<Ormskirk/>}/>
+<Route path="student-accommodation-in-oxford" element={<Oxford/>}/>
+<Route path="student-accommodation-in-paisley" element={<Paisley/>}/>
+<Route path="student-accommodation-in-plymouth" element={<Plymouth/>}/>
+<Route path="student-accommodation-in-pontypridd" element={<Pontypridd/>}/>
+<Route path="student-accommodation-in-poole" element={<Poole/>}/>
+<Route path="student-accommodation-in-portsmouth" element={<Portsmouth/>}/>
+<Route path="student-accommodation-in-preston" element={<Preston/>}/>
+<Route path="student-accommodation-in-reading" element={<Reading/>}/>
+<Route path="student-accommodation-in-salford" element={<Salford/>}/>
+<Route path="student-accommodation-in-sheffield" element={<Sheffield/>}/>
+<Route path="student-accommodation-in-southampton" element={<Southampton/>}/>
+<Route path="student-accommodation-in-st-andrews" element={<StAndrews/>}/>
+<Route path="student-accommodation-in-stirling" element={<Stirling/>}/>
+<Route path="student-accommodation-in-stoke-on-trent" element={<StokeonTrent/>}/>
+<Route path="student-accommodation-in-sunderland" element={<Sunderland/>}/>
+<Route path="student-accommodation-in-swansea" element={<Swansea/>}/>
+<Route path="student-accommodation-in-twickenham" element={<Twickenham/>}/>
+<Route path="student-accommodation-in-uxbridge" element={<Uxbridge/>}/>
+<Route path="student-accommodation-in-winchester" element={<Winchester/>}/>
+<Route path="student-accommodation-in-wolverhampton" element={<Wolverhampton/>}/>
+<Route path="student-accommodation-in-worcester" element={<Worcester/>}/>
+<Route path="student-accommodation-in-wrexham" element={<Wrexham/>}/>
+<Route path="student-accommodation-in-york" element={<York/>}/>
 <Route path="student-accommodation-in-aberdeen-city-centre-aberdeen" element={<AberdeenAberdeenCityCentre/>}/>
 <Route path="student-accommodation-in-middlefield-aberdeen" element={<AberdeenMiddlefield/>}/>
 <Route path="student-accommodation-in-ruthrieston-aberdeen" element={<AberdeenRuthrieston/>}/>
@@ -2454,7 +2539,6 @@ function App() {
 <Route path="student-accommodation-in-wedderhill-aberdeen" element={<AberdeenWedderhill/>}/>
 <Route path="student-accommodation-in-dyce-aberdeen" element={<AberdeenDyce/>}/>
 <Route path="student-accommodation-in-stoneywood-aberdeen" element={<AberdeenStoneywood/>}/>
-<Route path="student-accommodation-in-aberystwyth" element={<Aberystwyth/>}/>
 <Route path="student-accommodation-in-penparke-aberystwyth" element={<AberystwythPenparke/>}/>
 <Route path="student-accommodation-in-waunfawr-aberystwyth" element={<AberystwythWaunfawr/>}/>
 <Route path="student-accommodation-in-gelliangharad-aberystwyth" element={<AberystwythGelliangharad/>}/>
@@ -2472,7 +2556,6 @@ function App() {
 <Route path="student-accommodation-in-pen-rhiw-newydd-aberystwyth" element={<AberystwythPenRhiwNewydd/>}/>
 <Route path="student-accommodation-in-troed-yr-hen-riw-aberystwyth" element={<AberystwythTroedYrHenRiw/>}/>
 <Route path="student-accommodation-in-south-gate-aberystwyth" element={<AberystwythSouthGate/>}/>
-<Route path="student-accommodation-in-bangor" element={<Bangor/>}/>
 <Route path="student-accommodation-in-gardd-denman-bangor" element={<BangorGarddDenman/>}/>
 <Route path="student-accommodation-in-nant-porth-bangor" element={<BangorNantPorth/>}/>
 <Route path="student-accommodation-in-caellepa-bangor" element={<BangorCaellepa/>}/>
@@ -2495,7 +2578,6 @@ function App() {
 <Route path="student-accommodation-in-parc-vaynol-bangor" element={<BangorParcVaynol/>}/>
 <Route path="student-accommodation-in-bryn-bangor" element={<BangorBryn/>}/>
 <Route path="student-accommodation-in-parc-penrhyn-bangor" element={<BangorParcPenrhyn/>}/>
-<Route path="student-accommodation-in-bath" element={<Bath/>}/>
 <Route path="student-accommodation-in-oldfield-park-bath" element={<BathOldfieldPark/>}/>
 <Route path="student-accommodation-in-bath-spa-bath" element={<BathBathSpa/>}/>
 <Route path="student-accommodation-in-sladebrook-bath" element={<BathSladebrook/>}/>
@@ -2556,8 +2638,6 @@ function App() {
 <Route path="student-accommodation-in-ralph-allen-park-bath" element={<BathRalphAllenPark/>}/>
 <Route path="student-accommodation-in-combe-down-bath" element={<BathCombeDown/>}/>
 <Route path="student-accommodation-in-tyning-bath" element={<BathTyning/>}/>
-<Route path="student-accommodation-in-belfast" element={<Belfast/>}/>
-<Route path="student-accommodation-in-birmingham" element={<Birmingham/>}/>
 <Route path="student-accommodation-in-selly-oak-birmingham" element={<BirminghamSellyOak/>}/>
 <Route path="student-accommodation-in-stirchley-street-birmingham" element={<BirminghamStirchleyStreet/>}/>
 <Route path="student-accommodation-in-ten-acres-birmingham" element={<BirminghamTenAcres/>}/>
@@ -2632,7 +2712,6 @@ function App() {
 <Route path="student-accommodation-in-wake-green-birmingham" element={<BirminghamWakeGreen/>}/>
 <Route path="student-accommodation-in-bearwood-birmingham" element={<BirminghamBearwood/>}/>
 <Route path="student-accommodation-in-northfield-station-birmingham" element={<BirminghamNorthfieldStation/>}/>
-<Route path="student-accommodation-in-bolton" element={<Bolton/>}/>
 <Route path="student-accommodation-in-dixon-green-bolton" element={<BoltonDixonGreen/>}/>
 <Route path="student-accommodation-in-farnworth-bolton" element={<BoltonFarnworth/>}/>
 <Route path="student-accommodation-in-new-bury-bolton" element={<BoltonNewBury/>}/>
@@ -2649,7 +2728,6 @@ function App() {
 <Route path="student-accommodation-in-tonge-fold-bolton" element={<BoltonTongeFold/>}/>
 <Route path="student-accommodation-in-top-o-th-brow-bolton" element={<BoltonTopOThBrow/>}/>
 <Route path="student-accommodation-in-burnden-bolton" element={<BoltonBurnden/>}/>
-<Route path="student-accommodation-in-bradford" element={<Bradford/>}/>
 <Route path="student-accommodation-in-princeville-bradford" element={<BradfordPrinceville/>}/>
 <Route path="student-accommodation-in-dirk-hill-bradford" element={<BradfordDirkHill/>}/>
 <Route path="student-accommodation-in-chapel-green-bradford" element={<BradfordChapelGreen/>}/>
@@ -2671,8 +2749,6 @@ function App() {
 <Route path="student-accommodation-in-scholemoor-bradford" element={<BradfordScholemoor/>}/>
 <Route path="student-accommodation-in-upper-green-bradford" element={<BradfordUpperGreen/>}/>
 <Route path="student-accommodation-in-bradford-forster-square-station-bradford" element={<BradfordBradfordForsterSquareStation/>}/>
-<Route path="student-accommodation-in-brighton" element={<Brighton/>}/>
-<Route path="student-accommodation-in-bristol" element={<Bristol/>}/>
 <Route path="student-accommodation-in-bedminster-station-bristol" element={<BristolBedminsterStation/>}/>
 <Route path="student-accommodation-in-bristol-city-centre-bristol" element={<BristolBristolCityCentre/>}/>
 <Route path="student-accommodation-in-clifton-bristol" element={<BristolClifton/>}/>
@@ -2824,12 +2900,10 @@ function App() {
 <Route path="student-accommodation-in-kings-weston-bristol" element={<BristolKingsWeston/>}/>
 <Route path="student-accommodation-in-siston-hill-bristol" element={<BristolSistonHill/>}/>
 <Route path="student-accommodation-in-wapping-wharf-bristol" element={<BristolWappingWharf/>}/>
-<Route path="student-accommodation-in-buckingham" element={<Buckingham/>}/>
 <Route path="student-accommodation-in-mount-pleasant-buckingham" element={<BuckinghamMountPleasant/>}/>
 <Route path="student-accommodation-in-bone-hill-buckingham" element={<BuckinghamBoneHill/>}/>
 <Route path="student-accommodation-in-bourtonville-buckingham" element={<BuckinghamBourtonville/>}/>
 <Route path="student-accommodation-in-prebend-end-buckingham" element={<BuckinghamPrebendEnd/>}/>
-<Route path="student-accommodation-in-cambridge" element={<Cambridge/>}/>
 <Route path="student-accommodation-in-romsey-town-cambridge" element={<CambridgeRomseyTown/>}/>
 <Route path="student-accommodation-in-brookfields-cambridge" element={<CambridgeBrookfields/>}/>
 <Route path="student-accommodation-in-coldhams-common-cambridge" element={<CambridgeColdhamsCommon/>}/>
@@ -2848,7 +2922,6 @@ function App() {
 <Route path="student-accommodation-in-eddington-cambridge" element={<CambridgeEddington/>}/>
 <Route path="student-accommodation-in-burwell-cambridge" element={<CambridgeBurwell/>}/>
 <Route path="student-accommodation-in-chesterton-fen-road-estate-cambridge" element={<CambridgeChestertonFenRoadEstate/>}/>
-<Route path="student-accommodation-in-canterbury" element={<Canterbury/>}/>
 <Route path="student-accommodation-in-st-thomass-hill-canterbury" element={<CanterburyStThomassHill/>}/>
 <Route path="student-accommodation-in-thanington-without-canterbury" element={<CanterburyThaningtonWithout/>}/>
 <Route path="student-accommodation-in-parkwood-canterbury" element={<CanterburyParkwood/>}/>
@@ -2877,7 +2950,6 @@ function App() {
 <Route path="student-accommodation-in-harbledown-canterbury" element={<CanterburyHarbledown/>}/>
 <Route path="student-accommodation-in-petty-france-canterbury" element={<CanterburyPettyFrance/>}/>
 <Route path="student-accommodation-in-bekesbourne-station-canterbury" element={<CanterburyBekesbourneStation/>}/>
-<Route path="student-accommodation-in-cardiff" element={<Cardiff/>}/>
 <Route path="student-accommodation-in-cardiff-city--cardiff" element={<CardiffCardiffCity/>}/>
 <Route path="student-accommodation-in-plasnewydd-cardiff" element={<CardiffPlasnewydd/>}/>
 <Route path="student-accommodation-in-roath-park-cardiff" element={<CardiffRoathPark/>}/>
@@ -2954,9 +3026,6 @@ function App() {
 <Route path="student-accommodation-in-coed-y-gores-cardiff" element={<CardiffCoedYGores/>}/>
 <Route path="student-accommodation-in-watford-park-cardiff" element={<CardiffWatfordPark/>}/>
 <Route path="student-accommodation-in-ely-cardiff" element={<CardiffEly/>}/>
-<Route path="student-accommodation-in-carlisle" element={<Carlisle/>}/>
-<Route path="student-accommodation-in-carmarthen" element={<Carmarthen/>}/>
-<Route path="student-accommodation-in-chelmsford" element={<Chelmsford/>}/>
 <Route path="student-accommodation-in-beaulieu-chelmsford" element={<ChelmsfordBeaulieu/>}/>
 <Route path="student-accommodation-in-newlands-spring-chelmsford" element={<ChelmsfordNewlandsSpring/>}/>
 <Route path="student-accommodation-in-fambridge-end-chelmsford" element={<ChelmsfordFambridgeEnd/>}/>
@@ -2973,7 +3042,6 @@ function App() {
 <Route path="student-accommodation-in-gubbions-green-chelmsford" element={<ChelmsfordGubbionsGreen/>}/>
 <Route path="student-accommodation-in-brook-end-chelmsford" element={<ChelmsfordBrookEnd/>}/>
 <Route path="student-accommodation-in-chelmer-village-chelmsford" element={<ChelmsfordChelmerVillage/>}/>
-<Route path="student-accommodation-in-cheltenham" element={<Cheltenham/>}/>
 <Route path="student-accommodation-in-wymans-brook-cheltenham" element={<CheltenhamWymansBrook/>}/>
 <Route path="student-accommodation-in-hasbury-cheltenham" element={<CheltenhamHasbury/>}/>
 <Route path="student-accommodation-in-leckhampton-cheltenham" element={<CheltenhamLeckhampton/>}/>
@@ -2984,7 +3052,6 @@ function App() {
 <Route path="student-accommodation-in-moorend-cheltenham" element={<CheltenhamMoorend/>}/>
 <Route path="student-accommodation-in-up-end-cheltenham" element={<CheltenhamUpEnd/>}/>
 <Route path="student-accommodation-in-little-herberts-cheltenham" element={<CheltenhamLittleHerberts/>}/>
-<Route path="student-accommodation-in-chester" element={<Chester/>}/>
 <Route path="student-accommodation-in-two-mills-chester" element={<ChesterTwoMills/>}/>
 <Route path="student-accommodation-in-bache-chester" element={<ChesterBache/>}/>
 <Route path="student-accommodation-in-abbots-meads-chester" element={<ChesterAbbotsMeads/>}/>
@@ -3013,11 +3080,9 @@ function App() {
 <Route path="student-accommodation-in-hoole-park-chester" element={<ChesterHoolePark/>}/>
 <Route path="student-accommodation-in-irish-hill-chester" element={<ChesterIrishHill/>}/>
 <Route path="student-accommodation-in-the-castle-chester" element={<ChesterTheCastle/>}/>
-<Route path="student-accommodation-in-chichester" element={<Chichester/>}/>
 <Route path="student-accommodation-in-portfield-chichester" element={<ChichesterPortfield/>}/>
 <Route path="student-accommodation-in-rumboldswhyke-chichester" element={<ChichesterRumboldswhyke/>}/>
 <Route path="student-accommodation-in-whyke-chichester" element={<ChichesterWhyke/>}/>
-<Route path="student-accommodation-in-cirencester" element={<Cirencester/>}/>
 <Route path="student-accommodation-in-the-beeches-cirencester" element={<CirencesterTheBeeches/>}/>
 <Route path="student-accommodation-in-kings-hill-cirencester" element={<CirencesterKingsHill/>}/>
 <Route path="student-accommodation-in-watermoor-cirencester" element={<CirencesterWatermoor/>}/>
@@ -3031,7 +3096,6 @@ function App() {
 <Route path="student-accommodation-in-ablington-cirencester" element={<CirencesterAblington/>}/>
 <Route path="student-accommodation-in-kilkenny-cirencester" element={<CirencesterKilkenny/>}/>
 <Route path="student-accommodation-in-maiseyhampton-cirencester" element={<CirencesterMaiseyhampton/>}/>
-<Route path="student-accommodation-in-colchester" element={<Colchester/>}/>
 <Route path="student-accommodation-in-parsons-heath-colchester" element={<ColchesterParsonsHeath/>}/>
 <Route path="student-accommodation-in-welshwood-park-colchester" element={<ColchesterWelshwoodPark/>}/>
 <Route path="student-accommodation-in-greenstead-colchester" element={<ColchesterGreenstead/>}/>
@@ -3057,8 +3121,6 @@ function App() {
 <Route path="student-accommodation-in-gore-pit-colchester" element={<ColchesterGorePit/>}/>
 <Route path="student-accommodation-in-birch-holt-colchester" element={<ColchesterBirchHolt/>}/>
 <Route path="student-accommodation-in-little-birch-holt-colchester" element={<ColchesterLittleBirchHolt/>}/>
-<Route path="student-accommodation-in-coleraine" element={<Coleraine/>}/>
-<Route path="student-accommodation-in-coventry" element={<Coventry/>}/>
 <Route path="student-accommodation-in-stoke-coventry" element={<CoventryStoke/>}/>
 <Route path="student-accommodation-in-canley-coventry" element={<CoventryCanley/>}/>
 <Route path="student-accommodation-in-gosford-green-coventry" element={<CoventryGosfordGreen/>}/>
@@ -3106,8 +3168,6 @@ function App() {
 <Route path="student-accommodation-in-binley-colliery-village-coventry" element={<CoventryBinleyCollieryVillage/>}/>
 <Route path="student-accommodation-in-finham-coventry" element={<CoventryFinham/>}/>
 <Route path="student-accommodation-in-styvechale-coventry" element={<CoventryStyvechale/>}/>
-<Route path="student-accommodation-in-cranfield" element={<Cranfield/>}/>
-<Route path="student-accommodation-in-derby" element={<Derby/>}/>
 <Route path="student-accommodation-in-the-holmes-derby" element={<DerbyTheHolmes/>}/>
 <Route path="student-accommodation-in-strutts-park-derby" element={<DerbyStruttsPark/>}/>
 <Route path="student-accommodation-in-moorway-derby" element={<DerbyMoorway/>}/>
@@ -3121,14 +3181,12 @@ function App() {
 <Route path="student-accommodation-in-alvaston-derby" element={<DerbyAlvaston/>}/>
 <Route path="student-accommodation-in-allenton-derby" element={<DerbyAllenton/>}/>
 <Route path="student-accommodation-in-rose-hill-derby" element={<DerbyRoseHill/>}/>
-<Route path="student-accommodation-in-dundee" element={<Dundee/>}/>
 <Route path="student-accommodation-in-dundee-west-end-dundee" element={<DundeeDundeeWestEnd/>}/>
 <Route path="student-accommodation-in-dundee-city-centre-dundee" element={<DundeeDundeeCityCentre/>}/>
 <Route path="student-accommodation-in-stannergate-dundee" element={<DundeeStannergate/>}/>
 <Route path="student-accommodation-in-dundee-technology-park-dundee" element={<DundeeDundeeTechnologyPark/>}/>
 <Route path="student-accommodation-in-broughty-ferry-station-dundee" element={<DundeeBroughtyFerryStation/>}/>
 <Route path="student-accommodation-in-broughty-ferry-dundee" element={<DundeeBroughtyFerry/>}/>
-<Route path="student-accommodation-in-durham" element={<Durham/>}/>
 <Route path="student-accommodation-in-gilesgate-durham" element={<DurhamGilesgate/>}/>
 <Route path="student-accommodation-in-stockton-on-tees-durham" element={<DurhamStocktonOnTees/>}/>
 <Route path="student-accommodation-in-low-burnhall-durham" element={<DurhamLowBurnhall/>}/>
@@ -3166,9 +3224,7 @@ function App() {
 <Route path="student-accommodation-in-brandon-durham" element={<DurhamBrandon/>}/>
 <Route path="student-accommodation-in-edmondsley-fell-durham" element={<DurhamEdmondsleyFell/>}/>
 <Route path="student-accommodation-in-crossgate-moor-durham" element={<DurhamCrossgateMoor/>}/>
-<Route path="student-accommodation-in-ealing" element={<Ealing/>}/>
 <Route path="student-accommodation-in-northfields-ealing" element={<EalingNorthfields/>}/>
-<Route path="student-accommodation-in-edinburgh" element={<Edinburgh/>}/>
 <Route path="student-accommodation-in-edinburgh-south-edinburgh" element={<EdinburghEdinburghSouth/>}/>
 <Route path="student-accommodation-in-edinburgh-north-edinburgh" element={<EdinburghEdinburghNorth/>}/>
 <Route path="student-accommodation-in-leith-edinburgh" element={<EdinburghLeith/>}/>
@@ -3237,13 +3293,11 @@ function App() {
 <Route path="student-accommodation-in-royston-edinburgh" element={<EdinburghRoyston/>}/>
 <Route path="student-accommodation-in-craigleith-edinburgh" element={<EdinburghCraigleith/>}/>
 <Route path="student-accommodation-in-gilmerton-edinburgh" element={<EdinburghGilmerton/>}/>
-<Route path="student-accommodation-in-egham" element={<Egham/>}/>
 <Route path="student-accommodation-in-wick-egham" element={<EghamWick/>}/>
 <Route path="student-accommodation-in-englefield-green-egham" element={<EghamEnglefieldGreen/>}/>
 <Route path="student-accommodation-in-bell-weir-lock-egham" element={<EghamBellWeirLock/>}/>
 <Route path="student-accommodation-in-bishopsgate-egham" element={<EghamBishopsgate/>}/>
 <Route path="student-accommodation-in-glanty-egham" element={<EghamGlanty/>}/>
-<Route path="student-accommodation-in-exeter" element={<Exeter/>}/>
 <Route path="student-accommodation-in-pennsylvania-exeter" element={<ExeterPennsylvania/>}/>
 <Route path="student-accommodation-in-duryard-exeter" element={<ExeterDuryard/>}/>
 <Route path="student-accommodation-in-st-davids-exeter" element={<ExeterStDavids/>}/>
@@ -3288,7 +3342,6 @@ function App() {
 <Route path="student-accommodation-in-marsh-barton-exeter" element={<ExeterMarshBarton/>}/>
 <Route path="student-accommodation-in-redhills-exeter" element={<ExeterRedhills/>}/>
 <Route path="student-accommodation-in-the-fairways-exeter" element={<ExeterTheFairways/>}/>
-<Route path="student-accommodation-in-falmouth" element={<Falmouth/>}/>
 <Route path="student-accommodation-in-tregatreath-falmouth" element={<FalmouthTregatreath/>}/>
 <Route path="student-accommodation-in-bareppa-falmouth" element={<FalmouthBareppa/>}/>
 <Route path="student-accommodation-in-brill-falmouth" element={<FalmouthBrill/>}/>
@@ -3305,7 +3358,6 @@ function App() {
 <Route path="student-accommodation-in-penwerris-falmouth" element={<FalmouthPenwerris/>}/>
 <Route path="student-accommodation-in-swanvale-falmouth" element={<FalmouthSwanvale/>}/>
 <Route path="student-accommodation-in-the-beacon-falmouth" element={<FalmouthTheBeacon/>}/>
-<Route path="student-accommodation-in-farnham" element={<Farnham/>}/>
 <Route path="student-accommodation-in-mount-pleasant-farnham" element={<FarnhamMountPleasant/>}/>
 <Route path="student-accommodation-in-bridge-field-farnham" element={<FarnhamBridgeField/>}/>
 <Route path="student-accommodation-in-weybourne-farnham" element={<FarnhamWeybourne/>}/>
@@ -3313,7 +3365,6 @@ function App() {
 <Route path="student-accommodation-in-bentley-farnham" element={<FarnhamBentley/>}/>
 <Route path="student-accommodation-in-alice-holt-farnham" element={<FarnhamAliceHolt/>}/>
 <Route path="student-accommodation-in-ewshot-farnham" element={<FarnhamEwshot/>}/>
-<Route path="student-accommodation-in-glasgow" element={<Glasgow/>}/>
 <Route path="student-accommodation-in-blantyre-station-glasgow" element={<GlasgowBlantyreStation/>}/>
 <Route path="student-accommodation-in-airbles-station-glasgow" element={<GlasgowAirblesStation/>}/>
 <Route path="student-accommodation-in-westerton-station-glasgow" element={<GlasgowWestertonStation/>}/>
@@ -3421,7 +3472,6 @@ function App() {
 <Route path="student-accommodation-in-hutchesontown-glasgow" element={<GlasgowHutchesontown/>}/>
 <Route path="student-accommodation-in-possil-park-glasgow" element={<GlasgowPossilPark/>}/>
 <Route path="student-accommodation-in-eaglesham-glasgow" element={<GlasgowEaglesham/>}/>
-<Route path="student-accommodation-in-gloucester" element={<Gloucester/>}/>
 <Route path="student-accommodation-in-tredworth-gloucester" element={<GloucesterTredworth/>}/>
 <Route path="student-accommodation-in-bownham-gloucester" element={<GloucesterBownham/>}/>
 <Route path="student-accommodation-in-wotton-village-gloucester" element={<GloucesterWottonVillage/>}/>
@@ -3436,7 +3486,6 @@ function App() {
 <Route path="student-accommodation-in-the-island-gloucester" element={<GloucesterTheIsland/>}/>
 <Route path="student-accommodation-in-linden-gloucester" element={<GloucesterLinden/>}/>
 <Route path="student-accommodation-in-barton-gloucester" element={<GloucesterBarton/>}/>
-<Route path="student-accommodation-in-guildford" element={<Guildford/>}/>
 <Route path="student-accommodation-in-park-barn-guildford" element={<GuildfordParkBarn/>}/>
 <Route path="student-accommodation-in-woodbridge-hill-guildford" element={<GuildfordWoodbridgeHill/>}/>
 <Route path="student-accommodation-in-pinks-hill-guildford" element={<GuildfordPinksHill/>}/>
@@ -3458,7 +3507,6 @@ function App() {
 <Route path="student-accommodation-in-ash-guildford" element={<GuildfordAsh/>}/>
 <Route path="student-accommodation-in-whitmoor-guildford" element={<GuildfordWhitmoor/>}/>
 <Route path="student-accommodation-in-keens-park-guildford" element={<GuildfordKeensPark/>}/>
-<Route path="student-accommodation-in-hatfield" element={<Hatfield/>}/>
 <Route path="student-accommodation-in-roe-green-hatfield" element={<HatfieldRoeGreen/>}/>
 <Route path="student-accommodation-in-wilkins-green-hatfield" element={<HatfieldWilkinsGreen/>}/>
 <Route path="student-accommodation-in-symonds-hyde-hatfield" element={<HatfieldSymondsHyde/>}/>
@@ -3487,7 +3535,6 @@ function App() {
 <Route path="student-accommodation-in-old-hatfield-hatfield" element={<HatfieldOldHatfield/>}/>
 <Route path="student-accommodation-in-warrengate-estate-hatfield" element={<HatfieldWarrengateEstate/>}/>
 <Route path="student-accommodation-in-brookmans-park-station-hatfield" element={<HatfieldBrookmansParkStation/>}/>
-<Route path="student-accommodation-in-high-wycombe" element={<HighWycombe/>}/>
 <Route path="student-accommodation-in-west-wycombe-village-high-wycombe" element={<HighWycombeWestWycombeVillage/>}/>
 <Route path="student-accommodation-in-west-wycombe-high-wycombe" element={<HighWycombeWestWycombe/>}/>
 <Route path="student-accommodation-in-booker-high-wycombe" element={<HighWycombeBooker/>}/>
@@ -3497,7 +3544,6 @@ function App() {
 <Route path="student-accommodation-in-bowerdean-high-wycombe" element={<HighWycombeBowerdean/>}/>
 <Route path="student-accommodation-in-downley-common-high-wycombe" element={<HighWycombeDownleyCommon/>}/>
 <Route path="student-accommodation-in-high-wycombe-station-high-wycombe" element={<HighWycombeHighWycombeStation/>}/>
-<Route path="student-accommodation-in-huddersfield" element={<Huddersfield/>}/>
 <Route path="student-accommodation-in-folly-hall-huddersfield" element={<HuddersfieldFollyHall/>}/>
 <Route path="student-accommodation-in-rashcliffe-huddersfield" element={<HuddersfieldRashcliffe/>}/>
 <Route path="student-accommodation-in-springwood-huddersfield" element={<HuddersfieldSpringwood/>}/>
@@ -3555,7 +3601,6 @@ function App() {
 <Route path="student-accommodation-in-leymoor-huddersfield" element={<HuddersfieldLeymoor/>}/>
 <Route path="student-accommodation-in-royds-hall-huddersfield" element={<HuddersfieldRoydsHall/>}/>
 <Route path="student-accommodation-in-colne-valley-huddersfield" element={<HuddersfieldColneValley/>}/>
-<Route path="student-accommodation-in-hull" element={<Hull/>}/>
 <Route path="student-accommodation-in-newland-park-hull" element={<HullNewlandPark/>}/>
 <Route path="student-accommodation-in-sulcoates-hull" element={<HullSulcoates/>}/>
 <Route path="student-accommodation-in-sculcoates-hull" element={<HullSculcoates/>}/>
@@ -3567,19 +3612,14 @@ function App() {
 <Route path="student-accommodation-in-brooklands-park-hull" element={<HullBrooklandsPark/>}/>
 <Route path="student-accommodation-in-paragon-hull" element={<HullParagon/>}/>
 <Route path="student-accommodation-in-priory-grange-hull" element={<HullPrioryGrange/>}/>
-<Route path="student-accommodation-in-inverness" element={<Inverness/>}/>
-<Route path="student-accommodation-in-ipswich" element={<Ipswich/>}/>
 <Route path="student-accommodation-in-bixley-heath-ipswich" element={<IpswichBixleyHeath/>}/>
 <Route path="student-accommodation-in-redhouse-park-ipswich" element={<IpswichRedhousePark/>}/>
 <Route path="student-accommodation-in-california-ipswich" element={<IpswichCalifornia/>}/>
 <Route path="student-accommodation-in-priory-heath-ipswich" element={<IpswichPrioryHeath/>}/>
 <Route path="student-accommodation-in-st-johns-ipswich" element={<IpswichStJohns/>}/>
 <Route path="student-accommodation-in-warren-heath-ipswich" element={<IpswichWarrenHeath/>}/>
-<Route path="student-accommodation-in-keele" element={<Keele/>}/>
-<Route path="student-accommodation-in-kingston-upon-thames" element={<KingstonuponThames/>}/>
 <Route path="student-accommodation-in-kingston-upon-thames-kingston-upon-thames" element={<KingstonuponThamesKingstonUponThames/>}/>
 <Route path="student-accommodation-in-norbiton-kingston-upon-thames" element={<KingstonuponThamesNorbiton/>}/>
-<Route path="student-accommodation-in-lancaster" element={<Lancaster/>}/>
 <Route path="student-accommodation-in-primrose-hill-lancaster" element={<LancasterPrimroseHill/>}/>
 <Route path="student-accommodation-in-the-greaves-lancaster" element={<LancasterTheGreaves/>}/>
 <Route path="student-accommodation-in-westfield-war-memorial-village-lancaster" element={<LancasterWestfieldWarMemorialVillage/>}/>
@@ -3598,7 +3638,6 @@ function App() {
 <Route path="student-accommodation-in-galgate-lancaster" element={<LancasterGalgate/>}/>
 <Route path="student-accommodation-in-ellel-lancaster" element={<LancasterEllel/>}/>
 <Route path="student-accommodation-in-haverbreaks-lancaster" element={<LancasterHaverbreaks/>}/>
-<Route path="student-accommodation-in-leeds" element={<Leeds/>}/>
 <Route path="student-accommodation-in-hyde-park-leeds" element={<LeedsHydePark/>}/>
 <Route path="student-accommodation-in-headingley-leeds" element={<LeedsHeadingley/>}/>
 <Route path="student-accommodation-in-woodhouse-leeds" element={<LeedsWoodhouse/>}/>
@@ -3675,7 +3714,6 @@ function App() {
 <Route path="student-accommodation-in-scotland-leeds" element={<LeedsScotland/>}/>
 <Route path="student-accommodation-in-oakwood-leeds" element={<LeedsOakwood/>}/>
 <Route path="student-accommodation-in-farnley-leeds" element={<LeedsFarnley/>}/>
-<Route path="student-accommodation-in-leicester" element={<Leicester/>}/>
 <Route path="student-accommodation-in-clarendon-park-leicester" element={<LeicesterClarendonPark/>}/>
 <Route path="student-accommodation-in-leicester-city-centre-leicester" element={<LeicesterLeicesterCityCentre/>}/>
 <Route path="student-accommodation-in-knighton-leicester" element={<LeicesterKnighton/>}/>
@@ -3709,7 +3747,6 @@ function App() {
 <Route path="student-accommodation-in-anstey-pastures-leicester" element={<LeicesterAnsteyPastures/>}/>
 <Route path="student-accommodation-in-braunstone-leicester" element={<LeicesterBraunstone/>}/>
 <Route path="student-accommodation-in-spencefield-leicester" element={<LeicesterSpencefield/>}/>
-<Route path="student-accommodation-in-lincoln" element={<Lincoln/>}/>
 <Route path="student-accommodation-in-brayford-side-north-lincoln" element={<LincolnBrayfordSideNorth/>}/>
 <Route path="student-accommodation-in-brayford-wharf-north-lincoln" element={<LincolnBrayfordWharfNorth/>}/>
 <Route path="student-accommodation-in-newland-lincoln" element={<LincolnNewland/>}/>
@@ -3725,7 +3762,6 @@ function App() {
 <Route path="student-accommodation-in-bracebridge-lincoln" element={<LincolnBracebridge/>}/>
 <Route path="student-accommodation-in-burton-waters-lincoln" element={<LincolnBurtonWaters/>}/>
 <Route path="student-accommodation-in-fallows-lincoln" element={<LincolnFallows/>}/>
-<Route path="student-accommodation-in-liverpool" element={<Liverpool/>}/>
 <Route path="student-accommodation-in-wavertree-liverpool" element={<LiverpoolWavertree/>}/>
 <Route path="student-accommodation-in-kensington-liverpool" element={<LiverpoolKensington/>}/>
 <Route path="student-accommodation-in-aigburth-liverpool" element={<LiverpoolAigburth/>}/>
@@ -3766,7 +3802,6 @@ function App() {
 <Route path="student-accommodation-in-farthing-wood-liverpool" element={<LiverpoolFarthingWood/>}/>
 <Route path="student-accommodation-in-hillfoot-liverpool" element={<LiverpoolHillfoot/>}/>
 <Route path="student-accommodation-in-sutton-oak-liverpool" element={<LiverpoolSuttonOak/>}/>
-<Route path="student-accommodation-in-london" element={<London/>}/>
 <Route path="student-accommodation-in-wanstead-park-station-london" element={<LondonWansteadParkStation/>}/>
 <Route path="student-accommodation-in-croydon-london" element={<LondonCroydon/>}/>
 <Route path="student-accommodation-in-kings-road-area-london" element={<LondonKingsRoadArea/>}/>
@@ -3821,7 +3856,6 @@ function App() {
 <Route path="student-accommodation-in-heron-quays-station-london" element={<LondonHeronQuaysStation/>}/>
 <Route path="student-accommodation-in-mile-end-station-london" element={<LondonMileEndStation/>}/>
 <Route path="student-accommodation-in-beddington-lane-tram-stop-london" element={<LondonBeddingtonLaneTramStop/>}/>
-<Route path="student-accommodation-in-loughborough" element={<Loughborough/>}/>
 <Route path="student-accommodation-in-buck-hill-loughborough" element={<LoughboroughBuckHill/>}/>
 <Route path="student-accommodation-in-cow-hill-loughborough" element={<LoughboroughCowHill/>}/>
 <Route path="student-accommodation-in-southfields-park-loughborough" element={<LoughboroughSouthfieldsPark/>}/>
@@ -3836,7 +3870,6 @@ function App() {
 <Route path="student-accommodation-in-finney-hill-loughborough" element={<LoughboroughFinneyHill/>}/>
 <Route path="student-accommodation-in-park-hill-loughborough" element={<LoughboroughParkHill/>}/>
 <Route path="student-accommodation-in-nanpantan-loughborough" element={<LoughboroughNanpantan/>}/>
-<Route path="student-accommodation-in-luton" element={<Luton/>}/>
 <Route path="student-accommodation-in-hyde-luton" element={<LutonHyde/>}/>
 <Route path="student-accommodation-in-luton-hoo-luton" element={<LutonLutonHoo/>}/>
 <Route path="student-accommodation-in-newmill-end-luton" element={<LutonNewmillEnd/>}/>
@@ -3846,7 +3879,6 @@ function App() {
 <Route path="student-accommodation-in-park-town-luton" element={<LutonParkTown/>}/>
 <Route path="student-accommodation-in-wardown-luton" element={<LutonWardown/>}/>
 <Route path="student-accommodation-in-winsdon-hill-luton" element={<LutonWinsdonHill/>}/>
-<Route path="student-accommodation-in-manchester" element={<Manchester/>}/>
 <Route path="student-accommodation-in-south-manchester-manchester" element={<ManchesterSouthManchester/>}/>
 <Route path="student-accommodation-in-alma-park-manchester" element={<ManchesterAlmaPark/>}/>
 <Route path="student-accommodation-in-albert-park-manchester" element={<ManchesterAlbertPark/>}/>
@@ -3962,7 +3994,6 @@ function App() {
 <Route path="student-accommodation-in-the-city-manchester" element={<ManchesterTheCity/>}/>
 <Route path="student-accommodation-in-woods-end-manchester" element={<ManchesterWoodsEnd/>}/>
 <Route path="student-accommodation-in-trafford-distribution-centre-manchester" element={<ManchesterTraffordDistributionCentre/>}/>
-<Route path="student-accommodation-in-middlesbrough" element={<Middlesbrough/>}/>
 <Route path="student-accommodation-in-teesside-middlesbrough" element={<MiddlesbroughTeesside/>}/>
 <Route path="student-accommodation-in-ayresome-middlesbrough" element={<MiddlesbroughAyresome/>}/>
 <Route path="student-accommodation-in-grove-hill-middlesbrough" element={<MiddlesbroughGroveHill/>}/>
@@ -3973,7 +4004,6 @@ function App() {
 <Route path="student-accommodation-in-battersby-station-middlesbrough" element={<MiddlesbroughBattersbyStation/>}/>
 <Route path="student-accommodation-in-north-ormesby-middlesbrough" element={<MiddlesbroughNorthOrmesby/>}/>
 <Route path="student-accommodation-in-whinney-banks-middlesbrough" element={<MiddlesbroughWhinneyBanks/>}/>
-<Route path="student-accommodation-in-newcastle-upon-tyne" element={<NewcastleuponTyne/>}/>
 <Route path="student-accommodation-in-newcastle-upon-tyne-newcastle-upon-tyne" element={<NewcastleuponTyneNewcastleUponTyne/>}/>
 <Route path="student-accommodation-in-jesmond-newcastle-upon-tyne" element={<NewcastleuponTyneJesmond/>}/>
 <Route path="student-accommodation-in-newcastle-city-centre-newcastle-upon-tyne" element={<NewcastleuponTyneNewcastleCityCentre/>}/>
@@ -4062,7 +4092,6 @@ function App() {
 <Route path="student-accommodation-in-regent-centre-newcastle-upon-tyne" element={<NewcastleuponTyneRegentCentre/>}/>
 <Route path="student-accommodation-in-regent-farm-estate-newcastle-upon-tyne" element={<NewcastleuponTyneRegentFarmEstate/>}/>
 <Route path="student-accommodation-in-pendower-estate-newcastle-upon-tyne" element={<NewcastleuponTynePendowerEstate/>}/>
-<Route path="student-accommodation-in-newport" element={<Newport/>}/>
 <Route path="student-accommodation-in-castle-view-newport" element={<NewportCastleView/>}/>
 <Route path="student-accommodation-in-chetwynd-end-newport" element={<NewportChetwyndEnd/>}/>
 <Route path="student-accommodation-in-edgmond-manor-newport" element={<NewportEdgmondManor/>}/>
@@ -4085,7 +4114,6 @@ function App() {
 <Route path="student-accommodation-in-lilleshall-newport" element={<NewportLilleshall/>}/>
 <Route path="student-accommodation-in-edgmond-newport" element={<NewportEdgmond/>}/>
 <Route path="student-accommodation-in-tibberton-newport" element={<NewportTibberton/>}/>
-<Route path="student-accommodation-in-northampton" element={<Northampton/>}/>
 <Route path="student-accommodation-in-town-centre-northampton" element={<NorthamptonTownCentre/>}/>
 <Route path="student-accommodation-in-kingsley-park-northampton" element={<NorthamptonKingsleyPark/>}/>
 <Route path="student-accommodation-in-phippsville-northampton" element={<NorthamptonPhippsville/>}/>
@@ -4115,7 +4143,6 @@ function App() {
 <Route path="student-accommodation-in-mill-meadow-northampton" element={<NorthamptonMillMeadow/>}/>
 <Route path="student-accommodation-in-poets-corner-northampton" element={<NorthamptonPoetsCorner/>}/>
 <Route path="student-accommodation-in-black-lion-hill-northampton" element={<NorthamptonBlackLionHill/>}/>
-<Route path="student-accommodation-in-norwich" element={<Norwich/>}/>
 <Route path="student-accommodation-in-marlpit-estate-norwich" element={<NorwichMarlpitEstate/>}/>
 <Route path="student-accommodation-in-larkman-estate-norwich" element={<NorwichLarkmanEstate/>}/>
 <Route path="student-accommodation-in-earlham-norwich" element={<NorwichEarlham/>}/>
@@ -4150,7 +4177,6 @@ function App() {
 <Route path="student-accommodation-in-mousehold-norwich" element={<NorwichMousehold/>}/>
 <Route path="student-accommodation-in-trowse-millgate-norwich" element={<NorwichTrowseMillgate/>}/>
 <Route path="student-accommodation-in-tuckswood-norwich" element={<NorwichTuckswood/>}/>
-<Route path="student-accommodation-in-nottingham" element={<Nottingham/>}/>
 <Route path="student-accommodation-in-lenton-nottingham" element={<NottinghamLenton/>}/>
 <Route path="student-accommodation-in-old-lenton-nottingham" element={<NottinghamOldLenton/>}/>
 <Route path="student-accommodation-in-old-radford-nottingham" element={<NottinghamOldRadford/>}/>
@@ -4212,7 +4238,6 @@ function App() {
 <Route path="student-accommodation-in-wilford-nottingham" element={<NottinghamWilford/>}/>
 <Route path="student-accommodation-in-whitemoor-nottingham" element={<NottinghamWhitemoor/>}/>
 <Route path="student-accommodation-in-netherfield-station-nottingham" element={<NottinghamNetherfieldStation/>}/>
-<Route path="student-accommodation-in-ormskirk" element={<Ormskirk/>}/>
 <Route path="student-accommodation-in-church-field-gardens-ormskirk" element={<OrmskirkChurchFieldGardens/>}/>
 <Route path="student-accommodation-in-aughton-park-ormskirk" element={<OrmskirkAughtonPark/>}/>
 <Route path="student-accommodation-in-priory-grove-ormskirk" element={<OrmskirkPrioryGrove/>}/>
@@ -4223,7 +4248,6 @@ function App() {
 <Route path="student-accommodation-in-scarisbrick-ormskirk" element={<OrmskirkScarisbrick/>}/>
 <Route path="student-accommodation-in-burscough-ormskirk" element={<OrmskirkBurscough/>}/>
 <Route path="student-accommodation-in-ormskirk-station-ormskirk" element={<OrmskirkOrmskirkStation/>}/>
-<Route path="student-accommodation-in-oxford" element={<Oxford/>}/>
 <Route path="student-accommodation-in-cowley-oxford" element={<OxfordCowley/>}/>
 <Route path="student-accommodation-in-temple-cowley-oxford" element={<OxfordTempleCowley/>}/>
 <Route path="student-accommodation-in-st-clements-oxford" element={<OxfordStClements/>}/>
@@ -4270,9 +4294,7 @@ function App() {
 <Route path="student-accommodation-in-dean-court-oxford" element={<OxfordDeanCourt/>}/>
 <Route path="student-accommodation-in-littlemore-oxford" element={<OxfordLittlemore/>}/>
 <Route path="student-accommodation-in-blackbird-leys-oxford" element={<OxfordBlackbirdLeys/>}/>
-<Route path="student-accommodation-in-paisley" element={<Paisley/>}/>
 <Route path="student-accommodation-in-shortroods-paisley" element={<PaisleyShortroods/>}/>
-<Route path="student-accommodation-in-plymouth" element={<Plymouth/>}/>
 <Route path="student-accommodation-in-mutley-plymouth" element={<PlymouthMutley/>}/>
 <Route path="student-accommodation-in-pennycomequick-plymouth" element={<PlymouthPennycomequick/>}/>
 <Route path="student-accommodation-in-lipson-plymouth" element={<PlymouthLipson/>}/>
@@ -4297,7 +4319,6 @@ function App() {
 <Route path="student-accommodation-in-plymstock-plymouth" element={<PlymouthPlymstock/>}/>
 <Route path="student-accommodation-in-prince-rock-plymouth" element={<PlymouthPrinceRock/>}/>
 <Route path="student-accommodation-in-elburton-plymouth" element={<PlymouthElburton/>}/>
-<Route path="student-accommodation-in-pontypridd" element={<Pontypridd/>}/>
 <Route path="student-accommodation-in-treforest-pontypridd" element={<PontypriddTreforest/>}/>
 <Route path="student-accommodation-in-the-graig-pontypridd" element={<PontypriddTheGraig/>}/>
 <Route path="student-accommodation-in-trehopcyn-pontypridd" element={<PontypriddTrehopcyn/>}/>
@@ -4309,7 +4330,6 @@ function App() {
 <Route path="student-accommodation-in-rhydyfelin-pontypridd" element={<PontypriddRhydyfelin/>}/>
 <Route path="student-accommodation-in-rhydfelen-pontypridd" element={<PontypriddRhydfelen/>}/>
 <Route path="student-accommodation-in-glan-bad-pontypridd" element={<PontypriddGlanBad/>}/>
-<Route path="student-accommodation-in-poole" element={<Poole/>}/>
 <Route path="student-accommodation-in-talbot-village-poole" element={<PooleTalbotVillage/>}/>
 <Route path="student-accommodation-in-branksome-poole" element={<PooleBranksome/>}/>
 <Route path="student-accommodation-in-parkstone-poole" element={<PooleParkstone/>}/>
@@ -4320,7 +4340,6 @@ function App() {
 <Route path="student-accommodation-in-branksome-park-poole" element={<PooleBranksomePark/>}/>
 <Route path="student-accommodation-in-canford-cliffs-poole" element={<PooleCanfordCliffs/>}/>
 <Route path="student-accommodation-in-lower-parkstone-poole" element={<PooleLowerParkstone/>}/>
-<Route path="student-accommodation-in-portsmouth" element={<Portsmouth/>}/>
 <Route path="student-accommodation-in-copnor-portsmouth" element={<PortsmouthCopnor/>}/>
 <Route path="student-accommodation-in-portsea-portsmouth" element={<PortsmouthPortsea/>}/>
 <Route path="student-accommodation-in-old-portsmouth-portsmouth" element={<PortsmouthOldPortsmouth/>}/>
@@ -4341,7 +4360,6 @@ function App() {
 <Route path="student-accommodation-in-stamshaw-portsmouth" element={<PortsmouthStamshaw/>}/>
 <Route path="student-accommodation-in-whale-island-portsmouth" element={<PortsmouthWhaleIsland/>}/>
 <Route path="student-accommodation-in-tipner-portsmouth" element={<PortsmouthTipner/>}/>
-<Route path="student-accommodation-in-preston" element={<Preston/>}/>
 <Route path="student-accommodation-in-plungington-preston" element={<PrestonPlungington/>}/>
 <Route path="student-accommodation-in-adelphi-preston" element={<PrestonAdelphi/>}/>
 <Route path="student-accommodation-in-avenham-preston" element={<PrestonAvenham/>}/>
@@ -4367,7 +4385,6 @@ function App() {
 <Route path="student-accommodation-in-kingsfold-preston" element={<PrestonKingsfold/>}/>
 <Route path="student-accommodation-in-greaves-town-preston" element={<PrestonGreavesTown/>}/>
 <Route path="student-accommodation-in-lostock-hall-station-preston" element={<PrestonLostockHallStation/>}/>
-<Route path="student-accommodation-in-reading" element={<Reading/>}/>
 <Route path="student-accommodation-in-earley-reading" element={<ReadingEarley/>}/>
 <Route path="student-accommodation-in-whitley-reading" element={<ReadingWhitley/>}/>
 <Route path="student-accommodation-in-southern-hill-reading" element={<ReadingSouthernHill/>}/>
@@ -4386,7 +4403,6 @@ function App() {
 <Route path="student-accommodation-in-lower-caversham-reading" element={<ReadingLowerCaversham/>}/>
 <Route path="student-accommodation-in-kings-meadows-reading" element={<ReadingKingsMeadows/>}/>
 <Route path="student-accommodation-in-pound-green-reading" element={<ReadingPoundGreen/>}/>
-<Route path="student-accommodation-in-salford" element={<Salford/>}/>
 <Route path="student-accommodation-in-seedley-salford" element={<SalfordSeedley/>}/>
 <Route path="student-accommodation-in-wallness-salford" element={<SalfordWallness/>}/>
 <Route path="student-accommodation-in-pendleton-salford" element={<SalfordPendleton/>}/>
@@ -4416,7 +4432,6 @@ function App() {
 <Route path="student-accommodation-in-high-broughton-salford" element={<SalfordHighBroughton/>}/>
 <Route path="student-accommodation-in-salford-quays-salford" element={<SalfordSalfordQuays/>}/>
 <Route path="student-accommodation-in-higher-broughton-salford" element={<SalfordHigherBroughton/>}/>
-<Route path="student-accommodation-in-sheffield" element={<Sheffield/>}/>
 <Route path="student-accommodation-in-ecclesall-road-area-sheffield" element={<SheffieldEcclesallRoadArea/>}/>
 <Route path="student-accommodation-in-crookesmoor-sheffield" element={<SheffieldCrookesmoor/>}/>
 <Route path="student-accommodation-in-ecclesall-sheffield" element={<SheffieldEcclesall/>}/>
@@ -4487,7 +4502,6 @@ function App() {
 <Route path="student-accommodation-in-ranmoor-sheffield" element={<SheffieldRanmoor/>}/>
 <Route path="student-accommodation-in-millhouses-sheffield" element={<SheffieldMillhouses/>}/>
 <Route path="student-accommodation-in-hyde-park-tram-stop-sheffield" element={<SheffieldHydeParkTramStop/>}/>
-<Route path="student-accommodation-in-southampton" element={<Southampton/>}/>
 <Route path="student-accommodation-in-portswood-southampton" element={<SouthamptonPortswood/>}/>
 <Route path="student-accommodation-in-whithed-wood-southampton" element={<SouthamptonWhithedWood/>}/>
 <Route path="student-accommodation-in-southampton-common-southampton" element={<SouthamptonSouthamptonCommon/>}/>
@@ -4553,8 +4567,6 @@ function App() {
 <Route path="student-accommodation-in-sholing-southampton" element={<SouthamptonSholing/>}/>
 <Route path="student-accommodation-in-hatch-bottom-southampton" element={<SouthamptonHatchBottom/>}/>
 <Route path="student-accommodation-in-woolston-southampton" element={<SouthamptonWoolston/>}/>
-<Route path="student-accommodation-in-st-andrews" element={<StAndrews/>}/>
-<Route path="student-accommodation-in-stirling" element={<Stirling/>}/>
 <Route path="student-accommodation-in-stirling--county--stirling" element={<StirlingStirlingCounty/>}/>
 <Route path="student-accommodation-in-cambuskenneth-stirling" element={<StirlingCambuskenneth/>}/>
 <Route path="student-accommodation-in-raploch-stirling" element={<StirlingRaploch/>}/>
@@ -4581,7 +4593,6 @@ function App() {
 <Route path="student-accommodation-in-harpfields-stoke-on-trent" element={<StokeonTrentHarpfields/>}/>
 <Route path="student-accommodation-in-the-potteries-stoke-on-trent" element={<StokeonTrentThePotteries/>}/>
 <Route path="student-accommodation-in-barlaston-station-stoke-on-trent" element={<StokeonTrentBarlastonStation/>}/>
-<Route path="student-accommodation-in-sunderland" element={<Sunderland/>}/>
 <Route path="student-accommodation-in-ashbrooke-sunderland" element={<SunderlandAshbrooke/>}/>
 <Route path="student-accommodation-in-tunstall-vale-sunderland" element={<SunderlandTunstallVale/>}/>
 <Route path="student-accommodation-in-thornhill-sunderland" element={<SunderlandThornhill/>}/>
@@ -4649,7 +4660,6 @@ function App() {
 <Route path="student-accommodation-in-witherwack-sunderland" element={<SunderlandWitherwack/>}/>
 <Route path="student-accommodation-in-high-plains-sunderland" element={<SunderlandHighPlains/>}/>
 <Route path="student-accommodation-in-low-ford-sunderland" element={<SunderlandLowFord/>}/>
-<Route path="student-accommodation-in-swansea" element={<Swansea/>}/>
 <Route path="student-accommodation-in-brynmill-swansea" element={<SwanseaBrynmill/>}/>
 <Route path="student-accommodation-in-uplands-swansea" element={<SwanseaUplands/>}/>
 <Route path="student-accommodation-in-the-marina-swansea" element={<SwanseaTheMarina/>}/>
@@ -4671,11 +4681,9 @@ function App() {
 <Route path="student-accommodation-in-parcbeck-swansea" element={<SwanseaParcbeck/>}/>
 <Route path="student-accommodation-in-tycoch-swansea" element={<SwanseaTycoch/>}/>
 <Route path="student-accommodation-in-fforestfach-swansea" element={<SwanseaFforestfach/>}/>
-<Route path="student-accommodation-in-twickenham" element={<Twickenham/>}/>
 <Route path="student-accommodation-in-whitton-twickenham" element={<TwickenhamWhitton/>}/>
 <Route path="student-accommodation-in-maswell-park-twickenham" element={<TwickenhamMaswellPark/>}/>
 <Route path="student-accommodation-in-whitton-park-twickenham" element={<TwickenhamWhittonPark/>}/>
-<Route path="student-accommodation-in-uxbridge" element={<Uxbridge/>}/>
 <Route path="student-accommodation-in-colham-green-uxbridge" element={<UxbridgeColhamGreen/>}/>
 <Route path="student-accommodation-in-goulds-green-uxbridge" element={<UxbridgeGouldsGreen/>}/>
 <Route path="student-accommodation-in-uxbridge-common-uxbridge" element={<UxbridgeUxbridgeCommon/>}/>
@@ -4683,7 +4691,6 @@ function App() {
 <Route path="student-accommodation-in-willowbank-uxbridge" element={<UxbridgeWillowbank/>}/>
 <Route path="student-accommodation-in-cowley-uxbridge" element={<UxbridgeCowley/>}/>
 <Route path="student-accommodation-in-hillingdon-uxbridge" element={<UxbridgeHillingdon/>}/>
-<Route path="student-accommodation-in-winchester" element={<Winchester/>}/>
 <Route path="student-accommodation-in-stanmore-winchester" element={<WinchesterStanmore/>}/>
 <Route path="student-accommodation-in-sleepers-hill-winchester" element={<WinchesterSleepersHill/>}/>
 <Route path="student-accommodation-in-orams-arbour-winchester" element={<WinchesterOramsArbour/>}/>
@@ -4723,7 +4730,6 @@ function App() {
 <Route path="student-accommodation-in-greenacre-winchester" element={<WinchesterGreenacre/>}/>
 <Route path="student-accommodation-in-harestock-winchester" element={<WinchesterHarestock/>}/>
 <Route path="student-accommodation-in-weere-winchester" element={<WinchesterWeere/>}/>
-<Route path="student-accommodation-in-wolverhampton" element={<Wolverhampton/>}/>
 <Route path="student-accommodation-in-newbridge-wolverhampton" element={<WolverhamptonNewbridge/>}/>
 <Route path="student-accommodation-in-tettenhall-wolverhampton" element={<WolverhamptonTettenhall/>}/>
 <Route path="student-accommodation-in-aldersley-wolverhampton" element={<WolverhamptonAldersley/>}/>
@@ -4732,7 +4738,6 @@ function App() {
 <Route path="student-accommodation-in-palmers-cross-wolverhampton" element={<WolverhamptonPalmersCross/>}/>
 <Route path="student-accommodation-in-park-dale-wolverhampton" element={<WolverhamptonParkDale/>}/>
 <Route path="student-accommodation-in-whitmore-reans-wolverhampton" element={<WolverhamptonWhitmoreReans/>}/>
-<Route path="student-accommodation-in-worcester" element={<Worcester/>}/>
 <Route path="student-accommodation-in-st-johns-worcester" element={<WorcesterStJohns/>}/>
 <Route path="student-accommodation-in-upper-broadheath-worcester" element={<WorcesterUpperBroadheath/>}/>
 <Route path="student-accommodation-in-broadmoor-green-worcester" element={<WorcesterBroadmoorGreen/>}/>
@@ -4771,7 +4776,6 @@ function App() {
 <Route path="student-accommodation-in-pixham-worcester" element={<WorcesterPixham/>}/>
 <Route path="student-accommodation-in-stonehall-worcester" element={<WorcesterStonehall/>}/>
 <Route path="student-accommodation-in-napleton-worcester" element={<WorcesterNapleton/>}/>
-<Route path="student-accommodation-in-wrexham" element={<Wrexham/>}/>
 <Route path="student-accommodation-in-garden-village-wrexham" element={<WrexhamGardenVillage/>}/>
 <Route path="student-accommodation-in-kings-mills-wrexham" element={<WrexhamKingsMills/>}/>
 <Route path="student-accommodation-in-old-rhosrobin-wrexham" element={<WrexhamOldRhosrobin/>}/>
@@ -4791,7 +4795,6 @@ function App() {
 <Route path="student-accommodation-in-the-lodge-wrexham" element={<WrexhamTheLodge/>}/>
 <Route path="student-accommodation-in-wrexham-maelor-wrexham" element={<WrexhamWrexhamMaelor/>}/>
 <Route path="student-accommodation-in-llwyn-onn-wrexham" element={<WrexhamLlwynOnn/>}/>
-<Route path="student-accommodation-in-york" element={<York/>}/>
 <Route path="student-accommodation-in-tang-hall-york" element={<YorkTangHall/>}/>
 <Route path="student-accommodation-in-garrow-hill-york" element={<YorkGarrowHill/>}/>
 <Route path="student-accommodation-in-heworth-york" element={<YorkHeworth/>}/>
@@ -4821,7 +4824,7 @@ function App() {
 <Route path="student-accommodation-in-brockfield-york" element={<YorkBrockfield/>}/>
 <Route path="student-accommodation-in-old-earswick-york" element={<YorkOldEarswick/>}/>
 <Route path="student-accommodation-in-bull-commercial-centre-york" element={<YorkBullCommercialCentre/>}/>
-<Route path="student-accommodation-in-hungate-york" element={<YorkHungate/>}/> 
+<Route path="student-accommodation-in-hungate-york" element={<YorkHungate/>}/>
           {/* routeSectionEnd*/}          
 
           {/* <Route path="/aberdeen/aberdeen-city-centre" element={<AberdeenAberdeenCityCentre/>}/>
