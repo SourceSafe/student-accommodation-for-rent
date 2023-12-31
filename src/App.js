@@ -304,7 +304,6 @@ const BoltonMosesGate = lazy(() => import('./pages/town/BoltonMosesGate'));
 const BoltonOakenBottom = lazy(() => import('./pages/town/BoltonOakenBottom'));
 const BoltonTongeMoor = lazy(() => import('./pages/town/BoltonTongeMoor'));
 const BoltonGreatLever = lazy(() => import('./pages/town/BoltonGreatLever'));
-const BoltonHallIthWood = lazy(() => import('./pages/town/BoltonHallIthWood'));
 const BoltonTheHaulgh = lazy(() => import('./pages/town/BoltonTheHaulgh'));
 const BoltonTongeFold = lazy(() => import('./pages/town/BoltonTongeFold'));
 const BoltonTopOThBrow = lazy(() => import('./pages/town/BoltonTopOThBrow'));
@@ -2723,7 +2722,6 @@ function App() {
 <Route path="student-accommodation-in-oaken-bottom-bolton" element={<BoltonOakenBottom/>}/>
 <Route path="student-accommodation-in-tonge-moor-bolton" element={<BoltonTongeMoor/>}/>
 <Route path="student-accommodation-in-great-lever-bolton" element={<BoltonGreatLever/>}/>
-<Route path="student-accommodation-in-hall-ith-wood-bolton" element={<BoltonHallIthWood/>}/>
 <Route path="student-accommodation-in-the-haulgh-bolton" element={<BoltonTheHaulgh/>}/>
 <Route path="student-accommodation-in-tonge-fold-bolton" element={<BoltonTongeFold/>}/>
 <Route path="student-accommodation-in-top-o-th-brow-bolton" element={<BoltonTopOThBrow/>}/>
