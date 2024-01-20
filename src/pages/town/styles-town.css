@@ -10,7 +10,7 @@ h1{
 p{       
 
     font-size: 15px;
-    margin : 5px 5px 0px 0px s
+    margin : 5px 5px 0px 0px
 }
 
 h2{
@@ -48,7 +48,7 @@ h2{
   
   tr:hover {
     background-color:rgb(223, 224, 225);
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
  a:link {

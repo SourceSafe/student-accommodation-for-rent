@@ -1,0 +1,77 @@
+.filters {
+    margin: 0px 0px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+
+}
+
+.filter {
+    margin: 5px 5px 5px 5px;
+}
+
+.filterName {
+
+    color: orange;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+.filterGeneral {    
+    
+}
+.filterTown { 
+    width: 220px;    
+}
+
+.filterArea {
+    width: 200px;    
+
+}
+
+.filterBeds {
+    width: 150px;    
+
+}
+
+.filterPrice {
+    width: 150px;    
+
+}
+
+.filterType {
+    width: 100px;    
+}
+
+
+.select {    
+    height: 10px;    
+
+}
+
+
+.seachTitle {
+    color : rgb(155, 155, 155);
+    /* font-size: large; */
+    margin: 2px 0px;
+
+}
+
+
+.resultCount {
+    color : rgb(155, 155, 155);
+    /* font-size: large; */
+    margin: 2px 0px;
+
+}
+
+
+
+.titledSearch {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 5px 0px 0px; 
+    color : rgb(155, 155, 155);
+}
+

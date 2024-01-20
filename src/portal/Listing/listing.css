@@ -1,0 +1,125 @@
+
+
+.listings {       
+    display: flex;    
+    flex-wrap: wrap;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;    
+    margin:10px 0px 0px 0px;
+    background: rgb(241, 241, 241)
+}
+
+.listing {   
+    width:520px; 
+    height: auto;    
+    border-radius: 10px;         
+    margin: 8px;    
+    display:flex;
+    flex-direction: row;    
+    border: 1px solid rgb(202, 202, 202);
+
+}
+
+
+.listing-lhs {          
+    display:flex;
+    flex-direction: column;        
+    background: gainsboro;
+    border-top-left-radius: 10px;    
+    border-bottom-right-radius: 0%;
+    border-bottom-left-radius: 10px;    
+    
+    flex: 4;
+}
+
+.listing-rhs {
+    flex:5;               
+    border-radius: 10px;    
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+    /* background: green; */
+    padding: 5px;
+    background: white;
+}
+
+
+
+
+
+.price-container {        
+    margin: 5px;    
+    flex:1;
+}
+
+
+.listing-pcm {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.listing-pw {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+
+
+
+.image1 
+{  
+    width :260px;
+    height: auto;
+
+    border-top-left-radius: 10px;    
+}
+
+
+
+
+
+
+
+.listing-address-location {
+    display:flex;    
+    margin: 2px;
+}
+
+
+
+.listing-address {
+    flex:1;
+    font-weight: bold;    
+    font-size: 14px;    
+    margin: 2px;
+    color: rgb(46, 46, 46);
+    
+}
+
+.listing-booking-status {
+    flex:1;
+    font-weight: bold;
+    font-size: large;
+    margin: 2px;    
+    
+    
+}
+
+
+
+
+.listing-subheader {    
+    margin: 2px;
+    font-size: 14px;    
+}
+
+.listing-text {
+    margin: 10px 0px 0px 0px;    
+    font-size: 13px;
+    color: rgb(84, 84, 84);
+}
+
+
+
+
+
+  

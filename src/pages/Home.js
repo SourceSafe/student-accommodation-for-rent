@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
+import {Portal} from "../portal/Portal"
 import "../pages/town/styles-town.css"
 const Home = () => {
   return (
     <div>
       <h1>Student Accommodation For Rent</h1>
+      <Portal initTown={1} initBeds={3} initArea={3} initType={1} ></Portal>
+
+      
       <ul>
         {/* townSectionStart */}            
 <li><Link to="/student-accommodation-in-aberdeen">Student Accommodation in Aberdeen</Link></li>
