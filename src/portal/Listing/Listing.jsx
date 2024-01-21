@@ -30,7 +30,7 @@ export const  Listing = ({listing}) =>
   const info = listing.addedReduced;
 
   const imageWidth = windowSize[0] < 600 ?  windowSize[0]-35 : 350;
-  const imageHeight = windowSize[0] < 600 ?  277 : 'auto';
+  const imageHeight = windowSize[0] < 600 ?  'auto' : 277;
 
   const isDesktop = windowSize[0] > 600;
 
@@ -58,10 +58,10 @@ export const  Listing = ({listing}) =>
                   £{listing.price2} per week
 
                 </div>                  
-                <div>
+                {/* <div>
           <span>Width: {windowSize[0]}</span>
           <span>Height: {windowSize[1]}</span>
-        </div>      
+        </div>       */}
               </div>
 
           
