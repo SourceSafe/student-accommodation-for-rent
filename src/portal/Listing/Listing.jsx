@@ -29,7 +29,7 @@ export const  Listing = ({listing}) =>
 
   const info = listing.addedReduced;
 
-  const imageWidth = windowSize[0] < 600 ?  windowSize[0]-50 : 350;
+  const imageWidth = windowSize[0] < 600 ?  windowSize[0]-35 : 350;
   const imageHeight = windowSize[0] < 600 ?  277 : 'auto';
 
   const isDesktop = windowSize[0] > 600;
