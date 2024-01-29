@@ -1,15 +1,42 @@
 .filters {
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 5px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;    
-    flex-wrap: wrap;
-
+    flex-direction: row;    
+    flex-wrap: wrap;   
+    justify-content: space-between;
+    gap:20px;
+    
 }
 
 .filter {
-    margin: 5px 5px 5px 5px;
+    /* margin: 5px 0px 5px 15px; */
 }
+
+.priceFilter{
+    margin: 0px 25px 5px 45px;
+}
+
+.priceFilterSelection {
+    width: 200px;    
+    margin : 0px 0px 0px 0px;
+    display : flex;
+    justify-content: space-between;
+
+
+}
+
+.priceFilterValue{
+    user-select: none;
+    color: rgb(0, 0, 0);
+
+}
+
+.priceFilterUnit {
+    user-select: none;    
+}
+
+
+
 
 .filterName {
 
@@ -17,6 +44,36 @@
     font-size: 15px;
     font-weight: 500;
 }
+
+.priceFilterName {
+
+    color: orange;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.clearButton {
+
+    /* height: 40px; */
+
+    
+
+}
+
+
+
+.sortName {
+
+    color: rgb(128, 128, 128);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+
 
 
 .filterGeneral {    
@@ -36,36 +93,60 @@
 
 }
 
-.filterPrice {
-    width: 150px;    
 
-}
 
 .filterType {
     width: 100px;    
 }
 
-
-.select {    
-    height: 10px;    
-
+.filterSortType {
+    width: 200px;    
 }
 
 
-.seachTitle {
-    color : rgb(155, 155, 155);
-    /* font-size: large; */
-    margin: 2px 0px;
 
+.select {    
+    height: 10px;        
+}
+
+
+.seachTitle {    
+    margin: 2px 5px;
 }
 
 
 .resultCount {
-    color : rgb(155, 155, 155);
-    /* font-size: large; */
+    color : rgb(0, 0, 0);    
     margin: 2px 0px;
+    font-weight: bold;
 
 }
+.resultCountUnits
+{
+    
+}
+
+
+.filterButton
+{
+    color:rgb(255, 255, 255);
+    background: orange;
+    border: solid 2px rgb(212, 212, 212);    
+    font-weight: bold;
+    width : 120px;
+    height : 37px;    
+    border-radius: 5px;
+    margin-top: 17px;
+    margin-right: 5px;
+}
+
+.listing-pic-subheading{
+    margin-bottom: 10px;
+
+}
+
+
+
 
 
 
@@ -73,6 +154,90 @@
     display: flex;
     justify-content: space-between;
     margin: 0px 5px 0px 0px; 
-    color : rgb(155, 155, 155);
+    color : rgb(55, 55, 55);
+    font-size: small;
+    
 }
 
+
+.navButton
+{
+    color:rgb(255, 255, 255);
+    background: orange;
+    border: solid 2px rgb(212, 212, 212);    
+    font-weight: bold;
+    width : 140px;
+    height : 40px;    
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.navButton:hover
+{
+    color:rgb(255, 255, 255);
+    background: orange;
+    border: solid 2px rgb(55, 146, 199);    
+    font-weight: bold;
+    width : 180px;
+    height : 40px;    
+}
+
+
+.navButtonDisabled 
+{
+    color:rgb(220, 220, 220);
+    background: rgb(255, 255, 255);        
+}
+.navButtonDisabled:hover
+{
+    color:rgb(220, 220, 220);
+    background: rgb(255, 255, 255);     
+    border: solid 2px rgb(212, 212, 212);    
+    
+}
+
+
+.navButtons {
+    display:flex;    
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.navSmallButton
+{
+    color:rgb(95, 95, 95);
+    border: solid 2px rgb(212, 212, 212);
+    background: white;
+    
+    font-weight: bold;
+    width : 100px;;
+    height : auto;
+    margin: 10px;
+}
+
+
+
+
+.navSmallButtonDisabled{
+    color:rgb(193, 193, 193);
+    border: solid 2px rgb(212, 212, 212);
+    background: white;
+    font-weight: bold;
+
+    width : 100px;;
+    height : auto;
+    margin: 10px;
+
+}
+
+.select {
+    font-size: 14px;            
+}
+
+.filterBar {
+
+    display:flex;    
+    justify-content: space-between;
+}

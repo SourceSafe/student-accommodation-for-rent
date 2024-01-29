@@ -1,5 +1,4 @@
 import { Outlet } from "react-router-dom";
-
 import "./styles.css"
 const Layout = () => {
   return (
@@ -7,7 +6,7 @@ const Layout = () => {
     <a href="./">
     <img src="logo.jpg" alt="Welcone to Student Accommodation For Rent"/>       
     </a>
-
+    
 
         
       <Outlet />

@@ -1,14 +1,56 @@
+import {useState, useEffect} from 'react';
 import { Link } from "react-router-dom";
 import {Portal} from "../portal/Portal"
 import "../pages/town/styles-town.css"
+import { VitalStats } from "../portal/VitalStats/VitalStats";
 const Home = () => {
+
+
+const [mainStats, setMainStats] = useState();
+const [statLocation, setStatLocation] = useState();
+const [selectedLocation, setSelectedLocation] = useState();
+const [selectedTown, setSelectedTown] = useState();
+
+const [windowSize, setWindowSize] = useState([
+  window.innerWidth,
+  window.innerHeight,
+]);
+
+
+useEffect(() => {
+  const handleWindowResize = () => {
+    setWindowSize([window.innerWidth, window.innerHeight]);
+  };
+
+  window.addEventListener('resize', handleWindowResize);
+
+  return () => {
+    window.removeEventListener('resize', handleWindowResize);
+  };
+}, []);
+
+
+
+
+const isDesktop = windowSize[0] > 600;
+
+
+
+  
   return (
     <div>
-      <h1>Student Accommodation For Rent</h1>
-      <Portal initTown={1} initBeds={3} initArea={3} initType={1} ></Portal>
+
+      <div style = {{display:'flex', justifyContent:'space-between'}}>
+      {isDesktop &&  <h1>Student Accommodation For Rent</h1>    }
+        {isDesktop && <VitalStats isDesktop = {isDesktop} mainStats = {mainStats} location = {statLocation}> </VitalStats>}
+      </div>
+      
 
       
-      <ul>
+      <Portal  isDesktop = {isDesktop} initTown={1} initBeds={3} initArea={3} initType={1} setMainStats={setMainStats} setStatLocation = {setStatLocation} ></Portal>
+
+      
+      <ul style = {{display:"flex", flexWrap:"wrap"}}>
         {/* townSectionStart */}            
 <li><Link to="/student-accommodation-in-aberdeen">Student Accommodation in Aberdeen</Link></li>
 <li><Link to="/student-accommodation-in-aberystwyth">Student Accommodation in Aberystwyth</Link></li>
