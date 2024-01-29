@@ -169,7 +169,8 @@
     width : 140px;
     height : 40px;    
     border-radius: 5px;
-    margin-top: 10px;
+    margin: 10px 10px;
+    
 }
 
 .navButton:hover
