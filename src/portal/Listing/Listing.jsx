@@ -30,7 +30,8 @@ export const  Listing = ({listing, loading, isDesktop}) =>
 
   const info = listing.addedReduced;
   const imageWidth = windowSize[0] < 600 ?  windowSize[0]-35 : 350;
-  const imageHeight = windowSize[0] < 600 ?  'auto' : 277;
+  // const imageHeight = windowSize[0] < 600 ?  'auto' : 277;
+  const imageHeight = windowSize[0] < 600 ?  200 : 200;
   // const isDesktop = windowSize[0] > 600;
 
   const startColor = 'gainsboro';  
@@ -62,6 +63,7 @@ export const  Listing = ({listing, loading, isDesktop}) =>
                 <div>
 
                 <div className= "listing-pic-subheading"> {listing.add2}</div>
+                <div className= "listing-pic-subheading2"> {listing.add1}</div>                          
                   <div className ="listing-pcm" >
                     £{withComma(listing.price1)} per month
                   </div>
