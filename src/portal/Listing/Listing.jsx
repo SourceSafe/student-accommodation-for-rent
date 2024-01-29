@@ -1,9 +1,8 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import PlaceholderLoading from 'react-placeholder-loading'
 import LoadingOverlay from 'react-loading-overlay-ts';
-import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
+import {withComma} from "../../helper/format-helper"
 
 
 import "./listing.css"  
@@ -64,10 +63,10 @@ export const  Listing = ({listing, loading, isDesktop}) =>
 
                 <div className= "listing-pic-subheading"> {listing.add2}</div>
                   <div className ="listing-pcm" >
-                    £{listing.price1} per month
+                    £{withComma(listing.price1)} per month
                   </div>
                   <div className ="listing-pw" >
-                    £{listing.price2} per week
+                    £{withComma(listing.price2)} per week
                   </div>                            
                   <div className ="addedRecuded" >
                   { listing.addedReduced}
