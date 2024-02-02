@@ -228,11 +228,11 @@ return(<div>
 
   <div className = "filters">
 
-    <div className = "filter">
+    <div className = "filter" style = {{width:"195px"}}>
         <div className = "filterName">
             Town
         </div>
-        <div className = "filterTown filterGeneral">
+        <div className = "filterTown">
           <Select  disabled={listsLoading}  className={"select"}  type="text" values= { townSelect}  options={availabelTowns} onChange={(values) => setSelectedTown(values)} />
         </div>
     </div>
