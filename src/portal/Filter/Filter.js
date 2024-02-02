@@ -295,6 +295,7 @@ return(<div>
 
   
     
+    {  (isDesktop  || isMiniFilterMode)  && 
     <div className = "filter sortFilter">     
       <div className = "filterGeneral  sortName">
           Sort
@@ -303,6 +304,7 @@ return(<div>
         <Select   disabled={listsLoading}  className={"select"}  type="text" values={selectedSortType} options={availableSortTypes} onChange={(values) => setSelectedSortType(values)} />
         </div>                    
       </div>
+}
     
 
 {!isDesktop && !isMiniFilterMode &&

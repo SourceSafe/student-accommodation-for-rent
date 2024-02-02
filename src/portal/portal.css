@@ -17,7 +17,7 @@
 }
 
 .sortFilter{
-    width:130px;
+    width:150px;
 }
 
 .priceFilterSelection {
@@ -132,7 +132,7 @@
     border-radius: 5px;
     margin-top: 20px;
     margin-right: 5px;        
-    width:80px;
+    width:100px;
 }
 
 .filterButton:hover
