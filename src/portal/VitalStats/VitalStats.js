@@ -13,12 +13,15 @@ export const VitalStats = () =>
     const [isLoading] = useAtomState(isLoadingAtom);
     const [mainStats] = useAtomState(mainStatsAtom);
     const [locationDisplay] = useAtomState(locationDisplayAtom);
+
+
+    const all = mainStats.All?.len
     const statRowStyle = isDesktop ? "statRow" : "statRowMini";
     
     return (                                                
         <div className = "mainStats">
 
-                    <div className = "mainStatsTitle">Average Student Rents in {locationDisplay}</div>
+                    <div className = "mainStatsTitle">Average Student Rents  in {locationDisplay} (ppcm)</div>
 
                     <LoadingOverlay    styles={{
                         
