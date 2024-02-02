@@ -17,9 +17,8 @@ const Layout = () => {
         </a>
       </div>
       <div style={{marginTop:"20px"}}>
-
         { isDesktop && 
-        <VitalStats></VitalStats>        
+        <VitalStats ></VitalStats>        
       }
       </div>     
 

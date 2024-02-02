@@ -103,17 +103,11 @@ const Portal =  () =>
       return txt.replace("detached, bungalow, semi detached, terraced", "Houses")
     }
 
-    const is = isMiniFilterMode;
-
-    const resultZoneVisible  = !isMiniFilterMode;
     
     
     return(
 
-      <div>
-
-      
-      
+      <div>          
         <div>                
           {!isDesktop && <VitalStats style = {{width:'100%'}}></VitalStats>}                        
           <Filter/>

@@ -213,7 +213,7 @@ const onApply = () =>
 
 
 
-
+const showFilter = isDesktop  || isMiniFilterMode ? "block" : "none";
 
 return(<div>
 
@@ -229,7 +229,7 @@ return(<div>
   <div className = "filters">
 
     <div className = "filter" style = {{width:"195px"}}>
-        <div className = "filterName">
+        <div className = "filterName" style ={{display: {}}}>
             Town
         </div>
         <div className = "filterTown">
