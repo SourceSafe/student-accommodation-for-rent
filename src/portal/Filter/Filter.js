@@ -3,10 +3,16 @@ import '../portal.css'
 import Select  from 'react-dropdown-select';
 import Slider from 'rc-slider';
 import { FaDeleteLeft } from "react-icons/fa6";
+import {withComma} from "../../helper/format-helper"
+import { locationDisplayAtom, filtersAtom, isDesktopAtom } from '../appState/appState';
+import { useAtomState } from '@zedux/react';
 
 export const Filter = (props) =>
 {
-    const {setFilter, isDesktop} = props;
+    const [locationDisplay,setlocationDisplay] = useAtomState(locationDisplayAtom);
+    const [filter,setFilter] = useAtomState(filtersAtom);
+    const [isDesktop,] = useAtomState(isDesktopAtom);
+
     const lists = require('.././data/LocationByTown.json');
     const allLocations = {value:"All", label:'All Locations'};              
     const [listsLoading, setListsLoading] = useState(true);
@@ -67,11 +73,27 @@ export const Filter = (props) =>
       }
 
       let sortType = selectedSortType[0]?.value;            
+
+      
+
+      
                 
       if(locationIdentifier)
       {        
-        setFilter({locationIdentifier, beds, propertyTypes, sortType, selectedMinPrice, selectedMaxPrice })
+        setFilter({locationIdentifier, beds, propertyTypes, sortType, selectedMinPrice, selectedMaxPrice})
+        setlocationDisplay(getLocationDisplay());
       }            
+    }
+
+
+    const getLocationDisplay = () =>
+    {
+      let ret = "No Location Selected";
+      if(selectedLocation.length==1 && selectedLocation.length==1)
+      {
+        ret = selectedLocation[0].value === 'All' ?  selectedTown[0].label : `${selectedLocation[0].label}, ${selectedTown[0].label}`
+      }
+      return ret;      
     }
 
     
@@ -123,8 +145,7 @@ export const Filter = (props) =>
 
     
   useEffect(() => {    
-
-    
+      
     if(selectedPriceRange[0] == priceRange[0] && selectedPriceRange[1] != priceRange[1]) {
       setPriceRangeDisplay(`Everything below £${selectedPriceRange[1]}`)
       return;
@@ -250,7 +271,7 @@ return(<div>
                 <Slider range  min={priceRange[0]}  max = {priceRange[1]} value = {selectedPriceRange} onChangeComplete={(value) => onPriceRangeComplete(value) } onChange={onPriceRangeChange}   step = {25}  />                                
                 <div className = "priceFilterSelection">
 
-                <span className = "priceFilterUnit">{priceRangeDisplay}</span>                          
+                <span className = "priceFilterUnit">{withComma(priceRangeDisplay)}</span>                          
 
                   {/* <span className = "priceFilterValue">{`£${withComma(minPriceSlider)}`}</span>                          
                   <span>to</span>

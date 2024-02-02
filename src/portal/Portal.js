@@ -6,14 +6,16 @@ import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import {withComma} from "../helper/format-helper"
 import {Filter} from './Filter/Filter';
+import { VitalStats } from './VitalStats/VitalStats';
+import { useAtomState } from '@zedux/react';
+import { isDesktopAtom, mainStatsAtom, filtersAtom, isLoadingAtom, locationDisplayAtom } from './appState/appState'
 
 
-const Portal =  (props) =>
+const Portal =  () =>
 {          
     const refIndex = useRef(0);
     const urlFormat = "https://kdwytshik8.execute-api.eu-west-2.amazonaws.com/Production/SearchResults";      
-    const loadingListings = require('./data/LoadingListings.json');    
-    const {setMainStats, isDesktop} = props;          
+    const loadingListings = require('./data/LoadingListings.json');        
     const [totalCount, setTotalCount] = useState(0);      
     const [page, setPage] = useState(1);    
     const [searchResults, setSearchResults] = useState(loadingListings.results);    
@@ -21,8 +23,15 @@ const Portal =  (props) =>
     const [loading, setLoading] = useState(true);                  
     const [url, setURL] = useState();
     const [searchTitle, setSearchTitle] = useState("");                
-    const [filter, setFilter] = useState();
+    const [filter, setFilter] = useAtomState(filtersAtom);
     const [index, setIndex] = useState(0);
+    const [isDesktop] = useAtomState(isDesktopAtom);
+    const [mainStats, setMainStats] = useAtomState(mainStatsAtom);
+    const [isLoading, setIsLoading] = useAtomState(isLoadingAtom);
+    const [locationDisplay, setLocationDisplay] = useAtomState(locationDisplayAtom);
+    const prev = "<<";
+    const next  = ">>"
+    
     
         
     useEffect(() => {
@@ -49,19 +58,12 @@ const Portal =  (props) =>
       }
 
     }
-
-
-
-    
-
-    
-
-    
+            
                   
     useEffect(() => {
       const fetchData = async () => {
-        try {          
-          setSearchLoading(true);
+        try {                    
+          setIsLoading(true);          
           const response = await fetch(url)
           const result = await response.json();          
           setSearchResults(result.results);
@@ -71,8 +73,7 @@ const Portal =  (props) =>
         } catch (error) {
           console.error('Error fetching data:', error);
         } finally {
-
-          setSearchLoading(false);
+          setIsLoading(false);          
           
         }
       };
@@ -93,27 +94,30 @@ const Portal =  (props) =>
     const isPrev = page > 1;
     const isNext = totalCount / 24 > page;    
     const pageCount =  parseInt(totalCount/ 24) + 1;             
-    const prev = "<<";
-    const next  = ">>"
     const prevClassName =  isPrev ? "navButton" : "navButton navButtonDisabled";
     const nextClassName = isNext ? "navButton" : "navButton navButtonDisabled";
+
+    const simplify = (txt) =>
+    {
+      return txt.replace("detached, bungalow, semi detached, terraced", "Houses")
+    }
     
     
     return(
-        <div style={{width:"100%"}}>
+        <div>
 
         
+          {!isDesktop && <VitalStats style = {{width:'100%'}}></VitalStats>}
           <Filter isDesktop = {isDesktop} setFilter = {setFilter}></Filter> 
-        
 
-        
-        {isDesktop && <div className = "titledSearch">
-          <div className = "seachTitle">{searchTitle}</div>
+                        
+         <div className = "titledSearch">
+          <div className = "seachTitle">{simplify(searchTitle)}</div>
           <div>  
                 <span className = "resultCount" >{withComma(totalCount)} </span>                
                 <span className = "resultCountUnits">results </span>
           </div>                    
-        </div>}
+        </div>
 
                          
           <div>

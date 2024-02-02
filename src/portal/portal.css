@@ -148,7 +148,7 @@
 .titledSearch {
     display: flex;
     justify-content: space-between;
-    margin: 0px 5px 0px 0px; 
+    margin: 5px 5px 0px 0px; 
     color : rgb(55, 55, 55);
     font-size: small;
     
@@ -233,7 +233,7 @@
 }
 
 .filterBar {
-
+    margin : 10px 0px;
     display:flex;    
     justify-content: space-between;
 }
