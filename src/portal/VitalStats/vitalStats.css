@@ -5,6 +5,7 @@
     align-items: center;    
     display: flex;
     flex-direction: column;    
+
 }
 
 .mainStatsTitle{
@@ -50,12 +51,10 @@
 
 
 .stat {    
+    flex:1;
     user-select: none;
-    margin: 0px 5px;
-    min-width: 85px;
-    min-height: 45px;
-    cursor: pointer;    
-    padding: 0px 10px;
+    margin: 0px 5px;    
+    cursor: pointer;        
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,7 +62,9 @@
     font-weight: normal;
     color:rgb(0, 0, 0);    
     border-radius: 5px;
-    border: solid 3px #c2edff        
+    border: solid 3px #c2edff        ;
+    min-width: 70px;
+    
 }
 
 

@@ -315,14 +315,16 @@ return(<div>
   <button onClick={onFilter} className ="filterButton">Filter</button>
   }
 
-
-
-
 </div>
 
+
+<div style={{display:'flex', justifyContent:'center'}}>
+
 {!isDesktop && isMiniFilterMode &&
-  <button onClick={onApply} className ="filterButton" style={{width:"100%"}}>Apply</button>
+
+  <button onClick={onApply} className ="filterButton" style={{width:"95%"}}>Apply</button>
   }
+  </div>
 
 
 

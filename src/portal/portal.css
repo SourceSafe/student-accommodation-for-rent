@@ -133,13 +133,18 @@
     color:rgb(255, 255, 255);
     background: orange;
     border: solid 2px rgb(212, 212, 212);    
-    font-weight: bold;
-    width : 120px;
+    font-weight: bold;    
     height : 36px;    
     border-radius: 5px;
     margin-top: 20px;
-    margin-right: 5px;
-    width : 120px
+    margin-right: 5px;        
+    width:80px;
+}
+
+.filterButton:hover
+{
+    border: solid 2px rgb(184, 184, 184);    
+
 }
 
 

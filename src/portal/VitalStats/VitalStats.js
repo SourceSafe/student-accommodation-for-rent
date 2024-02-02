@@ -26,14 +26,15 @@ export const VitalStats = () =>
 
                     <div className = "mainStatsTitle">Average Student Rents  in {locationDisplay} (ppcm)</div>
 
-                    <LoadingOverlay    styles={{
+                    {/* <LoadingOverlay    styles={{
                         
-                    overlay: (base) => ({
+                    overlay: (base) => ({                                            
                     ...base,
+                    width:'100',
                     background: 'rgba(255, 255, 255, 0.7)', margin:"0px"
                     })}} 
                     active={isLoading}
-                    >
+                    > */}
                     <div className={statRowStyle}>
                         
                     <div className="stat">                  
@@ -55,7 +56,7 @@ export const VitalStats = () =>
                     </div>
             
                     </div>
-                    </LoadingOverlay>
+                    {/* </LoadingOverlay> */}
 
         </div>                                           
     )

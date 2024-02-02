@@ -48,7 +48,7 @@ useEffect(() => {
       
 
       
-      <Portal   initTown={1} initBeds={3} initArea={3} initType={1} ></Portal>;
+      <Portal   initTown={1} initBeds={3} initArea={3} initType={1} ></Portal>
 
       
       <ul style = {{display:"flex", flexWrap:"wrap"}}>

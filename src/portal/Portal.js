@@ -113,8 +113,9 @@ const Portal =  () =>
       {!isMiniFilterMode ? 
       
         <div>                
-          <Filter isDesktop = {isDesktop} setFilter = {setFilter}></Filter> 
           {!isDesktop && <VitalStats style = {{width:'100%'}}></VitalStats>}                        
+          <Filter isDesktop = {isDesktop} setFilter = {setFilter}></Filter> 
+          
          <div className = "titledSearch">
           <div className = "seachTitle">{simplify(searchTitle)}</div>
           <div>  
