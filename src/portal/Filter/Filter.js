@@ -4,12 +4,13 @@ import Select  from 'react-dropdown-select';
 import Slider from 'rc-slider';
 import { FaDeleteLeft } from "react-icons/fa6";
 import {withComma} from "../../helper/format-helper"
-import { locationDisplayAtom, filtersAtom, isDesktopAtom } from '../appState/appState';
+import { locationDisplayAtom, filtersAtom, isDesktopAtom, isMiniFilterModeAtom } from '../appState/appState';
 import { useAtomState } from '@zedux/react';
 
 export const Filter = (props) =>
 {
     const [locationDisplay,setlocationDisplay] = useAtomState(locationDisplayAtom);
+    const [isMiniFilterMode,setIsMiniFilterMode] = useAtomState(isMiniFilterModeAtom);
     const [filter,setFilter] = useAtomState(filtersAtom);
     const [isDesktop,] = useAtomState(isDesktopAtom);
 
@@ -196,12 +197,33 @@ export const Filter = (props) =>
     onPriceRangeComplete(priceRange)    
   }
     
+
+
+
+const onFilter = () =>
+{
+  setIsMiniFilterMode(true);
+}
+
+const onApply = () =>
+{
+  setIsMiniFilterMode(false);
+}
+
+
+
+
+
+
 return(<div>
+
+
+  
 
 
 
     
-<div className = "filterBar">
+<div className = "filterBar" >
   
 
   <div className = "filters">
@@ -215,7 +237,7 @@ return(<div>
         </div>
     </div>
 
-    { isDesktop && 
+    {  (isDesktop  || isMiniFilterMode)  && 
     
         <div className = "filter">
           <div className = "filterName">
@@ -229,7 +251,7 @@ return(<div>
         }
 
         
-    { isDesktop && 
+{  (isDesktop  || isMiniFilterMode)  && 
 
           <div className = "filter">
     <div className = "filterName">
@@ -242,7 +264,7 @@ return(<div>
 }
 
 
-{ isDesktop && 
+{  (isDesktop  || isMiniFilterMode)  && 
     <div className = "filter">
       <div className = "filterName">
               Home Type                        
@@ -253,16 +275,8 @@ return(<div>
       </div>
 }
     
-
-
-      
-    
-    
-
-
-
-
-  { isDesktop && 
+        
+{  (isDesktop  || isMiniFilterMode)  && 
       <div className = "priceFilter">
               <div className = "priceFilterName">
                   <label>  Price Range</label>
@@ -286,23 +300,30 @@ return(<div>
     </div>
 
   
-    { isDesktop && 
-    <div className = "filter">     
+    {/* {  (isDesktop  || isMiniFilterMode)  &&  */}
+    <div className = "filter sortFilter">     
       <div className = "filterGeneral  sortName">
           Sort
       </div>                                                                 
-      <div className = "filterSortType filterGeneral">
+      <div className = "filterSortType sortFilter">
         <Select   disabled={listsLoading}  className={"select"}  type="text" values={selectedSortType} options={availableSortTypes} onChange={(values) => setSelectedSortType(values)} />
         </div>                    
       </div>
-    }
+    {/* } */}
 
-{!isDesktop &&
-  <button className ="filterButton">Filter</button>
+{!isDesktop && !isMiniFilterMode &&
+  <button onClick={onFilter} className ="filterButton">Filter</button>
   }
 
 
+
+
 </div>
+
+{!isDesktop && isMiniFilterMode &&
+  <button onClick={onApply} className ="filterButton" style={{width:"100%"}}>Apply</button>
+  }
+
 
 
 

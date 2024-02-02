@@ -7,7 +7,7 @@ const Layout = () => {
 
   const [isDesktop] = useAtomState(isDesktopAtom);
   return (
-    <div style={{display: "flex", flexDirection:'column'}}>
+    <div style={{display: "flex", flexDirection:'column', margin:"0px 0px"}}>
 
       <div style={{display: "flex", flexDirection:'row', justifyContent: "space-between"}}>
 

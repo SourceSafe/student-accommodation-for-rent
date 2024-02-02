@@ -8,7 +8,7 @@ import {withComma} from "../helper/format-helper"
 import {Filter} from './Filter/Filter';
 import { VitalStats } from './VitalStats/VitalStats';
 import { useAtomState } from '@zedux/react';
-import { isDesktopAtom, mainStatsAtom, filtersAtom, isLoadingAtom, locationDisplayAtom } from './appState/appState'
+import { isDesktopAtom, mainStatsAtom, filtersAtom, isLoadingAtom, locationDisplayAtom, isMiniFilterModeAtom } from './appState/appState'
 
 
 const Portal =  () =>
@@ -29,6 +29,7 @@ const Portal =  () =>
     const [mainStats, setMainStats] = useAtomState(mainStatsAtom);
     const [isLoading, setIsLoading] = useAtomState(isLoadingAtom);
     const [locationDisplay, setLocationDisplay] = useAtomState(locationDisplayAtom);
+    const [isMiniFilterMode] = useAtomState(isMiniFilterModeAtom);
     const prev = "<<";
     const next  = ">>"
     
@@ -101,16 +102,19 @@ const Portal =  () =>
     {
       return txt.replace("detached, bungalow, semi detached, terraced", "Houses")
     }
+
+    const is = isMiniFilterMode;
     
     
     return(
-        <div>
 
-        
-          {!isDesktop && <VitalStats style = {{width:'100%'}}></VitalStats>}
+      <div>
+
+      {!isMiniFilterMode ? 
+      
+        <div>                
           <Filter isDesktop = {isDesktop} setFilter = {setFilter}></Filter> 
-
-                        
+          {!isDesktop && <VitalStats style = {{width:'100%'}}></VitalStats>}                        
          <div className = "titledSearch">
           <div className = "seachTitle">{simplify(searchTitle)}</div>
           <div>  
@@ -118,33 +122,32 @@ const Portal =  () =>
                 <span className = "resultCountUnits">results </span>
           </div>                    
         </div>
-
                          
           <div>
-            <div style={{display:'flex'}}>              
-         
+            <div style={{display:'flex'}}>                       
             </div> 
                 <div className="listings"> 
                   {searchResults?.map(listing => <Listing isDesktop={isDesktop} listing={listing} loading={loading} ></Listing>)}  
                 </div>                                    
               </div>
-
-
-
               <div className = "navButtons">
                 <button className = {prevClassName} disabled = {!isPrev} onClick={() => setPage(page-1)}> {prev}  Previous </button>
                 <label>{`Page ${page} / ${pageCount}`}</label>
                 <button className = {nextClassName} disabled = {!isNext} onClick={() => setPage(page+1)}>Next {next} </button>
-              </div>
-                         
-  
-
+              </div>                                
           </div>
-      
-        
-        
-        
 
+      : <div><Filter></Filter> </div>
+
+      
+
+
+        } 
+        
+        </div>
+
+          
+                            
     )
 }
 

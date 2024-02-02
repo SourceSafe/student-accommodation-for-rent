@@ -35,7 +35,7 @@ export const  Listing = ({listing}) =>
 
 
   const info = listing.addedReduced;
-  const imageWidth = windowSize[0] < 600 ?  windowSize[0]-32 : 350;
+  const imageWidth = windowSize[0] < 600 ?  windowSize[0]-35 : 350;
   // const imageHeight = windowSize[0] < 600 ?  'auto' : 277;
   const imageHeight = windowSize[0] < 600 ?  300 : 250;
   // const isDesktop = windowSize[0] > 600;
@@ -93,7 +93,7 @@ export const  Listing = ({listing}) =>
         <div className= "listing-address"> {listing.add1}</div>                          
         <div className= "listing-subheader"> {listing.add2}</div>
         <div className= "listing-text"> 
-        {decodeURIComponent(listing.description)}
+        {listing.description}
         </div>
          
       </div> }

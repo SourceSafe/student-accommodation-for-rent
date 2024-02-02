@@ -16,6 +16,10 @@
     margin: 0px 25px 5px 45px;
 }
 
+.sortFilter{
+    width:130px;
+}
+
 .priceFilterSelection {
     width: 200px;    
     margin : 0px 0px 0px 0px;
@@ -99,9 +103,6 @@
     width: 100px;    
 }
 
-.filterSortType {
-    width: 200px;    
-}
 
 
 
@@ -134,10 +135,11 @@
     border: solid 2px rgb(212, 212, 212);    
     font-weight: bold;
     width : 120px;
-    height : 37px;    
+    height : 36px;    
     border-radius: 5px;
-    margin-top: 17px;
+    margin-top: 20px;
     margin-right: 5px;
+    width : 120px
 }
 
 
