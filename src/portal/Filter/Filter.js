@@ -7,7 +7,7 @@ import {withComma} from "../../helper/format-helper"
 import { locationDisplayAtom, filtersAtom, isDesktopAtom, isMiniFilterModeAtom } from '../appState/appState';
 import { useAtomState } from '@zedux/react';
 
-export const Filter = (props) =>
+export const Filter = () =>
 {
     const [locationDisplay,setlocationDisplay] = useAtomState(locationDisplayAtom);
     const [isMiniFilterMode,setIsMiniFilterMode] = useAtomState(isMiniFilterModeAtom);
@@ -35,7 +35,7 @@ export const Filter = (props) =>
     const [isPriceFilterSet, setIsPriceFilterSet] = useState(false);
     const [minPriceSlider, setMinPriceSlider] = useState(priceRange[0]);
     const [maxPriceSlider, setMaxPriceSlider] = useState(priceRange[1]);    
-    const [index, setIndex] = useState(0);
+    
 
     
     useEffect(() => {       
@@ -284,13 +284,7 @@ return(<div>
               </div>              
                 <Slider range  min={priceRange[0]}  max = {priceRange[1]} value = {selectedPriceRange} onChangeComplete={(value) => onPriceRangeComplete(value) } onChange={onPriceRangeChange}   step = {25}  />                                
                 <div className = "priceFilterSelection">
-
-                <span className = "priceFilterUnit">{withComma(priceRangeDisplay)}</span>                          
-
-                  {/* <span className = "priceFilterValue">{`£${withComma(minPriceSlider)}`}</span>                          
-                  <span>to</span>
-                  <span className = "priceFilterValue">{`£${withComma(maxPriceSlider)}`}</span>                                             */}
-                  
+                <span className = "priceFilterUnit">{withComma(priceRangeDisplay)}</span>                                                         
               </div>                                     
             
       </div>
@@ -300,7 +294,7 @@ return(<div>
     </div>
 
   
-    {/* {  (isDesktop  || isMiniFilterMode)  &&  */}
+    
     <div className = "filter sortFilter">     
       <div className = "filterGeneral  sortName">
           Sort
@@ -309,11 +303,11 @@ return(<div>
         <Select   disabled={listsLoading}  className={"select"}  type="text" values={selectedSortType} options={availableSortTypes} onChange={(values) => setSelectedSortType(values)} />
         </div>                    
       </div>
-    {/* } */}
+    
 
 {!isDesktop && !isMiniFilterMode &&
-  <button onClick={onFilter} className ="filterButton">Filter</button>
-  }
+  <button onClick={onFilter} className ="filterButton">Filters</button>
+   }
 
 </div>
 
@@ -322,7 +316,7 @@ return(<div>
 
 {!isDesktop && isMiniFilterMode &&
 
-  <button onClick={onApply} className ="filterButton" style={{width:"95%"}}>Apply</button>
+  <button onClick={onApply} className ="filterButton" style={{width:"95%"}}>Less Filters</button>
   }
   </div>
 

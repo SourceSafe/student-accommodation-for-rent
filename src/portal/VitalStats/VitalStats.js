@@ -15,10 +15,10 @@ export const VitalStats = () =>
     const [locationDisplay] = useAtomState(locationDisplayAtom);
 
 
-    const all = mainStats.All?.length > 0 ? `${withComma(mainStats.All?.split(' ')[0])}` : "";
-    const house = mainStats.All?.length > 0 ? `${withComma(mainStats.House?.split(' ')[0])}` : "";
-    const flat = mainStats.All?.length > 0 ? `${withComma(mainStats.Flat?.split(' ')[0])}` : "";
-    const studio = mainStats.All?.length > 0 ? `${withComma(mainStats.Studio?.split(' ')[0])}` : "";
+    const all = mainStats.All?.length > 0 ? `${withComma(mainStats.All?.split(' ')[0])}` : "---";
+    const house = mainStats.House?.length > 0 ? `${withComma(mainStats.House?.split(' ')[0])}` : "---";
+    const flat = mainStats.Flat?.length > 0 ? `${withComma(mainStats.Flat?.split(' ')[0])}` : "---";
+    const studio = mainStats.Studio?.length > 0 ? `${withComma(mainStats.Studio?.split(' ')[0])}` : "--";
     const statRowStyle = isDesktop ? "statRow" : "statRowMini";
     
     return (                                                

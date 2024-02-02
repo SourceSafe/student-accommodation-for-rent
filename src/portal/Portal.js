@@ -104,17 +104,19 @@ const Portal =  () =>
     }
 
     const is = isMiniFilterMode;
+
+    const resultZoneVisible  = !isMiniFilterMode;
     
     
     return(
 
       <div>
 
-      {!isMiniFilterMode ? 
+      
       
         <div>                
           {!isDesktop && <VitalStats style = {{width:'100%'}}></VitalStats>}                        
-          <Filter isDesktop = {isDesktop} setFilter = {setFilter}></Filter> 
+          <Filter/>
           
          <div className = "titledSearch">
           <div className = "seachTitle">{simplify(searchTitle)}</div>
@@ -138,12 +140,11 @@ const Portal =  () =>
               </div>                                
           </div>
 
-      : <div><Filter></Filter> </div>
 
       
 
 
-        } 
+        
         
         </div>
 
