@@ -15,7 +15,10 @@ export const VitalStats = () =>
     const [locationDisplay] = useAtomState(locationDisplayAtom);
 
 
-    const all = mainStats.All?.len
+    const all = mainStats.All?.length > 0 ? `${withComma(mainStats.All?.split(' ')[0])}` : "";
+    const house = mainStats.All?.length > 0 ? `${withComma(mainStats.House?.split(' ')[0])}` : "";
+    const flat = mainStats.All?.length > 0 ? `${withComma(mainStats.Flat?.split(' ')[0])}` : "";
+    const studio = mainStats.All?.length > 0 ? `${withComma(mainStats.Studio?.split(' ')[0])}` : "";
     const statRowStyle = isDesktop ? "statRow" : "statRowMini";
     
     return (                                                
@@ -32,24 +35,23 @@ export const VitalStats = () =>
                     active={isLoading}
                     >
                     <div className={statRowStyle}>
-
                         
                     <div className="stat">                  
                         <div className="statTitle"> All</div>
-                        <div className = "statValue">{`${withComma(mainStats.All?.split(' ')[0])}`}</div>                        
+                        <div className = "statValue">{all}</div>                        
                     </div>
                     
                     <div className="stat">                  
                         <div className="statTitle"> House</div>
-                        <div className = "statValue">{`${withComma(mainStats.House?.split(' ')[0])}`}</div>                        
+                        <div className = "statValue">{house}</div>                        
                     </div>                    
                     <div className="stat">                  
                         <div className="statTitle"> Flat</div>
-                        <div className = "statValue">{`${withComma(mainStats.Flat?.split(' ')[0])}`}</div>                        
+                        <div className = "statValue">{flat}</div>                        
                     </div>                        
                     <div className="stat">                  
                         <div className="statTitle"> Studio</div>
-                        <div className = "statValue">{`${withComma(mainStats.Studio?.split(' ')[0])}`}</div>                        
+                        <div className = "statValue">{studio}</div>                        
                     </div>
             
                     </div>
