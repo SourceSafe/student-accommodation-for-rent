@@ -11,7 +11,7 @@ const Layout = () => {
 
       <div style={{display: "flex", flexDirection:'row', justifyContent: "space-between"}}>
 
-      <div>
+      <div style={{ margin:"0px 0px 0px 5px"}}>
         <a href="./">
           <img src="logo.jpg" alt="Welcone to Student Accommodation For Rent"/>           
         </a>
