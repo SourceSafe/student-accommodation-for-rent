@@ -287,7 +287,14 @@ return(<div>
                   <label>  Price Range</label>
                   { isPriceFilterSet && <FaDeleteLeft onClick={onClickClear}  size={20} ></FaDeleteLeft>}
               </div>              
-                <Slider range  min={priceRange[0]}  max = {priceRange[1]} value = {selectedPriceRange} onChangeComplete={(value) => onPriceRangeComplete(value) } onChange={onPriceRangeChange}   step = {25}  />                                
+                <Slider   handleStyle={{
+                    
+                    height: 20,
+                    width: 20,
+                    marginLeft: -10,
+                    marginTop: -7,
+          
+        }} style={{marginTop:"5px"}} range  min={priceRange[0]}  max = {priceRange[1]} value = {selectedPriceRange} onChangeComplete={(value) => onPriceRangeComplete(value) } onChange={onPriceRangeChange}   step = {25}  />                                
                 <div className = "priceFilterSelection">
                 <span className = "priceFilterUnit">{withComma(priceRangeDisplay)}</span>                                                         
               </div>                                     
