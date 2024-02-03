@@ -6,6 +6,7 @@ import { FaDeleteLeft } from "react-icons/fa6";
 import {withComma} from "../../helper/format-helper"
 import { locationDisplayAtom, filtersAtom, isDesktopAtom, isMiniFilterModeAtom } from '../appState/appState';
 import { useAtomState } from '@zedux/react';
+import { IoOptions } from "react-icons/io5";
 
 export const Filter = () =>
 {
@@ -224,6 +225,10 @@ return(<div>
 
     
 <div className = "filterBar" >
+
+
+
+
   
 
   <div className = "filters">
@@ -295,7 +300,7 @@ return(<div>
 
   
     
-    {  (isDesktop  || isMiniFilterMode)  && 
+    {/* {  (isDesktop  || isMiniFilterMode)  &&  */}
     <div className = "filter sortFilter">     
       <div className = "filterGeneral  sortName">
           Sort
@@ -304,12 +309,25 @@ return(<div>
         <Select   disabled={listsLoading}  className={"select"}  type="text" values={selectedSortType} options={availableSortTypes} onChange={(values) => setSelectedSortType(values)} />
         </div>                    
       </div>
-}
-    
+{/* } */}
+
+
 
 {!isDesktop && !isMiniFilterMode &&
-  <button onClick={onFilter} className ="filterButton">Filters</button>
-   }
+  <button onClick={onFilter} className ="filterButton">
+    <div style={{display:'flex', justifyContent:'center', alignItems:'center', gap:20}}>
+    <div>
+        <IoOptions size="25"/>        
+      </div>          
+      {/* <div >
+        Filters    
+      </div> */}
+
+    </div>
+</button>
+
+
+}
 
 </div>
 
