@@ -8,11 +8,20 @@ import {withComma} from "../helper/format-helper"
 import {Filter} from './Filter/Filter';
 import { VitalStats } from './VitalStats/VitalStats';
 import { useAtomState } from '@zedux/react';
-import { isDesktopAtom, mainStatsAtom, filtersAtom, isLoadingAtom, locationDisplayAtom, isMiniFilterModeAtom } from './appState/appState'
+import { isDesktopAtom, mainStatsAtom, filtersAtom, isLoadingAtom, locationDisplayAtom, isMiniFilterModeAtom, isPortalAtom } from './appState/appState'
+import { FaInfoCircle } from "react-icons/fa";
 
 
 const Portal =  () =>
 {          
+  const queryParameters = new URLSearchParams(window.location.search)
+  const locationIdentifier = queryParameters.get("areaLocationId")
+  const homeType = queryParameters.get("type")
+  const beds= queryParameters.get("beds")
+  const townLocationId= queryParameters.get("townLocationId")
+  
+
+  
     const refIndex = useRef(0);
     const urlFormat = "https://kdwytshik8.execute-api.eu-west-2.amazonaws.com/Production/SearchResults";      
     const loadingListings = require('./data/LoadingListings.json');        
@@ -30,6 +39,7 @@ const Portal =  () =>
     const [isLoading, setIsLoading] = useAtomState(isLoadingAtom);
     const [locationDisplay, setLocationDisplay] = useAtomState(locationDisplayAtom);
     const [isMiniFilterMode] = useAtomState(isMiniFilterModeAtom);
+    const [isPortal, setIsPortal] = useAtomState(isPortalAtom);
     const prev = "<<";
     const next  = ">>"
     
@@ -59,7 +69,22 @@ const Portal =  () =>
       }
 
     }
-            
+    useEffect(() => {
+      setIsPortal(true);
+      window.addEventListener('beforeunload', setFalse)      
+      return () => {
+        window.removeEventListener('beforeunload', setFalse)
+      }
+      
+
+    }, [])
+    
+    const setFalse = (e) => {
+      setIsPortal(false);      
+    }
+    
+    
+    
                   
     useEffect(() => {
       const fetchData = async () => {
@@ -74,8 +99,7 @@ const Portal =  () =>
         } catch (error) {
           console.error('Error fetching data:', error);
         } finally {
-          setIsLoading(false);          
-          
+          setIsLoading(false);                  
         }
       };
       if(url)
@@ -110,11 +134,15 @@ const Portal =  () =>
       <div>          
         <div>                
           {!isDesktop && <VitalStats style = {{width:'100%'}}></VitalStats>}                        
-          <Filter/>
+          <Filter townLocationId ={townLocationId} areaLocationId={locationIdentifier}   homeType = {homeType} beds={beds}  />
           
          <div className = "titledSearch">
-          <div className = "seachTitle">{simplify(searchTitle)}</div>
-          <div>  
+          <div style  ={{display:'flex', gap:'10px'}}>              
+              <div className = "seachTitle">{simplify(searchTitle)}</div>
+              {/* <FaInfoCircle size={20}/> */}
+          </div>
+                   
+          <div>                
                 <span className = "resultCount" >{withComma(totalCount)} </span>                
                 <span className = "resultCountUnits">results </span>
           </div>                    

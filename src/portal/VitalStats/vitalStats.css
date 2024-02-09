@@ -9,7 +9,11 @@
 }
 
 .mainStatsTitle{
-    margin:5px;
+    
+    user-select: none;
+    margin: 5px 5px;
+    
+
 
 }
 
@@ -92,3 +96,23 @@
 a{
     color:aqua;
 }
+
+
+
+.viewInfoLink {
+    text-decoration:none !important;        
+    
+}
+
+.viewInfoLink:hover {
+    text-decoration:none !important;      
+    color: black;      
+}
+
+
+
+
+
+
+
+

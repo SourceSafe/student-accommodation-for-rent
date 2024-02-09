@@ -8,13 +8,13 @@ import { locationDisplayAtom, filtersAtom, isDesktopAtom, isMiniFilterModeAtom }
 import { useAtomState } from '@zedux/react';
 import { IoOptions } from "react-icons/io5";
 
-export const Filter = () =>
+export const Filter = (props) =>
 {
+    const { townLocationId, areaLocationId, homeType, beds} = props;
     const [locationDisplay,setlocationDisplay] = useAtomState(locationDisplayAtom);
     const [isMiniFilterMode,setIsMiniFilterMode] = useAtomState(isMiniFilterModeAtom);
     const [filter,setFilter] = useAtomState(filtersAtom);
     const [isDesktop,] = useAtomState(isDesktopAtom);
-
     const lists = require('.././data/LocationByTown.json');
     const allLocations = {value:"All", label:'All Locations'};              
     const [listsLoading, setListsLoading] = useState(true);
@@ -110,7 +110,10 @@ export const Filter = () =>
         {
           locations?.unshift(allLocations);
           setAvailableLocations(locations)                            
-          setSelectedLocation([locations[0]]);                          
+
+
+          const locationId = locations.findIndex(item => item.value === areaLocationId)  == -1 ? 0 : locations.findIndex(item => item.value === areaLocationId);      
+          setSelectedLocation([locations[locationId]]);                    
         }
       }
       }, [selectedTown]);
@@ -124,11 +127,19 @@ export const Filter = () =>
         const map = new Map(townList.map(item => [item.label, item]));
         const uniqueTown = [...map.values()];                      
          setAvailableTowns(uniqueTown)       
-         setSelectedTown([uniqueTown[0]]);         
-        setAvailableBedrooms(lists.bedrooms);
-        setSelectedBedrooms([lists.bedrooms[0]]);
+
+         const townIdx = uniqueTown.findIndex(item => item.value === townLocationId)  == -1 ? 3 : uniqueTown.findIndex(item => item.value === townLocationId);      
+         setSelectedTown([uniqueTown[townIdx]]);         
+
+        setAvailableBedrooms(lists.bedrooms);      
+        const bedIdx = lists.bedrooms.findIndex(item => item.value === beds)  == -1 ? 0 : lists.bedrooms.findIndex(item => item.value === beds);      
+        setSelectedBedrooms([lists.bedrooms[bedIdx]]);
+
+                
         setAvailableHomeType(lists.homeType);
-        setSelectedHomeType([lists.homeType[0]]);
+        const typeIdx = lists.homeType.findIndex(item => item.value === homeType)  == -1 ? 0 : lists.homeType.findIndex(item => item.value === homeType);      
+        setSelectedHomeType([lists.homeType[typeIdx]]);
+        
         setAvailableSortType(lists.sortTypes);        
         setSelectedSortType([lists.sortTypes[2]]);
     }

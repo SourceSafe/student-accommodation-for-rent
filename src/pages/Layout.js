@@ -1,11 +1,12 @@
 import { Outlet } from "react-router-dom";
 import "./styles.css"
 import { VitalStats } from "../portal/VitalStats/VitalStats";
-import { isDesktopAtom } from "../portal/appState/appState";
+import { isDesktopAtom, isPortalAtom } from "../portal/appState/appState";
 import { useAtomState } from "@zedux/react";
 const Layout = () => {
 
   const [isDesktop] = useAtomState(isDesktopAtom);
+  const [isPortal] = useAtomState(isPortalAtom);
   return (
     <div style={{display: "flex", flexDirection:'column', margin:"0px 0px"}}>
 
@@ -17,7 +18,7 @@ const Layout = () => {
         </a>
       </div>
       <div style={{marginTop:"20px"}}>
-        { isDesktop && 
+        { isDesktop && isPortal && 
         <VitalStats ></VitalStats>        
       }
       </div>     

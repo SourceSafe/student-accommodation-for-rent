@@ -75,6 +75,124 @@ h2{
     text-decoration: underline;
   }
 
+.portalButton {
+    background: rgb(230, 149, 0);
+    min-width: 150px;
+    border : solid 2px rgb(213, 213, 213);
+    border-radius: 5px;            
+    height: 25px;
+}
+
+.portalButton:hover {
+  border : solid 2px rgb(187, 187, 187);
+}
+
+.portalLink {
+   text-decoration: none !important;
+   
+  font-weight: 500;
+}
+
+.portalLink:hover {
+    
+  
+  text-decoration: underline !important;
+
+  color: rgb(115, 146, 200) !important;
+  font-weight: 500;
+
+  
+  
+ 
+}
+
+
+
+.infoLink {
+    background: rgb(130, 154, 198);
+    min-width: 150px;
+    border : solid 2px rgb(213, 213, 213);
+    border-radius: 5px;    
+    height: 25px;    
+}
+
+
+.viewInfoButton {
+  background: rgb(115, 146, 200);
+  min-width: 65px;
+  border : solid 2px rgb(213, 213, 213);
+  border-radius: 10px;    
+  height: 30px;    
+  color: white; 
+}
+
+.viewInfoButtonIcon {
+  color:white;
+}
+
+.viewInfoButtonIcon:hover {
+  color:white;
+}
+
+.viewInfoButtonLink
+{
+  text-decoration: none !important;
+  color: white !important;
+  font-size: 13px !important;
+
+
+}
+.viewInfoButtonLink:hover
+{
+  text-decoration: underline !important;    
+  color: white !important;
+}
+
+
+.tableButtonAlignment {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+
+
+
+.searchButton {
+  background: orange;
+  min-width: 140px;
+  border : solid 2px rgb(213, 213, 213);
+  border-radius: 10px;    
+  height: 30px;    
+  color: white;
+  font-size:small !important   ;
+}
+
+.searchButtonIcon {
+  color:white;    
+}
+
+
+.searchButtonLink
+{
+  text-decoration: none !important;
+  color: white !important;
+  font-size: 13px !important;
+
+
+}
+.searchButtonLink:hover
+{
+  text-decoration: underline !important;    
+  color: white !important;
+}
+
+
+
+
+
+
+
 
  
  

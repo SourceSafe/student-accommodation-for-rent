@@ -7,38 +7,6 @@ import NoPage from "./pages/NoPage";
 
 //*** js:import-townStart
 const Bath = lazy(() => import('./pages/town/Bath'));
-const BathOldfieldParkFlat1 = lazy(() => import('./pages/town/BathOldfieldParkFlat1'));
-const BathOldfieldParkFlat2 = lazy(() => import('./pages/town/BathOldfieldParkFlat2'));
-const BathOldfieldParkFlat3 = lazy(() => import('./pages/town/BathOldfieldParkFlat3'));
-const BathOldfieldParkFlat4 = lazy(() => import('./pages/town/BathOldfieldParkFlat4'));
-const BathOldfieldParkFlat5 = lazy(() => import('./pages/town/BathOldfieldParkFlat5'));
-const BathOldfieldParkFlat6 = lazy(() => import('./pages/town/BathOldfieldParkFlat6'));
-const BathOldfieldParkFlat9 = lazy(() => import('./pages/town/BathOldfieldParkFlat9'));
-const BathOldfieldParkFlat10 = lazy(() => import('./pages/town/BathOldfieldParkFlat10'));
-const BathOldfieldParkHouse2 = lazy(() => import('./pages/town/BathOldfieldParkHouse2'));
-const BathOldfieldParkHouse3 = lazy(() => import('./pages/town/BathOldfieldParkHouse3'));
-const BathOldfieldParkHouse4 = lazy(() => import('./pages/town/BathOldfieldParkHouse4'));
-const BathOldfieldParkHouse5 = lazy(() => import('./pages/town/BathOldfieldParkHouse5'));
-const BathOldfieldParkHouse6 = lazy(() => import('./pages/town/BathOldfieldParkHouse6'));
-const BathOldfieldParkHouse7 = lazy(() => import('./pages/town/BathOldfieldParkHouse7'));
-const BathOldfieldParkHouse8 = lazy(() => import('./pages/town/BathOldfieldParkHouse8'));
-const BathOldfieldParkHouse9 = lazy(() => import('./pages/town/BathOldfieldParkHouse9'));
-const BathOldfieldParkHouse10 = lazy(() => import('./pages/town/BathOldfieldParkHouse10'));
-const BathOldfieldParkStudio1 = lazy(() => import('./pages/town/BathOldfieldParkStudio1'));
-const BathBathSpaFlat1 = lazy(() => import('./pages/town/BathBathSpaFlat1'));
-const BathBathSpaFlat2 = lazy(() => import('./pages/town/BathBathSpaFlat2'));
-const BathBathSpaFlat3 = lazy(() => import('./pages/town/BathBathSpaFlat3'));
-const BathBathSpaFlat4 = lazy(() => import('./pages/town/BathBathSpaFlat4'));
-const BathBathSpaFlat5 = lazy(() => import('./pages/town/BathBathSpaFlat5'));
-const BathBathSpaHouse2 = lazy(() => import('./pages/town/BathBathSpaHouse2'));
-const BathBathSpaHouse3 = lazy(() => import('./pages/town/BathBathSpaHouse3'));
-const BathBathSpaHouse4 = lazy(() => import('./pages/town/BathBathSpaHouse4'));
-const BathBathSpaHouse5 = lazy(() => import('./pages/town/BathBathSpaHouse5'));
-const BathBathSpaHouse6 = lazy(() => import('./pages/town/BathBathSpaHouse6'));
-const BathBathSpaHouse7 = lazy(() => import('./pages/town/BathBathSpaHouse7'));
-const BathBathSpaHouse8 = lazy(() => import('./pages/town/BathBathSpaHouse8'));
-const BathBathSpaHouse9 = lazy(() => import('./pages/town/BathBathSpaHouse9'));
-const BathBathSpaStudio1 = lazy(() => import('./pages/town/BathBathSpaStudio1'));
 const BathHouse = lazy(() => import('./pages/town/BathHouse'));
 const BathFlat = lazy(() => import('./pages/town/BathFlat'));
 const BathStudio = lazy(() => import('./pages/town/BathStudio'));
@@ -65,10 +33,42 @@ const BathOldfieldPark = lazy(() => import('./pages/town/BathOldfieldPark'));
 const BathOldfieldParkHouse = lazy(() => import('./pages/town/BathOldfieldParkHouse'));
 const BathOldfieldParkFlat = lazy(() => import('./pages/town/BathOldfieldParkFlat'));
 const BathOldfieldParkStudio = lazy(() => import('./pages/town/BathOldfieldParkStudio'));
+const BathOldfieldParkFlat1 = lazy(() => import('./pages/town/BathOldfieldParkFlat1'));
+const BathOldfieldParkFlat2 = lazy(() => import('./pages/town/BathOldfieldParkFlat2'));
+const BathOldfieldParkFlat3 = lazy(() => import('./pages/town/BathOldfieldParkFlat3'));
+const BathOldfieldParkFlat4 = lazy(() => import('./pages/town/BathOldfieldParkFlat4'));
+const BathOldfieldParkFlat5 = lazy(() => import('./pages/town/BathOldfieldParkFlat5'));
+const BathOldfieldParkFlat6 = lazy(() => import('./pages/town/BathOldfieldParkFlat6'));
+const BathOldfieldParkFlat9 = lazy(() => import('./pages/town/BathOldfieldParkFlat9'));
+const BathOldfieldParkFlat10 = lazy(() => import('./pages/town/BathOldfieldParkFlat10'));
+const BathOldfieldParkHouse2 = lazy(() => import('./pages/town/BathOldfieldParkHouse2'));
+const BathOldfieldParkHouse3 = lazy(() => import('./pages/town/BathOldfieldParkHouse3'));
+const BathOldfieldParkHouse4 = lazy(() => import('./pages/town/BathOldfieldParkHouse4'));
+const BathOldfieldParkHouse5 = lazy(() => import('./pages/town/BathOldfieldParkHouse5'));
+const BathOldfieldParkHouse6 = lazy(() => import('./pages/town/BathOldfieldParkHouse6'));
+const BathOldfieldParkHouse7 = lazy(() => import('./pages/town/BathOldfieldParkHouse7'));
+const BathOldfieldParkHouse8 = lazy(() => import('./pages/town/BathOldfieldParkHouse8'));
+const BathOldfieldParkHouse9 = lazy(() => import('./pages/town/BathOldfieldParkHouse9'));
+const BathOldfieldParkHouse10 = lazy(() => import('./pages/town/BathOldfieldParkHouse10'));
+const BathOldfieldParkStudio1 = lazy(() => import('./pages/town/BathOldfieldParkStudio1'));
 const BathBathSpa = lazy(() => import('./pages/town/BathBathSpa'));
 const BathBathSpaHouse = lazy(() => import('./pages/town/BathBathSpaHouse'));
 const BathBathSpaFlat = lazy(() => import('./pages/town/BathBathSpaFlat'));
 const BathBathSpaStudio = lazy(() => import('./pages/town/BathBathSpaStudio'));
+const BathBathSpaFlat1 = lazy(() => import('./pages/town/BathBathSpaFlat1'));
+const BathBathSpaFlat2 = lazy(() => import('./pages/town/BathBathSpaFlat2'));
+const BathBathSpaFlat3 = lazy(() => import('./pages/town/BathBathSpaFlat3'));
+const BathBathSpaFlat4 = lazy(() => import('./pages/town/BathBathSpaFlat4'));
+const BathBathSpaFlat5 = lazy(() => import('./pages/town/BathBathSpaFlat5'));
+const BathBathSpaHouse2 = lazy(() => import('./pages/town/BathBathSpaHouse2'));
+const BathBathSpaHouse3 = lazy(() => import('./pages/town/BathBathSpaHouse3'));
+const BathBathSpaHouse4 = lazy(() => import('./pages/town/BathBathSpaHouse4'));
+const BathBathSpaHouse5 = lazy(() => import('./pages/town/BathBathSpaHouse5'));
+const BathBathSpaHouse6 = lazy(() => import('./pages/town/BathBathSpaHouse6'));
+const BathBathSpaHouse7 = lazy(() => import('./pages/town/BathBathSpaHouse7'));
+const BathBathSpaHouse8 = lazy(() => import('./pages/town/BathBathSpaHouse8'));
+const BathBathSpaHouse9 = lazy(() => import('./pages/town/BathBathSpaHouse9'));
+const BathBathSpaStudio1 = lazy(() => import('./pages/town/BathBathSpaStudio1'));
 // //*** js:import-townEnd
 
 //*** jsStart:import-town-location
@@ -91,9 +91,29 @@ function App() {
 <Route path="shared-houses-for-students-in-bath" element={<BathHouse/>}/>
 <Route path="shared-flats-for-students-in-bath" element={<BathFlat/>}/>
 <Route path="studio-apartments-for-students-in-bath" element={<BathStudio/>}/>
+<Route path="student-accommodation-in-bath-1-bedroom-flats" element={<BathFlat1/>}/>
+<Route path="student-accommodation-in-bath-2-bedroom-flats" element={<BathFlat2/>}/>
+<Route path="student-accommodation-in-bath-3-bedroom-flats" element={<BathFlat3/>}/>
+<Route path="student-accommodation-in-bath-4-bedroom-flats" element={<BathFlat4/>}/>
+<Route path="student-accommodation-in-bath-5-bedroom-flats" element={<BathFlat5/>}/>
+<Route path="student-accommodation-in-bath-6-bedroom-flats" element={<BathFlat6/>}/>
+<Route path="student-accommodation-in-bath-7-bedroom-flats" element={<BathFlat7/>}/>
+<Route path="student-accommodation-in-bath-9-bedroom-flats" element={<BathFlat9/>}/>
+<Route path="student-accommodation-in-bath-10-bedroom-flats" element={<BathFlat10/>}/>
+<Route path="student-accommodation-in-bath-2-bedroom-houses" element={<BathHouse2/>}/>
+<Route path="student-accommodation-in-bath-3-bedroom-houses" element={<BathHouse3/>}/>
+<Route path="student-accommodation-in-bath-4-bedroom-houses" element={<BathHouse4/>}/>
+<Route path="student-accommodation-in-bath-5-bedroom-houses" element={<BathHouse5/>}/>
+<Route path="student-accommodation-in-bath-6-bedroom-houses" element={<BathHouse6/>}/>
+<Route path="student-accommodation-in-bath-7-bedroom-houses" element={<BathHouse7/>}/>
+<Route path="student-accommodation-in-bath-8-bedroom-houses" element={<BathHouse8/>}/>
+<Route path="student-accommodation-in-bath-9-bedroom-houses" element={<BathHouse9/>}/>
+<Route path="student-accommodation-in-bath-10-bedroom-houses" element={<BathHouse10/>}/>
+<Route path="student-accommodation-in-bath-1-bedroom-studios" element={<BathStudio1/>}/>
 <Route path="student-accommodation-in-oldfield-park-bath" element={<BathOldfieldPark/>}/>
 <Route path="shared-houses-for-students-in-oldfield-park-bath" element={<BathOldfieldParkHouse/>}/>
 <Route path="shared-flats-for-students-in-oldfield-park-bath" element={<BathOldfieldParkFlat/>}/>
+<Route path="studio-apartments-for-students-in-oldfield-park-bath" element={<BathOldfieldParkStudio/>}/>
 <Route path="shared-1-bedroom-flats-for-students-in-oldfield-park-bath" element={<BathOldfieldParkFlat1/>}/>
 <Route path="shared-2-bedroom-flats-for-students-in-oldfield-park-bath" element={<BathOldfieldParkFlat2/>}/>
 <Route path="shared-3-bedroom-flats-for-students-in-oldfield-park-bath" element={<BathOldfieldParkFlat3/>}/>
@@ -102,11 +122,6 @@ function App() {
 <Route path="shared-6-bedroom-flats-for-students-in-oldfield-park-bath" element={<BathOldfieldParkFlat6/>}/>
 <Route path="shared-9-bedroom-flats-for-students-in-oldfield-park-bath" element={<BathOldfieldParkFlat9/>}/>
 <Route path="shared-10-bedroom-flats-for-students-in-oldfield-park-bath" element={<BathOldfieldParkFlat10/>}/>
-<Route path="studio-apartments-for-students-in-oldfield-park-bath" element={<BathOldfieldParkStudio/>}/>
-<Route path="student-accommodation-in-bath-spa-bath" element={<BathBathSpa/>}/>
-<Route path="shared-houses-for-students-in-bath-spa-bath" element={<BathBathSpaHouse/>}/>
-<Route path="shared-flats-for-students-in-bath-spa-bath" element={<BathBathSpaFlat/>}/>
-<Route path="studio-apartments-for-students-in-bath-spa-bath" element={<BathBathSpaStudio/>}/>
 <Route path="shared-2-bedroom-houses-for-students-in-oldfield-park-bath" element={<BathOldfieldParkHouse2/>}/>
 <Route path="shared-3-bedroom-houses-for-students-in-oldfield-park-bath" element={<BathOldfieldParkHouse3/>}/>
 <Route path="shared-4-bedroom-houses-for-students-in-oldfield-park-bath" element={<BathOldfieldParkHouse4/>}/>
@@ -117,6 +132,10 @@ function App() {
 <Route path="shared-9-bedroom-houses-for-students-in-oldfield-park-bath" element={<BathOldfieldParkHouse9/>}/>
 <Route path="shared-10-bedroom-houses-for-students-in-oldfield-park-bath" element={<BathOldfieldParkHouse10/>}/>
 <Route path="studio-apartments-for-students-in-oldfield-park-bath" element={<BathOldfieldParkStudio1/>}/>
+<Route path="student-accommodation-in-bath-spa-bath" element={<BathBathSpa/>}/>
+<Route path="shared-houses-for-students-in-bath-spa-bath" element={<BathBathSpaHouse/>}/>
+<Route path="shared-flats-for-students-in-bath-spa-bath" element={<BathBathSpaFlat/>}/>
+<Route path="studio-apartments-for-students-in-bath-spa-bath" element={<BathBathSpaStudio/>}/>
 <Route path="shared-1-bedroom-flats-for-students-in-bath-spa-bath" element={<BathBathSpaFlat1/>}/>
 <Route path="shared-2-bedroom-flats-for-students-in-bath-spa-bath" element={<BathBathSpaFlat2/>}/>
 <Route path="shared-3-bedroom-flats-for-students-in-bath-spa-bath" element={<BathBathSpaFlat3/>}/>
@@ -131,27 +150,6 @@ function App() {
 <Route path="shared-8-bedroom-houses-for-students-in-bath-spa-bath" element={<BathBathSpaHouse8/>}/>
 <Route path="shared-9-bedroom-houses-for-students-in-bath-spa-bath" element={<BathBathSpaHouse9/>}/>
 <Route path="studio-apartments-for-students-in-bath-spa-bath" element={<BathBathSpaStudio1/>}/>
-
-<Route path="student-accommodation-in-bath---1-bedroom-flats" element={<BathFlat1/>}/>
-<Route path="student-accommodation-in-bath---2-bedroom-flats" element={<BathFlat2/>}/>
-<Route path="student-accommodation-in-bath---3-bedroom-flats" element={<BathFlat3/>}/>
-<Route path="student-accommodation-in-bath---4-bedroom-flats" element={<BathFlat4/>}/>
-<Route path="student-accommodation-in-bath---5-bedroom-flats" element={<BathFlat5/>}/>
-<Route path="student-accommodation-in-bath---6-bedroom-flats" element={<BathFlat6/>}/>
-<Route path="student-accommodation-in-bath---7-bedroom-flats" element={<BathFlat7/>}/>
-<Route path="student-accommodation-in-bath---9-bedroom-flats" element={<BathFlat9/>}/>
-<Route path="student-accommodation-in-bath---10-bedroom-flats" element={<BathFlat10/>}/>
-<Route path="student-accommodation-in-bath---2-bedroom-houses" element={<BathHouse2/>}/>
-<Route path="student-accommodation-in-bath---3-bedroom-houses" element={<BathHouse3/>}/>
-<Route path="student-accommodation-in-bath---4-bedroom-houses" element={<BathHouse4/>}/>
-<Route path="student-accommodation-in-bath---5-bedroom-houses" element={<BathHouse5/>}/>
-<Route path="student-accommodation-in-bath---6-bedroom-houses" element={<BathHouse6/>}/>
-<Route path="student-accommodation-in-bath---7-bedroom-houses" element={<BathHouse7/>}/>
-<Route path="student-accommodation-in-bath---8-bedroom-houses" element={<BathHouse8/>}/>
-<Route path="student-accommodation-in-bath---9-bedroom-houses" element={<BathHouse9/>}/>
-<Route path="student-accommodation-in-bath---10-bedroom-houses" element={<BathHouse10/>}/>
-<Route path="student-accommodation-in-bath---1-bedroom-studios" element={<BathStudio1/>}/>
-
           {/* routeSectionEnd*/}          
 
           {/* <Route path="/aberdeen/aberdeen-city-centre" element={<AberdeenAberdeenCityCentre/>}/>
