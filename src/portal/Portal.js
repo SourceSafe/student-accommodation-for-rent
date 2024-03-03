@@ -8,18 +8,42 @@ import {withComma} from "../helper/format-helper"
 import {Filter} from './Filter/Filter';
 import { VitalStats } from './VitalStats/VitalStats';
 import { useAtomState } from '@zedux/react';
-import { isDesktopAtom, mainStatsAtom, filtersAtom, isLoadingAtom, locationDisplayAtom, isMiniFilterModeAtom, isPortalAtom } from './appState/appState'
+import { isDesktopAtom, mainStatsAtom, filtersAtom, isLoadingAtom, locationDisplayAtom, isMiniFilterModeAtom, isPortalAtom, townAtom, locationAtom, homeTypeAtom, bedsAtom, sortAtom, minPriceAtom, MaxPriceAtom} from './appState/appState'
 import { FaInfoCircle } from "react-icons/fa";
+import { MdElectricalServices } from 'react-icons/md';
+import  {useNavigate}  from "react-router-dom";
 
 
-const Portal =  () =>
-{          
+
+
+
+const Portal =  (props) =>
+{     
+  const [bedFilter] = useAtomState(bedsAtom);  
+  const [homeTypeFilter] = useAtomState(homeTypeAtom);  
+  const [townFilter] = useAtomState(townAtom);  
+  const [locationFilter] = useAtomState(locationAtom);  
+  const [sortFilter] = useAtomState(sortAtom);  
+  const [minPriceFilter] = useAtomState(minPriceAtom);  
+  const [maxPriceFilter] = useAtomState(MaxPriceAtom);  
+      
   const queryParameters = new URLSearchParams(window.location.search)
-  const locationIdentifier = queryParameters.get("areaLocationId")
-  const homeType = queryParameters.get("type")
-  const beds= queryParameters.get("beds")
-  const townLocationId= queryParameters.get("townLocationId")
-  
+  let town= queryParameters.get("townLocationId");
+  let location = queryParameters.get("areaLocationId");
+  let beds= queryParameters.get("beds");
+  let homeType = queryParameters.get("type");
+  let sort = queryParameters.get("sort");
+  let minPrice = queryParameters.get("minPrice");
+  let maxPrice = queryParameters.get("maxPrice");
+    
+        
+  beds =  bedFilter;   
+  homeType = homeTypeFilter;      
+  town = townFilter;
+  location = locationFilter;
+  sort = sortFilter;
+  minPrice = minPriceFilter;
+  maxPrice = maxPriceFilter;
 
   
     const refIndex = useRef(0);
@@ -42,9 +66,12 @@ const Portal =  () =>
     const [isPortal, setIsPortal] = useAtomState(isPortalAtom);
     const prev = "<<";
     const next  = ">>"
-    
-    
-        
+
+
+
+
+
+              
     useEffect(() => {
       setLoading( searchLoading)
     }, [searchLoading])
@@ -128,13 +155,14 @@ const Portal =  () =>
     }
 
     
-    
+
+ 
     return(
 
       <div>          
         <div>                
           {!isDesktop && <VitalStats style = {{width:'100%'}}></VitalStats>}                        
-          <Filter townLocationId ={townLocationId} areaLocationId={locationIdentifier}   homeType = {homeType} beds={beds}  />
+          <Filter initTownLocationId ={town} initAreaLocationId={location}   initHomeType = {homeType} initBeds={beds} initSort = {sort} initMin = {minPrice} initMax = {maxPrice}  />
           
          <div className = "titledSearch">
           <div style  ={{display:'flex', gap:'10px'}}>              

@@ -4,17 +4,17 @@ import Select  from 'react-dropdown-select';
 import Slider from 'rc-slider';
 import { FaDeleteLeft } from "react-icons/fa6";
 import {withComma} from "../../helper/format-helper"
-import { locationDisplayAtom, filtersAtom, isDesktopAtom, isMiniFilterModeAtom } from '../appState/appState';
 import { useAtomState } from '@zedux/react';
+import { locationDisplayAtom, filtersAtom, isDesktopAtom, isMiniFilterModeAtom, bedsAtom, homeTypeAtom, townAtom, locationAtom, sortAtom } from '../appState/appState';
 import { IoOptions } from "react-icons/io5";
 
 export const Filter = (props) =>
 {
-    const { townLocationId, areaLocationId, homeType, beds} = props;
+    const { initTownLocationId, initAreaLocationId, initHomeType, initBeds, initSort} = props;
     const [locationDisplay,setlocationDisplay] = useAtomState(locationDisplayAtom);
     const [isMiniFilterMode,setIsMiniFilterMode] = useAtomState(isMiniFilterModeAtom);
     const [filter,setFilter] = useAtomState(filtersAtom);
-    const [isDesktop,] = useAtomState(isDesktopAtom);
+    const [isDesktop] = useAtomState(isDesktopAtom);
     const lists = require('.././data/LocationByTown.json');
     const allLocations = {value:"All", label:'All Locations'};              
     const [listsLoading, setListsLoading] = useState(true);
@@ -36,7 +36,18 @@ export const Filter = (props) =>
     const [isPriceFilterSet, setIsPriceFilterSet] = useState(false);
     const [minPriceSlider, setMinPriceSlider] = useState(priceRange[0]);
     const [maxPriceSlider, setMaxPriceSlider] = useState(priceRange[1]);    
+
+    const [bedAtomState, setBedAtomState] = useAtomState(bedsAtom);
+    const [homeTypeAtomState, setHomeTypeAtomState] = useAtomState(homeTypeAtom);
+    const [townAtomState, setTownAtomState] = useAtomState(townAtom);
+    const [locationAtomState, setLocationAtomState] = useAtomState(locationAtom);
+    const [sortAtomState, setSortAtomState] = useAtomState(sortAtom);
+  
+  
     
+    const [bedFilter] = useAtomState(bedsAtom);  
+    console.log(bedFilter);
+
 
     
     useEffect(() => {       
@@ -61,7 +72,8 @@ export const Filter = (props) =>
       {
         if(selectedBedrooms[0].value != "All")
         {
-          beds = selectedBedrooms[0].value;          
+          beds = selectedBedrooms[0].value;       
+          //setAtomBeds(beds)   
         }
       }
 
@@ -75,10 +87,7 @@ export const Filter = (props) =>
       }
 
       let sortType = selectedSortType[0]?.value;            
-
-      
-
-      
+          
                 
       if(locationIdentifier)
       {        
@@ -112,7 +121,7 @@ export const Filter = (props) =>
           setAvailableLocations(locations)                            
 
 
-          const locationId = locations.findIndex(item => item.value === areaLocationId)  == -1 ? 0 : locations.findIndex(item => item.value === areaLocationId);      
+          const locationId = locations.findIndex(item => item.value === initAreaLocationId)  == -1 ? 0 : locations.findIndex(item => item.value === initAreaLocationId);      
           setSelectedLocation([locations[locationId]]);                    
         }
       }
@@ -128,20 +137,32 @@ export const Filter = (props) =>
         const uniqueTown = [...map.values()];                      
          setAvailableTowns(uniqueTown)       
 
-         const townIdx = uniqueTown.findIndex(item => item.value === townLocationId)  == -1 ? 3 : uniqueTown.findIndex(item => item.value === townLocationId);      
+         const townIdx = uniqueTown.findIndex(item => item.value === initTownLocationId)  == -1 ? 3 : uniqueTown.findIndex(item => item.value === initTownLocationId);      
          setSelectedTown([uniqueTown[townIdx]]);         
 
-        setAvailableBedrooms(lists.bedrooms);      
-        const bedIdx = lists.bedrooms.findIndex(item => item.value === beds)  == -1 ? 0 : lists.bedrooms.findIndex(item => item.value === beds);      
-        setSelectedBedrooms([lists.bedrooms[bedIdx]]);
-
-                
+        setAvailableBedrooms(lists.bedrooms);                                      
         setAvailableHomeType(lists.homeType);
-        const typeIdx = lists.homeType.findIndex(item => item.value === homeType)  == -1 ? 0 : lists.homeType.findIndex(item => item.value === homeType);      
-        setSelectedHomeType([lists.homeType[typeIdx]]);
+
+        if(initHomeType === "Studio")
+        {
+          const bedIdx = lists.bedrooms.findIndex(item => item.label === 'Studio');
+          setSelectedBedrooms([lists.bedrooms[bedIdx]]);
+
+          const typeIdx = lists.homeType.findIndex(item => item.label === 'Flat');
+          setSelectedHomeType([lists.homeType[typeIdx]]);
+        }
+        else{          
+          const bedIdx = lists.bedrooms.findIndex(item => item.value === initBeds)  == -1 ? 0 : lists.bedrooms.findIndex(item => item.value === initBeds);      
+          setSelectedBedrooms([lists.bedrooms[bedIdx]]);
+  
+          const typeIdx = lists.homeType.findIndex(item => item.value === initHomeType)  == -1 ? 0 : lists.homeType.findIndex(item => item.value === initHomeType);      
+          setSelectedHomeType([lists.homeType[typeIdx]]);
+        }
+        
         
         setAvailableSortType(lists.sortTypes);        
-        setSelectedSortType([lists.sortTypes[2]]);
+        const sortIdx = lists.sortTypes.findIndex(item => item.value === initSort)  == -1 ? 2 : lists.sortTypes.findIndex(item => item.value === initSort);              
+        setSelectedSortType([lists.sortTypes[sortIdx]]);
     }
 
   
@@ -227,29 +248,50 @@ const onApply = () =>
 
 const showFilter = isDesktop  || isMiniFilterMode ? "block" : "none";
 
+
+const setTownFilter = (values) =>
+{
+  setSelectedTown(values);
+  setTownAtomState(values[0].value);
+}
+
+const setLocationFilter = (values) =>
+{
+  setSelectedLocation(values);
+  setLocationAtomState(values[0].value);
+}
+
+const setBedFilter = (values) =>
+{
+  setSelectedBedrooms(values);
+  setBedAtomState(values[0].value);
+}
+
+const setHomeTypeFilter = (values) =>
+{
+  setSelectedHomeType(values);
+  setHomeTypeAtomState(values[0].value);
+}
+
+const setSort = (values) =>
+{
+  setSelectedSortType(values)
+  setSortAtomState(values[0].value)
+}
+
+
+
+
 return(<div>
-
-
-  
-
-
-
-    
+      
 <div className = "filterBar" >
-
-
-
-
-  
-
   <div className = "filters">
-
     <div className = "filter" style = {{width:"195px"}}>
         <div className = "filterName" style ={{display: {}}}>
             Town
         </div>
         <div className = "filterTown">
-          <Select  disabled={listsLoading}  className={"select"}  type="text" values= { townSelect}  options={availabelTowns} onChange={(values) => setSelectedTown(values)} />
+          <Select  disabled={listsLoading}  className={"select"}  type="text" values= { townSelect}  options={availabelTowns} onChange={setTownFilter} />
         </div>
     </div>
 
@@ -260,10 +302,9 @@ return(<div>
                 Location
             </div>
             <div className = "filterArea filterGeneral">
-            <Select  disabled={listsLoading}  className={"select"} type="text"  values={selectedLocation} options={availableLocations} onChange={(values) => setSelectedLocation(values)} />
+            <Select  disabled={listsLoading}  className={"select"} type="text"  values={selectedLocation} options={availableLocations} onChange={setLocationFilter} />
             </div>                    
           </div>
-
         }
 
         
@@ -274,7 +315,7 @@ return(<div>
             Bedrooms                        
         </div>
         <div className = "filterBeds filterGeneral">
-        <Select disabled={listsLoading}  className={"select"} type="text" values={selectedBedrooms} options={availableBedrooms} onChange={(values) => setSelectedBedrooms(values)} />
+        <Select disabled={listsLoading}  className={"select"} type="text" values={selectedBedrooms} options={availableBedrooms} onChange={ setBedFilter} />
         </div>                    
     </div>
 }
@@ -286,7 +327,7 @@ return(<div>
               Home Type                        
           </div>
           <div className = "filterType filterGeneral">
-          <Select   disabled={listsLoading}  className={"select"} type="text" values={selectedHomeType} options={availableHomeTypes} onChange={(values) => setSelectedHomeType(values)} />
+          <Select   disabled={listsLoading}  className={"select"} type="text" values={selectedHomeType} options={availableHomeTypes} onChange={setHomeTypeFilter} />
           </div>                    
       </div>
 }
@@ -324,7 +365,7 @@ return(<div>
           Sort
       </div>                                                                 
       <div className = "filterSortType sortFilter">
-        <Select   disabled={listsLoading}  className={"select"}  type="text" values={selectedSortType} options={availableSortTypes} onChange={(values) => setSelectedSortType(values)} />
+        <Select   disabled={listsLoading}  className={"select"}  type="text" values={selectedSortType} options={availableSortTypes} onChange={setSort} />
         </div>                    
       </div>
  } 

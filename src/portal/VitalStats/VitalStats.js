@@ -11,6 +11,10 @@ import { FaSearch } from "react-icons/fa";
 import { BsFillHouseFill } from "react-icons/bs";
 import { IoStatsChart } from "react-icons/io5";
 import { ImStatsBars } from "react-icons/im";
+import { FaMagnifyingGlassChart } from "react-icons/fa6";
+import { IoBarChartSharp } from "react-icons/io5";
+import { FaInfoCircle } from "react-icons/fa";
+import {  Link } from "react-router-dom";
 
 
 import {isLoadingAtom, mainStatsAtom, locationDisplayAtom, isDesktopAtom, filtersAtom} from '../appState/appState'
@@ -64,7 +68,13 @@ export const VitalStats = () =>
         
             
             <div className = "mainStats">            
-                    <div className = "mainStatsTitle">Average Student Rents in {locationDisplay} pp/pm</div>
+
+
+                    <div style = {{display:'flex', alignItems:'center'}}>
+                    <div className = "mainStatsTitle">Average Rents (pp/pm) for your Location - </div>
+
+                    <div style = {{fontWeight:'500'}}>{locationDisplay}</div>
+                    </div>
 
                     {/* <LoadingOverlay    styles={{
                         
@@ -110,36 +120,36 @@ export const VitalStats = () =>
 
 
                                         
-                    
+
                         
-                    <div className="stat">                  
-                    <a  title = {`View Accommodation Information on ${locationDisplay}`} className ="viewInfoLink" href = {getLocationRoute()} >                        
+                    <div className="stat">                                                          
+                    <Link  title = {`View Accommodation Information on ${locationDisplay}`} className ="viewInfoLink" to = {getLocationRoute()} >                                                
                         <div className="statTitle"> All</div>
-                        <MdOutlineQueryStats className="viewInfoIcon" size = {25}></MdOutlineQueryStats>                                                                                                
+                        <FaMagnifyingGlassChart className="viewInfoIcon" size = {25}></FaMagnifyingGlassChart>                                                                                                
                         <div className = "statValue">{all}</div>                                                
-                        </a>
+                        </Link>
                     </div>
                     
                     <div className="stat">   
-                        <a title = {`View Information on Student Houses in ${locationDisplay}`} className ="viewInfoLink" href = {getLocationTypeRoute("houses")}>
+                        <Link title = {`View Information on Student Houses in ${locationDisplay}`} className ="viewInfoLink" to = {getLocationTypeRoute("houses")}>
                         <div className="statTitle"> House</div>
-                        <MdOutlineQueryStats size = {25}></MdOutlineQueryStats>                                                                                                
+                        <FaMagnifyingGlassChart className="viewInfoIcon" size = {25}></FaMagnifyingGlassChart>                                                                                                
                         <div className = "statValue">{house}</div>                        
-                        </a>               
+                        </Link>               
                     </div>                    
                     <div className="stat">                  
-                        <a title = {`View Information on Student Flats in ${locationDisplay}`} className ="viewInfoLink" href = {getLocationTypeRoute("flats")}>
+                        <Link title = {`View Information on Student Flats in ${locationDisplay}`} className ="viewInfoLink" to = {getLocationTypeRoute("flats")}>
                             <div className="statTitle"> Flat</div>
-                            <MdOutlineQueryStats size = {25}></MdOutlineQueryStats>                                                                                                
+                            <FaMagnifyingGlassChart className="viewInfoIcon"  size = {25}></FaMagnifyingGlassChart>                                                                                                
                             <div className = "statValue">{flat}</div>                        
-                        </a>
+                        </Link>
                     </div>                        
                     <div className="stat">      
-                    <a  title = {`View Information on Student Studio Apartments in ${locationDisplay}`} className ="viewInfoLink" href = {getLocationStudioRoute()}>
+                    <Link  title = {`View Information on Student Studio Apartments in ${locationDisplay}`} className ="viewInfoLink" to = {getLocationStudioRoute()}>
                         <div className="statTitle"> Studio</div>
-                        <MdOutlineQueryStats size = {25}></MdOutlineQueryStats>                                                                                                                        
+                        <FaMagnifyingGlassChart className="viewInfoIcon"size = {25}></FaMagnifyingGlassChart>                                                                                                                        
                         <div className = "statValue">{studio}</div>                        
-                        </a>            
+                        </Link>            
                     </div>
                                 
                     </div>

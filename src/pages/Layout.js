@@ -3,10 +3,18 @@ import "./styles.css"
 import { VitalStats } from "../portal/VitalStats/VitalStats";
 import { isDesktopAtom, isPortalAtom } from "../portal/appState/appState";
 import { useAtomState } from "@zedux/react";
+ 
 const Layout = () => {
 
   const [isDesktop] = useAtomState(isDesktopAtom);
   const [isPortal] = useAtomState(isPortalAtom);
+  
+
+
+  const hideStyle = {visibility:"hidden"};
+
+
+  const applyHide =  !isDesktop || !isPortal ? hideStyle :  {};
   return (
     <div style={{display: "flex", flexDirection:'column', margin:"0px 0px"}}>
 
@@ -17,7 +25,7 @@ const Layout = () => {
           <img src="logo.jpg" alt="Welcone to Student Accommodation For Rent"/>           
         </a>
       </div>
-      <div style={{marginTop:"20px"}}>
+      <div style={applyHide}>
         { isDesktop && isPortal && 
         <VitalStats ></VitalStats>        
       }
