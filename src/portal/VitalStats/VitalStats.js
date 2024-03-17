@@ -17,14 +17,14 @@ import { FaInfoCircle } from "react-icons/fa";
 import {  Link } from "react-router-dom";
 
 
-import {isLoadingAtom, mainStatsAtom, locationDisplayAtom, isDesktopAtom, filtersAtom} from '../appState/appState'
+import {isStatsLoadingAtom, mainStatsAtom, locationDisplayAtom, isDesktopAtom} from '../appState/appState'
 
 export const VitalStats = () =>
 {
     const [isDesktop] = useAtomState(isDesktopAtom);
-    const [isLoading] = useAtomState(isLoadingAtom);
+    const [isStatsLoading] = useAtomState(isStatsLoadingAtom);
     const [mainStats] = useAtomState(mainStatsAtom);
-    const [filter] = useAtomState(filtersAtom);
+    
     const [locationDisplay] = useAtomState(locationDisplayAtom);
 
 

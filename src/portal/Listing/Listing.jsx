@@ -4,17 +4,15 @@ import LoadingOverlay from 'react-loading-overlay-ts';
 import 'rc-slider/assets/index.css';
 import {withComma} from "../../helper/format-helper"
 import { useAtomState } from '@zedux/react';
-import { isDesktopAtom, mainStatsAtom, filtersAtom, isLoadingAtom, locationDisplayAtom } from '../appState/appState'
+import { isDesktopAtom} from '../appState/appState'
 
 
 import "./listing.css"  
 
 
-export const  Listing = ({listing}) =>
+export const  Listing = (props) =>
 {    
-
-
-  const [isLoading] = useAtomState(isLoadingAtom);
+  const {listing, isPortlet, isLoading} = props;  
   const [isDesktop] = useAtomState(isDesktopAtom);
   const [windowSize, setWindowSize] = useState([
     window.innerWidth,
@@ -33,12 +31,20 @@ export const  Listing = ({listing}) =>
     };
   }, []);
 
-
+  
   const info = listing.addedReduced;
-  const imageWidth = windowSize[0] < 600 ?  windowSize[0]-25 : 350;
+  let imageWidth = windowSize[0] < 600 ?  windowSize[0]-25 : 350;
   // const imageHeight = windowSize[0] < 600 ?  'auto' : 277;
   const imageHeight = windowSize[0] < 600 ?  280 : 250;
   // const isDesktop = windowSize[0] > 600;
+
+
+  if(isPortlet)
+  {
+    imageWidth = 330;
+
+
+  }
   
 
   const startColor = 'gainsboro';  
@@ -59,10 +65,7 @@ export const  Listing = ({listing}) =>
     <div className="listing"> 
       <div className="listing-lhs">          
              <img className="image1" style={{width :imageWidth, height:imageHeight}} src={listing.image1}/>                                                 
-            <div className = "belowImageInfoContainer">                                    
-          
-
-
+            <div className = "belowImageInfoContainer">                                            
                 <div>
 
                 { !isDesktop && 
@@ -89,7 +92,7 @@ export const  Listing = ({listing}) =>
       </div>
 
 
-      {isDesktop && <div className="listing-rhs">
+      {isDesktop && !isPortlet && <div className="listing-rhs">
         <div className= "listing-address"> {listing.add1}</div>                          
         <div className= "listing-subheader"> {listing.add2}</div>
         <div className= "listing-text"> 

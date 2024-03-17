@@ -8,7 +8,7 @@ import {withComma} from "../helper/format-helper"
 import {Filter} from './Filter/Filter';
 import { VitalStats } from './VitalStats/VitalStats';
 import { useAtomState } from '@zedux/react';
-import { isDesktopAtom, mainStatsAtom, filtersAtom, isLoadingAtom, locationDisplayAtom, isMiniFilterModeAtom, isPortalAtom, townAtom, locationAtom, homeTypeAtom, bedsAtom, sortAtom, minPriceAtom, MaxPriceAtom} from './appState/appState'
+import { isDesktopAtom, mainStatsAtom, filtersAtom, isStatsLoadingAtom, locationDisplayAtom, isMiniFilterModeAtom, isPortalAtom, townAtom, locationAtom, homeTypeAtom, bedsAtom, sortAtom, minPriceAtom, MaxPriceAtom} from './appState/appState'
 import { FaInfoCircle } from "react-icons/fa";
 import { MdElectricalServices } from 'react-icons/md';
 import  {useNavigate}  from "react-router-dom";
@@ -18,81 +18,55 @@ import  {useNavigate}  from "react-router-dom";
 
 
 const Portal =  (props) =>
-{     
-  const [bedFilter] = useAtomState(bedsAtom);  
-  const [homeTypeFilter] = useAtomState(homeTypeAtom);  
-  const [townFilter] = useAtomState(townAtom);  
-  const [locationFilter] = useAtomState(locationAtom);  
-  const [sortFilter] = useAtomState(sortAtom);  
-  const [minPriceFilter] = useAtomState(minPriceAtom);  
-  const [maxPriceFilter] = useAtomState(MaxPriceAtom);  
-      
-  const queryParameters = new URLSearchParams(window.location.search)
-  let town= queryParameters.get("townLocationId");
-  let location = queryParameters.get("areaLocationId");
-  let beds= queryParameters.get("beds");
-  let homeType = queryParameters.get("type");
-  let sort = queryParameters.get("sort");
-  let minPrice = queryParameters.get("minPrice");
-  let maxPrice = queryParameters.get("maxPrice");
-    
-        
-  beds =  bedFilter;   
-  homeType = homeTypeFilter;      
-  town = townFilter;
-  location = locationFilter;
-  sort = sortFilter;
-  minPrice = minPriceFilter;
-  maxPrice = maxPriceFilter;
+{    
 
-  
+  const {reRefresh} = props;
+
+
+
+  const navigate = useNavigate();
+      
     const refIndex = useRef(0);
     const urlFormat = "https://kdwytshik8.execute-api.eu-west-2.amazonaws.com/Production/SearchResults";      
     const loadingListings = require('./data/LoadingListings.json');        
     const [totalCount, setTotalCount] = useState(0);      
     const [page, setPage] = useState(1);    
-    const [searchResults, setSearchResults] = useState(loadingListings.results);    
-    const [searchLoading, setSearchLoading] = useState(true);    
-    const [loading, setLoading] = useState(true);                  
+    const [searchResults, setSearchResults] = useState(loadingListings.results);        
+    const [isLoading, setIsLoading] = useState(true);                  
     const [url, setURL] = useState();
     const [searchTitle, setSearchTitle] = useState("");                
-    const [filter, setFilter] = useAtomState(filtersAtom);
+    const [filters, setFilters] = useAtomState(filtersAtom);
     const [index, setIndex] = useState(0);
     const [isDesktop] = useAtomState(isDesktopAtom);
-    const [mainStats, setMainStats] = useAtomState(mainStatsAtom);
-    const [isLoading, setIsLoading] = useAtomState(isLoadingAtom);
+    const [mainStats, setMainStats] = useAtomState(mainStatsAtom);  
     const [locationDisplay, setLocationDisplay] = useAtomState(locationDisplayAtom);
     const [isMiniFilterMode] = useAtomState(isMiniFilterModeAtom);
     const [isPortal, setIsPortal] = useAtomState(isPortalAtom);
     const prev = "<<";
     const next  = ">>"
-
-
-
-
-
-              
-    useEffect(() => {
-      setLoading( searchLoading)
-    }, [searchLoading])
+    const [isStatsLoading, setIsStatsLoading] = useAtomState(isStatsLoadingAtom)
 
     
     useEffect(() => {      
-      if(filter)
+      if(filters)
         {
           setPage(1)          
           reRequest();
         }          
-    }, [filter])
+    }, [filters])
 
 
 
     const reRequest=() =>
     {
-      if(filter)
-      {
-      const url = urlFormat +  "?locationIdentifier=" + filter.locationIdentifier + "&index=" + refIndex.current  + "&minBedrooms=" + filter.beds +  "&maxBedrooms=" + filter.beds + "&propertyTypes=" + filter.propertyTypes + "&minPrice="+ filter.selectedMinPrice+ "&maxPrice=" + filter.selectedMaxPrice + "&sortType=" + filter.sortType; 
-      setURL(url);
+      if(filters)
+      {    
+        if(filters.location)              
+        {          
+          const locationIdentifier = filters.location === "All" ? filters.town.replace("^", "%5E") : filters.location.replace("^", "%5E");                  
+          const url = urlFormat +  "?locationIdentifier=" + locationIdentifier + "&index=" + refIndex.current  + "&minBedrooms=" + filters.beds +  "&maxBedrooms=" + filters.beds + "&propertyTypes=" + filters.propertyTypes + "&minPrice="+ filters.selectedMinPrice+ "&maxPrice=" + filters.selectedMaxPrice + "&sortType=" + filters.sortType; 
+          setURL(url);
+        }
       }
 
     }
@@ -115,7 +89,8 @@ const Portal =  (props) =>
                   
     useEffect(() => {
       const fetchData = async () => {
-        try {                    
+        try {    
+          setIsStatsLoading(true)                
           setIsLoading(true);          
           const response = await fetch(url)
           const result = await response.json();          
@@ -126,7 +101,9 @@ const Portal =  (props) =>
         } catch (error) {
           console.error('Error fetching data:', error);
         } finally {
+          setIsStatsLoading(false)                
           setIsLoading(false);                  
+
         }
       };
       if(url)
@@ -162,7 +139,7 @@ const Portal =  (props) =>
       <div>          
         <div>                
           {!isDesktop && <VitalStats style = {{width:'100%'}}></VitalStats>}                        
-          <Filter initTownLocationId ={town} initAreaLocationId={location}   initHomeType = {homeType} initBeds={beds} initSort = {sort} initMin = {minPrice} initMax = {maxPrice}  />
+          <Filter reRefresh = {reRefresh}/>
           
          <div className = "titledSearch">
           <div style  ={{display:'flex', gap:'10px'}}>              
@@ -180,7 +157,7 @@ const Portal =  (props) =>
             <div style={{display:'flex'}}>                       
             </div> 
                 <div className="listings"> 
-                  {searchResults?.map(listing => <Listing isDesktop={isDesktop} listing={listing} loading={loading} ></Listing>)}  
+                  {searchResults?.map(listing => <Listing  key = {listing.propertyId} isDesktop={isDesktop} listing={listing} isPortlet = {false} isLoading={isLoading} ></Listing>)}  
                 </div>                                    
               </div>
               <div className = "navButtons">

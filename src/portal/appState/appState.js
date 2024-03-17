@@ -14,4 +14,5 @@ export const bedsAtom = atom('beds',false);
 export const sortAtom = atom('sort',false);
 export const minPriceAtom = atom('minPrice',false);
 export const MaxPriceAtom = atom('maxPrice',false);
+export const isStatsLoadingAtom = atom('isStatsLoading',true);
 

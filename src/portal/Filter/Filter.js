@@ -5,18 +5,18 @@ import Slider from 'rc-slider';
 import { FaDeleteLeft } from "react-icons/fa6";
 import {withComma} from "../../helper/format-helper"
 import { useAtomState } from '@zedux/react';
-import { locationDisplayAtom, filtersAtom, isDesktopAtom, isMiniFilterModeAtom, bedsAtom, homeTypeAtom, townAtom, locationAtom, sortAtom } from '../appState/appState';
+import { locationDisplayAtom, filtersAtom, isDesktopAtom, isMiniFilterModeAtom } from '../appState/appState';
 import { IoOptions } from "react-icons/io5";
 
 export const Filter = (props) =>
-{
-    const { initTownLocationId, initAreaLocationId, initHomeType, initBeds, initSort} = props;
+{    
+    const {reRefresh} = props;
     const [locationDisplay,setlocationDisplay] = useAtomState(locationDisplayAtom);
     const [isMiniFilterMode,setIsMiniFilterMode] = useAtomState(isMiniFilterModeAtom);
-    const [filter,setFilter] = useAtomState(filtersAtom);
+    const [filters,setFilters] = useAtomState(filtersAtom);
     const [isDesktop] = useAtomState(isDesktopAtom);
     const lists = require('.././data/LocationByTown.json');
-    const allLocations = {value:"All", label:'All Locations'};              
+    const allLocations = {value:'All', label:'All Locations'};              
     const [listsLoading, setListsLoading] = useState(true);
     const priceRange = [250, 6000];
     const [selectedPriceRange, setSelectedPriceRange] = useState(priceRange);  
@@ -37,17 +37,22 @@ export const Filter = (props) =>
     const [minPriceSlider, setMinPriceSlider] = useState(priceRange[0]);
     const [maxPriceSlider, setMaxPriceSlider] = useState(priceRange[1]);    
 
-    const [bedAtomState, setBedAtomState] = useAtomState(bedsAtom);
-    const [homeTypeAtomState, setHomeTypeAtomState] = useAtomState(homeTypeAtom);
-    const [townAtomState, setTownAtomState] = useAtomState(townAtom);
-    const [locationAtomState, setLocationAtomState] = useAtomState(locationAtom);
-    const [sortAtomState, setSortAtomState] = useAtomState(sortAtom);
-  
+    
+    
   
     
-    const [bedFilter] = useAtomState(bedsAtom);  
-    console.log(bedFilter);
+    
+    
+    
 
+    useEffect(() => {       
+
+      console.log(reRefresh);
+      setListsLoading(true);        
+      initList(lists);                 
+      setListsLoading(false);              
+      window.scrollTo(0,0);
+    }, [reRefresh]);
 
     
     useEffect(() => {       
@@ -58,22 +63,38 @@ export const Filter = (props) =>
     
         
     useEffect(() => {            
-        evaluateFilter();   
+
+      
+
+
+        buildFilterSelection();   
         }
       , [selectedLocation, selectedBedrooms, selectedHomeType,  selectedMinPrice,  selectedMaxPrice, selectedSortType]);
 
       
-    const evaluateFilter = () =>
+    const buildFilterSelection = () =>
     {
-      const locationIdentifier = selectedLocation[0]?.value === "All" ? selectedTown[0]?.value.replace("^", "%5E") : selectedLocation[0]?.value.replace("^", "%5E");
+      //const locationIdentifier = selectedLocation[0]?.value === "All" ? selectedTown[0]?.value.replace("^", "%5E") : selectedLocation[0]?.value.replace("^", "%5E");
+      //const selctedtown =  selectedTown[0]?.value.replace("^", "%5E")
+
+      if( selectedTown[0]?.value)
+      {
+      
+      
+      
+      const town =  selectedTown[0]?.value;
+      const location =  selectedLocation[0]?.value;
+
+
+      
+
 
       let beds= ""      
       if(selectedBedrooms.length>0)
       {
         if(selectedBedrooms[0].value != "All")
         {
-          beds = selectedBedrooms[0].value;       
-          //setAtomBeds(beds)   
+          beds = selectedBedrooms[0].value;                 
         }
       }
 
@@ -87,13 +108,15 @@ export const Filter = (props) =>
       }
 
       let sortType = selectedSortType[0]?.value;            
-          
-                
-      if(locationIdentifier)
-      {        
-        setFilter({locationIdentifier, beds, propertyTypes, sortType, selectedMinPrice, selectedMaxPrice})
-        setlocationDisplay(getLocationDisplay());
-      }            
+                                
+      const newFilter = {town, location,  beds, propertyTypes, sortType, selectedMinPrice, selectedMaxPrice};
+
+      console.log(newFilter);
+      setFilters(newFilter)
+      setlocationDisplay(getLocationDisplay());
+    }
+    
+      
     }
 
 
@@ -121,7 +144,7 @@ export const Filter = (props) =>
           setAvailableLocations(locations)                            
 
 
-          const locationId = locations.findIndex(item => item.value === initAreaLocationId)  == -1 ? 0 : locations.findIndex(item => item.value === initAreaLocationId);      
+          const locationId = locations.findIndex(item => item.value === filters.location)  == -1 ? 0 : locations.findIndex(item => item.value === filters.location);      
           setSelectedLocation([locations[locationId]]);                    
         }
       }
@@ -137,13 +160,13 @@ export const Filter = (props) =>
         const uniqueTown = [...map.values()];                      
          setAvailableTowns(uniqueTown)       
 
-         const townIdx = uniqueTown.findIndex(item => item.value === initTownLocationId)  == -1 ? 3 : uniqueTown.findIndex(item => item.value === initTownLocationId);      
+         const townIdx = uniqueTown.findIndex(item => item.value === filters?.town)  == -1 ? 3 : uniqueTown.findIndex(item => item.value === filters?.town);      
          setSelectedTown([uniqueTown[townIdx]]);         
 
         setAvailableBedrooms(lists.bedrooms);                                      
         setAvailableHomeType(lists.homeType);
 
-        if(initHomeType === "Studio")
+        if(filters.homeType === "Studio")
         {
           const bedIdx = lists.bedrooms.findIndex(item => item.label === 'Studio');
           setSelectedBedrooms([lists.bedrooms[bedIdx]]);
@@ -152,16 +175,16 @@ export const Filter = (props) =>
           setSelectedHomeType([lists.homeType[typeIdx]]);
         }
         else{          
-          const bedIdx = lists.bedrooms.findIndex(item => item.value === initBeds)  == -1 ? 0 : lists.bedrooms.findIndex(item => item.value === initBeds);      
+          const bedIdx = lists.bedrooms.findIndex(item => item.value === filters.beds)  == -1 ? 0 : lists.bedrooms.findIndex(item => item.value === filters.beds);      
           setSelectedBedrooms([lists.bedrooms[bedIdx]]);
   
-          const typeIdx = lists.homeType.findIndex(item => item.value === initHomeType)  == -1 ? 0 : lists.homeType.findIndex(item => item.value === initHomeType);      
+          const typeIdx = lists.homeType.findIndex(item => item.label === filters.homeType)  == -1 ? 0 : lists.homeType.findIndex(item => item.label === filters.homeType);      
           setSelectedHomeType([lists.homeType[typeIdx]]);
         }
         
         
         setAvailableSortType(lists.sortTypes);        
-        const sortIdx = lists.sortTypes.findIndex(item => item.value === initSort)  == -1 ? 2 : lists.sortTypes.findIndex(item => item.value === initSort);              
+        const sortIdx = lists.sortTypes.findIndex(item => item.value === filters.sortType)  == -1 ? 2 : lists.sortTypes.findIndex(item => item.value === filters.sortType);              
         setSelectedSortType([lists.sortTypes[sortIdx]]);
     }
 
@@ -252,37 +275,44 @@ const showFilter = isDesktop  || isMiniFilterMode ? "block" : "none";
 const setTownFilter = (values) =>
 {
   setSelectedTown(values);
-  setTownAtomState(values[0].value);
+  const newFilters = {...filters, town : values[0].value}
+  setFilters(newFilters);  
 }
 
 const setLocationFilter = (values) =>
 {
   setSelectedLocation(values);
-  setLocationAtomState(values[0].value);
+  const newFilters = {...filters, location : values[0].value}
+  setFilters(newFilters);  
 }
 
 const setBedFilter = (values) =>
 {
   setSelectedBedrooms(values);
-  setBedAtomState(values[0].value);
+  const newFilters = {...filters, beds : values[0].value}
+  setFilters(newFilters);
 }
 
 const setHomeTypeFilter = (values) =>
 {
   setSelectedHomeType(values);
-  setHomeTypeAtomState(values[0].value);
+  const newFilters = {...filters, homeType : values[0].value}
+  setFilters(newFilters);
 }
 
 const setSort = (values) =>
 {
   setSelectedSortType(values)
-  setSortAtomState(values[0].value)
+  const newFilters = {...filters, sortType : values[0].value}
+  setFilters(newFilters);
 }
 
 
 
 
 return(<div>
+
+
       
 <div className = "filterBar" >
   <div className = "filters">
