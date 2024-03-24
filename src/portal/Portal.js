@@ -74,6 +74,7 @@ const Portal =  (props) =>
       setIsPortal(true);
       window.addEventListener('beforeunload', setFalse)      
       return () => {
+        setFalse();
         window.removeEventListener('beforeunload', setFalse)
       }
       

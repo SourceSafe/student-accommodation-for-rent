@@ -47,7 +47,7 @@ export const VitalStats = () =>
 
     const getLocationTypeRoute = (type) =>
     {        
-        return `shared-${type}-for-students-in-${stripLocation()}`
+        return `student-${type}-in-${stripLocation()}`
     }
 
     const getLocationStudioRoute = (type) =>

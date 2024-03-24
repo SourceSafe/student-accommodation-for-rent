@@ -99,17 +99,10 @@ h2{
   font-weight: 500;
 }
 
-.portalLink:hover {
-    
-  
+.portalLink:hover {    
   text-decoration: underline !important;
-
   color: rgb(115, 146, 200) !important;
-  font-weight: 500;
-
-  
-  
- 
+  font-weight: 500;   
 }
 
 

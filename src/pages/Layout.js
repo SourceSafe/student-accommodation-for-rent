@@ -3,18 +3,14 @@ import "./styles.css"
 import { VitalStats } from "../portal/VitalStats/VitalStats";
 import { isDesktopAtom, isPortalAtom } from "../portal/appState/appState";
 import { useAtomState } from "@zedux/react";
+import {CTAPackage} from  '../components/CTAPackage/CTAPackage'
+import {ViewPortal} from '../components/ViewPortal/ViewPortal'
  
 const Layout = () => {
 
   const [isDesktop] = useAtomState(isDesktopAtom);
   const [isPortal] = useAtomState(isPortalAtom);
-  
-
-
-  const hideStyle = {visibility:"hidden"};
-
-
-  const applyHide =  !isDesktop || !isPortal ? hideStyle :  {};
+    
   return (
     <div style={{display: "flex", flexDirection:'column', margin:"0px 0px"}}>
 
@@ -25,10 +21,24 @@ const Layout = () => {
           <img src="logo.jpg" alt="Welcone to Student Accommodation For Rent"/>           
         </a>
       </div>
-      <div style={applyHide}>
+      <div>
+        
+        <div style = {{display:'flex'}}>         
+
         { isDesktop && isPortal && 
-        <VitalStats ></VitalStats>        
-      }
+          <VitalStats></VitalStats>        
+        }
+
+        { isDesktop && !isPortal && 
+        <ViewPortal></ViewPortal>
+        }
+        
+        <CTAPackage description={"On any Student Accommodation"} ></CTAPackage>
+        
+
+        
+        </div>
+      
       </div>     
 
       </div>

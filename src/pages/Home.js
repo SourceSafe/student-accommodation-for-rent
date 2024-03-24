@@ -11,6 +11,7 @@ import { FaMagnifyingGlassChart } from "react-icons/fa6";
 import {useNavigate} from 'react-router-dom'
 
 import {Portlet} from '../portlet/portlet'
+import { CTAPackage } from '../components/CTAPackage/CTAPackage';
 
 
 
@@ -82,6 +83,8 @@ useEffect(() => {
           {/* {isDesktop && <VitalStats> </VitalStats>} */}
         </div>            
       </div>
+
+      
                 
       <Portal reRefresh = {reRefresh}/>
 
