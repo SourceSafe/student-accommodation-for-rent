@@ -13,23 +13,12 @@
     margin-top: 20px;
     width:250px;    
     padding: 10px;
+    
 }
-
-
-a:link {
-    font-size: 15px;          
-    background-color: transparent;
-    text-decoration: none !important;    
-  } 
-  a:visited {    
-    background-color: transparent;
-    text-decoration: none !important;
-  }
-  a:hover {
-    color:rgba(255, 255, 255, 0.937) !important;
-    background-color: transparent !important;
-    text-decoration: underline !important;   
-  }
+.ctaButton:hover {  
+    text-decoration: underline;    
+    color:rgba(255, 255, 255, 0.937) ;
+}
 
 
 
