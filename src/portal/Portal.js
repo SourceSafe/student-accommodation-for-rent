@@ -95,7 +95,7 @@ const Portal =  (props) =>
           setIsLoading(true);          
           const response = await fetch(url)
           const result = await response.json();          
-          setSearchResults(result.results);
+          setSearchResults(result.results.filter(item=>item.image1 !== ''));
           setTotalCount(result.totalCount);
           setSearchTitle(result.searchTitle);
           setMainStats(result.mainStats);

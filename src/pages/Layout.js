@@ -28,11 +28,7 @@ const Layout = () => {
         { isDesktop && isPortal && 
           <VitalStats></VitalStats>        
         }
-
-        { isDesktop && !isPortal && 
-        <ViewPortal></ViewPortal>
-        }
-        
+                
         <CTAPackage description={"On any Student Accommodation"} ></CTAPackage>
         
 
