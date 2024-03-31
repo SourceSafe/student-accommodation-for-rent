@@ -152,6 +152,7 @@ h2{
   display:flex;
   align-items:center;
   justify-content:space-between;
+  height: 100%;
 }
 
 
@@ -159,24 +160,35 @@ h2{
 
 .searchButton {
   background: orange;
-  min-width: 140px;
+  /* min-width: 140px; */
   border : solid 2px rgb(213, 213, 213);
   border-radius: 10px;    
   height: 30px;    
   color: white;   
-  font-size:small !important   ;
+  font-size:small;
+  text-wrap: nowrap;
+  margin-top: 10px;  
 }
+
+.mainViewButton {  
+  height: 50px;    
+  font-size: larger;
+  padding: 10px 10px;
+}
+
+
+.searchButtonIcon {
+  color:white;    
+  margin-left: 5px;
+}
+
+
 
 .searchButton:hover {  
 
   text-decoration: underline !important;   
 }
 
-
-
-.searchButtonIcon {
-  color:white;    
-}
 
 
 .searchButtonLink
