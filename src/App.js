@@ -3,6 +3,7 @@ import { BrowserRouter  as Router, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import NoPage from "./pages/NoPage";
+import {PropertyDetail} from './portal/PropertyDetail/PropertyDetail'
 
 
 //*** js:import-townStart
@@ -46,11 +47,6 @@ const BathFlat4 = lazy(() => import('./pages/town/BathFlat4'));
 const BathFlat5 = lazy(() => import('./pages/town/BathFlat5'));
 const BathFlat6 = lazy(() => import('./pages/town/BathFlat6'));
 const BathFlat7 = lazy(() => import('./pages/town/BathFlat7'));
-const BathFlat9 = lazy(() => import('./pages/town/BathFlat9'));
-const BathFlat10 = lazy(() => import('./pages/town/BathFlat10'));
-const BathStudio = lazy(() => import('./pages/town/BathStudio'));
-const BathOldfieldParkStudio = lazy(() => import('./pages/town/BathOldfieldParkStudio'));
-const BathStudio1 = lazy(() => import('./pages/town/BathStudio1'));
 // //*** js:import-townEnd
 
 //*** jsStart:import-town-location
@@ -69,7 +65,9 @@ const  App = ()  =>{
       <Routes>
           <Route path="/" element={<Layout />}>          
           <Route index element={<Home />} />                    
+          <Route path="properties/:propertyId" element={<PropertyDetail/>}/>
           {/* routeSectionStart*/}                    
+
 <Route path="student-accommodation-in-bath" element={<Bath/>}/>
 <Route path="student-accommodation-in-oldfield-park-bath" element={<BathOldfieldPark/>}/>
 <Route path="student-houses-in-bath" element={<BathHouse/>}/>
@@ -110,11 +108,6 @@ const  App = ()  =>{
 <Route path="student-accommodation-in-bath-5-bedroom-flats" element={<BathFlat5/>}/>
 <Route path="student-accommodation-in-bath-6-bedroom-flats" element={<BathFlat6/>}/>
 <Route path="student-accommodation-in-bath-7-bedroom-flats" element={<BathFlat7/>}/>
-<Route path="student-accommodation-in-bath-9-bedroom-flats" element={<BathFlat9/>}/>
-<Route path="student-accommodation-in-bath-10-bedroom-flats" element={<BathFlat10/>}/>
-<Route path="studio-apartments-for-students-in-bath" element={<BathStudio/>}/>
-<Route path="studio-apartments-for-students-in-oldfield-park-bath" element={<BathOldfieldParkStudio/>}/>
-<Route path="student-accommodation-in-bath-1-bedroom-studios" element={<BathStudio1/>}/>
           {/* routeSectionEnd*/}                    
           <Route path="*" element={<NoPage />} />                                            
         </Route>

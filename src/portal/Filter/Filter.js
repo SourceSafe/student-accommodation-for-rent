@@ -46,8 +46,6 @@ export const Filter = (props) =>
     
 
     useEffect(() => {       
-
-      console.log(reRefresh);
       setListsLoading(true);        
       initList(lists);                 
       setListsLoading(false);              
@@ -265,11 +263,6 @@ const onApply = () =>
 {
   setIsMiniFilterMode(false);
 }
-
-
-
-
-const showFilter = isDesktop  || isMiniFilterMode ? "block" : "none";
 
 
 const setTownFilter = (values) =>

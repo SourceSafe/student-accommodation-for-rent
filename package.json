@@ -9,6 +9,7 @@
     "@types/shallow-equals": "^1.0.3",
     "@types/shallowequal": "^1.1.5",
     "@zedux/react": "^1.1.1",
+    "html-react-parser": "^5.1.10",
     "mssql": "^10.0.1",
     "rc-slider": "^10.5.0",
     "react": "^18.2.0",

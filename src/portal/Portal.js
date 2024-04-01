@@ -12,6 +12,7 @@ import { isDesktopAtom, mainStatsAtom, filtersAtom, isStatsLoadingAtom, location
 import { FaInfoCircle } from "react-icons/fa";
 import { MdElectricalServices } from 'react-icons/md';
 import  {useNavigate}  from "react-router-dom";
+import {  Link } from "react-router-dom";
 
 
 
@@ -20,12 +21,9 @@ import  {useNavigate}  from "react-router-dom";
 const Portal =  (props) =>
 {    
 
-  const {reRefresh} = props;
+  const propertiesRoute = "./properties";
 
-
-
-  const navigate = useNavigate();
-      
+    const {reRefresh} = props;      
     const refIndex = useRef(0);
     const urlFormat = "https://kdwytshik8.execute-api.eu-west-2.amazonaws.com/Production/SearchResults";      
     const loadingListings = require('./data/LoadingListings.json');        
@@ -134,6 +132,12 @@ const Portal =  (props) =>
 
     
 
+    const buildPropertyRoute = (propertyId) =>
+    {
+      return `./properties/${propertyId}`
+
+    }
+
  
     return(
 
@@ -157,9 +161,24 @@ const Portal =  (props) =>
           <div>
             <div style={{display:'flex'}}>                       
             </div> 
+              
                 <div className="listings"> 
-                  {searchResults?.map(listing => <Listing  key = {listing.propertyId} isDesktop={isDesktop} listing={listing} isPortlet = {false} isLoading={isLoading} ></Listing>)}  
+                  {searchResults?.map( listing => (                  
+                  <div>
+                          <Link title = "View Property Details" className ="viewInfoLink" to = {buildPropertyRoute(listing.propertyId)}>
+                          <Listing  key = {listing.propertyId} isDesktop={isDesktop} listing={listing} isPortlet = {false} isLoading={isLoading} ></Listing>   
+                          </Link>
+                  </div>
+                    )
+                  )
+                    
+                  }
+
+                                  
+                  
+                  
                 </div>                                    
+              
               </div>
               <div className = "navButtons">
                 <button className = {prevClassName} disabled = {!isPrev} onClick={() => setPage(page-1)}> {prev}  Previous </button>

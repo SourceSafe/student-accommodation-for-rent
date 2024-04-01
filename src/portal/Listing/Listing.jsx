@@ -74,9 +74,6 @@ export const  Listing = (props) =>
                 <div className= "listing-pic-subheading2"> {listing.add1}</div>                          
                 </div>
               }
-
-
-
                   <div className ="listing-pcm" >
                     £{withComma(listing.price1)} per month
                   </div>

@@ -72,6 +72,7 @@ useEffect(() => {
 }, []);
 
   setIsDesktop(windowSize[0] > 600);
+  console.log(windowSize[0] > 600)
   
   return (
     <div>           
