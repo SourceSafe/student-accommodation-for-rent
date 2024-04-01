@@ -12,9 +12,16 @@
     margin-left: 50px;
     margin-top: 20px;
     width:250px;    
-    padding: 10px;
+    padding: 10px;        
+}
+
+.ctaButtonMobile { 
+    width:95%;   
+    margin: 20px 10px 20px 10px;
     
 }
+
+
 .ctaButton:hover {  
     text-decoration: underline;    
     color:rgba(255, 255, 255, 0.937) ;

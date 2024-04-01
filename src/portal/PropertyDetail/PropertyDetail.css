@@ -1,0 +1,14 @@
+.propertyDetail{
+    margin: 5px;
+}
+
+.thumbNail{
+    display:flex;
+    width:40%;
+}
+
+.thumbNailMobile{
+    display:flex;
+    width:80%;
+}
+

@@ -1,15 +1,27 @@
 import {  useParams } from "react-router-dom";
-import { useAtomState } from '@zedux/react';
 import { useEffect, useState } from "react";
 import parse from 'html-react-parser';
-import { isDesktopAtom} from '../appState/appState'
+import { CTAPackage } from "../../components/CTAPackage/CTAPackage";
+import  './PropertyDetail.css'
 
 export const PropertyDetail = (props) =>
 {
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
     const { propertyId } = useParams();
     const [details, setDetails] = useState();
-    const [isDesktop] = useAtomState(isDesktopAtom);
+    const [isMobile, setIsMobile] = useState();    
+
+    useEffect(() => {
+        const handleWindowSizeChange=() => {
+            setIsMobile(window.innerWidth <= 768);            
+        }
+        handleWindowSizeChange();
+        window.addEventListener('resize', handleWindowSizeChange);
+        return () => {
+            window.removeEventListener('resize', handleWindowSizeChange);
+        }
+    }, []);
+
     
     useEffect(() => {
         const fetchData = async () => {
@@ -32,38 +44,42 @@ export const PropertyDetail = (props) =>
       }, [propertyId]);
 
 
-      const imageWidth = isDesktop === true ? "50%" : "100%"
-      console.log({imageWidth})
-
-          
-    return <div>
+      const thumbNailStyle = isMobile ? "thumbNailMobile" : "thumbNail"
+    
+                    
+    return <div className = "propertyDetail">
 
         
-            <h2>We've partnered with UniBills.com to provide an All Inclusive Utility Package on this Property</h2>
-            <div>We've partnered with UniBills.com to provide you with an All Bills Included Utilty package. Let UniBills.com  deal with your Gas, Electirc, Water, Broadband and TV providers. All you need to do is pay an even split each month. </div>
+            <h2>Enjoy All Inclusive Utility Bills in this property</h2>
+            <p>This property is EXCLUSIVE of bills. To make life easier we've partnered with UniBills.com to offer an All Inclusive Utility Package on this Property. Let UniBills.com  deal with your Gas, Electric, Water, Broadband and TV providers. All you need to do is pay an even split each month. </p>
+
+            {isMobile && 
+            <CTAPackage isMobile={isMobile}/>
+            }
             
 
             <h2>Property Images</h2>
-
-            {isDesktop ? <div style = {{display:'flex', width:'50%'}}>
+            {!isMobile ? <div style = {{display:'flex', width:'50%'}}>
                 <img style = {{width:'100%', height:'auto', margin: "10px",borderRadius:'10px'}} src = {details?.images[selectedImageIndex]}></img>
-            </div> : <div style = {{display:'flex', width:'100%'}}>
+            </div> 
+            
+            : <div style = {{display:'flex', width:'100%'}}>
                 <img style = {{width:'100%', height:'auto', margin: "10px",borderRadius:'10px'}} src = {details?.images[selectedImageIndex]}></img>
             </div>}
 
             
 
             
-            <div style = {{display:'flex', width:'50%'}}>
-                <div style = {{width:'20%', height:'auto', margin: "10px"}}  onClick= {() => {setSelectedImageIndex(0)}}>
+            <div className ={thumbNailStyle}>
+                <div style = {{width:'25%', height:'auto', margin: "10px"}}  onClick= {() => {setSelectedImageIndex(0)}}>
                     <img  style = {{width:'100%', borderRadius:'10px'}} src = {details?.images[0]}></img>
                 </div>
 
-                <div style = {{width:'20%', height:'auto', margin: "10px"}}  onClick= {() => {setSelectedImageIndex(1)}}>
+                <div style = {{width:'25%', height:'auto', margin: "10px"}}  onClick= {() => {setSelectedImageIndex(1)}}>
                     <img  style = {{width:'100%',borderRadius:'10%'}} src = {details?.images[1]}></img>
                 </div>
 
-                <div style = {{width:'20%', height:'auto', margin: "10px"}}  onClick= {() => {setSelectedImageIndex(2)}}>
+                <div style = {{width:'25%', height:'auto', margin: "10px"}}  onClick= {() => {setSelectedImageIndex(2)}}>
                     <img  style = {{width:'100%',borderRadius:'10%'}} src = {details?.images[2]}></img>
                 </div>
             </div>
