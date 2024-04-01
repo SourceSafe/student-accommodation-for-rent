@@ -40,7 +40,7 @@ export const PropertyDetail = (props) =>
 
         
             <h2>We've partnered with UniBills.com to provide an All Inclusive Utility Package on this Property</h2>
-            <div>We've partnered with UniBills.com to provide you with an All Bills Included Utilty package. Let UniBills.com  deal with your Gas, Electirc, Water, Broadband and TV providers. All you need to do is pay an even split. </div>
+            <div>We've partnered with UniBills.com to provide you with an All Bills Included Utilty package. Let UniBills.com  deal with your Gas, Electirc, Water, Broadband and TV providers. All you need to do is pay an even split each month. </div>
             
 
             <h2>Property Images</h2>
