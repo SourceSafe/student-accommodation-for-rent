@@ -9,7 +9,7 @@ export const PropertyDetail = (props) =>
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
     const { propertyId } = useParams();
     const [details, setDetails] = useState();
-    const [isMobile, setIsMobile] = useState();    
+    const [isMobile,setIsMobile] = useState();    
 
     useEffect(() => {
         const handleWindowSizeChange=() => {
@@ -48,17 +48,13 @@ export const PropertyDetail = (props) =>
     
                     
     return <div className = "propertyDetail">
-
-        
-            <h2>Enjoy All Inclusive Utility Bills in this property</h2>
-            <p>This property is EXCLUSIVE of bills. To make life easier we've partnered with UniBills.com to offer an All Inclusive Utility Package on this Property. Let UniBills.com  deal with your Gas, Electric, Water, Broadband and TV providers. All you need to do is pay an even split each month. </p>
-
-            {isMobile && 
-            <CTAPackage isMobile={isMobile}/>
-            }
+                       
+            {/* <h2>Property Details</h2> */}
             
+  
+   
 
-            <h2>Property Images</h2>
+            
             {!isMobile ? <div style = {{display:'flex', width:'50%'}}>
                 <img style = {{width:'100%', height:'auto', margin: "10px",borderRadius:'10px'}} src = {details?.images[selectedImageIndex]}></img>
             </div> 
@@ -83,12 +79,28 @@ export const PropertyDetail = (props) =>
                     <img  style = {{width:'100%',borderRadius:'10%'}} src = {details?.images[2]}></img>
                 </div>
             </div>
+
+            <h2>Property Details</h2>
+            
+            <div style = {{margin : '10px'}}>
+            <div style = {{marginTop: '10px' ,fontSize:'20px', fontWeight:'bold'}}>Redland, Bristol, BS6 6RT</div>
+            <div style = {{marginTop: '10px', fontSize:'x-large', fontWeight:'bold'}}>£3,000 pcm</div>
+            <div>£692 pw</div>
+            <div>Added on 22/03/2024</div>
+            </div>
+
             
 
   
+   
 
 
-            {/* {details?.images.map(image => <img style = {{width:'425px', height:'auto', margin: "10px"}} src = {image}></img>)}  */}
+            <h2>Enjoy All Inclusive Utility Bills in this property</h2>
+            <p>This property is EXCLUSIVE of bills. To make life easier we've partnered with UniBills.com to offer an All Inclusive Utility Package on this Property. Let UniBills.com  deal with your Gas, Electric, Water, Broadband and TV providers. All you need to do is pay an even split each month. </p>
+
+            {isMobile && 
+            <CTAPackage isMobile={isMobile}/>
+            }
 
 
 
@@ -105,6 +117,9 @@ export const PropertyDetail = (props) =>
                 </li>
             </ul>
             )} 
+
+
+      
 
 
             
