@@ -83,8 +83,8 @@ export const PropertyDetail = (props) =>
             <h2>Property Details</h2>
             
             <div style = {{margin : '10px'}}>
-            <div style = {{marginTop: '10px' ,fontSize:'20px', fontWeight:'bold'}}>Redland, Bristol, BS6 6RT</div>
-            <div style = {{marginTop: '10px', fontSize:'x-large', fontWeight:'bold'}}>£3,000 pcm</div>
+            <div style = {{marginTop: '5px' ,fontSize:'22px', fontWeight:'bold'}}>Redland, Bristol, BS6 6RT</div>
+            <div style = {{marginTop: '10px', fontSize:'25px', fontWeight:'bold'}}>£3,000 pcm</div>
             <div>£692 pw</div>
             <div>Added on 22/03/2024</div>
             </div>
@@ -95,7 +95,7 @@ export const PropertyDetail = (props) =>
    
 
 
-            <h2>Enjoy All Inclusive Utility Bills in this property</h2>
+            <h2>Enjoy All Inclusive Utility Bills for this property</h2>
             <p>This property is EXCLUSIVE of bills. To make life easier we've partnered with UniBills.com to offer an All Inclusive Utility Package on this Property. Let UniBills.com  deal with your Gas, Electric, Water, Broadband and TV providers. All you need to do is pay an even split each month. </p>
 
             {isMobile && 
