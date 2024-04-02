@@ -27,7 +27,7 @@ const Portal =  (props) =>
 
     //const [searchResults, setSearchResults] = useState(loadingListings.results);        
 
-    const [isLoading, setIsLoading] = useState(true);                  
+    const [isLoading, setIsLoading] = useState(false);                  
     const [url, setURL] = useState();
     const [searchTitle, setSearchTitle] = useState("");                
     const [filters, setFilters] = useAtomState(filtersAtom);

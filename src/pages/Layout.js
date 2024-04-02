@@ -37,7 +37,9 @@ const Layout = () => {
 
         
         { isDesktop && 
-        <CTAPackage description={"On any Student Accommodation"} ></CTAPackage>
+        <div style ={{ marginTop: '15px'}}>
+        <CTAPackage  description={"On any Student Accommodation"} ></CTAPackage>
+        </div>
         }
                 
         

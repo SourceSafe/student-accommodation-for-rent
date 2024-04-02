@@ -32,10 +32,10 @@ export const PropertyDetail = (props) =>
             const url = "https://kdwytshik8.execute-api.eu-west-2.amazonaws.com/Production/GetDetail?propertyId=" + propertyId;                        
             const response = await fetch(url)
             const result = await response.json();                      
-            result.results.keyFeatures.unshift("Instant Quote Available from UniBills.com")
+            result.results.keyFeatures.unshift("Instant Quote Available from Fused.com")
             result.results.keyFeatures.unshift("All Bills Inclusive Option Available.")
             
-            result.results.lettingDetails.push({label:'Utilities Option', value:'Utilities Option available with UniBills.com. Let them take out the hassle of dealing with all the providers. You simply pay your monthly split.'})
+            result.results.lettingDetails.push({label:'Utilities Option', value:'Utilities Option available with Fused.com. Let them take out the hassle of dealing with all the providers. You simply pay your monthly split.'})
             setDetails(result.results)                                    
           } catch (error) {
             console.error('Error fetching property details:', error);
@@ -140,7 +140,7 @@ export const PropertyDetail = (props) =>
 
 
             <h2>Enjoy All Inclusive Utility Bills for this property</h2>
-            <p>This property is EXCLUSIVE of bills. To make life easier we've partnered with UniBills.com to offer an All Inclusive Utility Package on this Property. Let UniBills.com  deal with your Gas, Electric, Water, Broadband and TV providers. All you need to do is pay an even split each month. </p>
+            <p>This property is EXCLUSIVE of bills. To make life easier we've partnered with Fused.com to offer an All Inclusive Utility Package on this Property. Let Fused.com  deal with your Gas, Electric, Water, Broadband and TV providers. All you need to do is pay an even split each month. </p>
 
             {isMobile && 
             <CTAPackage isMobile={isMobile}/>
