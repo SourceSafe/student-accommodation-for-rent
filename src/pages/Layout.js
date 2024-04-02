@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useActionData  } from "react-router-dom";
 import "./styles.css"
 import { VitalStats } from "../portal/VitalStats/VitalStats";
 import { isDesktopAtom, isPortalAtom } from "../portal/appState/appState";
@@ -10,6 +10,12 @@ const Layout = () => {
 
   const [isDesktop] = useAtomState(isDesktopAtom);
   const [isPortal] = useAtomState(isPortalAtom);
+
+    
+
+  
+
+  //console.log("BAckPage:", window,performance?.navigation.type);
     
   return (
     <div style={{display: "flex", flexDirection:'column', margin:"0px 0px"}}>

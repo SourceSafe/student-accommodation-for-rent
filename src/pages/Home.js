@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigationType } from "react-router-dom";
 import {Portal} from "../portal/Portal"
 import "../pages/town/styles-town.css"
 import { VitalStats } from "../portal/VitalStats/VitalStats";
@@ -21,6 +21,10 @@ const navigate = useNavigate();
 const [buttonClicked, setButtonClicked] = useState(0);
 const [filters, setFilters] = useAtomState(filtersAtom);  
 const [reRefresh, setReRefresh] = useState(0);            
+
+const nav = useNavigationType();
+
+console.log("Navigation: ",nav);
 
 
 const [windowSize, setWindowSize] = useState([

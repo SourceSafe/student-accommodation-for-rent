@@ -8,28 +8,25 @@ import {withComma} from "../helper/format-helper"
 import {Filter} from './Filter/Filter';
 import { VitalStats } from './VitalStats/VitalStats';
 import { useAtomState } from '@zedux/react';
-import { isDesktopAtom, mainStatsAtom, filtersAtom, isStatsLoadingAtom, locationDisplayAtom, isMiniFilterModeAtom, isPortalAtom, townAtom, locationAtom, homeTypeAtom, bedsAtom, sortAtom, minPriceAtom, MaxPriceAtom} from './appState/appState'
+import { isDesktopAtom, mainStatsAtom, filtersAtom, portalUrlAtom, isStatsLoadingAtom, locationDisplayAtom, isMiniFilterModeAtom, isPortalAtom, searchResultsAtom} from './appState/appState'
 import { FaInfoCircle } from "react-icons/fa";
 import { MdElectricalServices } from 'react-icons/md';
 import  {useNavigate}  from "react-router-dom";
 import {  Link } from "react-router-dom";
 
-
-
-
-
 const Portal =  (props) =>
-{    
-
-  const propertiesRoute = "./properties";
-
+{        
+    const [searchResults, setSearchResults] = useAtomState(searchResultsAtom);  
+    const [lastPortalUrl, setLastPortalUrl ] = useAtomState(portalUrlAtom);
     const {reRefresh} = props;      
     const refIndex = useRef(0);
     const urlFormat = "https://kdwytshik8.execute-api.eu-west-2.amazonaws.com/Production/SearchResults";      
-    const loadingListings = require('./data/LoadingListings.json');        
+    
     const [totalCount, setTotalCount] = useState(0);      
     const [page, setPage] = useState(1);    
-    const [searchResults, setSearchResults] = useState(loadingListings.results);        
+
+    //const [searchResults, setSearchResults] = useState(loadingListings.results);        
+
     const [isLoading, setIsLoading] = useState(true);                  
     const [url, setURL] = useState();
     const [searchTitle, setSearchTitle] = useState("");                
@@ -43,7 +40,7 @@ const Portal =  (props) =>
     const prev = "<<";
     const next  = ">>"
     const [isStatsLoading, setIsStatsLoading] = useAtomState(isStatsLoadingAtom)
-
+    
     
     useEffect(() => {      
       if(filters)
@@ -62,8 +59,13 @@ const Portal =  (props) =>
         if(filters.location)              
         {          
           const locationIdentifier = filters.location === "All" ? filters.town.replace("^", "%5E") : filters.location.replace("^", "%5E");                  
-          const url = urlFormat +  "?locationIdentifier=" + locationIdentifier + "&index=" + refIndex.current  + "&minBedrooms=" + filters.beds +  "&maxBedrooms=" + filters.beds + "&propertyTypes=" + filters.propertyTypes + "&minPrice="+ filters.selectedMinPrice+ "&maxPrice=" + filters.selectedMaxPrice + "&sortType=" + filters.sortType; 
-          setURL(url);
+          const url = urlFormat +  "?locationIdentifier=" + locationIdentifier + "&index=" + refIndex.current  + "&minBedrooms=" + filters.beds +  "&maxBedrooms=" + filters.beds + "&propertyTypes=" + filters.propertyTypes + "&minPrice="+ filters.selectedMinPrice+ "&maxPrice=" + filters.selectedMaxPrice + "&sortType=" + filters.sortType;           
+          //setPortalUrl(url);
+          setURL(url);                      
+          
+          
+          
+           
         }
       }
 
@@ -88,15 +90,20 @@ const Portal =  (props) =>
                   
     useEffect(() => {
       const fetchData = async () => {
-        try {    
-          setIsStatsLoading(true)                
-          setIsLoading(true);          
-          const response = await fetch(url)
-          const result = await response.json();          
-          setSearchResults(result.results.filter(item=>item.image1 !== ''));
-          setTotalCount(result.totalCount);
-          setSearchTitle(result.searchTitle);
-          setMainStats(result.mainStats);
+        try {  
+          
+          if(lastPortalUrl !== url)
+          {
+            setIsStatsLoading(true)                
+            setIsLoading(true);          
+            const response = await fetch(url)
+            const result = await response.json();          
+            setSearchResults(result.results.filter(item=>item.image1 !== ''));
+            setTotalCount(result.totalCount);
+            setSearchTitle(result.searchTitle);
+            setMainStats(result.mainStats);
+            setLastPortalUrl(url);
+          }
         } catch (error) {
           console.error('Error fetching data:', error);
         } finally {

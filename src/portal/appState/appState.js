@@ -1,4 +1,6 @@
 import {atom} from '@zedux/react'
+// const loadingListings = require('./data/LoadingListings.json');        
+const loadingListings = require('../data/LoadingListings.json');        
 
 export const mainStatsAtom = atom('mainStats', {});
 export const isDesktopAtom = atom('isDeskTop',true);
@@ -15,4 +17,6 @@ export const sortAtom = atom('sort',false);
 export const minPriceAtom = atom('minPrice',false);
 export const MaxPriceAtom = atom('maxPrice',false);
 export const isStatsLoadingAtom = atom('isStatsLoading',true);
+export const portalUrlAtom = atom('portalURL',"");
+export const searchResultsAtom = atom('searchResults',loadingListings.results);
 

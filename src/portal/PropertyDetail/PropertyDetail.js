@@ -32,7 +32,9 @@ export const PropertyDetail = (props) =>
             const url = "https://kdwytshik8.execute-api.eu-west-2.amazonaws.com/Production/GetDetail?propertyId=" + propertyId;                        
             const response = await fetch(url)
             const result = await response.json();                      
-            result.results.keyFeatures.unshift("All Bills Inclusive Option Available with UniBills.com")
+            result.results.keyFeatures.unshift("Instant Quote Available from UniBills.com")
+            result.results.keyFeatures.unshift("All Bills Inclusive Option Available.")
+            
             result.results.lettingDetails.push({label:'Utilities Option', value:'Utilities Option available with UniBills.com. Let them take out the hassle of dealing with all the providers. You simply pay your monthly split.'})
             setDetails(result.results)                                    
           } catch (error) {
@@ -109,7 +111,7 @@ export const PropertyDetail = (props) =>
 
             
 
-            <h2 style = {{marginTop:'-5px'}}>Agent Contact Details</h2>
+            <h2 style = {{}}>Agent Contact Details</h2>
             <div style = {{ gap:'50px',  marginTop:'15px', display:'flex'}}>        
             
                 <div style = {{display:'flex', gap:'10px', alignItems:'center'}}>                 
