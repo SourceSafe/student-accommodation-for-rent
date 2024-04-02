@@ -3,6 +3,9 @@ import { useEffect, useState } from "react";
 import parse from 'html-react-parser';
 import { CTAPackage } from "../../components/CTAPackage/CTAPackage";
 import  './PropertyDetail.css'
+import { MdOutlineMailOutline } from "react-icons/md";
+import { FaPhone } from "react-icons/fa6";
+import { FaCheck } from "react-icons/fa";
 
 export const PropertyDetail = (props) =>
 {
@@ -29,6 +32,8 @@ export const PropertyDetail = (props) =>
             const url = "https://kdwytshik8.execute-api.eu-west-2.amazonaws.com/Production/GetDetail?propertyId=" + propertyId;                        
             const response = await fetch(url)
             const result = await response.json();                      
+            result.results.keyFeatures.unshift("All Bills Inclusive Option Available with UniBills.com")
+            result.results.lettingDetails.push({label:'Utilities Option', value:'Utilities Option available with UniBills.com. Let them take out the hassle of dealing with all the provders. You simply pay your monthly split.'})
             setDetails(result.results)                                    
           } catch (error) {
             console.error('Error fetching property details:', error);
@@ -80,14 +85,51 @@ export const PropertyDetail = (props) =>
                 </div>
             </div>
 
-            <h2>Property Details</h2>
             
-            <div style = {{margin : '10px'}}>
-            <div style = {{marginTop: '5px' ,fontSize:'22px', fontWeight:'bold'}}>Redland, Bristol, BS6 6RT</div>
-            <div style = {{marginTop: '10px', fontSize:'25px', fontWeight:'bold'}}>£3,000 pcm</div>
-            <div>£692 pw</div>
-            <div>Added on 22/03/2024</div>
+            
+            
+            {/* <h2>Property Details</h2> */}
+            
+            <div style = {{margin : '10px', width: '95%'}}>
+                <div style = {{marginTop: '5px' ,fontSize:'22px', fontWeight:'bold'}}>7 Bedroom House</div>
+                <div style = {{color : 'grey', marginTop: '5px' ,fontSize:'18px', fontWeight:'bold'}}>Redland, Bristol, BS6 6RT</div>
+            
+
+                <div style = {{marginTop: '10px', display: 'flex', border: '0px solid black', justifyContent: 'space-between'}}>
+                    <div style = {{}}>
+                        <div style = {{fontSize:'25px', fontWeight:'bold'}}>£3,000 pcm</div>
+                        <div>£692 pw</div>
+                        <div>Added on 22/03/2024</div>        
+                    </div>
+                    <div style = {{}}>                    
+                        <img style ={{}} src ="https://media.rightmove.co.uk/17k/16974/branch_logo_16974_0004.jpeg"></img>
+                    </div>
+                </div>
+            </div>            
+
+            
+
+            <h2>Agent Contact Details</h2>
+            <div style = {{ gap:'50px',  marginTop:'15px', display:'flex'}}>        
+            
+                <div style = {{display:'flex', gap:'10px', alignItems:'center'}}>                 
+                    <FaPhone style ={{color:"green"}} size={30}/>
+                    <div>
+                        <div style ={{fontWeight:'bold'}}>0117 463 2042</div>
+                        <div style ={{fontSize:'smaller', color:"grey"}}>Local call rate</div>
+                    </div>
+                </div> 
+
+
+                <div style ={{fontWeight:'bold', display:'flex', alignItems: 'center'}}>
+                    <MdOutlineMailOutline style ={{color:"green", marginRight:"5px"}} size={30}/>
+                    <div>Make an Enquiry</div>
+                </div>        
+                
             </div>
+            
+
+
 
             
 
@@ -124,14 +166,16 @@ export const PropertyDetail = (props) =>
 
             
             <h2>Property Details</h2>
+            <p>
             { details?.descriptionHTML !== null && details?.descriptionHTML !== undefined && 
                     parse(details?.descriptionHTML)
             }
+            </p>
 
 
             <h2>Key Features</h2>
             <ul>
-            {details?.keyFeatures.map(feature => <li>{feature}</li>)} 
+            {details?.keyFeatures.map(feature => <div><FaCheck style ={{marginRight:'20px'}} color = "green"/>{feature}</div>)}             
             </ul>
 
            
