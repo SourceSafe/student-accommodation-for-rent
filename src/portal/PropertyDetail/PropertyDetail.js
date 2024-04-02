@@ -33,7 +33,7 @@ export const PropertyDetail = (props) =>
             const response = await fetch(url)
             const result = await response.json();                      
             result.results.keyFeatures.unshift("All Bills Inclusive Option Available with UniBills.com")
-            result.results.lettingDetails.push({label:'Utilities Option', value:'Utilities Option available with UniBills.com. Let them take out the hassle of dealing with all the provders. You simply pay your monthly split.'})
+            result.results.lettingDetails.push({label:'Utilities Option', value:'Utilities Option available with UniBills.com. Let them take out the hassle of dealing with all the providers. You simply pay your monthly split.'})
             setDetails(result.results)                                    
           } catch (error) {
             console.error('Error fetching property details:', error);
@@ -109,7 +109,7 @@ export const PropertyDetail = (props) =>
 
             
 
-            <h2>Agent Contact Details</h2>
+            <h2 style = {{marginTop:'-5px'}}>Agent Contact Details</h2>
             <div style = {{ gap:'50px',  marginTop:'15px', display:'flex'}}>        
             
                 <div style = {{display:'flex', gap:'10px', alignItems:'center'}}>                 
