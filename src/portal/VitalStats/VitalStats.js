@@ -17,21 +17,18 @@ import { FaInfoCircle } from "react-icons/fa";
 import {  Link } from "react-router-dom";
 
 
-import {isStatsLoadingAtom, mainStatsAtom, locationDisplayAtom, isDesktopAtom} from '../appState/appState'
+import {isStatsLoadingAtom, searchResultsAtom, locationDisplayAtom, isDesktopAtom} from '../appState/appState'
 
 export const VitalStats = () =>
 {
-    const [isDesktop] = useAtomState(isDesktopAtom);
-    const [isStatsLoading] = useAtomState(isStatsLoadingAtom);
-    const [mainStats] = useAtomState(mainStatsAtom);
-    
+    const [isDesktop] = useAtomState(isDesktopAtom);    
+    const [searchResults] = useAtomState(searchResultsAtom);    
     const [locationDisplay] = useAtomState(locationDisplayAtom);
 
-
-    const all = mainStats.All?.length > 0 ? `${withComma(mainStats.All?.split(' ')[0])}` : "---";
-    const house = mainStats.House?.length > 0 ? `${withComma(mainStats.House?.split(' ')[0])}` : "---";
-    const flat = mainStats.Flat?.length > 0 ? `${withComma(mainStats.Flat?.split(' ')[0])}` : "---";
-    const studio = mainStats.Studio?.length > 0 ? `${withComma(mainStats.Studio?.split(' ')[0])}` : "--";
+    const all = searchResults?.mainStats.All?.length > 0 ? `${withComma(searchResults?.mainStats.All?.split(' ')[0])}` : "---";
+    const house = searchResults?.mainStats.House?.length > 0 ? `${withComma(searchResults?.mainStats.House?.split(' ')[0])}` : "---";
+    const flat = searchResults?.mainStats.Flat?.length > 0 ? `${withComma(searchResults?.mainStats.Flat?.split(' ')[0])}` : "---";
+    const studio = searchResults?.mainStats.Studio?.length > 0 ? `${withComma(searchResults?.mainStats.Studio?.split(' ')[0])}` : "--";
     const statRowStyle = isDesktop ? "statRow" : "statRowMini";
 
     const stripLocation = () =>
@@ -54,21 +51,13 @@ export const VitalStats = () =>
     {        
         return `studio-apartments-for-students-in-${stripLocation()}`
     }
-
-
     
     
     return (     
 
 
-        <div style = {{display:"flex",gap :'40px'}}>
-
-           
-
-        
-            
+        <div style = {{display:"flex",gap :'40px'}}>                               
             <div className = "mainStats">            
-
 
                     <div style = {{display:'flex', alignItems:'center'}}>
                     <div className = "mainStatsTitle">Average Rents (pp/pm) for your Location - </div>

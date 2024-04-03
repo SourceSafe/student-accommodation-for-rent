@@ -3,40 +3,32 @@ import { useState, useEffect } from 'react';
 import LoadingOverlay from 'react-loading-overlay-ts';
 import 'rc-slider/assets/index.css';
 import {withComma} from "../../helper/format-helper"
-import { useAtomState } from '@zedux/react';
-import { isDesktopAtom} from '../appState/appState'
-
-
 import "./listing.css"  
-
 
 export const  Listing = (props) =>
 {    
-  const {listing, isPortlet, isLoading} = props;  
-  const [isDesktop] = useAtomState(isDesktopAtom);
+  const {listing, isPortlet, isLoading} = props;    
+  const [isMobile,setIsMobile] = useState();    
   const [windowSize, setWindowSize] = useState([
     window.innerWidth,
     window.innerHeight,
   ]);
 
   useEffect(() => {
-    const handleWindowResize = () => {
-      setWindowSize([window.innerWidth, window.innerHeight]);
-    };
-
-    window.addEventListener('resize', handleWindowResize);
-
+    const handleWindowSizeChange=() => {
+        setIsMobile(window.innerWidth <= 768);            
+    }
+    handleWindowSizeChange();
+    window.addEventListener('resize', handleWindowSizeChange);
     return () => {
-      window.removeEventListener('resize', handleWindowResize);
-    };
-  }, []);
-
+        window.removeEventListener('resize', handleWindowSizeChange);
+    }
+}, []);
   
   const info = listing.addedReduced;
-  let imageWidth = windowSize[0] < 600 ?  windowSize[0]-25 : 350;
-  // const imageHeight = windowSize[0] < 600 ?  'auto' : 277;
-  const imageHeight = windowSize[0] < 600 ?  280 : 250;
-  // const isDesktop = windowSize[0] > 600;
+  let imageWidth =  isMobile  ?  windowSize[0]-145 :330;
+  const imageHeight = isMobile ?  280 : 250;
+  
 
 
   if(isPortlet)
@@ -68,7 +60,7 @@ export const  Listing = (props) =>
             <div className = "belowImageInfoContainer">                                            
                 <div>
 
-                { !isDesktop && 
+                { isMobile && 
                 <div>
                 <div className= "listing-pic-subheading"> {listing.add2}</div>
                 <div className= "listing-pic-subheading2"> {listing.add1}</div>                          
@@ -89,7 +81,7 @@ export const  Listing = (props) =>
       </div>
 
 
-      {isDesktop && !isPortlet && <div className="listing-rhs">
+      {!isMobile && !isPortlet && <div className="listing-rhs">
         <div className= "listing-address"> {listing.add1}</div>                          
         <div className= "listing-subheader"> {listing.add2}</div>
         <div className= "listing-text"> 

@@ -1,3 +1,8 @@
+.portal {
+    border : 0px solid black;
+    margin: 5px;
+}
+
 .filters {
     margin: 0px 0px 0px 5px;
     display: flex;
@@ -106,7 +111,8 @@
 
 
 .seachTitle {    
-    margin: 2px 5px;
+    margin: 2px 5px;    
+    font-size: large;
 }
 
 
@@ -114,6 +120,7 @@
     color : rgb(0, 0, 0);    
     margin: 2px 0px;
     font-weight: bold;
+    font-size: large;
 
 }
 .resultCountUnits
@@ -149,6 +156,7 @@
 .titledSearch {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 5px 5px 0px 0px; 
     color : rgb(55, 55, 55);
     font-size: small;

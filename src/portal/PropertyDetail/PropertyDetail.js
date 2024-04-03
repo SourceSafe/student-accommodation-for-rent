@@ -63,10 +63,7 @@ export const PropertyDetail = (props) =>
             : <div style = {{display:'flex', width:'100%'}}>
                 <img style = {{width:'100%', height:'auto', margin: "10px",borderRadius:'10px'}} src = {details?.images[selectedImageIndex]}></img>
             </div>}
-
-            
-
-            
+                    
             <div className ={thumbNailStyle}>
                 <div style = {{width:'25%', height:'auto', margin: "10px"}}  onClick= {() => {setSelectedImageIndex(0)}}>
                     <img  style = {{width:'100%', borderRadius:'10px'}} src = {details?.images[0]}></img>
@@ -80,9 +77,7 @@ export const PropertyDetail = (props) =>
                     <img  style = {{width:'100%',borderRadius:'10%'}} src = {details?.images[2]}></img>
                 </div>
             </div>
-
-                                                
-            
+                                                            
             <div style = {{margin : '10px', width: '95%'}}>
                 <div style = {{marginTop: '5px' ,fontSize:'22px', fontWeight:'bold'}}>7 Bedroom House</div>
                 <div style = {{color : 'grey', marginTop: '5px' ,fontSize:'18px', fontWeight:'bold'}}>Redland, Bristol, BS6 6RT</div>
@@ -98,9 +93,7 @@ export const PropertyDetail = (props) =>
                         <img style ={{}} src ="https://media.rightmove.co.uk/17k/16974/branch_logo_16974_0004.jpeg"></img>
                     </div>
                 </div>
-            </div>            
-
-            
+            </div>                        
 
             <h2 style = {{}}>Agent Contact Details</h2>
             <div style = {{ gap:'50px',  marginTop:'15px', display:'flex'}}>        
@@ -113,22 +106,13 @@ export const PropertyDetail = (props) =>
                     </div>
                 </div> 
 
-
                 <div style ={{fontWeight:'bold', display:'flex', alignItems: 'center'}}>
                     <MdOutlineMailOutline style ={{color:"green", marginRight:"5px"}} size={30}/>
                     <div>Make an Enquiry</div>
                 </div>        
                 
             </div>
-            
-
-
-
-            
-
-  
-   
-
+                        
 
             <h2>Enjoy All Inclusive Utility Bills for this property</h2>
             <p>This property is EXCLUSIVE of bills. To make life easier we've partnered with Fused.com to offer an All Inclusive Utility Package on this Property. Let Fused.com  deal with your Gas, Electric, Water, Broadband and TV providers. All you need to do is pay an even split each month. </p>

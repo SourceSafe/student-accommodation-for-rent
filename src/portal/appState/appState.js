@@ -18,5 +18,9 @@ export const minPriceAtom = atom('minPrice',false);
 export const MaxPriceAtom = atom('maxPrice',false);
 export const isStatsLoadingAtom = atom('isStatsLoading',true);
 export const portalUrlAtom = atom('portalURL',"");
-export const searchResultsAtom = atom('searchResults',loadingListings.results);
+export const searchResultsAtom = atom('searchResults',loadingListings);
+export const pageIndexAtom = atom('pageIndex',1);
+export const searchResultsCountAtom = atom('searchResultsCount',0);
+
+
 

@@ -8,28 +8,24 @@ import {withComma} from "../helper/format-helper"
 import {Filter} from './Filter/Filter';
 import { VitalStats } from './VitalStats/VitalStats';
 import { useAtomState } from '@zedux/react';
-import { isDesktopAtom, mainStatsAtom, filtersAtom, portalUrlAtom, isStatsLoadingAtom, locationDisplayAtom, isMiniFilterModeAtom, isPortalAtom, searchResultsAtom} from './appState/appState'
-import { FaInfoCircle } from "react-icons/fa";
+import { isDesktopAtom, mainStatsAtom, filtersAtom, portalUrlAtom, isStatsLoadingAtom, locationDisplayAtom, isMiniFilterModeAtom, isPortalAtom, searchResultsAtom, pageIndexAtom} from './appState/appState'
 import { MdElectricalServices } from 'react-icons/md';
-import  {useNavigate}  from "react-router-dom";
+
 import {  Link } from "react-router-dom";
 
 const Portal =  (props) =>
 {        
-    const [searchResults, setSearchResults] = useAtomState(searchResultsAtom);  
+    const [searchResults, setSearchResults] = useAtomState(searchResultsAtom);      
+    const [page, setPage] = useAtomState(pageIndexAtom);      
     const [lastPortalUrl, setLastPortalUrl ] = useAtomState(portalUrlAtom);
     const {reRefresh} = props;      
     const refIndex = useRef(0);
     const urlFormat = "https://kdwytshik8.execute-api.eu-west-2.amazonaws.com/Production/SearchResults";      
     
     const [totalCount, setTotalCount] = useState(0);      
-    const [page, setPage] = useState(1);    
-
-    //const [searchResults, setSearchResults] = useState(loadingListings.results);        
-
+    
     const [isLoading, setIsLoading] = useState(false);                  
-    const [url, setURL] = useState();
-    const [searchTitle, setSearchTitle] = useState("");                
+    const [url, setURL] = useState();    
     const [filters, setFilters] = useAtomState(filtersAtom);
     const [index, setIndex] = useState(0);
     const [isDesktop] = useAtomState(isDesktopAtom);
@@ -45,7 +41,7 @@ const Portal =  (props) =>
     useEffect(() => {      
       if(filters)
         {
-          setPage(1)          
+          //setPage(1)          
           reRequest();
         }          
     }, [filters])
@@ -60,7 +56,7 @@ const Portal =  (props) =>
         {          
           const locationIdentifier = filters.location === "All" ? filters.town.replace("^", "%5E") : filters.location.replace("^", "%5E");                  
           const url = urlFormat +  "?locationIdentifier=" + locationIdentifier + "&index=" + refIndex.current  + "&minBedrooms=" + filters.beds +  "&maxBedrooms=" + filters.beds + "&propertyTypes=" + filters.propertyTypes + "&minPrice="+ filters.selectedMinPrice+ "&maxPrice=" + filters.selectedMaxPrice + "&sortType=" + filters.sortType;           
-          //setPortalUrl(url);
+          //setLastPortalUrl(url);
           setURL(url);                      
           
           
@@ -90,20 +86,13 @@ const Portal =  (props) =>
                   
     useEffect(() => {
       const fetchData = async () => {
-        try {  
-          
-          if(lastPortalUrl !== url)
-          {
+        try {                                
             setIsStatsLoading(true)                
             setIsLoading(true);          
             const response = await fetch(url)
-            const result = await response.json();          
-            setSearchResults(result.results.filter(item=>item.image1 !== ''));
-            setTotalCount(result.totalCount);
-            setSearchTitle(result.searchTitle);
-            setMainStats(result.mainStats);
-            setLastPortalUrl(url);
-          }
+            const queryResult = await response.json();                      
+            setSearchResults(queryResult);                                              
+          
         } catch (error) {
           console.error('Error fetching data:', error);
         } finally {
@@ -112,11 +101,12 @@ const Portal =  (props) =>
 
         }
       };
-      if(url)
+      if(url && lastPortalUrl !== url)
       {
           fetchData();
+          setLastPortalUrl(url);
       }
-    }, [url]);
+    }, [url,setLastPortalUrl]);
 
     useEffect(() => {            
       refIndex.current = (page == 0 ? 0 : (page-1) * 24);      
@@ -127,14 +117,14 @@ const Portal =  (props) =>
     
 
     const isPrev = page > 1;
-    const isNext = totalCount / 24 > page;    
-    const pageCount =  parseInt(totalCount/ 24) + 1;             
+    const isNext = searchResults.totalCount / 24 > page;    
+    const pageCount =  parseInt(searchResults.totalCount/ 24) + 1;             
     const prevClassName =  isPrev ? "navButton" : "navButton navButtonDisabled";
     const nextClassName = isNext ? "navButton" : "navButton navButtonDisabled";
 
     const simplify = (txt) =>
     {
-      return txt.replace("detached, bungalow, semi detached, terraced", "Houses")
+      return txt?.replace("detached, bungalow, semi detached, terraced", "Houses")
     }
 
     
@@ -148,19 +138,17 @@ const Portal =  (props) =>
  
     return(
 
-      <div>          
+      <div className = "portal">    
+
         <div>                
           {!isDesktop && <VitalStats style = {{width:'100%'}}></VitalStats>}                        
-          <Filter reRefresh = {reRefresh}/>
-          
+          <Filter reRefresh = {reRefresh}/>                
          <div className = "titledSearch">
-          <div style  ={{display:'flex', gap:'10px'}}>              
-              <div className = "seachTitle">{simplify(searchTitle)}</div>
-              {/* <FaInfoCircle size={20}/> */}
-          </div>
-                   
+          <div>              
+              <div className = "seachTitle">{simplify(searchResults.searchTitle)}</div>              
+          </div>                   
           <div>                
-                <span className = "resultCount" >{withComma(totalCount)} </span>                
+                <span className = "resultCount" >{withComma(searchResults.totalCount)} </span>                
                 <span className = "resultCountUnits">results </span>
           </div>                    
         </div>
@@ -170,7 +158,7 @@ const Portal =  (props) =>
             </div> 
               
                 <div className="listings"> 
-                  {searchResults?.map( listing => (                  
+                  {searchResults?.results?.filter(item=>item.image1 !== '').map( listing => (                  
                   <div key = {listing.propertyId}>
                           <Link title = "View Property Details" className ="viewInfoLink" to = {buildPropertyRoute(listing.propertyId)}>
                           <Listing  key = {listing.propertyId} isDesktop={isDesktop} listing={listing} isPortlet = {false} isLoading={isLoading} ></Listing>   
@@ -188,9 +176,9 @@ const Portal =  (props) =>
               
               </div>
               <div className = "navButtons">
-                <button className = {prevClassName} disabled = {!isPrev} onClick={() => setPage(page-1)}> {prev}  Previous </button>
+                <button className = {prevClassName} disabled = {!isPrev} onClick={() => setPage(page =>page -1)}> {prev}  Previous </button>
                 <label>{`Page ${page} / ${pageCount}`}</label>
-                <button className = {nextClassName} disabled = {!isNext} onClick={() => setPage(page+1)}>Next {next} </button>
+                <button className = {nextClassName} disabled = {!isNext} onClick={() => setPage(page => page+1)}>Next {next} </button>
               </div>                                
           </div>
 
