@@ -55,13 +55,7 @@ export const PropertyDetail = (props) =>
     
                     
     return <div className = "propertyDetail">
-                       
-            {/* <h2>Property Details</h2> */}
-            
-  
-   
-
-            
+                                                                
             {!isMobile ? <div style = {{display:'flex', width:'50%'}}>
                 <img style = {{width:'100%', height:'auto', margin: "10px",borderRadius:'10px'}} src = {details?.images[selectedImageIndex]}></img>
             </div> 
@@ -87,10 +81,7 @@ export const PropertyDetail = (props) =>
                 </div>
             </div>
 
-            
-            
-            
-            {/* <h2>Property Details</h2> */}
+                                                
             
             <div style = {{margin : '10px', width: '95%'}}>
                 <div style = {{marginTop: '5px' ,fontSize:'22px', fontWeight:'bold'}}>7 Bedroom House</div>
@@ -148,19 +139,18 @@ export const PropertyDetail = (props) =>
 
 
 
-             
-
+            
             <h2>Letting Details</h2>
-            {details?.lettingDetails.map(detail => 
             <ul>       
-                <li>
+            {details?.lettingDetails.map(detail =>             
+                <li key = {detail.label}>
                     <div style ={{display:'flex'}}>
                     <div style ={{minWidth:'150px'}}>{detail.label}</div>
                     <div>{detail.value}</div>            
                     </div>
-                </li>
-            </ul>
+                </li>            
             )} 
+            </ul>
 
 
       
@@ -168,16 +158,16 @@ export const PropertyDetail = (props) =>
 
             
             <h2>Property Details</h2>
-            <p>
+            
             { details?.descriptionHTML !== null && details?.descriptionHTML !== undefined && 
                     parse(details?.descriptionHTML)
             }
-            </p>
+            
 
 
             <h2>Key Features</h2>
             <ul>
-            {details?.keyFeatures.map(feature => <div><FaCheck style ={{marginRight:'20px'}} color = "green"/>{feature}</div>)}             
+            {details?.keyFeatures.map(feature => <div key = {feature}><FaCheck style ={{marginRight:'20px'}} color = "green"/>{feature}</div>)}             
             </ul>
 
            

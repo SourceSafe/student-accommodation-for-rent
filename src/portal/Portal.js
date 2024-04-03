@@ -171,7 +171,7 @@ const Portal =  (props) =>
               
                 <div className="listings"> 
                   {searchResults?.map( listing => (                  
-                  <div>
+                  <div key = {listing.propertyId}>
                           <Link title = "View Property Details" className ="viewInfoLink" to = {buildPropertyRoute(listing.propertyId)}>
                           <Listing  key = {listing.propertyId} isDesktop={isDesktop} listing={listing} isPortlet = {false} isLoading={isLoading} ></Listing>   
                           </Link>
