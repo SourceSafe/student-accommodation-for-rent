@@ -83,12 +83,8 @@ useEffect(() => {
       <div style = {{display:'flex', justifyContent:'space-between'}}>
         <div>
           {isDesktop &&  <h1>Student Accommodation For Rent</h1>    }
-        </div>
-        <div>
-          {/* {isDesktop && <VitalStats> </VitalStats>} */}
-        </div>            
+        </div>        
       </div>
-
       
                 
       <Portal reRefresh = {reRefresh}/>

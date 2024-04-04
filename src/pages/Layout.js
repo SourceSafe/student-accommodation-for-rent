@@ -34,13 +34,13 @@ const Layout = () => {
   return (
     <div style={{display: "flex", flexDirection:'column', margin:"0px 0px"}}>
       
-      <div>
+      {/* <div>
       IsMobile : {isMobile == true ? "True" : "False"}
       <div>
       {width}
       </div>
-      </div>
-{/* 
+      </div> */}
+
       <div style={{display: "flex", flexDirection:'row', justifyContent: "space-between"}}>
 
       <div style={{ margin:"0px 0px 0px 5px"}}>
@@ -67,7 +67,7 @@ const Layout = () => {
       
       </div>     
 
-      </div> */}
+      </div>
 
 
 
