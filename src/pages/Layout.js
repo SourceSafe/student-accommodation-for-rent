@@ -10,12 +10,14 @@ import {ViewPortal} from '../components/ViewPortal/ViewPortal'
 const Layout = () => {  
   const [isPortal] = useAtomState(isPortalAtom);
   const [isMobile, setIsMobile] = useState(false);    
+  const [width, setWidth] = useState();    
   
         
   useEffect(() => {        
 
     const handleWindowSizeChange=() => {    
       setIsMobile( window.innerWidth <= 800);
+      setWidth( window.innerWidth);
     }
 
 
@@ -34,6 +36,9 @@ const Layout = () => {
       
       <div>
       IsMobile : {isMobile == true ? "True" : "False"}
+      <div>
+      {width}
+      </div>
       </div>
 {/* 
       <div style={{display: "flex", flexDirection:'row', justifyContent: "space-between"}}>
