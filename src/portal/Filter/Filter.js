@@ -318,7 +318,7 @@ return(<div>
             Town
         </div>
         <div className = "filterTown">
-          <Select  disabled={listsLoading}  className={"select"}  type="text" values= { townSelect}  options={availabelTowns} onChange={setTownFilter} />
+          <Select  disabled={listsLoading}  className="select"  type="text" values= { townSelect}  options={availabelTowns} onChange={setTownFilter} />
         </div>
     </div>
 
