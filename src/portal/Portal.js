@@ -72,9 +72,7 @@ const Portal =  (props) =>
       return () => {
         setFalse();
         window.removeEventListener('beforeunload', setFalse)
-      }
-      
-
+      }      
     }, [])
     
     const setFalse = (e) => {

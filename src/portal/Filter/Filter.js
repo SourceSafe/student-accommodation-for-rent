@@ -13,8 +13,7 @@ export const Filter = (props) =>
     const {reRefresh} = props;
     const [locationDisplay,setlocationDisplay] = useAtomState(locationDisplayAtom);
     const [isMiniFilterMode,setIsMiniFilterMode] = useAtomState(isMiniFilterModeAtom);
-    const [filters,setFilters] = useAtomState(filtersAtom);
-    const [isDesktop] = useAtomState(isDesktopAtom);
+    const [filters,setFilters] = useAtomState(filtersAtom);    
     const lists = require('.././data/LocationByTown.json');
     const allLocations = {value:'All', label:'All Locations'};              
     const [listsLoading, setListsLoading] = useState(true);
@@ -36,15 +35,8 @@ export const Filter = (props) =>
     const [isPriceFilterSet, setIsPriceFilterSet] = useState(false);
     const [minPriceSlider, setMinPriceSlider] = useState(priceRange[0]);
     const [maxPriceSlider, setMaxPriceSlider] = useState(priceRange[1]);    
-
-    
-    
-  
-    
-    
-    
-    
-
+    const [isMobile, setIsMobile] = useState(true);    
+                        
     useEffect(() => {       
       setListsLoading(true);        
       initList(lists);                 
@@ -52,12 +44,24 @@ export const Filter = (props) =>
       window.scrollTo(0,0);
     }, [reRefresh]);
 
+    const handleWindowSizeChange=() => {
+      setIsMobile(window.innerWidth <= 768);            
+  }
     
     useEffect(() => {       
+      handleWindowSizeChange();
+        window.addEventListener('resize', handleWindowSizeChange);
         setListsLoading(true);        
         initList(lists);                 
-        setListsLoading(false);              
+        setListsLoading(false);                      
+        return () => {
+            window.removeEventListener('resize', handleWindowSizeChange);
+        }        
       }, []);
+
+
+
+
     
         
     useEffect(() => {            
@@ -318,7 +322,7 @@ return(<div>
         </div>
     </div>
 
-    {  (isDesktop  || isMiniFilterMode)  && 
+    {  (!isMobile  || isMiniFilterMode)  && 
     
         <div className = "filter">
           <div className = "filterName">
@@ -331,7 +335,7 @@ return(<div>
         }
 
         
-{  (isDesktop  || isMiniFilterMode)  && 
+{  (!isMobile  || isMiniFilterMode)  && 
 
           <div className = "filter">
     <div className = "filterName">
@@ -344,7 +348,7 @@ return(<div>
 }
 
 
-{  (isDesktop  || isMiniFilterMode)  && 
+{  (!isMobile  || isMiniFilterMode)  && 
     <div className = "filter">
       <div className = "filterName">
               Home Type                        
@@ -356,7 +360,7 @@ return(<div>
 }
     
         
-{  (isDesktop  || isMiniFilterMode)  && 
+{  (!isMobile  || isMiniFilterMode)  && 
       <div className = "priceFilter">
               <div className = "priceFilterName">
                   <label>  Price Range</label>
@@ -382,7 +386,7 @@ return(<div>
 
   
     
-    {  (isDesktop  || isMiniFilterMode)  && 
+    {  (!isMobile  || isMiniFilterMode)  && 
     <div className = "filter sortFilter">     
       <div className = "filterGeneral  sortName">
           Sort
@@ -395,7 +399,7 @@ return(<div>
 
 
 
-{!isDesktop && !isMiniFilterMode &&
+{isMobile && !isMiniFilterMode &&
   <button onClick={onFilter} className ="filterButton">
     <div style={{display:'flex', justifyContent:'center', alignItems:'center', gap:20}}>
     <div>
@@ -416,7 +420,7 @@ return(<div>
 
 <div style={{display:'flex', justifyContent:'center'}}>
 
-{!isDesktop && isMiniFilterMode &&
+{!isMobile && isMiniFilterMode &&
 
   <button onClick={onApply} className ="filterButton" style={{width:"95%"}}>Less Filters</button>
   }
