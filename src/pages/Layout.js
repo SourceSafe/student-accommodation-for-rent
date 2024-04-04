@@ -59,7 +59,7 @@ const Layout = () => {
         
         { !isMobile && 
         <div style ={{ marginTop: '9px'}}>
-        <CTAPackage  description={"On any Student Accommodation"} ></CTAPackage>
+        {/* <CTAPackage  description={"On any Student Accommodation"} ></CTAPackage> */}
         </div>
         }                            
         
