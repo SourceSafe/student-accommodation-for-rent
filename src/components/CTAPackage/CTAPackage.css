@@ -13,8 +13,7 @@
     margin-left: 50px;
     margin-top: 20px;
     width:425px;    
-    padding: 10px;        
-
+    padding: 10px;            
     
 }
 
@@ -61,6 +60,7 @@
     font-size:  large;        
     color:rgba(255, 255, 255, 0.937) ;
     font-weight: bold;
+    font-family: Ca;
 }
 
 .ctaText2 {

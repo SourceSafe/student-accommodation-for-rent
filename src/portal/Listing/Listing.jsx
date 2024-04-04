@@ -26,7 +26,7 @@ export const  Listing = (props) =>
 }, []);
   
   const info = listing.addedReduced;
-  let imageWidth =  isMobile  ?  windowSize[0]-70 :330;
+  let imageWidth =  isMobile  ?  windowSize[0]-50 :330;
   const imageHeight = isMobile ?  280 : 250;
   
 
