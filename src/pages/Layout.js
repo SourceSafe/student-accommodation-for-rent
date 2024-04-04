@@ -9,15 +9,20 @@ import {ViewPortal} from '../components/ViewPortal/ViewPortal'
  
 const Layout = () => {  
   const [isPortal] = useAtomState(isPortalAtom);
-  const [isMobile,setIsMobile] = useState();    
-    
+  const [isMobile, setIsMobile] = useState(false);    
   
-  useEffect(() => {
-    const handleWindowSizeChange=() => {
-        setIsMobile(window.innerWidth <= 768);            
+        
+  useEffect(() => {        
+
+    const handleWindowSizeChange=() => {    
+      setIsMobile( window.innerWidth <= 800);
     }
-    handleWindowSizeChange();
+
+
     window.addEventListener('resize', handleWindowSizeChange);
+
+    handleWindowSizeChange();
+
     return () => {
         window.removeEventListener('resize', handleWindowSizeChange);
     }
@@ -26,6 +31,10 @@ const Layout = () => {
     
   return (
     <div style={{display: "flex", flexDirection:'column', margin:"0px 0px"}}>
+      
+      <div>
+      IsMobile : {isMobile == true ? "True" : "False"}
+      </div>
 {/* 
       <div style={{display: "flex", flexDirection:'row', justifyContent: "space-between"}}>
 
