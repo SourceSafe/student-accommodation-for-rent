@@ -164,3 +164,23 @@
   }
 
   
+
+  .textAndBanner{
+    display:flex;
+    flex-direction: column;
+    height: 100%;
+    
+  }
+
+  .mainText{    
+    flex:3;
+  }
+
+  .banner{    
+    
+    flex:1;
+    margin-bottom: 5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }

@@ -88,7 +88,7 @@ const Portal =  (props) =>
             setIsStatsLoading(true)                
             setIsLoading(true);          
             const response = await fetch(url)
-            const queryResult = await response.json();                      
+            const queryResult = await response.json();                                  
             setSearchResults(queryResult);                                              
           
         } catch (error) {
@@ -127,9 +127,11 @@ const Portal =  (props) =>
 
     
 
-    const buildPropertyRoute = (propertyId) =>
+    const buildPropertyRoute = (listing) =>
     {
-      return `./properties/${propertyId}`
+      const {propertyId, description}  = listing
+      const billsOfferedByAgent = description.toUpperCase().includes("BILLS");
+      return `./properties/${propertyId}/${billsOfferedByAgent}`
 
     }
 
@@ -158,7 +160,7 @@ const Portal =  (props) =>
                 <div className="listings"> 
                   {searchResults?.results?.filter(item=>item.image1 !== '').map( listing => (                  
                   <div key = {listing.propertyId}>
-                          <Link title = "View Property Details" className ="viewInfoLink" to = {buildPropertyRoute(listing.propertyId)}>
+                          <Link title = "View Property Details" className ="viewInfoLink" to = {buildPropertyRoute(listing)}>
                           <Listing  key = {listing.propertyId} isDesktop={isDesktop} listing={listing} isPortlet = {false} isLoading={isLoading} ></Listing>   
                           </Link>
                   </div>

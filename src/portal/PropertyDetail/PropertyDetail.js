@@ -6,11 +6,15 @@ import  './PropertyDetail.css'
 import { MdOutlineMailOutline } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
 import { FaCheck } from "react-icons/fa";
+import {isBillsIncludedInText} from '../../helper/text-helper'
+
+const enrichLettingDetails = [{label:'Utilities Option', value:'Utilities Option available with FUSED.com. Let them take out the hassle of dealing with all the providers. You simply pay your monthly split.'}]
+const enrichKeyFeatures = ["Utilities Package Available", "Instant Quote Available from FUSED.com"]
 
 export const PropertyDetail = (props) =>
-{
+{    
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-    const { propertyId } = useParams();
+    const { propertyId, billsOfferedByAgent } = useParams();
     const [details, setDetails] = useState();
     const [isMobile,setIsMobile] = useState();    
 
@@ -25,17 +29,20 @@ export const PropertyDetail = (props) =>
         }
     }, []);
 
+
+    const billsOffered = (details) =>
+    {
+        return billsOfferedByAgent==="true" | isBillsIncludedInText(JSON.stringify(details))
+
+    }
+
     
     useEffect(() => {
         const fetchData = async () => {
           try {    
             const url = "https://kdwytshik8.execute-api.eu-west-2.amazonaws.com/Production/GetDetail?propertyId=" + propertyId;                        
             const response = await fetch(url)
-            const result = await response.json();                      
-            result.results.keyFeatures.unshift("Instant Quote Available from Fused.com")
-            result.results.keyFeatures.unshift("All Bills Inclusive Option Available.")
-            
-            result.results.lettingDetails.push({label:'Utilities Option', value:'Utilities Option available with Fused.com. Let them take out the hassle of dealing with all the providers. You simply pay your monthly split.'})
+            const result = await response.json();                                                         
             setDetails(result.results)                                    
           } catch (error) {
             console.error('Error fetching property details:', error);
@@ -51,9 +58,9 @@ export const PropertyDetail = (props) =>
       }, [propertyId]);
 
 
-      const thumbNailStyle = isMobile ? "thumbNailMobile" : "thumbNail"
+    const thumbNailStyle = isMobile ? "thumbNailMobile" : "thumbNail"
     
-                    
+    
     
     const pictureFlexLayout = isMobile ? 'column' : 'row'
     
@@ -63,15 +70,17 @@ export const PropertyDetail = (props) =>
         
         
         <h2>Property Details</h2>
-        <div style={{display:'flex', flexDirection: pictureFlexLayout}}>
+
+        <div style={{border:'0px solid black', display:'flex', flexDirection: pictureFlexLayout}}>
                 
-            <div className="pictureSection">
+            <div className="pictureSection" style={{border:'0px solid black', flex : 2}}>
                                                                     
-                {!isMobile ? <div style = {{display:'flex', width:'95%'}}>
+                {!isMobile ? 
+                <div style = {{display:'flex', width:'95%'}}>
                     <img style = {{width:'100%', height:'auto', margin: "10px",borderRadius:'10px'}} src = {details?.images[selectedImageIndex]}></img>
-                </div> 
-                
-                : <div style = {{display:'flex', width:'100%'}}>
+                </div>                 
+                :
+                 <div style = {{display:'flex', width:'100%'}}>
                     <img style = {{width:'100%', height:'auto', margin: "10px",borderRadius:'10px'}} src = {details?.images[selectedImageIndex]}></img>
                 </div>}
                         
@@ -91,7 +100,7 @@ export const PropertyDetail = (props) =>
             </div>
 
 
-            <div className = "blurb">                                                                
+            <div className = "blurb" style = {{flex:1}}>                                                                
 
             
                 <div style = {{margin : '10px', width: '95%'}}>
@@ -127,26 +136,39 @@ export const PropertyDetail = (props) =>
                         <div>Make an Enquiry</div>
                     </div>        
                     
-                </div>                            
+                </div>    
+                                
+                {!billsOffered(details) && 
+                <div>
+                    <h2>Enjoy All Inclusive Utility Bills for this property</h2>
+                    <p>This property is EXCLUSIVE of bills. To make life easier we've partnered with Fused.com to offer an All Inclusive Utility Package on this Property. Let Fused.com  deal with your Gas, Electric, Water, Broadband and TV providers. All you need to do is pay an even split each month. </p>
+                    <CTAPackage isMobile={isMobile}/>
+                </div>
+            }
 
-                <h2>Enjoy All Inclusive Utility Bills for this property</h2>
-                <p>This property is EXCLUSIVE of bills. To make life easier we've partnered with Fused.com to offer an All Inclusive Utility Package on this Property. Let Fused.com  deal with your Gas, Electric, Water, Broadband and TV providers. All you need to do is pay an even split each month. </p>
-
-                {/* {isMobile &&  */}
-                <CTAPackage isMobile={isMobile}/>
-                {/* } */}
             </div>
 
         </div>
 
             
             <h2>Letting Details</h2>
-            <ul>       
-            {details?.lettingDetails.map(detail =>             
+            <ul>    
+
+            { !billsOffered(details) && enrichLettingDetails.map(detail =>             
                 <li key = {detail.label}>
                     <div style ={{display:'flex'}}>
                     <div style ={{minWidth:'150px'}}>{detail.label}</div>
                     <div>{detail.value}</div>            
+                    </div>
+                </li>            
+            )} 
+                
+                               
+            {details?.lettingDetails.map(detail =>             
+                <li key = {detail.label}>
+                    <div style ={{display:'flex'}}>
+                    <div style ={{minWidth:'150px'}}>{detail.label.replaceAll("&amp;","&")}</div>
+                    <div>{detail.value.replaceAll("&amp;","&")}</div>            
                     </div>
                 </li>            
             )} 
@@ -158,16 +180,22 @@ export const PropertyDetail = (props) =>
 
             
             <h2>Property Details</h2>
+
+            <p>
             
             { details?.descriptionHTML !== null && details?.descriptionHTML !== undefined && 
-                    parse(details?.descriptionHTML)
+                    parse(details?.descriptionHTML.replaceAll("&amp;","&"))
             }
+            </p>
+            
             
 
-
-            <h2>Key Features</h2>
+            <h2>Key Features</h2>        
             <ul>
-            {details?.keyFeatures.map(feature => <div key = {feature}><FaCheck style ={{marginRight:'20px'}} color = "green"/>{feature}</div>)}             
+                {!billsOffered(details) && 
+                    enrichKeyFeatures.map(feature => <div key = {feature}><FaCheck style ={{marginRight:'20px'}} color = "green"/>{feature}</div>)             
+                }
+                {details?.keyFeatures.map(feature => <div key = {feature}><FaCheck style ={{marginRight:'20px'}} color = "green"/>{feature.replaceAll("&amp;","&")}</div>)}             
             </ul>
 
            

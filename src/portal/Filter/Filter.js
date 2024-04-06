@@ -162,7 +162,7 @@ export const Filter = (props) =>
         const uniqueTown = [...map.values()];                      
          setAvailableTowns(uniqueTown)       
 
-         const townIdx = uniqueTown.findIndex(item => item.value === filters?.town)  == -1 ? 3 : uniqueTown.findIndex(item => item.value === filters?.town);      
+         const townIdx = uniqueTown.findIndex(item => item.value === filters?.town)  == -1 ? 0 : uniqueTown.findIndex(item => item.value === filters?.town);      
          setSelectedTown([uniqueTown[townIdx]]);         
 
         setAvailableBedrooms(lists.bedrooms);                                      
