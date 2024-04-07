@@ -13,7 +13,8 @@
     margin-left: 10px;
     margin-top: 20px;
     width:425px;    
-    padding: 10px;            
+    /* padding: 10px;             */
+    height: 80px;
     
 }
 
@@ -42,32 +43,26 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     align-items: center;
     gap:10px;
 }   
 
-.ctaTextLayout {    
-    height: 100%;
+.ctaTextLayout {  
+    height: 100%;      
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    flex-direction: column;    
     margin-left: 10px;
+    justify-content: space-evenly;
 }
 
 
 .ctaText {        
     font-size:  large;        
     color:rgba(255, 255, 255, 0.937) ;
-    font-weight: bold;
-    font-family: Ca;
+    font-weight: bold;    
 }
 
 .ctaText2 {
 color: rgb(255, 255, 255);            
 }
-
-
-
-
-

@@ -1,0 +1,33 @@
+
+
+.utilitiyIcons
+{
+    width : 100%;
+    display:flex;
+    justify-content: center;
+    gap:30px;
+    margin-top: 20px;
+}
+
+
+.utilityTickPair{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:5px;
+
+}
+
+
+.utility{
+    color: black;
+}
+
+
+.utilityImage{
+    width: 35px;
+    
+
+}
+
+

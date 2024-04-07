@@ -1,17 +1,33 @@
 import  './CTAPackage.css'
 import { BsFillHouseCheckFill } from "react-icons/bs";
+import {UtilityStrip} from '../UtilityStrip/UtilityStrip'
 
 export const CTAPackage = (props) =>
 {
 const {tag1, tag2,  isMobile} = props;
-const firstLine = tag1 ? tag1 : "All inclusive Utilities"
-const secondLine = tag2 ? tag2 :"Get an Instant Quote Now"
+//const firstLine = tag1 ? tag1 : "Fully Inclusive Utilities"
+const firstLine = tag1 ? tag1 : "GET YOUR QUOTE NOW !" 
+//const secondLine = tag2 ? tag2 :"Fully Inclusive Utilitiy Bills"
+const secondLine = tag2 ? tag2 :"All Bills Included Package"
+
+
+
+const utilities = [{src:"https://cdn-p0.unihomes.co.uk/images/icons/22-icon-gas.png?id=7469a38637911d020330035443541388ef57c441", title:"Gas"},
+{src:"https://cdn-p0.unihomes.co.uk/images/icons/22-icon-electricity.png?id=7469a38637911d020330035443541388ef57c441", title:"Electricity"},
+{src:"https://cdn-p0.unihomes.co.uk/images/icons/22-icon-internet.png?id=7469a38637911d020330035443541388ef57c441", title:"Fibre Internet"},
+{src:"https://cdn-p0.unihomes.co.uk/images/icons/22-icon-water.png?id=7469a38637911d020330035443541388ef57c441", title:"Water"},
+{src:"https://cdn-p0.unihomes.co.uk/images/icons/22-icon-tv-licence.png?id=7469a38637911d020330035443541388ef57c441", title:"TV Licence"}]
 
 
 const style = isMobile? "ctaButton ctaButtonMobile" : "ctaButton";
 
 return(      
-    <a style = {{ textDecoration: 'none', color: 'white' }} href="https://app.fusedbills.co.uk/signup/about" target="_blank"> 
+    <a style = {{ alignItems: 'center', flexDirection: "column", display : "flex", textDecoration: 'none', color: 'white' }} href="https://app.fusedbills.co.uk/signup/about" target="_blank"> 
+
+
+        <UtilityStrip/>
+
+
         <button className={style}>            
         <div className="ctaLayout">
             <div className="ctaTextLayout">

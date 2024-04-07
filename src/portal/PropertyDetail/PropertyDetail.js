@@ -1,4 +1,4 @@
-import {  useParams } from "react-router-dom";
+import {  useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import parse from 'html-react-parser';
 import { CTAPackage } from "../../components/CTAPackage/CTAPackage";
@@ -7,6 +7,7 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
 import { FaCheck } from "react-icons/fa";
 import {isBillsIncludedInText} from '../../helper/text-helper'
+import {CaptureUserDetails} from "../../components/CaptureUserDetails/CaptureUserDetails"
 
 const enrichLettingDetails = [{label:'Utilities Option', value:'Utilities Option available with FUSED.com. Let them take out the hassle of dealing with all the providers. You simply pay your monthly split.'}]
 const enrichKeyFeatures = ["Utilities Package Available", "Instant Quote Available from FUSED.com"]
@@ -36,6 +37,10 @@ export const PropertyDetail = (props) =>
 
     }
 
+    const buildEnquiryRoute = (propertyId) => {            
+        return `/enquire/${propertyId}`;
+      }
+
     
     useEffect(() => {
         const fetchData = async () => {
@@ -63,6 +68,7 @@ export const PropertyDetail = (props) =>
     
     
     const pictureFlexLayout = isMobile ? 'column' : 'row'
+    
     
     return <div className = "propertyDetail">
 
@@ -103,6 +109,8 @@ export const PropertyDetail = (props) =>
             <div className = "blurb" style = {{flex:1}}>                                                                
 
             
+
+            
                 <div style = {{margin : '10px', width: '95%'}}>
                     <div style = {{marginTop: '5px' ,fontSize:'22px', fontWeight:'bold'}}>7 Bedroom House</div>
                     <div style = {{color : 'grey', marginTop: '5px' ,fontSize:'18px', fontWeight:'bold'}}>Redland, Bristol, BS6 6RT</div>
@@ -131,20 +139,27 @@ export const PropertyDetail = (props) =>
                         </div>
                     </div> 
 
-                    <div style ={{fontWeight:'bold', display:'flex', alignItems: 'center'}}>
-                        <MdOutlineMailOutline style ={{color:"green", marginRight:"5px"}} size={30}/>
-                        <div>Make an Enquiry</div>
-                    </div>        
+                    <Link title = "Make an Enquiry" className ="enquiry" to = {buildEnquiryRoute(propertyId)}>
+                        <div style ={{fontWeight:'bold', display:'flex', alignItems: 'center'}}>
+                            <MdOutlineMailOutline style ={{color:"green", marginRight:"5px"}} size={30}/>
+                            <div>Make an Enquiry</div>
+                        </div>        
+                    </Link>
                     
                 </div>    
+
+                
                                 
-                {!billsOffered(details) && 
+                {details && !billsOffered(details) && 
                 <div>
                     <h2>Enjoy All Inclusive Utility Bills for this property</h2>
                     <p>This property is EXCLUSIVE of bills. To make life easier we've partnered with Fused.com to offer an All Inclusive Utility Package on this Property. Let Fused.com  deal with your Gas, Electric, Water, Broadband and TV providers. All you need to do is pay an even split each month. </p>
-                    <CTAPackage isMobile={isMobile}/>
+                    {/* <CTAPackage tag1 = "£23.77 pppw" tag2= {"Request a Call Back"} isMobile={isMobile}/> */}
+                    <CTAPackage  isMobile={isMobile}/>
+
+                    {/* <CaptureUserDetails/> */}
                 </div>
-            }
+                }
 
             </div>
 

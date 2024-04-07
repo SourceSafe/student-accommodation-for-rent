@@ -4,6 +4,7 @@ import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import NoPage from "./pages/NoPage";
 import {PropertyDetail} from './portal/PropertyDetail/PropertyDetail'
+import {Enquiry} from './portal/Enquiry/Enquiry'
 
 
 //*** js:import-townStart
@@ -70,7 +71,11 @@ const  App = ()  =>{
       <Routes>
           <Route path="/" element={<Layout />}>          
           <Route index element={<Home />} />                    
+          <Route path="/enquire/:propertyId" element={<Enquiry/>}/>
           <Route path="properties/:propertyId/:billsOfferedByAgent" element={<PropertyDetail/>}/>
+          
+
+          
           {/* routeSectionStart*/}                    
 
 <Route path="student-accommodation-in-bath" element={<Bath/>}/>
