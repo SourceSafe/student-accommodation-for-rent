@@ -129,9 +129,9 @@ const Portal =  (props) =>
 
     const buildPropertyRoute = (listing) =>
     {
-      const {propertyId, description}  = listing
+      const {propertyId, description, add2}  = listing
       const billsOfferedByAgent = description.toUpperCase().includes("BILLS");
-      return `./properties/${propertyId}/${billsOfferedByAgent}`
+      return `./properties/${propertyId}/${billsOfferedByAgent}/${add2}`
 
     }
 

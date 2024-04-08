@@ -15,7 +15,7 @@ const enrichKeyFeatures = ["Utilities Package Available", "Instant Quote Availab
 export const PropertyDetail = (props) =>
 {    
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-    const { propertyId, billsOfferedByAgent } = useParams();
+    const { propertyId, billsOfferedByAgent, add2 } = useParams();
     const [details, setDetails] = useState();
     const [isMobile,setIsMobile] = useState();    
 
@@ -37,8 +37,14 @@ export const PropertyDetail = (props) =>
 
     }
 
-    const buildEnquiryRoute = (propertyId) => {            
-        return `/enquire/${propertyId}`;
+    const buildEnquiryRoute = () => {       
+        const tennancyDate = details?.lettingDetails[0].value.replaceAll("/","-")
+
+        const ret  = `/enquire/${propertyId}/${details?.title}/${tennancyDate}/${add2}`;
+
+        
+        return ret;
+
       }
 
     
@@ -108,18 +114,16 @@ export const PropertyDetail = (props) =>
 
             <div className = "blurb" style = {{flex:1}}>                                                                
 
-            
-
-            
+                    
                 <div style = {{margin : '10px', width: '95%'}}>
-                    <div style = {{marginTop: '5px' ,fontSize:'22px', fontWeight:'bold'}}>7 Bedroom House</div>
-                    <div style = {{color : 'grey', marginTop: '5px' ,fontSize:'18px', fontWeight:'bold'}}>Redland, Bristol, BS6 6RT</div>
+                    <div style = {{marginTop: '5px' ,fontSize:'22px', fontWeight:'bold'}}>{add2}</div>
+                    <div style = {{color : 'grey', marginTop: '5px' ,fontSize:'18px', fontWeight:'bold'}}>{details?.title}</div>
                 
 
                     <div style = {{marginTop: '10px', display: 'flex', border: '0px solid black', justifyContent: 'space-between'}}>
                         <div style = {{}}>
-                            <div style = {{fontSize:'25px', fontWeight:'bold'}}>£3,000 pcm</div>
-                            <div>£692 pw</div>
+                            <div style = {{fontSize:'25px', fontWeight:'bold'}}>{details?.mainPrice}</div>
+                            <div>{details?.secondaryPrice}</div>
                             <div>Added on 22/03/2024</div>        
                         </div>
                         <div style = {{}}>                    

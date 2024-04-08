@@ -9,7 +9,7 @@ import { UtilityStrip } from '../../components/UtilityStrip/UtilityStrip';
 export const Enquiry = () =>
 {
 
-    const { propertyId } = useParams();
+    const { propertyId, title, tennancyDate, add2} = useParams();
     const [utilitiesChecked, setUtilitiesChecked] = useState(false);
     const [moreDetailsChecked, setMoreDetailsChecked] = useState(false);
     const [viewingChecked, setViewingChecked] = useState(false);
@@ -20,6 +20,40 @@ export const Enquiry = () =>
         <div className="main">       
         
             <div className = "enquiry">
+
+
+            <div className="labelFieldPair">
+                        <div className="label">
+                            Property Address
+                        </div>
+                        <div className="title">
+                            {title}
+                        </div>
+            </div>    
+
+            
+            <div className='row'>
+
+            <div className="labelFieldPair">
+                                <div className="label">
+                                    Tennacy Start
+                                </div>
+                                <div className="add2">
+                                    {tennancyDate.toUpperCase() === "ASK AGENT" ? "Immediate" : tennancyDate}
+                                </div>
+                    </div>  
+                <div className="labelFieldPair">
+                            <div className="label">
+                                Number of Tenants
+                            </div>
+                            <div className="add2">
+                                {add2.substring(0,1)}
+                            </div>
+                </div>    
+                     
+
+            </div>
+            
 
             I would like: 
             <div className="row">
@@ -51,6 +85,8 @@ export const Enquiry = () =>
                 </div>
 
             </div>
+
+                   
             
                 
                 <div className="row">
@@ -72,17 +108,6 @@ export const Enquiry = () =>
                     </div>
                 </div>
 
-
-                <div className="row">
-                    <div className="labelFieldPair">
-                        <div className="label">
-                            Email
-                        </div>
-                        <div className="field fieldLarge">
-                            Enter Here            
-                        </div>
-                    </div>                                            
-                </div>
 
                 
                 <div className="row">
@@ -106,30 +131,7 @@ export const Enquiry = () =>
                         </div>
                     </div>
                 </div>
-
-                
-                <div className="row">
-                <div className="labelFieldPair">
-                        <div className="label">
-                            Country
-                        </div>
-                        <div className="field fieldLarge">
-                            Eg. UK
-                        </div>
-                    </div>
-                </div>
-
-                
-                <div className="row">
-                <div className="labelFieldPair">
-                        <div className="label">
-                            Postcode
-                        </div>
-                        <div className="field fieldLarge">
-                            Eg. MK6 61AJ
-                        </div>
-                    </div>
-                </div>
+                             
 
                 <div className="row">
                 <div className="labelFieldPair">
