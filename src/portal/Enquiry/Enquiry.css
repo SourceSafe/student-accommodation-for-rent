@@ -3,6 +3,7 @@
     flex-direction: row;
     gap:130px;
     user-select: none;
+    margin : 5px;
 }
 
 
