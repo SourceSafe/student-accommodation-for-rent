@@ -18,6 +18,7 @@ export const PropertyDetail = (props) =>
     const { propertyId, billsOfferedByAgent, add2 } = useParams();
     const [details, setDetails] = useState();
     const [isMobile,setIsMobile] = useState();    
+    const [utilitiesAlreadyOffered, setUtilitiesAlreadyOffered] = useState();
 
     useEffect(() => {
         const handleWindowSizeChange=() => {
@@ -30,6 +31,12 @@ export const PropertyDetail = (props) =>
         }
     }, []);
 
+    useEffect(() => {
+        const billsAlreadyOffered =  billsOfferedByAgent==="true" | isBillsIncludedInText(JSON.stringify(details))
+        setUtilitiesAlreadyOffered(billsAlreadyOffered)    
+    }, [details,billsOfferedByAgent]);
+
+
 
     const billsOffered = (details) =>
     {
@@ -39,13 +46,16 @@ export const PropertyDetail = (props) =>
 
     const buildEnquiryRoute = () => {       
         const tennancyDate = details?.lettingDetails[0].value.replaceAll("/","-")
+        
 
-        const ret  = `/enquire/${propertyId}/${details?.title}/${tennancyDate}/${add2}`;
+        const ret  = `/enquire/${propertyId}/${details?.title}/${tennancyDate}/${add2}/${utilitiesAlreadyOffered}`;
 
         
         return ret;
 
       }
+
+    //const enqRoute = buildEnquiryRoute();
 
     
     useEffect(() => {
@@ -143,7 +153,7 @@ export const PropertyDetail = (props) =>
                         </div>
                     </div> 
 
-                    <Link title = "Make an Enquiry" className ="enquiry" to = {buildEnquiryRoute(propertyId)}>
+                    <Link title = "Make an Enquiry" className ="enquiry" to = {buildEnquiryRoute()}>
                         <div style ={{fontWeight:'bold', display:'flex', alignItems: 'center'}}>
                             <MdOutlineMailOutline style ={{color:"green", marginRight:"5px"}} size={30}/>
                             <div>Make an Enquiry</div>

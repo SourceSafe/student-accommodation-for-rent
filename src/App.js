@@ -71,7 +71,7 @@ const  App = ()  =>{
       <Routes>
           <Route path="/" element={<Layout />}>          
           <Route index element={<Home />} />                    
-          <Route path="enquire/:propertyId/:title/:tennancyDate/:add2" element={<Enquiry/>}/>
+          <Route path="enquire/:propertyId/:title/:tennancyDate/:add2/:billsOfferedByAgent" element={<Enquiry/>}/>
           <Route path="properties/:propertyId/:billsOfferedByAgent/:add2" element={<PropertyDetail/>}/>
           
 

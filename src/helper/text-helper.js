@@ -19,5 +19,5 @@ export const isBillsIncludedInText= (text) => {
     const upperText = text?.toUpperCase();
     const includedInPositive = positiveWords.reduce(reducer, false)
     const includedInNegative = negativeWords.reduce(reducer, false)    
-    return includedInPositive && ! includedInNegative;
+    return Boolean(includedInPositive && ! includedInNegative);
 }

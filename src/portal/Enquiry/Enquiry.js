@@ -9,7 +9,7 @@ import { UtilityStrip } from '../../components/UtilityStrip/UtilityStrip';
 export const Enquiry = () =>
 {
 
-    const { propertyId, title, tennancyDate, add2} = useParams();
+    const { propertyId, title, tennancyDate, add2, billsOfferedByAgent} = useParams();
     const [utilitiesChecked, setUtilitiesChecked] = useState(false);
     const [moreDetailsChecked, setMoreDetailsChecked] = useState(false);
     const [viewingChecked, setViewingChecked] = useState(false);
@@ -157,34 +157,37 @@ export const Enquiry = () =>
             </div>     
 
 
-            
-
+            {billsOfferedByAgent==="0" && 
+                            
                 <div className = "cat">
-                                                
-                    <div>
-                        <h2>Enjoy All Inclusive Utility Bills for this property</h2>
+                                                                
+                <div>
+                    <h2>Enjoy All Inclusive Utility Bills for this property</h2>
 
-                        <p>This property is EXCLUSIVE of bills. To make life easier we've partnered with Fused.com to offer an All Inclusive Utility Package on this Property. Let Fused.com  deal with your Gas, Electric, Water, Broadband and TV providers. All you need to do is pay an even split each month. </p>
-   
-                        <div className = "utilityoption"  onClick={() =>  setUtilitiesChecked (state => !state)}>                                  
-                        <div >
-                                {utilitiesChecked === true ? <ImCheckboxChecked/> : <ImCheckboxUnchecked/> } 
-                            </div>
-                            <div>
-                                I would you like to be contacted by FUSED.com to discuss an All Bills Inclusive Package
-                            </div>  
+                    <p>This property is EXCLUSIVE of bills. To make life easier we've partnered with Fused.com to offer an All Inclusive Utility Package on this Property. Let Fused.com  deal with your Gas, Electric, Water, Broadband and TV providers. All you need to do is pay an even split each month. </p>
+
+                    <div className = "utilityoption"  onClick={() =>  setUtilitiesChecked (state => !state)}>                                  
+                    <div >
+                            {utilitiesChecked === true ? <ImCheckboxChecked/> : <ImCheckboxUnchecked/> } 
                         </div>
-                        <UtilityStrip/>
-                                            
-                        {utilitiesChecked === true && 
-                        <div> 
-                            {/* <UtilityStrip/> */}
-                        {/* <CTAPackage tag1 = "Excellent !!!" tag2 = "We'll call you back ..."/>                     */}
-                        
-                        </div>
-                        }
-                    </div>                                
+                        <div>
+                            I would you like to be contacted by FUSED.com to discuss an All Bills Inclusive Package
+                        </div>  
+                    </div>
+                    <UtilityStrip/>
+                                        
+                    {utilitiesChecked === true && 
+                    <div> 
+                        {/* <UtilityStrip/> */}
+                    {/* <CTAPackage tag1 = "Excellent !!!" tag2 = "We'll call you back ..."/>                     */}
+                    
+                    </div>
+                    }
+                </div>                                
                 </div>
+            
+            }
+
             
 
 
