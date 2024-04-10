@@ -110,34 +110,50 @@ const formatPhone = (phone) =>
 
         <div style={{border:'0px solid black', display:'flex', flexDirection: pictureFlexLayout}}>
                 
-            <div className="pictureSection" style={{border:'0px solid black', flex : 2}}>
+            <div className="pictureSection" style={{border:'0px solid black', flex :10, display:'flex', flexDirection:'column', margin : '0px 0px 0px 0px'}}>
                                                                     
-                {!isMobile ? 
-                <div style = {{display:'flex', width:'95%'}}>
-                    <img style = {{width:'100%', height:'auto', margin: "10px",borderRadius:'10px'}} src = {details?.images[selectedImageIndex]}></img>
-                </div>                 
-                :
-                 <div style = {{display:'flex', width:'100%'}}>
-                    <img style = {{width:'100%', height:'auto', margin: "10px",borderRadius:'10px'}} src = {details?.images[selectedImageIndex]}></img>
-                </div>}
+                
+                <div style ={{border:'0px solid black', flex:5}}>
+                    {/* {!isMobile ? 
+                    <div style = {{display:'flex', width:'95%', height:"95%"}}>
+                        <img style = {{border : '1px solid red', width:'100%', height:'auto', margin: "10px",borderRadius:'10px',  objectFit: "cover"}} src = {details?.images[selectedImageIndex]}></img>
+                    </div>                 
+                    :
+                    <div style = {{display:'flex', width:'100%'}}>
+                        <img style = {{width:'100%', height:'auto', margin: "10px",borderRadius:'10px'}} src = {details?.images[selectedImageIndex]}></img>
+                    </div>} */}
+
+                    {/* s */}
+
+
+
+                    <img style = {{width:'100%', maxHeight:'560px',borderRadius:'10px',  objectFit: "covr"}} src = {details?.images[selectedImageIndex]}></img>
+
+
+                </div>
                         
-                <div className ={thumbNailStyle}>
-                    <div style = {{width:'35%', height:'auto', margin: "10px"}}  onClick= {() => {setSelectedImageIndex(0)}}>
-                        <img  style = {{width:'100%', borderRadius:'10px'}} src = {details?.images[0]}></img>
-                    </div>
+                
+                <div style ={{border:'0px solid black', flex:1}}>
+                    <div className ={thumbNailStyle}>
+                        <div style = {{margin: "10px"}}  onClick= {() => {setSelectedImageIndex(0)}}>
+                            <img  style = {{width:'125px', height: '100px',  borderRadius:'10px'}} src = {details?.images[0]}></img>
+                        </div>
 
-                    <div style = {{width:'35%', height:'auto', margin: "10px"}}  onClick= {() => {setSelectedImageIndex(1)}}>
-                        <img  style = {{width:'100%',borderRadius:'10%'}} src = {details?.images[1]}></img>
-                    </div>
+                        <div style = {{ margin: "10px"}}  onClick= {() => {setSelectedImageIndex(1)}}>
+                            <img  style = {{width:'125px', height: '100px', borderRadius:'10%'}} src = {details?.images[1]}></img>
+                        </div>
 
-                    <div style = {{width:'35%', height:'auto', margin: "10px"}}  onClick= {() => {setSelectedImageIndex(2)}}>
-                        <img  style = {{width:'100%',borderRadius:'10%'}} src = {details?.images[2]}></img>
+                        <div style = {{margin: "10px"}}  onClick= {() => {setSelectedImageIndex(2)}}>
+                            <img  style = {{width:'125px', height: '100px', borderRadius:'10%'}} src = {details?.images[2]}></img>
+                        </div>
                     </div>
                 </div>
+
+
             </div>
 
 
-            <div className = "blurb" style = {{flex:1}}>                                                                
+            <div className = "blurb" style = {{flex:6 , margin:'0px 5px 0px 15px'}}>                                                                
 
                     
                 <div style = {{margin : '10px', width: '95%'}}>
