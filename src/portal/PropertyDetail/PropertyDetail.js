@@ -127,7 +127,7 @@ const formatPhone = (phone) =>
 
 
 
-                    <img style = {{width:'100%', maxHeight:'560px',borderRadius:'10px',  objectFit: "covr"}} src = {details?.images[selectedImageIndex]}></img>
+                    <img style = {{width:'100%', height:'560px',borderRadius:'10px',  objectFit: "cover"}} src = {details?.images[selectedImageIndex]}></img>
 
 
                 </div>
