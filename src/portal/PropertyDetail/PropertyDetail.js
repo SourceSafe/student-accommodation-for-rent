@@ -8,9 +8,10 @@ import { FaPhone } from "react-icons/fa6";
 import { FaCheck } from "react-icons/fa";
 import {isBillsIncludedInText} from '../../helper/text-helper'
 import {CaptureUserDetails} from "../../components/CaptureUserDetails/CaptureUserDetails"
+import {partnerAtom} from '../appState/appState'
+import { useAtomState } from '@zedux/react';
 
-const enrichLettingDetails = [{label:'Utilities Option', value:'Utilities Option available with FUSED.com. Let them take out the hassle of dealing with all the providers. You simply pay your monthly split.'}]
-const enrichKeyFeatures = ["Utilities Package Available", "Instant Quote Available from FUSED.com"]
+
 
 export const PropertyDetail = (props) =>
 {    
@@ -19,6 +20,11 @@ export const PropertyDetail = (props) =>
     const [details, setDetails] = useState();
     const [isMobile,setIsMobile] = useState();    
     const [utilitiesAlreadyOffered, setUtilitiesAlreadyOffered] = useState();
+    const [partner] = useAtomState(partnerAtom)
+    const enrichLettingDetails = [{label:'Utilities Option', value:`Utilities Option available with ${partner.name}. Let them take out the hassle of dealing with all the providers. You simply pay your monthly split.`}]
+    const enrichKeyFeatures = ["Utilities Package Available", `Instant Quote Available from ${partner.name}`]
+
+
 
     useEffect(() => {
         const handleWindowSizeChange=() => {
@@ -143,7 +149,7 @@ export const PropertyDetail = (props) =>
                 </div>                        
 
                 <h2 style = {{}}>Agent Contact Details</h2>
-                <div style = {{ gap:'50px',  marginTop:'15px', display:'flex'}}>        
+                <div style = {{  margin: '15px', display:'flex', alignItems:'center', justifyContent:'space-between'}}>        
                 
                     <div style = {{display:'flex', gap:'10px', alignItems:'center'}}>                 
                         <FaPhone style ={{color:"green"}} size={30}/>
@@ -153,9 +159,9 @@ export const PropertyDetail = (props) =>
                         </div>
                     </div> 
 
-                    <Link title = "Make an Enquiry" className ="enquiry" to = {buildEnquiryRoute()}>
+                    <Link title = "Make an Enquiry" className ="makeEnquiry" to = {buildEnquiryRoute()}>
                         <div style ={{fontWeight:'bold', display:'flex', alignItems: 'center'}}>
-                            <MdOutlineMailOutline style ={{color:"green", marginRight:"5px"}} size={30}/>
+                            <MdOutlineMailOutline style ={{color:"green", marginRight:"5px"}} size={35}/>
                             <div>Make an Enquiry</div>
                         </div>        
                     </Link>
@@ -167,7 +173,7 @@ export const PropertyDetail = (props) =>
                 {details && !billsOffered(details) && 
                 <div>
                     <h2>Enjoy All Inclusive Utility Bills for this property</h2>
-                    <p>This property is EXCLUSIVE of bills. To make life easier we've partnered with Fused.com to offer an All Inclusive Utility Package on this Property. Let Fused.com  deal with your Gas, Electric, Water, Broadband and TV providers. All you need to do is pay an even split each month. </p>
+                    <p>This property is EXCLUSIVE of bills. To make life easier we've partnered with {partner.name} to offer an All Inclusive Utility Package on this Property. Let {partner.name}  deal with your Gas, Electric, Water, Broadband and TV providers. All you need to do is pay an even split each month. </p>
                     {/* <CTAPackage tag1 = "£23.77 pppw" tag2= {"Request a Call Back"} isMobile={isMobile}/> */}
                     <CTAPackage  isMobile={isMobile}/>
 

@@ -4,6 +4,8 @@ import  './Enquiry.css'
 import {  useParams } from "react-router-dom";
 import { ImCheckboxUnchecked, ImCheckboxChecked  } from "react-icons/im";
 import { UtilityStrip } from '../../components/UtilityStrip/UtilityStrip';
+import {partnerAtom} from '../appState/appState'
+import { useAtomState } from '@zedux/react';
 
 
 export const Enquiry = () =>
@@ -13,6 +15,7 @@ export const Enquiry = () =>
     const [utilitiesChecked, setUtilitiesChecked] = useState(false);
     const [moreDetailsChecked, setMoreDetailsChecked] = useState(false);
     const [viewingChecked, setViewingChecked] = useState(false);
+    const [partner] = useAtomState(partnerAtom)
 
 
 
@@ -164,20 +167,33 @@ export const Enquiry = () =>
                 <div>
                     <h2>Enjoy All Inclusive Utility Bills for this property</h2>
 
-                    <p>This property is EXCLUSIVE of bills. To make life easier we've partnered with Fused.com to offer an All Inclusive Utility Package on this Property. Let Fused.com  deal with your Gas, Electric, Water, Broadband and TV providers. All you need to do is pay an even split each month. </p>
+                    <p>This property is EXCLUSIVE of bills. To make life easier we've partnered with {partner.name} to offer an All Inclusive Utility Package on this Property. Let {partner.name}  deal with your Gas, Electric, Water, Broadband and TV providers. All you need to do is pay an even split each month. </p>
 
                     <div className = "utilityoption"  onClick={() =>  setUtilitiesChecked (state => !state)}>                                  
                     <div >
                             {utilitiesChecked === true ? <ImCheckboxChecked/> : <ImCheckboxUnchecked/> } 
                         </div>
                         <div>
-                            I would you like to be contacted by FUSED.com to discuss an All Bills Inclusive Package
+                            I would like to be contacted by {partner.name} to discuss an All Bills Inclusive Package.
                         </div>  
                     </div>
                     <UtilityStrip/>
+
+                    {/* <div style ={{display:'flex', justifyContent:'center'}}>
+
+                    <div  style = {{ width:'200px', borderRadius: '10px', border:'0px solid lighgray', margin : '20px', justifyContent: 'center', display:'flex', background:'#d92c57'}}>
+                        <img src = {partner.image} style= {{width:'100px'}}></img>
+                    </div>
+
+                    </div> */}
+
+                    
+                                            
                                         
                     {utilitiesChecked === true && 
                     <div> 
+
+                        
                         {/* <UtilityStrip/> */}
                     {/* <CTAPackage tag1 = "Excellent !!!" tag2 = "We'll call you back ..."/>                     */}
                     

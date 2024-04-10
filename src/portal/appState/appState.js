@@ -22,5 +22,9 @@ export const searchResultsAtom = atom('searchResults',loadingListings);
 export const pageIndexAtom = atom('pageIndex',1);
 export const searchResultsCountAtom = atom('searchResultsCount',0);
 
+//export const partnerAtom = atom('partner', {name:"UniHomes.com", link: "partnerDetail", image:''});
+export const partnerAtom = atom('partner', {name:"SplitTheBills.com", quotelink: "https://join.splitthebills.co.uk/", image:'https://www.splitthebills.co.uk/wp-content/uploads/2020/11/Split-The-Bills.png'});
+//export const partnerAtom = atom('partner', {name:"UniHomes.com", quotelink: "https://join.unihomes.co.uk/", image:'https://www.splitthebills.co.uk/wp-content/uploads/2020/11/Split-The-Bills.png'});
+
 
 
