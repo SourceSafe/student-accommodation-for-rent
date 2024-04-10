@@ -25,7 +25,16 @@ export const PropertyDetail = (props) =>
     const enrichKeyFeatures = ["Utilities Package Available", `Instant Quote Available from ${partner.name}`]
 
 
+const formatPhone = (phone) =>
+{
+    
+    const c1 = phone?.slice(0,5);
+    const c2 = phone?.slice(5,8);
+    const c3 = phone?.slice(8,12);
 
+    return `${c1} ${c2} ${c3}`
+
+}
     useEffect(() => {
         const handleWindowSizeChange=() => {
             setIsMobile(window.innerWidth <= 768);            
@@ -160,7 +169,7 @@ export const PropertyDetail = (props) =>
                     <div style = {{display:'flex', gap:'10px', alignItems:'center'}}>                 
                         <FaPhone style ={{color:"green"}} size={30}/>
                         <div>
-                            <div style ={{fontWeight:'bold'}}>{details?.lettingPhone}</div>
+                            <div style ={{fontWeight:'bold'}}>{formatPhone(details?.lettingPhone)}</div>
                             <div style ={{fontSize:'smaller', color:"grey"}}>Local call rate</div>
                         </div>
                     </div> 
