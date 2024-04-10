@@ -20,16 +20,18 @@
 
 .mainImage {            
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius:10px;
 }
 
 
 .thumbImages {
     border:'0px solid black';
+    display: flex;
 }
 
 
 .thumbImage {
-    border-radius:10%;
+    border-radius:10px;
     margin: 10px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }

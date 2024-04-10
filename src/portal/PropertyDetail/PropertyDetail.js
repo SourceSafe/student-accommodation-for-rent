@@ -121,7 +121,7 @@ const formatPhone = (phone) =>
       }, [propertyId]);
 
 
-    const thumbNailStyle = isMobile ? "thumbNailMobile" : "thumbNail"
+    // const thumbNailStyle = isMobile ? "thumbNailMobile" : "thumbNail"
     
     
     
@@ -136,33 +136,14 @@ const formatPhone = (phone) =>
         
         <h2>Property Details</h2>
 
-        <div style={{border:'0px solid black', display:'flex', flexDirection: pictureFlexLayout}}>
-                
-            <div className="pictureSection" style={{border:'0px solid black', flex :10, display:'flex', flexDirection:'column'}}>
-                                                                                    
-                
-                <img className = 'mainImage' style = {{width:mainImageSize?.width, height:mainImageSize?.height}} src = {details?.images[selectedImageIndex]}></img>
-                
-                
-                <div className = "thumbImages">
-                    <div className ={thumbNailStyle}>
-
-
-                        <div  onClick= {() => {setSelectedImageIndex(0)}}>
-                            <img  className = "thumbImage" style = {{width:thumbImageSize?.width, height: thumbImageSize?.height}} src = {details?.images[0]}></img>
-                        </div>
-
-                        <div   onClick= {() => {setSelectedImageIndex(1)}}>
-                            <img  className = "thumbImage" style = {{width:thumbImageSize?.width, height: thumbImageSize?.height}} src = {details?.images[1]}></img>
-                        </div>
-
-                        <div   onClick= {() => {setSelectedImageIndex(2)}}>
-                            <img  className = "thumbImage" style = {{width:thumbImageSize?.width, height: thumbImageSize?.height}} src = {details?.images[2]}></img>
-                        </div>
-                    </div>
+        <div style={{border:'0px solid black', display:'flex', flexDirection: pictureFlexLayout}}>                
+            <div className="pictureSection" style={{border:'0px solid black', flex :10, display:'flex', flexDirection:'column'}}>                                                                                                    
+                <img className = 'mainImage' style = {{width:mainImageSize?.width, height:mainImageSize?.height}} src = {details?.images[selectedImageIndex]}></img>                                
+                <div className = "thumbImages">                                    
+                    <img  className = "thumbImage" style = {{width:thumbImageSize?.width, height: thumbImageSize?.height}} src = {details?.images[0]} onClick= {() => {setSelectedImageIndex(0)}}></img>                                
+                    <img  className = "thumbImage" style = {{width:thumbImageSize?.width, height: thumbImageSize?.height}} src = {details?.images[1]} onClick= {() => {setSelectedImageIndex(1)}}></img>                                        
+                    <img  className = "thumbImage" style = {{width:thumbImageSize?.width, height: thumbImageSize?.height}} src = {details?.images[2]} onClick= {() => {setSelectedImageIndex(2)}}></img>                                        
                 </div>
-
-
             </div>
 
 
