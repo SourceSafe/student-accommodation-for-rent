@@ -158,10 +158,10 @@ const Portal =  (props) =>
             </div> 
               
                 <div className="listings"> 
-                  {searchResults?.results?.filter(item=>item.image1 !== '').map( listing => (                  
-                  <div key = {listing.propertyId}>
+                  {searchResults?.results?.filter(item=>item.image1 !== '').map( (listing, index) => (                  
+                  <div key = {listing.propertyId + index}>
                           <Link title = "View Property Details" className ="viewInfoLink" to = {buildPropertyRoute(listing)}>
-                          <Listing  key = {listing.propertyId} isDesktop={isDesktop} listing={listing} isPortlet = {false} isLoading={isLoading} ></Listing>   
+                          <Listing  key = {listing.propertyId + index} isDesktop={isDesktop} listing={listing} isPortlet = {false} isLoading={isLoading} ></Listing>   
                           </Link>
                   </div>
                     )

@@ -1,0 +1,1631 @@
+{
+    "locationsByTown": [                        
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Bath, Somerset",
+            "locationIdentifier": "REGION^116",
+            "count": 238
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Oldfield Park, Bath, Somerset",
+            "locationIdentifier": "REGION^71108",
+            "count": 165
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Bath Spa, Bath, Somerset",
+            "locationIdentifier": "REGION^71093",
+            "count": 111
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Sladebrook, Bath, Somerset",
+            "locationIdentifier": "REGION^71115",
+            "count": 37
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "The Oval, Bath, Somerset",
+            "locationIdentifier": "REGION^61729",
+            "count": 37
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Twerton Hill, Bath, Somerset",
+            "locationIdentifier": "REGION^71120",
+            "count": 37
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Moorlands, Bath, Somerset",
+            "locationIdentifier": "REGION^71107",
+            "count": 36
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Kingsway, Bath, Somerset",
+            "locationIdentifier": "REGION^71102",
+            "count": 35
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Bloomfield, Bath, Somerset",
+            "locationIdentifier": "REGION^71095",
+            "count": 34
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Southdown, Bath, Somerset",
+            "locationIdentifier": "REGION^22627",
+            "count": 28
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Penn Hill, Bath, Somerset",
+            "locationIdentifier": "REGION^71109",
+            "count": 26
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "South Twerton, Bath, Somerset",
+            "locationIdentifier": "REGION^71117",
+            "count": 26
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Twerton, Bath, Somerset",
+            "locationIdentifier": "REGION^71119",
+            "count": 26
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "East Twerton, Bath, Somerset",
+            "locationIdentifier": "REGION^71098",
+            "count": 22
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Lower Weston, Bath, Somerset",
+            "locationIdentifier": "REGION^16323",
+            "count": 22
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Odd Down, Bath, Somerset",
+            "locationIdentifier": "REGION^61725",
+            "count": 20
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Newbridge, Bath",
+            "locationIdentifier": "REGION^96999",
+            "count": 15
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Bear Flat, Bath, Somerset",
+            "locationIdentifier": "REGION^94223",
+            "count": 14
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Widcombe, Bath, Somerset",
+            "locationIdentifier": "REGION^26891",
+            "count": 14
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Bailbrook, Bath, Somerset",
+            "locationIdentifier": "REGION^71092",
+            "count": 13
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Weston, Bath, Somerset",
+            "locationIdentifier": "REGION^26493",
+            "count": 13
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Yomede Park, Bath, Somerset",
+            "locationIdentifier": "REGION^61731",
+            "count": 13
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Weston Park, Bath, Somerset",
+            "locationIdentifier": "REGION^71122",
+            "count": 12
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Kensington, Bath, Somerset",
+            "locationIdentifier": "REGION^61722",
+            "count": 10
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Larkhall, Bath, Somerset",
+            "locationIdentifier": "REGION^14676",
+            "count": 10
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Locksbrook, Bath, Somerset",
+            "locationIdentifier": "REGION^71104",
+            "count": 10
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Primrose Hill, Bath, Somerset",
+            "locationIdentifier": "REGION^71110",
+            "count": 10
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Raglands, Bath, Somerset",
+            "locationIdentifier": "REGION^71111",
+            "count": 10
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Rosehill, Bath, Somerset",
+            "locationIdentifier": "REGION^71112",
+            "count": 10
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Rudmore Park, Bath, Somerset",
+            "locationIdentifier": "REGION^71113",
+            "count": 10
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Snow Hill, Bath, Somerset",
+            "locationIdentifier": "REGION^71116",
+            "count": 10
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Avon Park, Bath, Somerset",
+            "locationIdentifier": "REGION^71091",
+            "count": 9
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Beacon Hill, Bath, Somerset",
+            "locationIdentifier": "REGION^61718",
+            "count": 9
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Beechen Cliff, Bath, Somerset",
+            "locationIdentifier": "REGION^71094",
+            "count": 7
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Crescent Gardens, Bath, Somerset",
+            "locationIdentifier": "REGION^71096",
+            "count": 7
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Dolemeads, Bath, Somerset",
+            "locationIdentifier": "REGION^71097",
+            "count": 7
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Hat, Bath, Somerset",
+            "locationIdentifier": "REGION^61721",
+            "count": 7
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Hatfield Buildings, Bath, Somerset",
+            "locationIdentifier": "REGION^71100",
+            "count": 7
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Kingsmead, Bath, Somerset",
+            "locationIdentifier": "REGION^71101",
+            "count": 7
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Lambridge, Bath, Somerset",
+            "locationIdentifier": "REGION^71103",
+            "count": 7
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Lower Swainswick, Bath, Somerset",
+            "locationIdentifier": "REGION^71105",
+            "count": 7
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Lyncombe Hill, Bath, Somerset",
+            "locationIdentifier": "REGION^61724",
+            "count": 7
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Lyncombe Vale, Bath, Somerset",
+            "locationIdentifier": "REGION^71106",
+            "count": 7
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Perrymead, Bath, Somerset",
+            "locationIdentifier": "REGION^86080",
+            "count": 7
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Rush Hill, Bath, Somerset",
+            "locationIdentifier": "REGION^71114",
+            "count": 7
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Sion Hill, Bath, Somerset",
+            "locationIdentifier": "REGION^61727",
+            "count": 7
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "South Lyncombe, Bath, Somerset",
+            "locationIdentifier": "REGION^61728",
+            "count": 7
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Sydney Gardens, Bath, Somerset",
+            "locationIdentifier": "REGION^71118",
+            "count": 7
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Twerton On Avon, Bath, Somerset",
+            "locationIdentifier": "REGION^25218",
+            "count": 7
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Upper Weston, Bath, Somerset",
+            "locationIdentifier": "REGION^61730",
+            "count": 7
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Villa Fields, Bath, Somerset",
+            "locationIdentifier": "REGION^71121",
+            "count": 7
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Williamstowe, Bath, Somerset",
+            "locationIdentifier": "REGION^71123",
+            "count": 7
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Walcot, Bath, Somerset",
+            "locationIdentifier": "REGION^25677",
+            "count": 6
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Whiteway, Bath, Somerset",
+            "locationIdentifier": "REGION^26773",
+            "count": 5
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Lansdown, Bath, Somerset",
+            "locationIdentifier": "REGION^14660",
+            "count": 4
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Bathwick, Bath, Somerset",
+            "locationIdentifier": "REGION^3051",
+            "count": 3
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Fairfield Park, Bath, Somerset",
+            "locationIdentifier": "REGION^71099",
+            "count": 3
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Bradford Park, Bath, Somerset",
+            "locationIdentifier": "REGION^61719",
+            "count": 1
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Combe Down, Bath, Somerset",
+            "locationIdentifier": "REGION^6908",
+            "count": 1
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Ralph Allen Park, Bath, Somerset",
+            "locationIdentifier": "REGION^61726",
+            "count": 1
+        },
+        {
+            "town": "Bath",
+            "townLocationIdentifier": "REGION^116",
+            "location": "Tyning, Bath, Somerset",
+            "locationIdentifier": "REGION^71124",
+            "count": 1
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Bedminster Station, Bristol",
+            "locationIdentifier": "STATION^782",
+            "count": 994
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Bristol",
+            "locationIdentifier": "REGION^219",
+            "count": 770
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Bristol City Centre, Bristol",
+            "locationIdentifier": "REGION^93829",
+            "count": 228
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Clifton, Bristol",
+            "locationIdentifier": "REGION^6574",
+            "count": 171
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Filton, Bristol",
+            "locationIdentifier": "REGION^9938",
+            "count": 92
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Horfield, Bristol",
+            "locationIdentifier": "REGION^13077",
+            "count": 79
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "St Pauls, Bristol",
+            "locationIdentifier": "REGION^71172",
+            "count": 75
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "St. Michaels, Bristol",
+            "locationIdentifier": "REGION^71173",
+            "count": 71
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Moorfields, Bristol",
+            "locationIdentifier": "REGION^71160",
+            "count": 68
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Pile Marsh, Bristol",
+            "locationIdentifier": "REGION^71167",
+            "count": 68
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Brandon Hill, Bristol",
+            "locationIdentifier": "REGION^61735",
+            "count": 67
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Fishponds, Bristol",
+            "locationIdentifier": "REGION^10002",
+            "count": 63
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Redland, Bristol",
+            "locationIdentifier": "REGION^20676",
+            "count": 63
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Bishopston, Bristol",
+            "locationIdentifier": "REGION^3650",
+            "count": 55
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Cotham, Bristol",
+            "locationIdentifier": "REGION^7153",
+            "count": 53
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Kingsdown, Bristol",
+            "locationIdentifier": "REGION^14106",
+            "count": 51
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Tyndall\u0027s Park, Bristol",
+            "locationIdentifier": "REGION^61756",
+            "count": 51
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Woolcott Park, Bristol",
+            "locationIdentifier": "REGION^71191",
+            "count": 51
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Stokes Croft, Bristol",
+            "locationIdentifier": "REGION^61753",
+            "count": 47
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Clay Bottom, Bristol",
+            "locationIdentifier": "REGION^86082",
+            "count": 41
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Crofts End, Bristol",
+            "locationIdentifier": "REGION^61740",
+            "count": 33
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Hudds Barton, Bristol",
+            "locationIdentifier": "REGION^61744",
+            "count": 33
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Rose Green, Bristol",
+            "locationIdentifier": "REGION^71169",
+            "count": 33
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Stoke Park, Bristol",
+            "locationIdentifier": "REGION^93830",
+            "count": 31
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Ashley Down, Bristol",
+            "locationIdentifier": "REGION^2317",
+            "count": 25
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Tankard\u0027s Close, Bristol",
+            "locationIdentifier": "REGION^61754",
+            "count": 25
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Temple, Bristol",
+            "locationIdentifier": "REGION^71177",
+            "count": 25
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Canon\u0027s Marsh, Bristol",
+            "locationIdentifier": "REGION^71136",
+            "count": 24
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Cathay, Bristol",
+            "locationIdentifier": "REGION^71137",
+            "count": 24
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Stoke Gifford, Bristol",
+            "locationIdentifier": "REGION^23375",
+            "count": 22
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Avonmouth Station, Bristol",
+            "locationIdentifier": "STATION^452",
+            "count": 21
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Northville, Bristol",
+            "locationIdentifier": "REGION^18676",
+            "count": 18
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Stapleton, Bristol",
+            "locationIdentifier": "REGION^23176",
+            "count": 17
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Westbury-On-Trym, Bristol",
+            "locationIdentifier": "REGION^26417",
+            "count": 17
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Cheswick Village, Bristol",
+            "locationIdentifier": "REGION^94565",
+            "count": 15
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Golden Hill, Bristol",
+            "locationIdentifier": "REGION^61742",
+            "count": 15
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Southmead, Bristol",
+            "locationIdentifier": "REGION^22647",
+            "count": 14
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "The Galleries, Bristol",
+            "locationIdentifier": "REGION^71180",
+            "count": 14
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Hotwells, Bristol",
+            "locationIdentifier": "REGION^13160",
+            "count": 13
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "St. Andrews, Bristol",
+            "locationIdentifier": "REGION^22795",
+            "count": 13
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Lockleaze, Bristol",
+            "locationIdentifier": "REGION^94079",
+            "count": 12
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "St. Pauls, Bristol",
+            "locationIdentifier": "REGION^22967",
+            "count": 12
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Bedminster, Bristol",
+            "locationIdentifier": "REGION^3171",
+            "count": 11
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Clifton Wood, Bristol",
+            "locationIdentifier": "REGION^6589",
+            "count": 11
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "St. Augustines, Bristol",
+            "locationIdentifier": "REGION^22806",
+            "count": 11
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Eastville, Bristol",
+            "locationIdentifier": "REGION^9135",
+            "count": 10
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Hillfields, Bristol",
+            "locationIdentifier": "REGION^71150",
+            "count": 10
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Oldbury Court Estate, Bristol",
+            "locationIdentifier": "REGION^71164",
+            "count": 10
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Oldbury Court, Bristol",
+            "locationIdentifier": "REGION^61749",
+            "count": 10
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Russell Town, Bristol",
+            "locationIdentifier": "REGION^61752",
+            "count": 9
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "St. George, Bristol",
+            "locationIdentifier": "REGION^22856",
+            "count": 9
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Summer Hill, Bristol",
+            "locationIdentifier": "REGION^71219",
+            "count": 9
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "The Dings, Bristol",
+            "locationIdentifier": "REGION^61755",
+            "count": 9
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Westbury Park, Bristol",
+            "locationIdentifier": "REGION^26415",
+            "count": 9
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Kingswood, Bristol",
+            "locationIdentifier": "REGION^14169",
+            "count": 8
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Montpelier, Bristol",
+            "locationIdentifier": "REGION^17488",
+            "count": 8
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Netham, Bristol",
+            "locationIdentifier": "REGION^71161",
+            "count": 8
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Air Balloon Hill, Bristol",
+            "locationIdentifier": "REGION^71126",
+            "count": 7
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Bell Hill, Bristol",
+            "locationIdentifier": "REGION^71129",
+            "count": 7
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Brislington, Bristol",
+            "locationIdentifier": "REGION^4636",
+            "count": 7
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Burchell\u0027s Green, Bristol",
+            "locationIdentifier": "REGION^61737",
+            "count": 7
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Chester Park, Bristol",
+            "locationIdentifier": "REGION^71139",
+            "count": 7
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Cockshott Hill, Bristol",
+            "locationIdentifier": "REGION^71141",
+            "count": 7
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Easton, Bristol",
+            "locationIdentifier": "REGION^9114",
+            "count": 7
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Hopewell Hill, Bristol",
+            "locationIdentifier": "REGION^71151",
+            "count": 7
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Lower Easton, Bristol",
+            "locationIdentifier": "REGION^61746",
+            "count": 7
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Lower Soundwell, Bristol",
+            "locationIdentifier": "REGION^71158",
+            "count": 7
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Mayfield Park, Bristol",
+            "locationIdentifier": "REGION^61747",
+            "count": 7
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Potters Wood, Bristol",
+            "locationIdentifier": "REGION^61751",
+            "count": 7
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Rockleaze, Bristol",
+            "locationIdentifier": "REGION^71168",
+            "count": 7
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Southville, Bristol",
+            "locationIdentifier": "REGION^22658",
+            "count": 7
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "St. Philips, Bristol",
+            "locationIdentifier": "REGION^22976",
+            "count": 7
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Two Mile Hill, Bristol",
+            "locationIdentifier": "REGION^71181",
+            "count": 7
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Watley\u0027s End, Bristol",
+            "locationIdentifier": "REGION^71186",
+            "count": 7
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Brentry, Bristol",
+            "locationIdentifier": "REGION^71193",
+            "count": 6
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Chessels, Bristol",
+            "locationIdentifier": "REGION^71138",
+            "count": 6
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Merrywood, Bristol",
+            "locationIdentifier": "REGION^71159",
+            "count": 6
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Redcliffe, Bristol",
+            "locationIdentifier": "REGION^20653",
+            "count": 6
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Staple Hill, Bristol",
+            "locationIdentifier": "REGION^23162",
+            "count": 6
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Conham, Bristol",
+            "locationIdentifier": "REGION^61739",
+            "count": 5
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Hanham Green, Bristol",
+            "locationIdentifier": "REGION^71147",
+            "count": 5
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Jeffries Hill, Bristol",
+            "locationIdentifier": "REGION^71153",
+            "count": 5
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Kensington Hill, Bristol",
+            "locationIdentifier": "REGION^61745",
+            "count": 5
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Kensington Park, Bristol",
+            "locationIdentifier": "REGION^71154",
+            "count": 5
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Cadbury Heath, Bristol",
+            "locationIdentifier": "REGION^71135",
+            "count": 4
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Cockroad Bottom, Bristol",
+            "locationIdentifier": "REGION^71140",
+            "count": 4
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Downend, Bristol",
+            "locationIdentifier": "REGION^8377",
+            "count": 4
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Emersons Green, Bristol",
+            "locationIdentifier": "REGION^9450",
+            "count": 4
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Lantern Bottom, Bristol",
+            "locationIdentifier": "REGION^71156",
+            "count": 4
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Mount Hill, Bristol",
+            "locationIdentifier": "REGION^61748",
+            "count": 4
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "North Common, Bristol",
+            "locationIdentifier": "REGION^71162",
+            "count": 4
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Oldland, Bristol",
+            "locationIdentifier": "REGION^61750",
+            "count": 4
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Park Wall, Bristol",
+            "locationIdentifier": "REGION^71165",
+            "count": 4
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Sandy Park, Bristol",
+            "locationIdentifier": "REGION^71170",
+            "count": 4
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Stone Hill, Bristol",
+            "locationIdentifier": "REGION^71175",
+            "count": 4
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "The Batch, Bristol",
+            "locationIdentifier": "REGION^71178",
+            "count": 4
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Upper Eastville, Bristol",
+            "locationIdentifier": "REGION^93444",
+            "count": 4
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Warmley Hill, Bristol",
+            "locationIdentifier": "REGION^71185",
+            "count": 4
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Warmley Tower, Bristol",
+            "locationIdentifier": "REGION^61758",
+            "count": 4
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Whites Hill, Bristol",
+            "locationIdentifier": "REGION^71188",
+            "count": 4
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Windmill Hill, Bristol",
+            "locationIdentifier": "REGION^71189",
+            "count": 4
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Woodstock, Bristol",
+            "locationIdentifier": "REGION^71190",
+            "count": 4
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Bristol Temple Meads Station, Bristol",
+            "locationIdentifier": "STATION^1388",
+            "count": 3
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Broom Hill, Bristol",
+            "locationIdentifier": "REGION^61736",
+            "count": 3
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Hanham, Bristol",
+            "locationIdentifier": "REGION^11821",
+            "count": 3
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Henleaze, Bristol",
+            "locationIdentifier": "REGION^12380",
+            "count": 3
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Lee Woods, Bristol",
+            "locationIdentifier": "REGION^71207",
+            "count": 3
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Lyde Green, Bristol",
+            "locationIdentifier": "REGION^61768",
+            "count": 3
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Pucklechurch, Bristol",
+            "locationIdentifier": "REGION^20328",
+            "count": 3
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Redfield, Bristol",
+            "locationIdentifier": "REGION^20663",
+            "count": 3
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Soundwell, Bristol",
+            "locationIdentifier": "REGION^22460",
+            "count": 3
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Totterdown, Bristol",
+            "locationIdentifier": "REGION^24756",
+            "count": 3
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Arnos Vale, Bristol",
+            "locationIdentifier": "REGION^2206",
+            "count": 2
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Barton Hill, Bristol",
+            "locationIdentifier": "REGION^2998",
+            "count": 2
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Chewton Keynsham, Bristol",
+            "locationIdentifier": "REGION^71204",
+            "count": 2
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Keynsham, Bristol",
+            "locationIdentifier": "REGION^13872",
+            "count": 2
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Knowle, Bristol",
+            "locationIdentifier": "REGION^14449",
+            "count": 2
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Patchway, Bristol",
+            "locationIdentifier": "REGION^19400",
+            "count": 2
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Temple Quay, Bristol",
+            "locationIdentifier": "REGION^94256",
+            "count": 2
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "The Park, Bristol",
+            "locationIdentifier": "REGION^61765",
+            "count": 2
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Wellsway, Bristol",
+            "locationIdentifier": "REGION^71205",
+            "count": 2
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Barrs Court, Bristol",
+            "locationIdentifier": "REGION^2974",
+            "count": 1
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Blackhorse, Bristol",
+            "locationIdentifier": "REGION^61734",
+            "count": 1
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Blaise Hamlet, Bristol",
+            "locationIdentifier": "REGION^71131",
+            "count": 1
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Blaise, Bristol",
+            "locationIdentifier": "REGION^71130",
+            "count": 1
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Bradley Stoke, Bristol",
+            "locationIdentifier": "REGION^4295",
+            "count": 1
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Catbrain, Bristol",
+            "locationIdentifier": "REGION^61738",
+            "count": 1
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Cribbs Causeway, Bristol",
+            "locationIdentifier": "REGION^71143",
+            "count": 1
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Filwood Park, Bristol",
+            "locationIdentifier": "REGION^71146",
+            "count": 1
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Filwood, Bristol",
+            "locationIdentifier": "REGION^71145",
+            "count": 1
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Greenbank, Bristol",
+            "locationIdentifier": "REGION^11330",
+            "count": 1
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Hambrook, Bristol",
+            "locationIdentifier": "REGION^11746",
+            "count": 1
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Henbury, Bristol",
+            "locationIdentifier": "REGION^12365",
+            "count": 1
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Hengrove Park, Bristol",
+            "locationIdentifier": "REGION^61743",
+            "count": 1
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Hursley Hill, Bristol",
+            "locationIdentifier": "REGION^71152",
+            "count": 1
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "King\u0027s Weston, Bristol",
+            "locationIdentifier": "REGION^86083",
+            "count": 1
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Leigh Woods, Bristol",
+            "locationIdentifier": "REGION^14873",
+            "count": 1
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Lower Knowle, Bristol",
+            "locationIdentifier": "REGION^71157",
+            "count": 1
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Mangotsfield, Bristol",
+            "locationIdentifier": "REGION^16649",
+            "count": 1
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Northavon, Bristol",
+            "locationIdentifier": "REGION^71225",
+            "count": 1
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Pen Pole, Bristol",
+            "locationIdentifier": "REGION^71166",
+            "count": 1
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Shirehampton, Bristol",
+            "locationIdentifier": "REGION^22041",
+            "count": 1
+        },
+        {
+            "town": "Bristol",
+            "townLocationIdentifier": "REGION^219",
+            "location": "Siston Hill, Bristol",
+            "locationIdentifier": "REGION^86084",
+            "count": 1
+        }
+
+    ],
+    "homeType": [
+        {
+            "value": "detached%2Cbungalow%2Csemi-detached%2Cterraced",
+            "label": "House"
+        },
+        {
+            "value": "flat",
+            "label": "Flat"
+        }
+    ],
+    "bedrooms": [
+        {
+            "value": "All",
+            "label": "All Bedrooms"
+        },
+        {
+            "value": "0",
+            "label": "Studio"
+        },
+        {
+            "value": "1",
+            "label": "1 Bedroom"
+        },
+        {
+            "value": "2",
+            "label": "2 Bedrooms"
+        },
+        {
+            "value": "3",
+            "label": "3 Bedrooms"
+        },
+        {
+            "value": "4",
+            "label": "4 Bedrooms"
+        },
+        {
+            "value": "5",
+            "label": "5 Bedrooms"
+        },
+        {
+            "value": "6",
+            "label": "6 Bedrooms"
+        },
+        {
+            "value": "7",
+            "label": "7 Bedrooms"
+        },
+        {
+            "value": "8",
+            "label": "8 Bedrooms"
+        },
+        {
+            "value": "9",
+            "label": "9 Bedrooms"
+        },
+        {
+            "value": "10",
+            "label": "10 Bedrooms"
+        },
+        {
+            "value": "11",
+            "label": "11 Bedrooms"
+        },
+        {
+            "value": "12",
+            "label": "13 Bedrooms"
+        }
+    ],
+    "pricesMin": [
+        {
+            "value": "All",
+            "label": "Min Price"
+        },
+        {
+            "value": "200",
+            "label": "\u00A3200 pcm"
+        },
+        {
+            "value": "300",
+            "label": "\u00A3300 pcm"
+        },
+        {
+            "value": "400",
+            "label": "\u00A3400 pcm"
+        },
+        {
+            "value": "500",
+            "label": "\u00A3500 pcm"
+        },
+        {
+            "value": "600",
+            "label": "\u00A3600 pcm"
+        },
+        {
+            "value": "700",
+            "label": "\u00A3700 pcm"
+        },
+        {
+            "value": "800",
+            "label": "\u00A3800 pcm"
+        },
+        {
+            "value": "900",
+            "label": "\u00A3900 pcm"
+        },
+        {
+            "value": "1000",
+            "label": "\u00A31000 pcm"
+        },
+        {
+            "value": "1100",
+            "label": "\u00A31100 pcm"
+        },
+        {
+            "value": "1200",
+            "label": "\u00A31200 pcm"
+        },
+        {
+            "value": "All",
+            "label": "Min Price"
+        }
+    ],
+    "pricesMax": [
+        {
+            "value": "All",
+            "label": "Max Price"
+        },
+        {
+            "value": "300",
+            "label": "\u00A3300 pcm"
+        },
+        {
+            "value": "400",
+            "label": "\u00A3400 pcm"
+        },
+        {
+            "value": "500",
+            "label": "\u00A3500 pcm"
+        },
+        {
+            "value": "600",
+            "label": "\u00A3600 pcm"
+        },
+        {
+            "value": "700",
+            "label": "\u00A3700 pcm"
+        },
+        {
+            "value": "800",
+            "label": "\u00A3800 pcm"
+        },
+        {
+            "value": "900",
+            "label": "\u00A3900 pcm"
+        },
+        {
+            "value": "1000",
+            "label": "\u00A31000 pcm"
+        },
+        {
+            "value": "1100",
+            "label": "\u00A31100 pcm"
+        },
+        {
+            "value": "1200",
+            "label": "\u00A31200 pcm"
+        },
+        {
+            "value": "1500",
+            "label": "\u00A31500 pcm"
+        },
+        {
+            "value": "2000",
+            "label": "\u00A32000 pcm"
+        },
+        {
+            "value": "All",
+            "label": "Max Price"
+        }
+    ],
+    "sortTypes": [
+        {
+            "label": "Lowest Price",
+            "value": 1
+        },
+        {
+            "label": "Highest Price",
+            "value": 2
+        },        
+        {
+            "label": "Newest Listed",
+            "value": 3
+        },
+        {
+            "label": "Oldest Listed",
+            "value": 10
+        }
+    ]
+}
