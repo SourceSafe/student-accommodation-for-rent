@@ -24,6 +24,25 @@ export const PropertyDetail = (props) =>
     const enrichLettingDetails = [{label:'Utilities Option', value:`Utilities Option available with ${partner.name}. Let them take out the hassle of dealing with all the providers. You simply pay your monthly split.`}]
     const enrichKeyFeatures = ["Utilities Package Available", `Instant Quote Available from ${partner.name}`]
 
+    const MAIN_WIDTH_DESKTOP = '100%';
+    const MAIN_HEIGHT_DESKTOP = '500px';
+    const THUMB_WIDTH_DESKTOP = '150px';
+    const THUMB_HEIGHT_DESKTOP = '100px';
+
+
+
+    const MAIN_WIDTH_MOBILE = '100%';
+    const MAIN_HEIGHT_MOBILE = '350px';    
+    const THUMB_WIDTH_MOBILE = '100px';
+    const THUMB_HEIGHT_MOBILE = '70px';
+    
+    
+
+    const [mainImageSize, setMainImageSize] = useState();    
+    const [thumbImageSize, setThumbImageSize] = useState();    
+    
+    
+
 
 const formatPhone = (phone) =>
 {
@@ -51,6 +70,14 @@ const formatPhone = (phone) =>
         setUtilitiesAlreadyOffered(billsAlreadyOffered)    
     }, [details,billsOfferedByAgent]);
 
+
+
+    useEffect(() => {
+        const  mainSize = isMobile == true ? {width: MAIN_WIDTH_MOBILE, height: MAIN_HEIGHT_MOBILE} : {width: MAIN_WIDTH_DESKTOP, height: MAIN_HEIGHT_DESKTOP};
+        const  thumbSize = isMobile == true ? {width: THUMB_WIDTH_MOBILE, height: THUMB_HEIGHT_MOBILE} : {width: THUMB_WIDTH_DESKTOP, height: THUMB_HEIGHT_DESKTOP};
+        setMainImageSize(mainSize)
+        setThumbImageSize(thumbSize)        
+    }, [isMobile]);
 
 
     const billsOffered = (details) =>
@@ -115,37 +142,22 @@ const formatPhone = (phone) =>
                                                                     
                 
                 <div style ={{border:'0px solid black', flex:5}}>
-                    {/* {!isMobile ? 
-                    <div style = {{display:'flex', width:'95%', height:"95%"}}>
-                        <img style = {{border : '1px solid red', width:'100%', height:'auto', margin: "10px",borderRadius:'10px',  objectFit: "cover"}} src = {details?.images[selectedImageIndex]}></img>
-                    </div>                 
-                    :
-                    <div style = {{display:'flex', width:'100%'}}>
-                        <img style = {{width:'100%', height:'auto', margin: "10px",borderRadius:'10px'}} src = {details?.images[selectedImageIndex]}></img>
-                    </div>} */}
-
-                    {/* s */}
-
-
-
-                    <img style = {{width:'100%', height:'560px',borderRadius:'10px',  objectFit: "cover"}} src = {details?.images[selectedImageIndex]}></img>
-
-
+                    <img style = {{width:mainImageSize?.width, height:mainImageSize?.height, borderRadius:'10px',  objectFit: "cover"}} src = {details?.images[selectedImageIndex]}></img>
                 </div>
                         
                 
                 <div style ={{border:'0px solid black', flex:1}}>
                     <div className ={thumbNailStyle}>
                         <div style = {{margin: "10px"}}  onClick= {() => {setSelectedImageIndex(0)}}>
-                            <img  style = {{width:'125px', height: '100px',  borderRadius:'10px'}} src = {details?.images[0]}></img>
+                            <img  style = {{width:thumbImageSize?.width, height: thumbImageSize?.height,  borderRadius:'10px'}} src = {details?.images[0]}></img>
                         </div>
 
                         <div style = {{ margin: "10px"}}  onClick= {() => {setSelectedImageIndex(1)}}>
-                            <img  style = {{width:'125px', height: '100px', borderRadius:'10%'}} src = {details?.images[1]}></img>
+                            <img  style = {{width:thumbImageSize?.width, height: thumbImageSize?.height, borderRadius:'10%'}} src = {details?.images[1]}></img>
                         </div>
 
                         <div style = {{margin: "10px"}}  onClick= {() => {setSelectedImageIndex(2)}}>
-                            <img  style = {{width:'125px', height: '100px', borderRadius:'10%'}} src = {details?.images[2]}></img>
+                            <img  style = {{width:thumbImageSize?.width, height: thumbImageSize?.height, borderRadius:'10%'}} src = {details?.images[2]}></img>
                         </div>
                     </div>
                 </div>
