@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from "react";
 import { CTAPackage } from '../../components/CTAPackage/CTAPackage';
 import  './Enquiry.css'
 import {  useParams } from "react-router-dom";
@@ -16,11 +16,27 @@ export const Enquiry = () =>
     const [moreDetailsChecked, setMoreDetailsChecked] = useState(false);
     const [viewingChecked, setViewingChecked] = useState(false);
     const [partner] = useAtomState(partnerAtom)
+    const [isMobile, setIsMobile] = useState();    
+
+    useEffect(() => {
+        const handleWindowSizeChange=() => {
+            setIsMobile(window.innerWidth <= 768);            
+        }
+        handleWindowSizeChange();
+        window.addEventListener('resize', handleWindowSizeChange);
+        return () => {
+            window.removeEventListener('resize', handleWindowSizeChange);
+        }
+    }, []);
+
+
+    const direction = isMobile ? 'column' : 'row';
+    const gap = isMobile ? '0px' : '100px';
 
 
 
     return (
-        <div className="main">       
+        <div className="main" style = {{gap:gap, display:'flex', flexDirection:direction}}>       
         
             <div className = "enquiry">
 
@@ -147,11 +163,6 @@ export const Enquiry = () =>
                     </div>
                 </div>
 
-                <div className="row">
-                    <button className  = "sendEmail">
-                        Send email
-                    </button>                
-                </div>
 
 
 
@@ -160,9 +171,9 @@ export const Enquiry = () =>
             </div>     
 
 
-            {billsOfferedByAgent==="0" && 
-                            
+            {billsOfferedByAgent==="0" &&                             
                 <div className = "cat">
+
                                                                 
                 <div>
                     <h2>Enjoy All Inclusive Utility Bills for this property</h2>
@@ -198,15 +209,20 @@ export const Enquiry = () =>
                     {/* <CTAPackage tag1 = "Excellent !!!" tag2 = "We'll call you back ..."/>                     */}
                     
                     </div>
+                
                     }
-                </div>                                
+
+                    <div className="row">
+                    <button className  = "sendEmail">
+                        Send email
+                    </button>                
                 </div>
-            
+                </div>                                
+
+                
+                
+                </div>                        
             }
-
-            
-
-
         </div>
     )
 }

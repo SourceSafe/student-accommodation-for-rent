@@ -1,9 +1,9 @@
 .main {
     display: flex;
-    flex-direction: row;
-    gap:130px;
+    flex-direction: row;    
     user-select: none;
     margin : 5px;
+    
 }
 
 
@@ -60,10 +60,8 @@
 
 
 .cat {
-
     display : flex;
-    justify-content: center;
-    
+    justify-content: center;                
 }
 
 
@@ -102,7 +100,7 @@
     border: 2px solid gray;
     border-radius: 5px;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 .sendEmail:hover {
