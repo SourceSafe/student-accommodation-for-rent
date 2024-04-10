@@ -212,12 +212,17 @@ export const Enquiry = () =>
                 
                     }
 
-                    <div className="row">
-                    <button className  = "sendEmail">
-                        Send email
-                    </button>                
-                </div>
-                </div>                                
+
+                    
+
+                    
+                    <div style = {{display:'flex', flexDirection:'row', justifyContent:'center'}}>
+                        <button className  = "sendEmail">
+                            Send email
+                        </button>                
+                    </div>                                
+                
+                    </div>                                
 
                 
                 
