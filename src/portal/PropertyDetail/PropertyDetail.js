@@ -138,26 +138,26 @@ const formatPhone = (phone) =>
 
         <div style={{border:'0px solid black', display:'flex', flexDirection: pictureFlexLayout}}>
                 
-            <div className="pictureSection" style={{border:'0px solid black', flex :10, display:'flex', flexDirection:'column', margin : '0px 0px 0px 0px'}}>
-                                                                    
+            <div className="pictureSection" style={{border:'0px solid black', flex :10, display:'flex', flexDirection:'column'}}>
+                                                                                    
                 
-                <div style ={{border:'0px solid black', flex:5}}>
-                    <img style = {{width:mainImageSize?.width, height:mainImageSize?.height, borderRadius:'10px',  objectFit: "cover"}} src = {details?.images[selectedImageIndex]}></img>
-                </div>
-                        
+                <img className = 'mainImage' style = {{width:mainImageSize?.width, height:mainImageSize?.height}} src = {details?.images[selectedImageIndex]}></img>
                 
-                <div style ={{border:'0px solid black', flex:1}}>
+                
+                <div className = "thumbImages">
                     <div className ={thumbNailStyle}>
-                        <div style = {{margin: "10px"}}  onClick= {() => {setSelectedImageIndex(0)}}>
-                            <img  style = {{width:thumbImageSize?.width, height: thumbImageSize?.height,  borderRadius:'10px'}} src = {details?.images[0]}></img>
+
+
+                        <div  onClick= {() => {setSelectedImageIndex(0)}}>
+                            <img  className = "thumbImage" style = {{width:thumbImageSize?.width, height: thumbImageSize?.height}} src = {details?.images[0]}></img>
                         </div>
 
-                        <div style = {{ margin: "10px"}}  onClick= {() => {setSelectedImageIndex(1)}}>
-                            <img  style = {{width:thumbImageSize?.width, height: thumbImageSize?.height, borderRadius:'10%'}} src = {details?.images[1]}></img>
+                        <div   onClick= {() => {setSelectedImageIndex(1)}}>
+                            <img  className = "thumbImage" style = {{width:thumbImageSize?.width, height: thumbImageSize?.height}} src = {details?.images[1]}></img>
                         </div>
 
-                        <div style = {{margin: "10px"}}  onClick= {() => {setSelectedImageIndex(2)}}>
-                            <img  style = {{width:thumbImageSize?.width, height: thumbImageSize?.height, borderRadius:'10%'}} src = {details?.images[2]}></img>
+                        <div   onClick= {() => {setSelectedImageIndex(2)}}>
+                            <img  className = "thumbImage" style = {{width:thumbImageSize?.width, height: thumbImageSize?.height}} src = {details?.images[2]}></img>
                         </div>
                     </div>
                 </div>
