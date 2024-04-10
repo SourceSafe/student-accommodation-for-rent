@@ -133,28 +133,34 @@ export const PropertyDetail = (props) =>
                     
                 <div style = {{margin : '10px', width: '95%'}}>
                     <div style = {{marginTop: '5px' ,fontSize:'22px', fontWeight:'bold'}}>{add2}</div>
-                    <div style = {{color : 'grey', marginTop: '5px' ,fontSize:'18px', fontWeight:'bold'}}>{details?.title}</div>
-                
-
+                    <div style = {{color : 'grey', marginTop: '5px' ,fontSize:'18px', fontWeight:'bold'}}>{details?.title}</div>                
                     <div style = {{marginTop: '10px', display: 'flex', border: '0px solid black', justifyContent: 'space-between'}}>
                         <div style = {{}}>
                             <div style = {{fontSize:'25px', fontWeight:'bold'}}>{details?.mainPrice}</div>
-                            <div>{details?.secondaryPrice}</div>
-                            <div>Added on 22/03/2024</div>        
-                        </div>
-                        <div style = {{}}>                    
-                            <img style ={{}} src ="https://media.rightmove.co.uk/17k/16974/branch_logo_16974_0004.jpeg"></img>
-                        </div>
+                            <div>{details?.secondaryPrice}</div>                            
+                            {/* <div>Added on 22/03/2024</div>         */}
+                        </div>                        
                     </div>
                 </div>                        
 
                 <h2 style = {{}}>Agent Contact Details</h2>
-                <div style = {{  margin: '15px', display:'flex', alignItems:'center', justifyContent:'space-between'}}>        
                 
+
+                <div>
+
+                <div style ={{margin: '10px', display:'flex', justifyContent:'space-between'}}>
+                    <div>{details?.lettingAgent}</div>                                    
+                    {/* <img style ={{width:"100px",marginTop:'-15px'}} src ={details?.lettingLogo}></img>                                     */}
+                </div>
+
+
+
+                <div style = {{  margin: '15px', display:'flex', alignItems:'center', justifyContent:'space-between'}}>        
+                                
                     <div style = {{display:'flex', gap:'10px', alignItems:'center'}}>                 
                         <FaPhone style ={{color:"green"}} size={30}/>
                         <div>
-                            <div style ={{fontWeight:'bold'}}>0117 463 2042</div>
+                            <div style ={{fontWeight:'bold'}}>{details?.lettingPhone}</div>
                             <div style ={{fontSize:'smaller', color:"grey"}}>Local call rate</div>
                         </div>
                     </div> 
@@ -167,6 +173,8 @@ export const PropertyDetail = (props) =>
                     </Link>
                     
                 </div>    
+
+                </div>
 
                 
                                 
