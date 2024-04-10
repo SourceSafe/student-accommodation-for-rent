@@ -25,7 +25,7 @@ export const PropertyDetail = (props) =>
     const enrichKeyFeatures = ["Utilities Package Available", `Instant Quote Available from ${partner.name}`]
 
     const MAIN_WIDTH_DESKTOP = '100%';
-    const MAIN_HEIGHT_DESKTOP = '500px';
+    const MAIN_HEIGHT_DESKTOP = '550px';
     const THUMB_WIDTH_DESKTOP = '150px';
     const THUMB_HEIGHT_DESKTOP = '100px';
 
@@ -137,7 +137,7 @@ const formatPhone = (phone) =>
         <h2>Property Details</h2>
 
         <div style={{border:'0px solid black', display:'flex', flexDirection: pictureFlexLayout}}>                
-            <div className="pictureSection" style={{border:'0px solid black', flex :10, display:'flex', flexDirection:'column'}}>                                                                                                    
+            <div className="pictureSection">                                                                                                    
                 <img className = 'mainImage' style = {{width:mainImageSize?.width, height:mainImageSize?.height}} src = {details?.images[selectedImageIndex]}></img>                                
                 <div className = "thumbImages">                                    
                     <img  className = "thumbImage" style = {{width:thumbImageSize?.width, height: thumbImageSize?.height}} src = {details?.images[0]} onClick= {() => {setSelectedImageIndex(0)}}></img>                                
