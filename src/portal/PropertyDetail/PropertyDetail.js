@@ -143,7 +143,7 @@ export const PropertyDetail = (props) =>
                     </div>
                 </div>                        
 
-                <h2 style = {{}}>Agent Contact Details</h2>
+                <h2 style = {{marginTop : "20px"}}>Agent Contact Details</h2>
                 
 
                 <div>
