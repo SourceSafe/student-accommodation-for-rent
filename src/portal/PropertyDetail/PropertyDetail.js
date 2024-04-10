@@ -99,6 +99,7 @@ const formatPhone = (phone) =>
     
     
     const pictureFlexLayout = isMobile ? 'column' : 'row'
+    const phoneRef = `tel:${details?.lettingPhone}`
     
     
     return <div className = "propertyDetail">
@@ -185,7 +186,10 @@ const formatPhone = (phone) =>
                     <div style = {{display:'flex', gap:'10px', alignItems:'center'}}>                 
                         <FaPhone style ={{color:"green"}} size={30}/>
                         <div>
-                            <div style ={{fontWeight:'bold'}}>{formatPhone(details?.lettingPhone)}</div>
+
+                            <a href={phoneRef}>
+                                <div style ={{fontWeight:'bold'}}>{formatPhone(details?.lettingPhone)}</div>
+                            </a>
                             <div style ={{fontSize:'smaller', color:"grey"}}>Local call rate</div>
                         </div>
                     </div> 
