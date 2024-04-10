@@ -158,7 +158,7 @@ const formatPhone = (phone) =>
                 <div>
 
                 <div style ={{margin: '10px', display:'flex', justifyContent:'space-between'}}>
-                    <div>{details?.lettingAgent}</div>                                    
+                    <div>{details?.lettingAgent.replace("&amp;","&")}</div>                                    
                     {/* <img style ={{width:"100px",marginTop:'-15px'}} src ={details?.lettingLogo}></img>                                     */}
                 </div>
 
