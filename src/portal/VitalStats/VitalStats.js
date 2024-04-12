@@ -60,56 +60,13 @@ export const VitalStats = () =>
             <div className = "mainStats">            
 
                     <div style = {{display:'flex', alignItems:'center'}}>
-                    <div className = "mainStatsTitle">Average Rents (pp/pm) for your Location - </div>
+                    <div className = "mainStatsTitle">Average Rents (pp pcm) for  </div>
 
                     <div style = {{fontWeight:'500'}}>{locationDisplay}</div>
                     </div>
 
-                    {/* <LoadingOverlay    styles={{
-                        
-                    overlay: (base) => ({                                            
-                    ...base,
-                    width:'100',
-                    background: 'rgba(255, 255, 255, 0.7)', margin:"0px"
-                    })}} 
-                    active={isLoading}
-                    > */}
-
                     <div className={statRowStyle}>
-
-
-
-
-                        {/* <button className = 'viewInfoButton'>
-                        <a className = 'viewButtonLink' href='www.google.com' title='View our Key Statistics on 5 Bed Houses'>
-                        <div className = 'tableButtonAlignment'>
-                                <text>5 Bedroom House</text>                            
-                                <MdOutlineQueryStats className = 'viewInfoButtonIcon' size={20}></MdOutlineQueryStats>
-                            </div>
-                            </a>
-                        </button>
-                        
-
-                                                                      
-                        <button className = 'searchButton'>
-                            <a className = 'viewButtonLink' href='www.google.com' title='View our 5 Bedroom Properties'>
-                                <div className = 'tableButtonAlignment'>
-                                    <text>View Properties</text>                            
-                                    <BsFillHouseFill className = 'searchButtonIcon' size={17}></BsFillHouseFill>
-                                </div>
-                            </a>
-                        </button>
-
-                       */}
-
-
-
-                        
-                                        
-
-
-                                        
-
+                                                                            
                         
                     <div className="stat">                                                          
                     <Link  title = {`View Accommodation Information on ${locationDisplay}`} className ="viewInfoLink" to = {getLocationRoute()} >                                                

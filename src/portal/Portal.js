@@ -55,7 +55,8 @@ const Portal =  (props) =>
         if(filters.location)              
         {          
           const locationIdentifier = filters.location === "All" ? filters.town.replace("^", "%5E") : filters.location.replace("^", "%5E");                  
-          const url = urlFormat +  "?locationIdentifier=" + locationIdentifier + "&index=" + refIndex.current  + "&minBedrooms=" + filters.beds +  "&maxBedrooms=" + filters.beds + "&propertyTypes=" + filters.propertyTypes + "&minPrice="+ filters.selectedMinPrice+ "&maxPrice=" + filters.selectedMaxPrice + "&sortType=" + filters.sortType;           
+          const townlocationIdentifier =  filters.town.replace("^", "%5E");
+          const url = urlFormat +  "?townLocationIdentifier=" + townlocationIdentifier + "&locationIdentifier=" + locationIdentifier + "&index=" + refIndex.current  + "&minBedrooms=" + filters.beds +  "&maxBedrooms=" + filters.beds + "&propertyTypes=" + filters.propertyTypes + "&minPrice="+ filters.selectedMinPrice+ "&maxPrice=" + filters.selectedMaxPrice + "&sortType=" + filters.sortType;           
           //setLastPortalUrl(url);
           setURL(url);                      
           

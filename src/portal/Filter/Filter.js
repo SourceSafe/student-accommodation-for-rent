@@ -127,7 +127,7 @@ export const Filter = (props) =>
       let ret = "No Location Selected";
       if(selectedLocation.length==1 && selectedLocation.length==1)
       {
-        ret = selectedLocation[0].value === 'All' ?  selectedTown[0].label : `${selectedLocation[0].label}, ${selectedTown[0].label}`
+        ret =  selectedTown[0].label;
       }
       return ret;      
     }
