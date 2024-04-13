@@ -160,7 +160,7 @@ h2{
 
 .searchButton {
   background: orange;
-  /* min-width: 140px; */
+   min-width: 100px; 
   border : solid 2px rgb(213, 213, 213);
   border-radius: 10px;    
   height: 30px;    
@@ -168,6 +168,7 @@ h2{
   font-size:small;
   text-wrap: nowrap;
   margin-top: 10px;  
+  
 }
 
 .mainViewButton {  

@@ -18,7 +18,7 @@ export const PropertyDetail = (props) =>
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
     const { propertyId, billsOfferedByAgent, add2 } = useParams();
     const [details, setDetails] = useState();
-    const [isMobile,setIsMobile] = useState();    
+    const [isMobile,setIsMobile] = useState();        
     const [utilitiesAlreadyOffered, setUtilitiesAlreadyOffered] = useState();
     const [partner] = useAtomState(partnerAtom)
     const enrichLettingDetails = [{label:'Utilities Option', value:`Utilities Option available with ${partner.name}. Let them take out the hassle of dealing with all the providers. You simply pay your monthly split.`}]
@@ -46,7 +46,10 @@ export const PropertyDetail = (props) =>
 
 const formatPhone = (phone) =>
 {
-    
+    if(phone === undefined)
+    {
+        return;
+    }
     const c1 = phone?.slice(0,5);
     const c2 = phone?.slice(5,8);
     const c3 = phone?.slice(8,12);
@@ -72,7 +75,7 @@ const formatPhone = (phone) =>
 
 
 
-    useEffect(() => {
+    useEffect(() => {        
         const  mainSize = isMobile == true ? {width: MAIN_WIDTH_MOBILE, height: MAIN_HEIGHT_MOBILE} : {width: MAIN_WIDTH_DESKTOP, height: MAIN_HEIGHT_DESKTOP};
         const  thumbSize = isMobile == true ? {width: THUMB_WIDTH_MOBILE, height: THUMB_HEIGHT_MOBILE} : {width: THUMB_WIDTH_DESKTOP, height: THUMB_HEIGHT_DESKTOP};
         setMainImageSize(mainSize)
