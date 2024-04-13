@@ -15,6 +15,7 @@ import {  Link } from "react-router-dom";
 
 const Portal =  (props) =>
 {        
+    const [isMobile, setIsMobile] = useState();  
     const [searchResults, setSearchResults] = useAtomState(searchResultsAtom);      
     const [page, setPage] = useAtomState(pageIndexAtom);      
     const [lastPortalUrl, setLastPortalUrl ] = useAtomState(portalUrlAtom);
@@ -27,8 +28,7 @@ const Portal =  (props) =>
     const [isLoading, setIsLoading] = useState(false);                  
     const [url, setURL] = useState();    
     const [filters, setFilters] = useAtomState(filtersAtom);
-    const [index, setIndex] = useState(0);
-    const [isDesktop] = useAtomState(isDesktopAtom);
+    const [index, setIndex] = useState(0);    
     const [mainStats, setMainStats] = useAtomState(mainStatsAtom);  
     const [locationDisplay, setLocationDisplay] = useAtomState(locationDisplayAtom);
     const [isMiniFilterMode] = useAtomState(isMiniFilterModeAtom);
@@ -40,8 +40,7 @@ const Portal =  (props) =>
     
     useEffect(() => {      
       if(filters)
-        {
-          //setPage(1)          
+        {          
           reRequest();
         }          
     }, [filters])
@@ -68,13 +67,22 @@ const Portal =  (props) =>
 
     }
     useEffect(() => {
+      const handleWindowSizeChange=() => {
+        setIsMobile(window.innerWidth <= 768);            
+    }
+    handleWindowSizeChange();
+    window.addEventListener('resize', handleWindowSizeChange);
       setIsPortal(true);
       window.addEventListener('beforeunload', setFalse)      
       return () => {
+        window.removeEventListener('resize', handleWindowSizeChange);
         setFalse();
         window.removeEventListener('beforeunload', setFalse)
       }      
     }, [])
+
+
+
     
     const setFalse = (e) => {
       setIsPortal(false);      
@@ -142,7 +150,7 @@ const Portal =  (props) =>
       <div className = "portal">    
 
         <div>                
-          {!isDesktop && <VitalStats style = {{width:'100%'}}></VitalStats>}                        
+          {isMobile && <VitalStats style = {{width:'100%'}}></VitalStats>}                        
           <Filter reRefresh = {reRefresh}/>                
          <div className = "titledSearch">
           <div>              
@@ -162,7 +170,7 @@ const Portal =  (props) =>
                   {searchResults?.results?.filter(item=>item.image1 !== '').map( (listing, index) => (                  
                   <div key = {listing.propertyId + index}>
                           <Link title = "View Property Details" className ="viewInfoLink" to = {buildPropertyRoute(listing)}>
-                          <Listing  key = {listing.propertyId + index} isDesktop={isDesktop} listing={listing} isPortlet = {false} isLoading={isLoading} ></Listing>   
+                          <Listing  key = {listing.propertyId + index} isDesktop={!isMobile} listing={listing} isPortlet = {false} isLoading={isLoading} ></Listing>   
                           </Link>
                   </div>
                     )
